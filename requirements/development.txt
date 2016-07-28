@@ -1,0 +1,18 @@
+-r common.txt
+
+## Development utils
+ipython
+selenium
+# django-extensions
+# django-debug-toolbar
+
+## Documentation
+sphinx
+sphinx_rtd_theme
+pyenchant
+sphinxcontrib-spelling
+recommonmark
+
+## Core utils
+pip
+wheel
