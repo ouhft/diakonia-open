@@ -27,6 +27,8 @@ This is an application to aide service development in the Transplant and Haemato
 **Target Group**: Transplant and Haematology Department Staff
 
 
+## Sub Projects
+1. **NHIC-TRA Export** - Starting point from a timeline perspective (if not a logical one) is the NIHR Health Informatics Collaborative - Transplantation data export project. 
 
 ## Documents
 
