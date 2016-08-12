@@ -50,7 +50,7 @@ Homebrew supports the latest version of software, and one or two older versions.
 
 * Postgres (v9.5.3 currently)
 * FHIRbase(2) - https://github.com/fhirbase/fhirbase-plv8 (v1.4.0 currently)
-* plv8 - https://github.com/plv8/plv8 - (current is v1.5.3, but using v1.4.3 because it supports the older version of v8 available from the Homebrew Version archive)
+* plv8 - https://github.com/plv8/plv8 http://pgxn.org/dist/plv8/- (current is v1.5.3, but using v1.4.3 because it supports the older version of v8 available from the Homebrew Version archive)
 * v8 - via Homebrew Versions archive - (current is v5.1; but using v3.15 as this is the only historic version at present available)
 
 Can now condense this down to the following:
