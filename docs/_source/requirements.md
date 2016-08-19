@@ -13,3 +13,16 @@ This page is going to evolve a lot over the course of this project, mostly becau
  * [http://techwhirl.com/writing-software-requirements-specifications/]()
  * [https://en.wikipedia.org/wiki/Software_requirements_specification]()
 
+
+## Draft Content
+
+### Technical Requirements
+
+1. FHIR used as the standard for data persistence and communication
+ * Interoperability is essential, FHIR embodies this, be it Human Readability for data, through to use of common technologies like REST APIs and good Documentation.
+
+2. SNOMED CT used as the standard for clinical data coding. The NHS National Information Board (NIB) [has specified that](http://systems.digital.nhs.uk/data/uktc/snomed) SNOMED CT is to be used as the single terminology in all care settings in England. The move to using a single common terminology in electronic integrated care records means:
+ * information can be shared consistently within and across all health and care settings
+ * data can be organised for the benefit of the individual's care, for example highlighting current health problems
+ * data can be organised for the benefit of groups of individuals, for example identifying trends resulting from change in clinical practice
+ * the risk of different interpretations of the record between different care settings can be reduced.
