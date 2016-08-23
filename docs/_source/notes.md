@@ -35,6 +35,7 @@ There are many :-/
 * Various data resources can be found on the TRUD (the Technology Reference data Update Distribution site) - https://isd.hscic.gov.uk/trud3/user/guest/group/0/home
  * The Interoperability Toolkit - https://isd.hscic.gov.uk/trud3/user/guest/group/41/pack/30
 * http://data.developer.nhs.uk/fhir/eRS/Chapter.1.About/index.html -- FHIR Implementation Guide for the NHS e-Referral Service
+* http://www.oxonhealthcaretransformation.nhs.uk/who-is-involved/transformation-board-meeting-papers/transformation-board-2016-04-26/73-for-info-oxfordshire-digital-platform/file -- Oxfordshire plans from March
 
 ### FHIR(base)
 

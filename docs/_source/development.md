@@ -49,8 +49,8 @@ On OS X 10.11.6, this has been a series of forward and backward steps.
 Homebrew supports the latest version of software, and one or two older versions. For FHIRbase to install locally we need the following stack:
 
 * Postgres (v9.5.3 currently)
-* FHIRbase(2) - https://github.com/fhirbase/fhirbase-plv8 (v1.4.0 currently)
-* plv8 - https://github.com/plv8/plv8 http://pgxn.org/dist/plv8/- (current is v1.5.3, but using v1.4.3 because it supports the older version of v8 available from the Homebrew Version archive)
+* FHIRbase(2) - [https://github.com/fhirbase/fhirbase-plv8]() (v1.4.0 currently)
+* plv8 - [https://github.com/plv8/plv8 http://pgxn.org/dist/plv8/]()- (current is v1.5.3, but using v1.4.3 because it supports the older version of v8 available from the Homebrew Version archive)
 * v8 - via Homebrew Versions archive - (current is v5.1; but using v3.15 as this is the only historic version at present available)
 
 Can now condense this down to the following:
@@ -58,7 +58,7 @@ Can now condense this down to the following:
 * `brew install v8-315` -- only works since June 2016
 * `pip install pgxnclient`
 * `LIBRARY_PATH="/usr/local/opt/v8-315/lib" CPATH="/usr/local/opt/v8-315/include" pgxnclient install plv8=1.4.3`
-* Then we follow https://github.com/fhirbase/fhirbase-plv8#installation
+* Then we follow [https://github.com/fhirbase/fhirbase-plv8#installation]()
  * `psql -d postgres` -- because there isn't a DB named after the local user. We now are in the PSQL CLI:
  * `CREATE DATABASE fhirbase;`. Then exit CLI
  * `export DATABASE_URL=postgres://user:password@localhost:5432/fhirbase` -- remember to escape any symbols in password
