@@ -67,3 +67,7 @@ Can now condense this down to the following:
  * `cat fhirbase-1.4.0.0.sql | psql fhirbase`
 * And it worked fine. Tested by creating patient storage, seeing new tables generated, and then removed the storage.
 
+
+### Sphinx Install
+
+TBA

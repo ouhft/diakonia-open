@@ -36,8 +36,11 @@ There are many :-/
  * The Interoperability Toolkit - [https://isd.hscic.gov.uk/trud3/user/guest/group/41/pack/30]()
 * [http://data.developer.nhs.uk/fhir/eRS/Chapter.1.About/index.html]() -- FHIR Implementation Guide for the NHS e-Referral Service
 * [http://www.oxonhealthcaretransformation.nhs.uk/who-is-involved/transformation-board-meeting-papers/transformation-board-2016-04-26/73-for-info-oxfordshire-digital-platform/file]() -- Oxfordshire plans from March
+ * [http://www.oxonhealthcaretransformation.nhs.uk/who-is-involved/transformation-board-meeting-papers/]() -- For a full index of the Transformation Board's meetings
 * [http://www.ouh.nhs.uk/about/trust-board/2016/january/documents/TB2016.15-epr-plans-and-governance.pdf]() -- Trust strategy talks of a new Health Informatics Committee to be created. Need to investigate.
  * Full index at [http://www.ouh.nhs.uk/about/trust-board/meetings-and-papers.aspx]()
+* South, Central, and West, Commisioning Support Unit (Andrew Fenton, previously of this trust), writing about how they are supporting Digital Health changes -- [https://www.scwcsu.nhs.uk/news/insights-issue-6-june-2016-commissioning-show-special/how-digital-health-transformation-is-taking-shape]()
+ * [Digital Transformation Services](https://www.scwcsu.nhs.uk/solutions/digital-transformation) @ SCW:CSU 
 
 
 ### FHIR(base)
@@ -60,6 +63,9 @@ A likely favourite as their data model seems more flexible and saner (see person
 * Slideshows:
  * [http://www.slideshare.net/ewoutkramer/fhir-tutorial-morning]()
  * [http://www.slideshare.net/GrahameGrieve/introduction-to-fhir]()
+ * [http://www.slideshare.net/DevDays2014/fhir-architecture-overview-for-nonprogrammers-ren-spronk]()
+ * [http://www.slideshare.net/ewoutkramer/fhir-profiling-tutorial]()
+ * [http://www.slideshare.net/ewoutkramer/hl7-fhir-for-developers]()
 
 * Extensions are a key concept to understand, and some work will likely be needed to be done to create relevant ones for Transplantation
  * [https://fhirblog.com/2014/03/06/extensions-are-not-second-class-fhir-citizens/]()
@@ -87,6 +93,7 @@ A likely favourite as their data model seems more flexible and saner (see person
 
 * Or from SMARTonFHIR: [https://github.com/smart-on-fhir/client-py]()
  * [https://fhirblog.com/2016/07/08/what-is-smart-and-why-should-you-care/#more-158596]()
+ * SMART on FHIR Python Client Docs - [http://docs.smarthealthit.org/client-py/index.html]()
 
 ### OpenEHR
 
@@ -116,3 +123,7 @@ At somepoint, the reality is that developed services will need to operate somewh
  * Supposedly behind Genomics England hosting: [http://ukcloud.com/wp-content/uploads/2016/07/UKCloud_CaseStudy_RGB_Digital_Genomics.pdf]()
  * [https://www.digitalmarketplace.service.gov.uk/g-cloud/services/7456481668431278]()
  * [http://ukcloud.com/what-we-do/platform-as-a-service/digital-application-platform]()
+
+**Security** is an important topic, and covers all aspects of all projects...
+
+* [http://docs.smarthealthit.org/authorization/best-practices/]()
