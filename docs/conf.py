@@ -20,7 +20,7 @@ import importlib
 import inspect
 from recommonmark.parser import CommonMarkParser
 from django.db.models.fields.files import FileDescriptor
-from django.db.models.manager import AbstractManagerDescriptor, ManagerDescriptor
+from django.db.models.manager import ManagerDescriptor
 from django.db.models.query import QuerySet
 from django.utils.translation import ugettext, get_language, activate, deactivate
 
@@ -39,19 +39,18 @@ sys.path.append(os.path.abspath('../../lib/python3.5/site-packages/'))
 # with open('../location.env', 'r') as location_file:
 #     environment_string = location_file.read().replace('\n', '')
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings.development")  # + environment_string)
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings")  # + environment_string)
 import django
 django.setup()
 
 # Fix Django's FileFields
 FileDescriptor.__get__ = lambda self, *args, **kwargs: self
 ManagerDescriptor.__get__ = lambda self, *args, **kwargs: self.manager
-AbstractManagerDescriptor.__get__ = lambda self, *args, **kwargs: None
 
 # Stop Django from executing DB queries
 QuerySet.__repr__ = lambda self: self.__class__.__name__
 
-GITHUB_USER = 'marshalc'  # Name of your Github user or organisation
+GITHUB_USER = 'ouh-churchill'  # Name of your Github user or organisation
 GITHUB_PROJECT = 'diakonia'  # Name of your Github repository
 
 

@@ -17,8 +17,8 @@ Consider shift of methodolgy as shown by the OPAL project, using Angluar JS as t
 * [https://angular.io/docs/ts/latest/guide/architecture.html]()
 * [http://www.bluebuttonjs.com]() -- BlueButton.js helps developers parse and generate complex health data formats like C-CDA with ease, so you can empower patients with access to their health records.
 * [https://github.com/openhealthcare/opal]() -- Django+Angular OSS health system
- * With Plugins (though none for Transplant): [http://opal.openhealthcare.org.uk/docs/guides/plugins_list/]()
- * Documentation: [http://opal.openhealthcare.org.uk/docs/]()
+	* With Plugins (though none for Transplant): [http://opal.openhealthcare.org.uk/docs/guides/plugins_list/]()
+	* Documentation: [http://opal.openhealthcare.org.uk/docs/]()
 
 
 ## Data Structures
@@ -33,14 +33,14 @@ There are many :-/
 * [https://code4health.org]() -- An incubator group from NHS England
 * There are many references to strategy and ongoing work via the NHS Digital Technology pages - [https://www.england.nhs.uk/digitaltechnology/]()
 * Various data resources can be found on the TRUD (the Technology Reference data Update Distribution site) - [https://isd.hscic.gov.uk/trud3/user/guest/group/0/home]()
- * The Interoperability Toolkit - [https://isd.hscic.gov.uk/trud3/user/guest/group/41/pack/30]()
+	* The Interoperability Toolkit - [https://isd.hscic.gov.uk/trud3/user/guest/group/41/pack/30]()
 * [http://data.developer.nhs.uk/fhir/eRS/Chapter.1.About/index.html]() -- FHIR Implementation Guide for the NHS e-Referral Service
 * [http://www.oxonhealthcaretransformation.nhs.uk/who-is-involved/transformation-board-meeting-papers/transformation-board-2016-04-26/73-for-info-oxfordshire-digital-platform/file]() -- Oxfordshire plans from March
- * [http://www.oxonhealthcaretransformation.nhs.uk/who-is-involved/transformation-board-meeting-papers/]() -- For a full index of the Transformation Board's meetings
+	* [http://www.oxonhealthcaretransformation.nhs.uk/who-is-involved/transformation-board-meeting-papers/]() -- For a full index of the Transformation Board's meetings
 * [http://www.ouh.nhs.uk/about/trust-board/2016/january/documents/TB2016.15-epr-plans-and-governance.pdf]() -- Trust strategy talks of a new Health Informatics Committee to be created. Need to investigate.
- * Full index at [http://www.ouh.nhs.uk/about/trust-board/meetings-and-papers.aspx]()
+	* Full index at [http://www.ouh.nhs.uk/about/trust-board/meetings-and-papers.aspx]()
 * South, Central, and West, Commisioning Support Unit (Andrew Fenton, previously of this trust), writing about how they are supporting Digital Health changes -- [https://www.scwcsu.nhs.uk/news/insights-issue-6-june-2016-commissioning-show-special/how-digital-health-transformation-is-taking-shape]()
- * [Digital Transformation Services](https://www.scwcsu.nhs.uk/solutions/digital-transformation) @ SCW:CSU 
+	* [Digital Transformation Services](https://www.scwcsu.nhs.uk/solutions/digital-transformation) @ SCW:CSU 
 
 
 ### FHIR(base)
@@ -61,23 +61,23 @@ A likely favourite as their data model seems more flexible and saner (see person
 
 
 * Slideshows:
- * [http://www.slideshare.net/ewoutkramer/fhir-tutorial-morning]()
- * [http://www.slideshare.net/GrahameGrieve/introduction-to-fhir]()
- * [http://www.slideshare.net/DevDays2014/fhir-architecture-overview-for-nonprogrammers-ren-spronk]()
- * [http://www.slideshare.net/ewoutkramer/fhir-profiling-tutorial]()
- * [http://www.slideshare.net/ewoutkramer/hl7-fhir-for-developers]()
-
+	* [http://www.slideshare.net/ewoutkramer/fhir-tutorial-morning]()
+	* [http://www.slideshare.net/GrahameGrieve/introduction-to-fhir]()
+	* [http://www.slideshare.net/DevDays2014/fhir-architecture-overview-for-nonprogrammers-ren-spronk]()
+	* [http://www.slideshare.net/ewoutkramer/fhir-profiling-tutorial]()
+	* [http://www.slideshare.net/ewoutkramer/hl7-fhir-for-developers]()
+	
 * Extensions are a key concept to understand, and some work will likely be needed to be done to create relevant ones for Transplantation
- * [https://fhirblog.com/2014/03/06/extensions-are-not-second-class-fhir-citizens/]()
- * See also the link to the NHS eRS which uses extensions 
+	* [https://fhirblog.com/2014/03/06/extensions-are-not-second-class-fhir-citizens/]()
+	* See also the link to the NHS eRS which uses extensions 
 
 * [http://www.hl7.org.uk/doc_store/NHS/HL7%20Integration%20Options%20for%20Trusts.pdf]() -- HL7 talks about integration strategies, including the need for roadmaps (and steps to create)
 
 * [http://www.ehealthnews.eu/emis/4679-emis-health-implements-open-standards-for-interoperability]() -- EMIS are using Fhirbase with Snomed and NHS DD
 
 * [https://www.renalreg.org/wp-content/uploads/2014/10/The-UK-Renal-Data-Collaboration-UKRDC-and-the-Data-Model-by-Dr-Keith-Simpson-and-Peter-Nicklin.pdf]() - Project to create a UK Renal Registry that communicates with partners via FHIR
- * [https://www.renalreg.org/wp-content/uploads/2014/09/UK_Renal_Data_Collaboration_White_Paper_1.1.pdf]()
- * [https://www.renalreg.org/data/]() - Has a UK Renal Registry Dataset definition
+	* [https://www.renalreg.org/wp-content/uploads/2014/09/UK_Renal_Data_Collaboration_White_Paper_1.1.pdf]()
+	* [https://www.renalreg.org/data/]() - Has a UK Renal Registry Dataset definition
 
 * [http://stackoverflow.com/questions/tagged/hl7-fhir]() -- Stackoverflow has 260 Q&As so far
 
@@ -89,11 +89,11 @@ A likely favourite as their data model seems more flexible and saner (see person
 
 * Lots of FHIR related postings at [https://fhirblog.com]()
 * As well as at: [https://thefhirplace.com]()
- * [https://thefhirplace.com/2016/08/08/create-my-first-fhir-implementation-guide-using-simplifier/]() 
+	* [https://thefhirplace.com/2016/08/08/create-my-first-fhir-implementation-guide-using-simplifier/]() 
 
 * Or from SMARTonFHIR: [https://github.com/smart-on-fhir/client-py]()
- * [https://fhirblog.com/2016/07/08/what-is-smart-and-why-should-you-care/#more-158596]()
- * SMART on FHIR Python Client Docs - [http://docs.smarthealthit.org/client-py/index.html]()
+	* [https://fhirblog.com/2016/07/08/what-is-smart-and-why-should-you-care/#more-158596]()
+	* SMART on FHIR Python Client Docs - [http://docs.smarthealthit.org/client-py/index.html]()
 
 ### OpenEHR
 
@@ -108,7 +108,7 @@ The NHS National Information Board (NIB) has specified that SNOMED CT is to be u
 * [http://systems.digital.nhs.uk/data/uktc/snomed]()
 * Look for the UK SNOMED CT! - [https://isd.hscic.gov.uk/trud3/user/guest/group/0/pack/26]()
 * Python has a module for SNOMED - [https://pypi.python.org/pypi/PyMedTermino]()
- * Docs at [http://pythonhosted.org/PyMedTermino/]()
+	* Docs at [http://pythonhosted.org/PyMedTermino/]()
 * Mapping is not without its issues: [http://www.safescript.com/tmt_error_analysis.html]()
 
 
@@ -120,9 +120,9 @@ At somepoint, the reality is that developed services will need to operate somewh
 * [http://www.redcentricplc.com/services/infrastructure/hosting-colocation/n3-hosting/]()
 * [https://www.4d-dc.com/cloud]()
 * [http://ukcloud.com]() -- The new name for Skyscape
- * Supposedly behind Genomics England hosting: [http://ukcloud.com/wp-content/uploads/2016/07/UKCloud_CaseStudy_RGB_Digital_Genomics.pdf]()
- * [https://www.digitalmarketplace.service.gov.uk/g-cloud/services/7456481668431278]()
- * [http://ukcloud.com/what-we-do/platform-as-a-service/digital-application-platform]()
+	* Supposedly behind Genomics England hosting: [http://ukcloud.com/wp-content/uploads/2016/07/UKCloud_CaseStudy_RGB_Digital_Genomics.pdf]()
+	* [https://www.digitalmarketplace.service.gov.uk/g-cloud/services/7456481668431278]()
+	* [http://ukcloud.com/what-we-do/platform-as-a-service/digital-application-platform]()
 
 **Security** is an important topic, and covers all aspects of all projects...
 

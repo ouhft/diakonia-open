@@ -34,16 +34,14 @@ Then move some things around…
 
 After that, PyCharm will want a few settings tweaks (like Django support enabling, and pointing at the settings files). I tend to hold of on this until I've also sorted out the setup of Best Practice for settings and other folders/files that form part of the project boilerplate.
 
-
-
-http://v4-alpha.getbootstrap.com
+[http://v4-alpha.getbootstrap.com]()
 
 
 
 
-## Dev System Notes
+# Dev System Notes
 
-### FHIRbase Install
+## FHIRbase Install
 On OS X 10.11.6, this has been a series of forward and backward steps. 
 
 Homebrew supports the latest version of software, and one or two older versions. For FHIRbase to install locally we need the following stack:
@@ -59,15 +57,30 @@ Can now condense this down to the following:
 * `pip install pgxnclient`
 * `LIBRARY_PATH="/usr/local/opt/v8-315/lib" CPATH="/usr/local/opt/v8-315/include" pgxnclient install plv8=1.4.3`
 * Then we follow [https://github.com/fhirbase/fhirbase-plv8#installation]()
- * `psql -d postgres` -- because there isn't a DB named after the local user. We now are in the PSQL CLI:
- * `CREATE DATABASE fhirbase;`. Then exit CLI
- * `export DATABASE_URL=postgres://user:password@localhost:5432/fhirbase` -- remember to escape any symbols in password
- * `wget https://github.com/fhirbase/fhirbase-plv8/releases/download/v1.4.0.0/fhirbase-1.4.0.0.sql.zip`
- * `unzip fhirbase-1.4.0.0.sql.zip`
- * `cat fhirbase-1.4.0.0.sql | psql fhirbase`
+	* `psql -d postgres` -- because there isn't a DB named after the local user. We now are in the PSQL CLI:
+	* `CREATE DATABASE fhirbase;`. Then exit CLI
+	* `export DATABASE_URL=postgres://user:password@localhost:5432/fhirbase` -- remember to escape any symbols in password
+	* `wget https://github.com/fhirbase/fhirbase-plv8/releases/download/v1.4.0.0/fhirbase-1.4.0.0.sql.zip`
+	* `unzip fhirbase-1.4.0.0.sql.zip`
+	* `cat fhirbase-1.4.0.0.sql | psql fhirbase`
 * And it worked fine. Tested by creating patient storage, seeing new tables generated, and then removed the storage.
 
 
-### Sphinx Install
+## Sphinx Install
 
-TBA
+Sphinx is configured to create documentation outputs ([#39](https://github.com/ouh-churchill/diakonia/issues/39)), and scan for django code. The html documentation is then pushed into another repository for display via GitHub pages ([#40](https://github.com/ouh-churchill/diakonia/issues/40))
+
+To publish:
+
+* In the diakonia repo, edit your documents, and commit changes
+* From the cli, whilst **in the diakonia virtualenv**:
+	* `cd docs`
+	* `make html`
+* In another cli, we add, commit, and push the changes to the documentation repo
+	* `workon ouh-churchill-docs`
+	* `cd ouh-churchill.github.io-repo`
+	* `git add .`
+	* `git commit -m 'updates'`
+	* `git push`
+	* For the quick, it can be: `git add .;git commit -m 'updates';git push`
+* Online documents can then be seen at [https://ouh-churchill.github.io]()

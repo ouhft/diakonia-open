@@ -3,7 +3,7 @@
 Documentation for Project Diakonia
 ==================================
 
-This is an XXXXXX. This has aims YYYY.
+This is a TEST. This has aims AIMS.
 
 You should find information related to the overall system from design, through to deployment and
 maintenance. If you have any questions, please contact the main author Carl Marshall
@@ -21,6 +21,13 @@ Contents
    _source/requirements
    _source/user_stories
    _source/development
+   _source/BMT/index
+   _source/NHIC/index
+   _source/FHIRstation/index
+   _source/PancreasDB/index
+   _source/TransplantEPR/index
+   _source/notes
+   _source/project_management
 
 
 Indices and tables

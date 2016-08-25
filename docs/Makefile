@@ -55,9 +55,11 @@ clean:
 
 .PHONY: html
 html:
-	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
+	# $(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html <-- Original
+	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) /Users/carl/Projects/ouh-churchill-docs/ouh-churchill.github.io-repo
 	@echo
-	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
+	# @echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
+	@echo "Build finished. The HTML pages are in ouh-churchill.github.io-repo."
 
 .PHONY: dirhtml
 dirhtml:
