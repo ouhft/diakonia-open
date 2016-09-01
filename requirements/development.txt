@@ -1,9 +1,10 @@
 -r common.txt
 
 ## Development utils
+gnureadline
 ipython
 selenium
-# django-extensions
+django-extensions
 # django-debug-toolbar
 
 ## Documentation

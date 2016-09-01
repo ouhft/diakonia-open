@@ -195,12 +195,32 @@
           <tspan x="-97.94" y="-1.75" font-family="HelveticaNeue-Bold" font-size="14" fill="#000000">powered by FHIRbase</tspan>
         </text>
       </g>
+      <g id="eyeaux">
+        <path d="M292,326.5 L499.88,326.5 L499.88,429.5 L292,429.5 L292,326.5 z" fill="#FFFFFF"/>
+        <text transform="matrix(1, 0, 0, 1, 395.764, 364)">
+          <tspan x="-91.764" y="-6" font-family="HelveticaNeue-Bold" font-size="24" fill="#FF0000">eyeaux</tspan>
+        </text>
+        <text transform="matrix(1, 0, 0, 1, 401.94, 396.75)">
+          <tspan x="-97.94" y="-18.75" font-family="HelveticaNeue-Bold" font-size="14" fill="#000000">NHIC-TRA motivated data </tspan>
+          <tspan x="-97.94" y="-1.75" font-family="HelveticaNeue-Bold" font-size="14" fill="#000000">ingest and export processes</tspan>
+        </text>
+      </g>
     </g>
     <g id="client_box">
       <path d="M11.5,37.5 L1008.5,37.5 L1008.5,216.5 L11.5,216.5 L11.5,37.5 z" fill-opacity="0" stroke="#ADADAD" stroke-width="3"/>
       <text transform="matrix(1, 0, 0, 1, 961.277, 61)">
         <tspan x="3.751" y="-3.5" font-family="HelveticaNeue-Bold" font-size="14" fill="#FFFFFF">client</tspan>
       </text>
+      <g id="Pancreas">
+        <path d="M46.78,71.5 L254.66,71.5 L254.66,174.5 L46.78,174.5 L46.78,71.5 z" fill="#FFFFFF"/>
+        <text transform="matrix(1, 0, 0, 1, 150.544, 109)">
+          <tspan x="-91.764" y="-6" font-family="HelveticaNeue-Bold" font-size="24" fill="#FF0000">TBA</tspan>
+        </text>
+        <text transform="matrix(1, 0, 0, 1, 156.72, 141.75)">
+          <tspan x="-97.94" y="-18.75" font-family="HelveticaNeue-Bold" font-size="14" fill="#000000">Pancreas DB Client - yet to </tspan>
+          <tspan x="-97.94" y="-1.75" font-family="HelveticaNeue-Bold" font-size="14" fill="#000000">be named</tspan>
+        </text>
+      </g>
     </g>
     <g id="RDBMS_Link">
       <path d="M51.72,483 L249.72,483 L249.72,524 L51.72,524 L51.72,483 z" fill="#ADADAD"/>

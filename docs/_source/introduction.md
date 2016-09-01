@@ -1,5 +1,5 @@
-# Project Diakonia
-This is an application to aide service development in the Transplant and Haematology Departments at OUH.
+# About Diakonia
+This is an umbrella project to aide service development in the Transplant and Haematology Departments at OUH.
 
 ## Project Name: Diakonia
 [Diakonia](https://en.wikipedia.org/wiki/Diaconia) - Ministers to the data needs of the departments
@@ -20,18 +20,16 @@ This is an application to aide service development in the Transplant and Haemato
 ## Outline
 **Name**: Diakonia
 
-**Goal**: TBC
+**Goal**: To develop processes and supporting applications for data management tasks within Transplant and Haematology
 
-**Metrics**: TBC
+**Metrics**: See each sub-project
 
 **Target Group**: Transplant and Haematology Department Staff
 
 
 ## Sub Projects
 1. **NHIC-TRA Export** - Starting point from a timeline perspective (if not a logical one) is the NIHR Health Informatics Collaborative - Transplantation data export project. 
-
-## Documents
-
-* [Developent Environment](development.md)
-* [Project Requirements](requirements.md)
-* [User Stories](user_stories.md)
+2. **Pancreas DB** - Process mapping and application development to capture Pancreas Transplant data for clinical evaluation
+3. **Transplant EPR** - Business proposal for a clinical EPR system to support the Transplant department
+4. **BMT** - Bone Marrow Transplant project
+5. **FHIRstation** - Development of an application server supporting the FHIR API built on top of the FHIRbase DB platform

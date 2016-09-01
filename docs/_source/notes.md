@@ -51,6 +51,7 @@ A likely favourite as their data model seems more flexible and saner (see person
 * [https://github.com/fhirbase]() -- Code repositories
 * [https://github.com/fhirbase/fhirbase-plv8]() -- Repository for the Postgres Implementation
 * [http://fhirbase.github.io/demo/index.html]() -- Demo site with query window
+* [https://groups.google.com/forum/#!forum/fhirbase]() -- Google group
 
 
 * [http://hl7.org/implement/standards/fhir/documentation.html]() -- Fhir documentation

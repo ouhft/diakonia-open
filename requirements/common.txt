@@ -2,3 +2,9 @@ Django
 pytz
 docutils
 django-environ
+
+# For eyeaux
+XlsxWriter
+openpyxl
+bdateutil
+lxml

@@ -3,7 +3,7 @@
 Documentation for Project Diakonia
 ==================================
 
-This is a TEST. This has aims AIMS.
+This is a PROJECT. This has aims AIMS.
 
 You should find information related to the overall system from design, through to deployment and
 maintenance. If you have any questions, please contact the main author Carl Marshall
@@ -11,11 +11,17 @@ maintenance. If you have any questions, please contact the main author Carl Mars
 
 Quick links:
 
+* This documentation is online at https://ouh-churchill.github.io/index.html
+* The repository is at https://github.com/ouh-churchill/diakonia
+* The project management (Waffle.io) screen is at https://waffle.io/ouh-churchill/diakonia
+
 Contents
 --------
 
 .. toctree::
    :maxdepth: 2
+   :caption: Table of Contents
+   :name: mastertoc
 
    _source/introduction
    _source/requirements

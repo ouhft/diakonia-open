@@ -1,4 +1,4 @@
-# FHIRstation
+# Introduction
 **Summary:** FHIR server django app built on top of FHIRbase
 
 **Key objectives:**
