@@ -9,9 +9,9 @@ This page is going to evolve a lot over the course of this project, mostly becau
 * The expectation is that we'll use the repository Issues system to track work items, which means having a stable set of URIs for referring to the requirements
 * Documentation for this project (and sub-projects) will be a priority (and therefore a high priority Non-functional Requirement in itself), and the planned toolchain will have us using Sphinx to compile and index the documents and files, with developer contributed content coming in the form of plain text files (either .md Markdown, or .rst ReStructured Text)
 * We still need to choose and adopt a suitable template for requirements gathering and reporting. Some examples can be seen at:
-	* [http://stackoverflow.com/questions/171653/examples-of-requirement-documents]()
-	* [http://techwhirl.com/writing-software-requirements-specifications/]()
-	* [https://en.wikipedia.org/wiki/Software_requirements_specification]()
+	* [http://stackoverflow.com/questions/171653/examples-of-requirement-documents](http://stackoverflow.com/questions/171653/examples-of-requirement-documents)
+	* [http://techwhirl.com/writing-software-requirements-specifications/](http://techwhirl.com/writing-software-requirements-specifications/)
+	* [https://en.wikipedia.org/wiki/Software_requirements_specification](https://en.wikipedia.org/wiki/Software_requirements_specification)
 
 
 ## Draft Content

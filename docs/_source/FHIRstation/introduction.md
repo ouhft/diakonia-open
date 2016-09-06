@@ -57,4 +57,4 @@ We're using FHIR as a semantic structure for the data layer, with FHIR-like comm
 
 Standard ORM techniques from most frameworks are of limited use with FHIRbase directly, though given other system elements will reside in a Postgres DB, they will still have their uses, and the FHIRbase DB can also be queried by `SQL SELECT` statements via ORM.
 
-**Question:** Do we handle the Binary endpoint? [https://www.hl7.org/fhir/binary.html]() There's no hint in the FHIRbase docs about what it does or does not support regarding binary types.
+**Question:** Do we handle the Binary endpoint? [https://www.hl7.org/fhir/binary.html](https://www.hl7.org/fhir/binary.html) There's no hint in the FHIRbase docs about what it does or does not support regarding binary types.

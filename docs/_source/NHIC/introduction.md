@@ -4,8 +4,8 @@ Overview: ???
 
 
 ## Common Terms
-* **NIHR** - NHS National Institute for Health Research [http://www.nihr.ac.uk/]() 
-* **HIC** - Health Informatics Collaborative [http://www.nihr.ac.uk/about/hic.htm]()
+* **NIHR** - NHS National Institute for Health Research [http://www.nihr.ac.uk/](http://www.nihr.ac.uk/) 
+* **HIC** - Health Informatics Collaborative [http://www.nihr.ac.uk/about/hic.htm](http://www.nihr.ac.uk/about/hic.htm])
 * **TRA** - Renal Transplantation Theme (one of five themes within the HIC project)
 * **ACS** - Acute Coronary Syndromes (another theme)
 * **CAN** - Ovarian Cancer theme
@@ -14,7 +14,7 @@ Overview: ???
 * **GSTT** - Guy's and St Thomas Trust, one of the TRA theme partners, and theme lead
 
 ## Resources
-* NIHR Website - single page overview: [http://www.nihr.ac.uk/about/hic.htm]()
+* NIHR Website - single page overview: [http://www.nihr.ac.uk/about/hic.htm](http://www.nihr.ac.uk/about/hic.htm])
 * NIHR Google Hub - a shared Google instance related to a `@nihr.ac.uk` address. Not very much on there at all.
 * Old BRC/HIC shared documents - via the Google Hub, in `Shared with me -> OxBRC`. Has a fair amount of dated content. Barely updated since 2014.
 * New BRC/HIC shared documents - also via the [Google Hub](https://drive.google.com/open?id=0BxVx4JelQXE_aE9OU0VnMGVQMFk), but this time in `My Drive -> HIC Shared Documents`. More current documentation, but still a dearth of Transplantation information (mostly due to there being little work done on it to date)
