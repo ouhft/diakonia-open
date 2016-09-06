@@ -14,11 +14,11 @@ There needs to be a lot more, and better structured. So one thing to get right f
 
 Consider shift of methodolgy as shown by the OPAL project, using Angluar JS as the Client side technology, with a Django application service backing it (and possibly a direct link to FhirBase?)
 
-* [https://angular.io/docs/ts/latest/guide/architecture.html]()
-* [http://www.bluebuttonjs.com]() -- BlueButton.js helps developers parse and generate complex health data formats like C-CDA with ease, so you can empower patients with access to their health records.
-* [https://github.com/openhealthcare/opal]() -- Django+Angular OSS health system
-	* With Plugins (though none for Transplant): [http://opal.openhealthcare.org.uk/docs/guides/plugins_list/]()
-	* Documentation: [http://opal.openhealthcare.org.uk/docs/]()
+* [https://angular.io/docs/ts/latest/guide/architecture.html](https://angular.io/docs/ts/latest/guide/architecture.html)
+* [http://www.bluebuttonjs.com](http://www.bluebuttonjs.com) -- BlueButton.js helps developers parse and generate complex health data formats like C-CDA with ease, so you can empower patients with access to their health records.
+* [https://github.com/openhealthcare/opal](https://github.com/openhealthcare/opal) -- Django+Angular OSS health system
+	* With Plugins (though none for Transplant): [http://opal.openhealthcare.org.uk/docs/guides/plugins_list/](http://opal.openhealthcare.org.uk/docs/guides/plugins_list/)
+	* Documentation: [http://opal.openhealthcare.org.uk/docs/](http://opal.openhealthcare.org.uk/docs/)
 
 
 ## Data Structures
@@ -27,7 +27,7 @@ There are many :-/
 
 ### NHS
 
-* NHS HSCIC has a data dictionary, with contents online at: [http://www.datadictionary.nhs.uk/data_dictionary/diagrams/diagrams/person_diagram_fr.asp?shownav=1]()
+* NHS HSCIC has a data dictionary, with contents online at: [http://www.datadictionary.nhs.uk/data_dictionary/diagrams/diagrams/person_diagram_fr.asp?shownav=1](http://www.datadictionary.nhs.uk/data_dictionary/diagrams/diagrams/person_diagram_fr.asp?shownav=1)
 * [https://data.england.nhs.uk]() -- Find and explore the data used by NHS England to conduct its core business
 * [http://systems.digital.nhs.uk/ddc]() -- Are behind the NHS Spine
 * [https://code4health.org]() -- An incubator group from NHS England
