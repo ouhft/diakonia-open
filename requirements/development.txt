@@ -3,9 +3,12 @@
 ## Development utils
 gnureadline
 ipython
-selenium
 django-extensions
-# django-debug-toolbar
+
+# Testing tools
+django-test-plus
+selenium
+django-debug-toolbar
 
 ## Documentation
 sphinx
@@ -13,7 +16,3 @@ sphinx_rtd_theme
 pyenchant
 sphinxcontrib-spelling
 recommonmark
-
-## Core utils
-pip
-wheel

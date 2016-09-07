@@ -1,9 +1,33 @@
-Django
-pytz
+## Core utils
+pip
+wheel
 docutils
+
+# Latest Django
+Django
+
+# Configuration
 django-environ
 
-# For eyeaux
+# Forms
+
+# Models
+
+# Images
+
+# AAA
+
+# DB
+psycopg2
+
+# Timezone support
+pytz
+
+
+# For specific APPS
+# APP: fhirstation
+
+# APP: eyeaux
 XlsxWriter
 openpyxl
 bdateutil
