@@ -21,7 +21,6 @@ TEMPLATES[0]['OPTIONS']['debug'] = DEBUG
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#secret-key
 # Note: This key only used for development and testing.
 SECRET_KEY = env('DJANGO_SECRET_KEY', default='CHANGEME!!!')
-print("DEBUG: Secret key set to {}".format(SECRET_KEY))
 
 # Mail settings
 # ------------------------------------------------------------------------------
@@ -42,8 +41,10 @@ CACHES = {
 
 # django-debug-toolbar
 # ------------------------------------------------------------------------------
-MIDDLEWARE += ['debug_toolbar.middleware.DebugToolbarMiddleware',]
-INSTALLED_APPS += ['debug_toolbar', ]
+# NB: Not presently compatible with Django 1.10 on Py3 - 2016-10-03 - DjDT v1.5
+#     https://github.com/jazzband/django-debug-toolbar/issues/853
+# MIDDLEWARE += ['debug_toolbar.middleware.DebugToolbarMiddleware',]
+# INSTALLED_APPS += ['debug_toolbar', ]
 
 INTERNAL_IPS = ['127.0.0.1', ]
 # tricks to have debug toolbar when developing with docker
@@ -65,4 +66,3 @@ TEST_RUNNER = 'django.test.runner.DiscoverRunner'
 
 # Your local stuff: Below this line define 3rd party library settings
 # ------------------------------------------------------------------------------
-print("DEBUG: end of settings.development")

@@ -1,0 +1,4112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2015 rel. 4 sp1 (x64) (http://www.altova.com) by IT Department (Guys & St Thomas NHS Foundation Trust) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1">
+	<xs:annotation>
+		<xs:documentation>
+			<h1>Title: NHIC Transplantation</h1>
+			<p>Version: 1.6.0</p>
+			<p>Generated: 2015-12-18T18:08:25.107+01:00</p>
+		</xs:documentation>
+	</xs:annotation>
+	<xs:annotation>
+		<xs:documentation>
+			<p>This metadata section enables the data to be automatically parsed.</p>
+		</xs:documentation>
+	</xs:annotation>
+	<xs:element name="record">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="metadata" type="metadata" minOccurs="1" maxOccurs="1"/>
+				<xs:element name="recipient" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="recipient_ID" type="xs:ID">
+								<xs:annotation>
+									<xs:documentation>
+										<description>The ID of the Recipient used when cross-referring in Transplant. Format: This should start with 'R_' followed by the value in pseudo id attribute nhic_tra_0</description>
+									</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="demographics">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="nhic_tra_0" type="nhic_tra_Pseudo_ID">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>Pseudonymised patient identifier</question-text>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>Pseudo ID of the Patient (Recipient). This is a code which is anonymous to those looking at the dataset, but which can be used to look up the real identity of the patient.</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_19" type="xs:integer">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>NHSBT/ODT Number</question-text>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>ODT identifier of an IDENTIFIED INDIVIDUAL (Recipient) , used to link with NHSBT database records</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_6" type="xs:integer">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>Date of birth</question-text>
+													<anonymisation>Return only the Year part</anonymisation>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>Year of date of birth of an IDENTIFIED INDIVIDUAL (Recipient)</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_8" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>Postcode</question-text>
+													<anonymisation>This value must be masked to just the outer part of postcode to ensure data does not contain identifiable information</anonymisation>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>Outer Postcode of the current home address of an IDENTIFIED INDIVIDUAL (Recipient)</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_14" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>Gender</question-text>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>Current gender of an IDENTIFIED INDIVIDUAL (Recipient)</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_14-1" type="nhic_tra_gender_type" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>
+													<description>Current gender of an IDENTIFIED INDIVIDUAL (Recipient) - Translated</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_15" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>Ethnicity</question-text>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>Coded ethnic identity of an IDENTIFIED INDIVIDUAL (Recipient)</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_15-1" type="nhic_tra_ethnicity_type" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>
+													<description>Coded ethnic identity of an IDENTIFIED INDIVIDUAL (Recipient) - Translated</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_16" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>GP Surgery</question-text>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>The GP Surgery where an IDENTIFIED INDIVIDUAL (Recipient) is currently registered</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_17" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>Blood Group</question-text>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>A/B/O/AB blood group of an IDENTIFIED INDIVIDUAL (Recipient)</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_17-1" type="nhic_tra_blood_group_type" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>
+													<description>A/B/O/AB blood group of an IDENTIFIED INDIVIDUAL (Recipient) - Translated</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_18" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>Blood Rhesus</question-text>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>Rhesus blood group of an IDENTIFIED INDIVIDUAL (Recipient)</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_18-1" type="nhic_tra_blood_rhesus_type" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>
+													<description>Rhesus blood group of an IDENTIFIED INDIVIDUAL (Recipient) - Translated</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_20" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>Renal Registry Number</question-text>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>The Renal Registry number for an IDENTIFIED INDIVIDUAL (Recipient)</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_21" type="xs:date" minOccurs="0">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>Date of death</question-text>
+													<anonymisation>This value must be masked as YYYY-MM-15 to ensure data does not contain identifiable information</anonymisation>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>Date of death of an IDENTIFIED INDIVIDUAL (Recipient)</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="biopsy" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="nhic_tra_267" type="nhic_tra_biopsy_type_type">
+											<xs:annotation>
+												<xs:documentation>
+													<description>Biopsy of Native, Pre-implantation, Explanted or Transplant Kidney?</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_203" type="xs:dateTime">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>Biopsy date</question-text>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>Date of BIOPSY either NATIVE or performed on a TRANSPLANT</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_204" type="xs:string">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>Biopsy report text</question-text>
+													<anonymisation>Free text anonymisation required to remove all PID from text</anonymisation>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>BIOPSY Report Text (NATIVE or TRANSPLANT)</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_205" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>Biopsy report ID</question-text>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>BIOPSY Report ID (NATIVE or TRANSPLANT)</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="banff-code" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="nhic_tra_206" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Banff code</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>BANFF CODE Assigned to a TRANSPLANT BIOPSY</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_206-1" type="nhic_tra_banff_code_type" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>
+																<description>BANFF CODE Assigned to a TRANSPLANT BIOPSY - Translated</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="banff-symptom-category" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="nhic_tra_207" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Banff symptom category</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>BANFF SYMPTOM Category assessed in a TRANSPLANT BIOPSY</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_207-1" type="nhic_tra_banff_sympton_category_type" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>
+																<description>BANFF SYMPTOM Category assessed in a TRANSPLANT BIOPSY - Translated</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_208" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Banff symptom category score</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>BANFF SYMPTOM score assigned to a TRANSPLANT BIOPSY</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="karpinski-score" minOccurs="0">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="nhic_tra_75" type="nhic_tra_karpinski_score_type" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Pre-implantation biopsy K score</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>The Karpinski score given to the pre-implantation biopsy performed on a kidney used in a TRANSPLANT</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_76" type="nhic_tra_karpinski_score_type" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Pre-implantation biopsy K score (second kidney)</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>The Karpinski score given to the pre-implantation biopsy for the second kidney used in a TRANSPLANT, if it was a dual transplant</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="nhic_tra_266" type="nhic_tra_histopatholgy_diagnosis_type" minOccurs="0" maxOccurs="unbounded">
+											<xs:annotation>
+												<xs:documentation>
+													<description>Diagnoses made by the Histopathologist from the Biopsy Report</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="post-transplant-followup" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="height" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="nhic_tra_127" type="xs:decimal" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Height</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>HEIGHT MEASUREMENT</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_128" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Height unit</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>HEIGHT MEASUREMENT unit</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_129" type="xs:dateTime" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Height date</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Date of HEIGHT MEASUREMENT</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="weight" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="nhic_tra_130" type="xs:decimal" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Weight</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>WEIGHT MEASUREMENT</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_131" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Weight unit</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>WEIGHT MEASUREMENT unit</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_132" type="xs:dateTime" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Weight date</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Date of WEIGHT MEASUREMENT</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="blood-pressure-systolic" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="nhic_tra_241" type="xs:integer" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Blood pressure - Systolic</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>BLOOD PRESSURE MEASUREMENT - Systolic</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_251" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Blood pressure - Systolic unit</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Unit of Systolic BLOOD PRESSURE MEASUREMENT</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_252" type="xs:dateTime" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Blood pressure - Systolic date</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Date and time of Systolic BLOOD PRESSURE MEASUREMENT</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="blood-pressure-diastolic" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="nhic_tra_242" type="xs:integer" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Blood pressure - Diastolic</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>BLOOD PRESSURE MEASUREMENT - Diastolic</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_253" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Blood pressure - Diastolic unit</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Unit of Diastolic BLOOD PRESSURE MEASUREMENT</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_254" type="xs:dateTime" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Blood pressure - Diastolic date</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Date and time of Diastolic BLOOD PRESSURE MEASUREMENT</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="dgf" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="nhic_tra_124" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Allograft function</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Coded value representing whether the function of the kidney TRANSPLANT was immediate, delayed or absent</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_124-1" type="nhic_tra_allograft_function_type" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Allograft function - Translated</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Coded value representing whether the function of the kidney TRANSPLANT was immediate, delayed or absent - Translated</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="dialysis-modality" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="nhic_tra_125" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Dialysis modality (post-transplant)</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Modality of any DIALYSIS PERIOD occurring after the TRANSPLANT</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_125-1" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Dialysis modality - translated</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Modality of any DIALYSIS PERIOD occurring after the TRANSPLANT - Translated</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_126" type="xs:dateTime" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Dialysis date/time</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Date and time of any DIALYSIS PERIOD occurring after a TRANSPLANT</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="hla-antibody" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="nhic_tra_136" type="xs:dateTime" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>HLA antibody date</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Date of HLA ANTIBODY test</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_137" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>HLA antibody locus</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Locus at which HLA ANTIBODY was tested</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_138" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>HLA antibody value</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Locus value/allele at which HLA ANTIBODY was tested</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_139" type="nhic_tra_hla_antibody_result_type" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>
+																<description>Result of HLA ANTIBODY assay</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="medical-history" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="nhic_tra_55" type="nhic_tra_Enum_YesNo_type" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>
+													<description>Was the transplant performed on the RECIPIENT before dialysis was required?</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_59" type="xs:integer" minOccurs="0">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>No. of previous transplants</question-text>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>number of transplants a RECIPIENT had prior to the most recent
+one</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_65" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>
+													<description>Coded value representing whether the RECIPIENT is a current, previous or non-smoker</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_65-1" type="nhic_tra_smoker_status_type" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>
+													<description>Coded value representing whether the RECIPIENT is a current, previous or non-smoker - Translated</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="comorbidity" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="nhic_tra_63" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Comorbidity diagnosis</question-text>
+																<anonymisation>Free text anonymisation required to remove all PID from text</anonymisation>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Comorbidity condition diagnosed in a RECIPIENT</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_64" type="xs:dateTime" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Comorbidity diagnosis date</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Date at which a RECIPIENT was diagnosed with a comorbidity</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="family-history" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="nhic_tra_60" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Family history: diagnosis</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Diagnosis of a FAMILY HISTORY condition in a RECIPIENT</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_61" type="xs:dateTime" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Family history: diagnosis date</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Date of diagnosis of a FAMILY HISTORY condition</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_62" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Family history: relationship</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Relationship of subject of FAMILY HISTORY to the RECIPIENT</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_62-1" type="nhic_tra_family_history_relationship_type" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>
+																<description>Relationship of subject of FAMILY HISTORY to the RECIPIENT - Translated</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="dialysis-modality" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="nhic_tra_56" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>
+																<description>Modality used for a RECIPIENT's DIALYSIS PERIOD</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_56-1" type="nhic_tra_pre-transplant_dialysis_modality_type" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Dialysis Modality - translated</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Modality used for a RECIPIENT's DIALYSIS PERIOD - Translated</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_57" type="xs:dateTime" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Dialysis modality start date</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Start of DIALYSIS PERIOD using this mode of dialysis</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_58" type="xs:dateTime" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Dialysis modality end date</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>End of DIALYSIS PERIOD using this mode of dialysis</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="esrd" minOccurs="0">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="nhic_tra_52" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Cause of ESRD</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Cause of End Stage Renal Disease in a RECIPIENT</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_53" type="xs:dateTime" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Diagnosis Date for ESRD</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Date on which a RECIPIENT was diagnosed with End Stage Renal Disease</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_54" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Postcode at ESRD diagnosis</question-text>
+																<anonymisation>This value must be masked to just the outer part of postcode to ensure data does not contain identifiable information</anonymisation>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Outer part of Postcode of a RECIPIENT at time of diagnosis with End Stage Renal Disease</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="drug-prescriptions" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="nhic_tra_117" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>Drug name</question-text>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>Brand name of a DRUG PRESCRIPTION</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_117-1" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>Drug name - translated</question-text>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>Brand name of a DRUG PRESCRIPTION - Translated</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_118" type="xs:dateTime" minOccurs="0">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>Drug start date</question-text>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>Start date of a DRUG PRESCRIPTION</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_119" type="xs:dateTime" minOccurs="0">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>Drug stop date</question-text>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>End date of a DRUG PRESCRIPTION</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_120" type="xs:dateTime" minOccurs="0">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>Drug current as of date</question-text>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>Date at which a DRUG PRESCRIPTION was known to be current</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_121" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>Dose</question-text>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>Dose of a DRUG PRESCRIPTION</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_122" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>Dose unit</question-text>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>Dose unit of a DRUG PRESCRIPTION</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_123" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>Dose frequency</question-text>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>Frequency of administration of a DRUG PRESCRIPTION</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_123-1" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>
+													<description>Frequency of administration of a DRUG PRESCRIPTION - Translated</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_256" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>Drug generic name</question-text>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>Generic drug name, eg: ‘Tacrolimus’</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_257" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>Drug class</question-text>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>Drug class, eg ‘CNI Inhibitor’</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_258" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>Broader drug class</question-text>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>Broader drug class, eg: ‘Immunosuppressant’</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="clinical-event" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="nhic_tra_140" type="xs:dateTime" minOccurs="0">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>Clinical event date/time</question-text>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>Date of a CLINICAL EVENT that occurs to an INDIVIDUAL (Recipient)</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_141" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>Clincal event description</question-text>
+													<anonymisation>Free text anonymisation required to remove all PID from text</anonymisation>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>Specifies a CLINICAL EVENT that occurs to an INDIVIDUAL (Recipient)</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="serology" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="cmv" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="nhic_tra_97" type="nhic_tra_serology_result_type" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>
+																<description>CMV SEROLOGY RESULT of an INDIVIDUAL (Recipient)</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_98" type="xs:dateTime" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>CMV date</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Date of CMV SEROLOGY RESULT (Recipient)</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="ebv" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="nhic_tra_99" type="nhic_tra_serology_result_type" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>
+																<description>EBV SEROLOGY RESULT of an INDIVIDUAL (Recipient)</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_100" type="xs:dateTime" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>EBV date</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Date of EBV SEROLOGY RESULT (Recipient)</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="vzv" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="nhic_tra_101" type="nhic_tra_serology_result_type" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>
+																<description>VZV SEROLOGY RESULT of an INDIVIDUAL (Recipient)</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_102" type="xs:dateTime" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>VZV date</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Date of VZV SEROLOGY RESULT (Recipient)</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="toxoplasma" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="nhic_tra_103" type="nhic_tra_serology_result_type" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>
+																<description>Toxoplasma SEROLOGY RESULT of an INDIVIDUAL (Recipient)</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_104" type="xs:dateTime" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Toxoplasma date</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Date of Toxoplasma SEROLOGY RESULT  (Recipient)</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="hiv" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="nhic_tra_105" type="nhic_tra_serology_result_type" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>
+																<description>HIV SEROLOGY RESULT of an INDIVIDUAL (Recipient)</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_106" type="xs:dateTime" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>HIV date</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Date of HIV SEROLOGY RESULT (Recipient)</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="hep" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="nhic_tra_230" type="nhic_tra_serology_result_type" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>
+																<description>HepB core Ab SEROLOGY RESULT of an INDIVIDUAL (Recipient)</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_280" type="xs:dateTime" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>
+																<description>Date of HepB core Ab SEROLOGY RESULT (Recipient)</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_231" type="nhic_tra_serology_result_type" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>
+																<description>HepB surface antigen SEROLOGY RESULT of an INDIVIDUAL (Recipient)</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_281" type="xs:dateTime" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>
+																<description>Date of HepB surface antigen SEROLOGY RESULT (Recipient)</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_232" type="nhic_tra_serology_result_type" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>
+																<description>HepC IgG SEROLOGY RESULT of an INDIVIDUAL (Recipient)</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_282" type="xs:dateTime" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>
+																<description>Date of HepC IgG SEROLOGY RESULT (Recipient)</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="urine-test" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="urine-dip" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="nhic_tra_188" type="xs:dateTime" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Urine dip date/time</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Date and time of URINE DIP test</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_189" type="nhic_tra_test_result_type" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Leucocyte dip result</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>URINE DIP Leucocyte result</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_190" type="nhic_tra_test_result_type" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Nitrite dip result</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>URINE DIP nitrite result</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_191" type="nhic_tra_test_result_type" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>pH dip result</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>URINE DIP pH result</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_192" type="nhic_tra_test_result_type" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Protein dip result</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>URINE DIP protein result</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_193" type="nhic_tra_test_result_type" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Glucose dip result</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>URINE DIP glucose result</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_194" type="nhic_tra_test_result_type" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Ketone bodies dip result</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>URINE DIP ketone bodies result</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_195" type="nhic_tra_test_result_type" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Erythrocytes dip result</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>URINE DIP erythrocytes result</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="albumin-test" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="nhic_tra_197" type="xs:dateTime" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Albumin test date/time</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>URINE TEST date - Albumin</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_198" type="nhic_tra_test_result_type" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Albumin test result</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>URINE TEST result - Albumin</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_199" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Albumin test unit</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>URINE TEST unit - Albumin</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="microalbumin-test" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="nhic_tra_200" type="xs:dateTime" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Microalbumin test date/time</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>URINE TEST date - Microalbumin</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_201" type="nhic_tra_test_result_type" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Microalbumin test result</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>URINE TEST result - Microalbumin</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_202" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Microalbumin test unit</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>URINE TEST unit - Microalbumin</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="protein-creatine-ratio" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="nhic_tra_239" type="nhic_tra_test_result_type" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Protein Creatinine ratio</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Protein Creatinine ratio from URINE TEST</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_276" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>
+																<description>Protein Creatinine ratio from URINE TEST unit</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_277" type="xs:dateTime" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>
+																<description>Protein Creatinine ratio from URINE TEST date and time</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="albumin-creatine-ratio" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="nhic_tra_240" type="nhic_tra_test_result_type" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Albumin Creatinine ratio</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Albumin Creatinine ratio from URINE TEST</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_278" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Albumin Creatinine ratio</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Albumin Creatinine ratio from URINE TEST unit</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_279" type="xs:dateTime" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Albumin Creatinine ratio</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Albumin Creatinine ratio from URINE TEST date and time</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="blood-test" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="serum-creatinine" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="nhic_tra_142" type="nhic_tra_test_result_type" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Serum creatinine level</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Serum creatinine  BLOOD RESULT level</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_143" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Serum creatinine unit</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Serum creatinine  BLOOD RESULT unit</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_144" type="xs:dateTime" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Serum creatinine date/time</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Serum creatinine  BLOOD RESULT date and time</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="blood-glucose" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="nhic_tra_145" type="nhic_tra_test_result_type" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Blood glucose level</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Blood glucose BLOOD RESULT level</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_146" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Blood glucose unit</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Blood glucose BLOOD RESULT unit</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_147" type="xs:dateTime" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Blood glucose date/time</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Blood glucose BLOOD RESULT date and time</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="ciclosporin-level" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="nhic_tra_154" type="nhic_tra_test_result_type" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Ciclosporin level</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Ciclosporin BLOOD RESULT level</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_155" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Ciclosporin level unit</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Ciclosporin BLOOD RESULT unit</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_156" type="xs:dateTime" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Ciclosporin level date/time</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Ciclosporin BLOOD RESULT date and time</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="tacrolimus-level" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="nhic_tra_151" type="nhic_tra_test_result_type" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Tacrolimus level</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Tacrolimus BLOOD RESULT level</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_152" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Tacrolimus level unit</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Tacrolimus BLOOD RESULT unit</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_153" type="xs:dateTime" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Tacrolimus level date/time</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Tacrolimus BLOOD RESULT date and time</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="hba1c-level" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="nhic_tra_157" type="nhic_tra_test_result_type" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>HbA1C level</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>HbA1C BLOOD RESULT level</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_158" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>HbA1C level unit</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>HbA1C BLOOD RESULT unit</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_159" type="xs:dateTime" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>HbA1C level date/time</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>HbA1C BLOOD RESULT date and time</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="cmv-viral-load" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="nhic_tra_160" type="nhic_tra_test_result_type" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>CMV viral load</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>CMV BLOOD RESULT level</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_161" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>CMV viral load unit</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>CMV BLOOD RESULT unit</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_162" type="xs:dateTime" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>CMV viral load date/time</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>CMV BLOOD RESULT date and time</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="ebv-viral-load" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="nhic_tra_163" type="nhic_tra_test_result_type" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>EBV viral load</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>EBV BLOOD RESULT level</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_164" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>EBV viral load unit</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>EBV BLOOD RESULT unit</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_165" type="xs:dateTime" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>EBV viral load date/time</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>EBV BLOOD RESULT date and time</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="bk-viral-load-blood" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="nhic_tra_166" type="nhic_tra_test_result_type" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>BK viral load (blood)</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>BK viral load BLOOD RESULT level</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_167" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>BK viral load (blood) unit</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>BK viral load BLOOD RESULT unit</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_168" type="xs:dateTime" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>BK viral load (blood) date/time</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>BK viral load BLOOD RESULT date and time</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="blood-result" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="nhic_tra_169" type="xs:dateTime" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Blood cell count date/time</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>BLOOD COUNT date and time</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_170" type="nhic_tra_test_result_type" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>White Blood Cell count</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>BLOOD COUNT white blood cells</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_171" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>White Blood Cell count unit</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>BLOOD COUNT wbc unit</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_172" type="nhic_tra_test_result_type" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Red Blood Cell count</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>BLOOD COUNT red blood cells</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_173" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Red Blood Cell count unit</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>BLOOD COUNT rbc unit</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_174" type="nhic_tra_test_result_type" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Haemoglobin</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>BLOOD COUNT haemoglobin</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_175" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Haemoglobin unit</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>BLOOD COUNT haemoglobin unit</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_176" type="nhic_tra_test_result_type" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Lymphocytes</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>BLOOD COUNT lymphocytes</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_177" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Lymphocytes unit</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>BLOOD COUNT lymphocytes unit</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_178" type="nhic_tra_test_result_type" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Basophils</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>BLOOD COUNT basophils</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_179" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Basophils unit</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>BLOOD COUNT basophils unit</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_180" type="nhic_tra_test_result_type" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Monocytes</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>BLOOD COUNT monocytes</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_181" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Monocytes unit</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>BLOOD COUNT monocytes unit</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_182" type="nhic_tra_test_result_type" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Eosinophils</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>BLOOD COUNT eosinophils</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_183" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Eosinophils unit</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>BLOOD COUNT eosinophils unit</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_184" type="nhic_tra_test_result_type" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Platelets</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>BLOOD COUNT platelets</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_185" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Platelets unit</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>BLOOD COUNT platelets unit</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_186" type="nhic_tra_test_result_type" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Neutrophils</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>BLOOD COUNT neutrophils</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_187" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Neutrophils unit</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>BLOOD COUNT neutrophils unit</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="estimated-GFR" minOccurs="0">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="nhic_tra_236" type="nhic_tra_test_result_type" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>estimated GFR (MDRD formula)</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Estimated GFR (in mL/min) based on creatinine from BLOOD RESULT and patient characteristics</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_246" type="xs:dateTime" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>estimated GFR (MDRD formula) date</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Date and time of estimated GFR based on creatinine from BLOOD RESULT and patient characteristics</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="mycophenylate" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="nhic_tra_237" type="nhic_tra_test_result_type" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Mycophenylate level</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Mycophenylate BLOOD RESULT level</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_247" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Mycophenylate unit</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Mycophenylate BLOOD RESULT unit</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_248" type="xs:dateTime" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Mycophenylate date</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Mycophenylate BLOOD RESULT date and time</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="sirolimus" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="nhic_tra_238" type="nhic_tra_test_result_type" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Sirolimus level</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Sirolimus BLOOD RESULT level</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_249" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Sirolimus unit</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Sirolimus BLOOD RESULT unit</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_250" type="xs:dateTime" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Sirolimus date</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Sirolimus BLOOD RESULT date and time</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="hla" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="seroligical" minOccurs="0" maxOccurs="unbounded">
+											<xs:annotation>
+												<xs:documentation>
+													<description>Recipient HLA data at the serological level from NHSBT</description>
+												</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="nhic_tra_86" type="xs:dateTime" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>HLA Serological typing date</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Date at which an RECIPIENT was assigned an HLA TYPE at the Serological level</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_87" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>HLA Serological typing method</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Method by which a RECIPIENT was assigned an HLA TYPE - Serological</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_88" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>HLA Serological locus </question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>LOCUS of a RECIPIENT HLA TYPE - Serological</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_89" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>HLA Serological value</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Value at LOCUS of a RECIPIENT HLA TYPE - Serological</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="molecular" minOccurs="0" maxOccurs="unbounded">
+											<xs:annotation>
+												<xs:documentation>
+													<description>Recipient HLA data at the molecular level from Tissue Typing Lab</description>
+												</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="nhic_tra_268" type="xs:dateTime" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>HLA Molecular typing date</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Date at which an RECIPIENT was assigned an HLA TYPE at the Molecular level (High Resolution)</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_269" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>HLA Molecular typing method</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Method by which a RECIPIENT was assigned an HLA TYPE - Molecular</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_270" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>HLA Molecular locus</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>LOCUS of a RECIPIENT HLA TYPE - Molecular</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_271" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>HLA Molecular value</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Value at LOCUS of a RECIPIENT HLA TYPE  - Molecular</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="generic-consent" type="generic-consent" minOccurs="0"/>
+							<xs:element name="study" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="enrolment" type="study-enrolment" minOccurs="0" maxOccurs="unbounded"/>
+										<xs:element name="sample-collection" type="study-sample-collection" minOccurs="0" maxOccurs="unbounded"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="donor" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="donor_ID" type="xs:ID">
+								<xs:annotation>
+									<xs:documentation>
+										<description>The ID of the Donor used when cross-referring in Transplant. Format: This should start with 'D_' followed by the value in pseudo id attributenhic_tra_243</description>
+									</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="demographics">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="nhic_tra_243" type="nhic_tra_Pseudo_ID">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>Living Donor Pseudonym</question-text>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>Pseudo ID of the Donor. Applies to both IDENTIFIED or NON-IDENTIFIED INDIVIDUAL</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_40" type="xs:integer">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>NHSBT/ODT Number</question-text>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>ODT identifier, used to link with NHSBT database records of an IDENTIFIED INDIVIDUAL (Donor)  or NON-IDENTIFIED INDIVIDUAL (Donor)</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_27" type="xs:integer" minOccurs="0">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>Date of birth</question-text>
+													<anonymisation>Return only the Year part</anonymisation>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>Year of date of birth of an IDENTIFIED INDIVIDUAL (Donor) or NON-IDENTIFIED INDIVIDUAL (Donor)</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_35" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>Gender</question-text>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>Current gender of an IDENTIFIED INDIVIDUAL (Donor)  or NON-IDENTIFIED INDIVIDUAL (Donor) </description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_35-1" type="nhic_tra_gender_type" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>
+													<description>Current gender of an IDENTIFIED INDIVIDUAL (Donor)  or NON-IDENTIFIED INDIVIDUAL (Donor) - Translated</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_36" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>Ethnicity</question-text>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>Coded ethnic identity of an IDENTIFIED INDIVIDUAL (Donor)  or NON-IDENTIFIED INDIVIDUAL (Donor)</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_36-1" type="nhic_tra_ethnicity_type" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>
+													<description>Coded ethnic identity of an IDENTIFIED INDIVIDUAL (Donor)  or NON-IDENTIFIED INDIVIDUAL (Donor) - Translated</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_38" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>Blood Group</question-text>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>A/B/O/AB blood group of an IDENTIFIED INDIVIDUAL (Donor)  or NON-IDENTIFIED INDIVIDUAL (Donor) </description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_38-1" type="nhic_tra_blood_group_type" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>
+													<description>A/B/O/AB blood group of an IDENTIFIED INDIVIDUAL (Donor)  or NON-IDENTIFIED INDIVIDUAL (Donor) -  Translated</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_39" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>Blood Rhesus</question-text>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>Rhesus blood group of an IDENTIFIED INDIVIDUAL (Donor)  or NON-IDENTIFIED INDIVIDUAL (Donor)</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_39-1" type="nhic_tra_blood_rhesus_type" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>
+													<description>Rhesus blood group of an IDENTIFIED INDIVIDUAL (Donor)  or NON-IDENTIFIED INDIVIDUAL (Donor) - Translated</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_41" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>Renal Registry Number</question-text>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>The Renal Registry number for an IDENTIFIED INDIVIDUAL (Donor)  or NON-IDENTIFIED INDIVIDUAL (Donor)</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_42" type="xs:integer" minOccurs="0">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>Age</question-text>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>The age in years of an IDENTIFIED INDIVIDUAL (Donor)  or NON-IDENTIFIED INDIVIDUAL (Donor)</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:choice>
+											<xs:element name="living-donor" minOccurs="0">
+												<xs:complexType>
+													<xs:sequence>
+														<xs:element name="nhic_tra_29" type="xs:string" minOccurs="0">
+															<xs:annotation>
+																<xs:appinfo>
+																	<question-text>Postcode</question-text>
+																	<anonymisation>This value must be masked to just the outer part of postccode to ensure data does not contain identifiable information</anonymisation>
+																</xs:appinfo>
+																<xs:documentation>
+																	<description>Outer Postcode of the current home address of an IDENTIFIED INDIVIDUAL (Donor)</description>
+																</xs:documentation>
+															</xs:annotation>
+														</xs:element>
+														<xs:element name="nhic_tra_37" type="xs:string" minOccurs="0">
+															<xs:annotation>
+																<xs:appinfo>
+																	<question-text>GP Surgery</question-text>
+																</xs:appinfo>
+																<xs:documentation>
+																	<description>The GP Surgery where an IDENTIFIED INDIVIDUAL (Donor) is currently registered</description>
+																</xs:documentation>
+															</xs:annotation>
+														</xs:element>
+													</xs:sequence>
+												</xs:complexType>
+											</xs:element>
+											<xs:element name="cadaveric-donor" minOccurs="0">
+												<xs:complexType>
+													<xs:sequence>
+														<xs:element name="nhic_tra_44" type="xs:string" minOccurs="0">
+															<xs:annotation>
+																<xs:appinfo>
+																	<question-text>Cause of death</question-text>
+																</xs:appinfo>
+																<xs:documentation>
+																	<description>The coded cause of death of a NON-IDENTIFIED INDIVIDUAL (Donor)</description>
+																</xs:documentation>
+															</xs:annotation>
+														</xs:element>
+														<xs:element name="nhic_tra_44-1" type="nhic_tra_cause_of_death_type" minOccurs="0">
+															<xs:annotation>
+																<xs:documentation>
+																	<description>The coded cause of death of a NON-IDENTIFIED INDIVIDUAL (Donor) - Translated</description>
+																</xs:documentation>
+															</xs:annotation>
+														</xs:element>
+													</xs:sequence>
+												</xs:complexType>
+											</xs:element>
+										</xs:choice>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="comorbidity" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="nhic_tra_46" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>Comorbidity diagnosis</question-text>
+													<anonymisation>Free text anonymisation required to remove all PID from text</anonymisation>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>Any comorbidities of an IDENTIFIED INDIVIDUAL (Donor)  or NON-IDENTIFIED INDIVIDUAL (Donor) known at time of transplant</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_47" type="xs:dateTime" minOccurs="0">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>Comorbidity diagnosis date</question-text>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>Date of diagnosis of any comorbidities of an IDENTIFIED INDIVIDUAL (Donor)  or NON-IDENTIFIED INDIVIDUAL (Donor), if known</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="serology" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="cmv" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="nhic_tra_107" type="nhic_tra_serology_result_type" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>
+																<description>CMV SEROLOGY RESULT of an INDIVIDUAL (Donor)</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_108" type="xs:dateTime" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>CMV date</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Date of CMV SEROLOGY RESULT (Donor)</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="ebv" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="nhic_tra_109" type="nhic_tra_serology_result_type" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>
+																<description>EBV SEROLOGY RESULT of an INDIVIDUAL (Donor)</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_110" type="xs:dateTime" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>EBV date</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Date of EBV SEROLOGY RESULT (Donor)</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="vzv" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="nhic_tra_111" type="nhic_tra_serology_result_type" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>
+																<description>VZV SEROLOGY RESULT of an INDIVIDUAL (Donor)</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_112" type="xs:dateTime" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>VZV date</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Date of VZV SEROLOGY RESULT (Donor)</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="toxoplasma" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="nhic_tra_113" type="nhic_tra_serology_result_type" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>
+																<description>Toxoplasma SEROLOGY RESULT of an INDIVIDUAL (Donor)</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_114" type="xs:dateTime" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Toxoplasma date</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Date of Toxoplasma SEROLOGY RESULT (Donor)</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="hiv" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="nhic_tra_115" type="nhic_tra_serology_result_type" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>
+																<description>HIV SEROLOGY RESULT of an INDIVIDUAL (Donor)</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_116" type="xs:dateTime" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>HIV date</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Date of HIV SEROLOGY RESULT (Donor)</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="hep" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="nhic_tra_233" type="nhic_tra_serology_result_type" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>
+																<description>HepB core Ab SEROLOGY RESULT of an INDIVIDUAL (Donor)</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_283" type="xs:dateTime" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>
+																<description>Date of HepB core Ab SEROLOGY RESULT (Donor)</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_234" type="nhic_tra_serology_result_type" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>
+																<description>HepB surface antigen SEROLOGY RESULT of an INDIVIDUAL (Donor)</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_284" type="xs:dateTime" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>
+																<description>Date of HepB surface antigen SEROLOGY RESULT (Donor)</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_235" type="nhic_tra_serology_result_type" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>
+																<description>HepC IgG SEROLOGY RESULT of an INDIVIDUAL (Donor)</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_285" type="xs:dateTime" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>
+																<description>Date of HepC IgG SEROLOGY RESULT (Donor)</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="hla" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="serological" minOccurs="0" maxOccurs="unbounded">
+											<xs:annotation>
+												<xs:documentation>
+													<description>Donor HLA data at the serological level from NHSBT</description>
+												</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="nhic_tra_262" type="xs:dateTime" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>HLA Serological typing date</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Date at which a DONOR was assigned an HLA TYPE at the Serological level</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_263" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>HLA Serological typing method</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Method by which a DONOR was assigned an HLA TYPE - Serological</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_264" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>HLA Serological locus</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>LOCUS of a DONOR HLA TYPE - Serological</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_265" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>HLA Serological value</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Value at LOCUS of a DONOR HLA TYPE - Serological</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="molecular" minOccurs="0" maxOccurs="unbounded">
+											<xs:annotation>
+												<xs:documentation>
+													<description>Donor HLA data at the molecular level from Tissue Typing Lab</description>
+												</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="nhic_tra_272" type="xs:dateTime" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>HLA Molecular typing date</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Date at which an DONOR was assigned an HLA TYPE at the Molecular level (High Resolution)</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_273" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>Method by which a DONOR was assigned an HLA TYPE - Molecular</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Method by which a DONOR was assigned an HLA TYPE</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_274" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>LOCUS of a DONOR HLA TYPE - Molecular</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>LOCUS of a DONOR HLA TYPE</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="nhic_tra_275" type="xs:string" minOccurs="0">
+														<xs:annotation>
+															<xs:appinfo>
+																<question-text>HLA Molecular value</question-text>
+															</xs:appinfo>
+															<xs:documentation>
+																<description>Value at LOCUS of a DONOR HLA TYPE - Molecular</description>
+															</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="generic-consent" type="generic-consent" minOccurs="0"/>
+							<xs:element name="study" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="enrolment" type="study-enrolment" minOccurs="0" maxOccurs="unbounded"/>
+										<xs:element name="sample-collection" type="study-sample-collection" minOccurs="0" maxOccurs="unbounded"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="transplant" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="recipient_IDREF" type="xs:IDREF"/>
+							<xs:element name="donor_IDREF" type="xs:IDREF"/>
+							<xs:element name="tranplant-details">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="nhic_tra_66" type="xs:dateTime">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>Date of transplant</question-text>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>Date of a TRANSPLANT</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_67" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>Transplant Centre</question-text>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>Centre at which a TRANSPLANT was performed on a RECIPIENT and a DONOR</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_70" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>Type of transplant</question-text>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>Type of donor for TRANSPLANT, eg cadaveric DBD/DCD, Live related/unrelated</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_70-1" type="nhic_tra_transplant_donor_type_type" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>
+													<description>Type of donor for TRANSPLANT, eg cadaveric DBD/DCD, Live related/unrelated - Translated</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_71" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>Relationship between recipient and donor</question-text>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>Degree of relatedness between RECIPIENT and DONOR in a TRANSPLANT</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_71-1" type="nhic_tra_recipient_donor_relationship_type" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>
+													<description>Degree of relatedness between RECIPIENT and DONOR in a TRANSPLANT - Translated</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_72" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>Laterality</question-text>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>Was the TRANSPLANT of a left or right kidney, or a dual transplant?</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_72-1" type="nhic_tra_laterality_type" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>
+													<description>Was the TRANSPLANT of a left or right kidney, or a dual Transplant? - Translated</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_74" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>Local/imported</question-text>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>Whether the TRANSPLANT was of local or imported organs</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_74-1" type="nhic_tra_organ_origin_type" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>
+													<description>Whether the TRANSPLANT was of local or imported organs - Translated</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_77" type="xs:dateTime" minOccurs="0">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>Failure date</question-text>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>Failure date of a TRANSPLANT. Defined as date of return to dialysis or  transplant list, whichever is earlier.</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_78" type="nhic_tra_Enum_YesNo_type" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>
+													<description>Was there a blood group incompatibility between the recipient and donor of a TRANSPLANT?</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_79" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>ABO antibody titre</question-text>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>ABO ANTIBODY TITRE level</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_80" type="xs:dateTime" minOccurs="0">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>ABO antibody date</question-text>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>Date of ABO ANTIBODY TITRE</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_81" type="nhic_tra_Enum_YesNo_type" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>
+													<description>Was there an HLA incompatibility between the recipient and donor of a TRANSPLANT?</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_82" type="nhic_tra_Enum_YesNo_type" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>
+													<description>Did the recipient receive bone marrow from the donor prior to the TRANSPLANT?</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_83" type="xs:decimal" minOccurs="0">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>Cold ischaemic time/hours</question-text>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>Number of hours the the kidney spent on ice prior to the TRANSPLANT</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_84" type="xs:decimal" minOccurs="0">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>Warm ischaemic time/minutes</question-text>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>Number of minutes the kidney spent out of ice prior to the TRANSPLANT</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_73" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>Organs transplanted</question-text>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>The organs which were involved in the TRANSPLANT</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_73-1" type="nhic_tra_organs_transplanted_type" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>
+													<description>The organs which were involved in the TRANSPLANT - Translated</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="hla-mismatch" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="nhic_tra_85" type="nhic_tra_hla_mismatch_total_number_type" minOccurs="0">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>HLA mismatch A/B/DR</question-text>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>Number of mismatches at A, B and DR loci between recipient and donor of a TRANSPLANT</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_259" type="nhic_tra_hla_mismatch_number_type" minOccurs="0">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>HLA Mismatch A</question-text>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>Number of mismatches at A locus between RECIPIENT and DONOR of a TRANSPLANT</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_260" type="nhic_tra_hla_mismatch_number_type" minOccurs="0">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>HLA Mismatch B</question-text>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>Number of mismatches at B locus between RECIPIENT and DONOR of a TRANSPLANT</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_261" type="nhic_tra_hla_mismatch_number_type" minOccurs="0">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>HLA Mismatch DR</question-text>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>Number of mismatches at DR locus between RECIPIENT and DONOR of a TRANSPLANT</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="induction" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="nhic_tra_90" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>Induction regime (summary)</question-text>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>Summary of the induction regime given before a TRANSPLANT</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_91" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>Induction drug</question-text>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>Name of INDUCTION DRUG</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_91-1" type="nhic_tra_induction_drug_type" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>
+													<description>Name of INDUCTION DRUG - Translated</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_92" type="xs:dateTime" minOccurs="0">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>Induction drug administration date</question-text>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>Date of administration of INDUCTION DRUG</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_93" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>Induction drug administration dose</question-text>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>Dose of INDUCTION DRUG given</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_94" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>Induction drug administration unit</question-text>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>Unit of dose of INDUCTION DRUG</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_95" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>Induction procedure</question-text>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>INDUCTION PROCEDURE given (eg immunoadsorbtion)</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_95-1" type="nhic_tra_induction_procedure_type" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>
+													<description>INDUCTION PROCEDURE given (eg immunoadsorbtion) - Translated</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="nhic_tra_96" type="xs:dateTime" minOccurs="0">
+											<xs:annotation>
+												<xs:appinfo>
+													<question-text>Induction procedure date</question-text>
+												</xs:appinfo>
+												<xs:documentation>
+													<description>Date of administration of INDUCTION PROCEDURE</description>
+												</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="metadata">
+		<xs:sequence>
+			<xs:element name="form-name" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>
+						<p>This restricts the form-name element so that it must have the value
+                                    'NHIC-Transplantation'.</p>
+					</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="NHIC-Transplantation"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="form-version" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>
+						<p>This restricts the form-version element so that it must have the
+                                value '1.6.0'.</p>
+					</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="1.6.0"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="date" type="xs:date" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>
+						<p>The date that this file was generated.</p>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nhic_tra_245" type="nhic_tra_data_source_organisation_code_type">
+				<xs:annotation>
+					<xs:appinfo>
+						<question-text>Data source organisation code</question-text>
+					</xs:appinfo>
+					<xs:documentation>
+						<description>The organisation code for the origin of the data</description>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="study-enrolment">
+		<xs:sequence>
+			<xs:element name="nhic_tra_218" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<question-text>Name of study/ies patient enrolled in</question-text>
+					</xs:appinfo>
+					<xs:documentation>
+						<description>Name of a RESEARCH STUDY an INDIVIDUAL is enrolled in</description>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nhic_tra_219" type="xs:dateTime" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:appinfo>
+						<question-text>Enrolment date/s</question-text>
+					</xs:appinfo>
+					<xs:documentation>
+						<description>Date individual was enrolled in RESEARCH STUDY</description>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nhic_tra_220" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<question-text>Consent conditions</question-text>
+					</xs:appinfo>
+					<xs:documentation>
+						<description>Any CONDTIONs that limit participation in RESEARCH STUDY</description>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nhic_tra_221" type="xs:dateTime" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:appinfo>
+						<question-text>Withdrawal date/s</question-text>
+					</xs:appinfo>
+					<xs:documentation>
+						<description>Date individual withdrew from RESEARCH STUDY</description>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nhic_tra_222" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<question-text>Withdrawal conditions</question-text>
+					</xs:appinfo>
+					<xs:documentation>
+						<description>Any CONDTIONs attached to withdrawal from RESEARCH STUDY</description>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nhic_tra_223" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<question-text>Study ID</question-text>
+					</xs:appinfo>
+					<xs:documentation>
+						<description>Identifier used for INDIVIDUAL in RESEARCH STUDY</description>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="study-sample-collection">
+		<xs:sequence>
+			<xs:element name="nhic_tra_224" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<question-text>Sample ID</question-text>
+					</xs:appinfo>
+					<xs:documentation>
+						<description>Identifier used for RESEARCH SAMPLE taken from INDIVIDUAL as part of RESEARCH STUDY</description>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nhic_tra_225" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<question-text>Sample Type</question-text>
+					</xs:appinfo>
+					<xs:documentation>
+						<description>Type of RESEARCH SAMPLE</description>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nhic_tra_226" type="xs:dateTime" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<question-text>Sample Date</question-text>
+					</xs:appinfo>
+					<xs:documentation>
+						<description>Date and time RESEARCH SAMPLE was given</description>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nhic_tra_227" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<question-text>Sample Status</question-text>
+					</xs:appinfo>
+					<xs:documentation>
+						<description>Current status of RESEARCH SAMPLE</description>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nhic_tra_228" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<question-text>Sample quality</question-text>
+					</xs:appinfo>
+					<xs:documentation>
+						<description>Quality of RESEARCH SAMPLE</description>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nhic_tra_229" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<question-text>Aliquot ID</question-text>
+					</xs:appinfo>
+					<xs:documentation>
+						<description>Identifier of RESEARCH ALIQUOT made from RESEARCH SAMPLE</description>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="generic-consent">
+		<xs:sequence>
+			<xs:element name="nhic_tra_210" type="nhic_tra_Enum_YesNo_type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+						<description>Has an INDIVIDUAL given CONSENT to use tissue?</description>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nhic_tra_211" type="nhic_tra_Enum_YesNo_type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+						<description>Has an INDIVIDUAL given CONSENT to use genetic data?</description>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nhic_tra_212" type="nhic_tra_Enum_YesNo_type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+						<description>Has an INDIVIDUAL given CONSENT to use blood?</description>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nhic_tra_213" type="nhic_tra_Enum_YesNo_type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+						<description>Has an INDIVIDUAL given CONSENT to use records?</description>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nhic_tra_214" type="nhic_tra_Enum_YesNo_type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+						<description>Has an INDIVIDUAL given CONSENT to be contacted about research?</description>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nhic_tra_215" type="nhic_tra_Enum_YesNo_type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+						<description>Has an INDIVIDUAL given CONSENT to be involved in animal research?</description>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nhic_tra_216" type="xs:dateTime" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<question-text>Date consent given</question-text>
+					</xs:appinfo>
+					<xs:documentation>
+						<description>When was CONSENT given?</description>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nhic_tra_217" type="xs:dateTime" minOccurs="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<question-text>Date consent withdrawn</question-text>
+					</xs:appinfo>
+					<xs:documentation>
+						<description>When was CONSENT withdrawn?</description>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="nhic_tra_test_result_type" final="restriction">
+		<xs:annotation>
+			<xs:documentation>Limits blood and urine test results to 30 characters</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="30"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="nhic_tra_Pseudo_ID" final="restriction">
+		<xs:annotation>
+			<xs:documentation>Pseudo ID</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="5"/>
+			<xs:maxLength value="36"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="nhic_tra_Enum_YesNo_type" final="restriction">
+		<xs:annotation>
+			<xs:documentation>Yes or No</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="N"/>
+			<xs:enumeration value="Y"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="nhic_tra_gender_type" final="restriction">
+		<xs:annotation>
+			<xs:documentation>nhic_tra_14-1, nhic_tra_35-1</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="0">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Not known</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Male</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Female</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Not specified</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="nhic_tra_ethnicity_type" final="restriction">
+		<xs:annotation>
+			<xs:documentation>nhic_tra_15-1, nhic_tra_36-1</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="A">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>British</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="B">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Irish</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="C">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Any other White background</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="D">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>White and Black Caribbean</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="E">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>White and Black African</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="F">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>White and Asian</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="G">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Any other mixed background</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="H">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Indian</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="J">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Pakistani</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="K">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Bangladeshi</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="L">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Any other Asian background</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="M">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Caribbean</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="N">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>African</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="P">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Any other Black background</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="R">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Chinese</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="S">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Any other ethnic group</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Z">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Not stated</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="nhic_tra_blood_group_type" final="restriction">
+		<xs:annotation>
+			<xs:documentation>nhic_tra_17-1</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="A">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Blood Group A</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="B">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Blood Group B</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="AB">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Blood Group AB</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="O">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Blood Group O</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="UNKNOWN">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Blood Group is not known</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="nhic_tra_blood_rhesus_type" final="restriction">
+		<xs:annotation>
+			<xs:documentation>nhic_tra_18-1</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="POS">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>RhD-positive</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="NEG">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>RhD-negative</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="NOT TESTED"/>
+			<xs:enumeration value="UNKNOWN"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="nhic_tra_cause_of_death_type" final="restriction">
+		<xs:annotation>
+			<xs:documentation>nhic_tra_44-1</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Aortic Aneurysm">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Aortic Aneurysm</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Asthma">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Asthma</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Brain Tumour">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Brain Tumour</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Cancer">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Cancer, other than brain tumour</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Carbon Monoxide Poisoning">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Carbon Monoxide Poisoning</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Cardiac Arrest">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Cardiac Arrest</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Cardiovascular - Type Unclassified">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Cardiovascular - Type Unclassified</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Chronic Pulmonary Disease">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Chronic Pulmonary Disease</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Congestive Cardiac Failure">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Congestive Cardiac Failure</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Drug Overdose">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Drug Overdose</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Hypovolaemia">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Acute blood loss / hypovolaemia</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Hypoxic Brain Damage">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Hypoxic Brain Damage - All Causes</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Infection">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Infection</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Intracranial - Type Unclassified (CVA)">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Intracranial - Type Unclassified (CVA)</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Intracranial Haemorrhage">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Intracranial Haemorrhage</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Intracranial Thrombosis">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Intracranial Thrombosis</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Ischaemic Heart Disease">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Ischaemic Heart Disease</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Liver Failure">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Liver failure (not self poisoning)</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Meningitis">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Meningitis</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Multi Organ Failure">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Multi Organ Failure</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Myocardial Infarction">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Myocardial Infarction</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Other">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Other</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Pulmonary Embolism">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Pulmonary Embolism</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Respiratory Failure">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Respiratory - type unclassified (inc smoke inhalation)</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Self Poisoning">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Self poisoning (type unclassifed)</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Trauma">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Trauma</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Unknown">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Unknown</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="nhic_tra_pre-transplant_dialysis_modality_type" final="restriction">
+		<xs:annotation>
+			<xs:documentation>nhic_tra-56-1</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="UNIT HAEMODIALYSIS"/>
+			<xs:enumeration value="HOME HAEMODIALYSIS"/>
+			<xs:enumeration value="PERITONEAL DIALYSIS (CAPD/APD)"/>
+			<xs:enumeration value="CONSERVATIVE MANAGEMENT"/>
+			<xs:enumeration value="NOT RELEVANT"/>
+			<xs:enumeration value="UNKNOWN"/>
+			<xs:enumeration value="OTHER"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="nhic_tra_family_history_relationship_type" final="restriction">
+		<xs:annotation>
+			<xs:documentation>nhic_tra_62-1</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="FATHER"/>
+			<xs:enumeration value="MOTHER"/>
+			<xs:enumeration value="SIBLING"/>
+			<xs:enumeration value="OTHER"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="nhic_tra_smoker_status_type" final="restriction">
+		<xs:annotation>
+			<xs:documentation>nhic_tra_65</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Current smoker</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Ex-smoker</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Non-smoker - history unknown</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Never smoked</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Z">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Not Stated (PERSON asked but declined to provide a response)</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="nhic_tra_transplant_donor_type_type" final="restriction">
+		<xs:annotation>
+			<xs:documentation>nhic_tra_70-1</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="DBD"/>
+			<xs:enumeration value="DCD"/>
+			<xs:enumeration value="LIVING RELATED"/>
+			<xs:enumeration value="LIVING UNRELATED"/>
+			<xs:enumeration value="LIVING RELATIONSHIP UNSPECIFIED"/>
+			<xs:enumeration value="OTHER"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="nhic_tra_recipient_donor_relationship_type" final="restriction">
+		<xs:annotation>
+			<xs:documentation>nhic_tra_71-1</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="ALTRUISTIC NON-DIRECTED DONOR"/>
+			<xs:enumeration value="CADAVERIC DONOR, NO RELATIONSHIP"/>
+			<xs:enumeration value="LIVING NON-RELATED DONOR - SPOUSE"/>
+			<xs:enumeration value="MONOZYGOTIC (IDENTICAL) TWIN"/>
+			<xs:enumeration value="DIZYGOTIC (NON-IDENTICAL) TWIN"/>
+			<xs:enumeration value="MOTHER OR FATHER"/>
+			<xs:enumeration value="OTHER LIVING NON-RELATED DONOR"/>
+			<xs:enumeration value="OTHER LIVING RELATED"/>
+			<xs:enumeration value="SIBLING (0 SHARED HAPLOTYPE)"/>
+			<xs:enumeration value="SIBLING (1 SHARED HAPLOTYPE)"/>
+			<xs:enumeration value="SIBLING (2 SHARED HAPLOTYPES)"/>
+			<xs:enumeration value="SIBLING (GENETIC RELATIONSHIP UNKNOWN)"/>
+			<xs:enumeration value="SON OR DAUGHTER"/>
+			<xs:enumeration value="POOLED DONOR"/>
+			<xs:enumeration value="UNKNOWN"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="nhic_tra_laterality_type" final="restriction">
+		<xs:annotation>
+			<xs:documentation>nhic_tra_72-1</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="LEFT"/>
+			<xs:enumeration value="RIGHT"/>
+			<xs:enumeration value="BOTH"/>
+			<xs:enumeration value="UNSPECIFIED"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="nhic_tra_organ_origin_type" final="restriction">
+		<xs:annotation>
+			<xs:documentation>nhic_tra_74-1</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="IMPORTED"/>
+			<xs:enumeration value="LOCAL"/>
+			<xs:enumeration value="UNKNOWN"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="nhic_tra_organs_transplanted_type" final="restriction">
+		<xs:annotation>
+			<xs:documentation>nhic_tra_73-1</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="DUAL"/>
+			<xs:enumeration value="EN BLOC"/>
+			<xs:enumeration value="KIDNEY"/>
+			<xs:enumeration value="SPK"/>
+			<xs:enumeration value="CLKT"/>
+			<xs:enumeration value="PAK"/>
+			<xs:enumeration value="PANCREAS"/>
+			<xs:enumeration value="OTHER"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="nhic_tra_karpinski_score_type" final="restriction">
+		<xs:annotation>
+			<xs:documentation>nhic_tra_75, nhic_tra_76</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="12"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="nhic_tra_hla_mismatch_total_number_type" final="restriction">
+		<xs:annotation>
+			<xs:documentation>nhic_tra_85</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="6"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="nhic_tra_induction_drug_type" final="restriction">
+		<xs:annotation>
+			<xs:documentation>nhic_tra_91-1</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="BASILIXIMAB (SIMULECT)"/>
+			<xs:enumeration value="ALEMTUZEMAB (CAMPATH-1H)"/>
+			<xs:enumeration value="RITUXIMAB"/>
+			<xs:enumeration value="ANTITHYMOCYTE GLOBULIN (ATG)"/>
+			<xs:enumeration value="INTRAVENOUS IMMUNOGLOBULIN (IVIG)"/>
+			<xs:enumeration value="PULSED STEROIDS (METHYLPREDNISOLONE)"/>
+			<xs:enumeration value="AMIKACIN"/>
+			<xs:enumeration value="METHYLPREDNISOLONE (NOT PULSED)"/>
+			<xs:enumeration value="OTHER"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="nhic_tra_induction_procedure_type" final="restriction">
+		<xs:annotation>
+			<xs:documentation>nhic_tra_95-1</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="IMMUNOADSORBTION (COLUMNS)"/>
+			<xs:enumeration value="PLASMA EXCHANGE"/>
+			<xs:enumeration value="OTHER"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="nhic_tra_serology_result_type" final="restriction">
+		<xs:annotation>
+			<xs:documentation>nhic_tra_97, nhic_tra_99, nhic_tra_101, nhic_tra_103, nhic_tra_105, nhic_tra_230, nhic_tra_231, nhic_tra_232, nhic_tra_107, nhic_tra_109, nhic_tra_111, nhic_tra_113, nhic_tra_115, nhic_tra_233, nhic_tra_234, nhic_tra_235</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Negative"/>
+			<xs:enumeration value="Positive"/>
+			<xs:enumeration value="Not reported"/>
+			<xs:enumeration value="Not tested"/>
+			<xs:enumeration value="Result awaited"/>
+			<xs:enumeration value="Unknown"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="nhic_tra_allograft_function_type" final="restriction">
+		<xs:annotation>
+			<xs:documentation>nhic_tra_124-1</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="PRIMARY NONFUNCTION"/>
+			<xs:enumeration value="IMMEDIATE FUNCTION"/>
+			<xs:enumeration value="DELAYED GRAFT FUNCTION"/>
+			<xs:enumeration value="GRAFT NEPHRECTOMY"/>
+			<xs:enumeration value="UNKNOWN"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="nhic_tra_hla_antibody_result_type" final="restriction">
+		<xs:annotation>
+			<xs:documentation>nhic_tra_139</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="NO"/>
+			<xs:enumeration value="YES"/>
+			<xs:enumeration value="WEAK"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="nhic_tra_banff_code_type" final="restriction">
+		<xs:annotation>
+			<xs:documentation>nhic_tra_206-1</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="CAT.1"/>
+			<xs:enumeration value="CAT.2 C4D DEPOSITION ONLY"/>
+			<xs:enumeration value="CAT.2 ACUTE TYPE I"/>
+			<xs:enumeration value="CAT.2 ACUTE TYPE II"/>
+			<xs:enumeration value="CAT.2 ACUTE TYPE III"/>
+			<xs:enumeration value="CAT.2 ACUTE NOS"/>
+			<xs:enumeration value="CAT.2 CHRONIC"/>
+			<xs:enumeration value="CAT.2 NOT GRADED"/>
+			<xs:enumeration value="CAT.2 INDETERMINATE"/>
+			<xs:enumeration value="CAT.3"/>
+			<xs:enumeration value="CAT.4 ACUTE TYPE IA"/>
+			<xs:enumeration value="CAT.4 ACUTE TYPE IB"/>
+			<xs:enumeration value="CAT.4 ACUTE TYPE IIA"/>
+			<xs:enumeration value="CAT.4 ACUTE TYPE IIB"/>
+			<xs:enumeration value="CAT.4 ACUTE TYPE III"/>
+			<xs:enumeration value="CAT.4 ACUTE NOS"/>
+			<xs:enumeration value="CAT.4 CHRONIC"/>
+			<xs:enumeration value="CAT.4 NOT GRADED"/>
+			<xs:enumeration value="CAT.5 GRADE I"/>
+			<xs:enumeration value="CAT.5 GRADE II"/>
+			<xs:enumeration value="CAT.5 GRADE III"/>
+			<xs:enumeration value="CAT.5 NOT GRADED"/>
+			<xs:enumeration value="CAT.6"/>
+			<xs:enumeration value="(More CAT.6 subcategories)"/>
+			<xs:enumeration value="INSUFFICIENT SAMPLE"/>
+			<xs:enumeration value="OTHER"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="nhic_tra_banff_sympton_category_type" final="restriction">
+		<xs:annotation>
+			<xs:documentation>nhic_tra_207-1</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="AAH">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Alternate Arteriolar Hyaline Thickening</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="AH">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Arteriolar Hyaline Thickening</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="BKV">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>BK Virus</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="C4d">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>C4 d Deposition</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="cg">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Double Contours</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ci">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Interstitial Fibrosis</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ct">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Tubular Atrophy</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="cv">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Fibrous Intimal Thickening</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="g">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Glomerulitis</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="i">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Interstitial Infiltration</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="mm">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Mesangial Matrix Increase</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ptc">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Peritubular Capillaritis</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="t">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Tubilitis</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ti">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Total Inflammation</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="v">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Vessel</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="nhic_tra_data_source_organisation_code_type" final="restriction">
+		<xs:annotation>
+			<xs:documentation>nhic_tra_245
+</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="RJ1"/>
+			<xs:enumeration value="RGT"/>
+			<xs:enumeration value="RTH"/>
+			<xs:enumeration value="RYJ"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="nhic_tra_hla_mismatch_number_type" final="restriction">
+		<xs:annotation>
+			<xs:documentation>nhic_tra_259, nhic_tra_260, nhic_tra_261</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="2"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="nhic_tra_biopsy_type_type" final="restriction">
+		<xs:annotation>
+			<xs:documentation>nhic_tra_267</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="NATIVE">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Biopsy of Native Kidney</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TRANSPLANT">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Biopsy of Transplanted Kidney</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="PRE-IMPLANTATION">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Biopsy of Pre-Implanted Kidney (Time-zero biopsy) </display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="EXPLANTED">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Biopsy of Explanted Kidney</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="UNKNOWN"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="nhic_tra_histopatholgy_diagnosis_type" final="restriction">
+		<xs:annotation>
+			<xs:documentation>nhic_tra_266</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="IgA N">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>IgA nephropathy</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MN">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Membranous nephropathy</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="FSGS">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Focal and Segmental</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MCGN/MPGN">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Mesangiocapillary Glomerulonephritis (also known as Membranoproliferative Glomerulonephritis MPGN)</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TM">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Thrombotic microangiopathy</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="DN">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Diabetic nephropathy</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ACR">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Acute cellular rejection</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="AAMR">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Acute antibody mediated rejection (Acute humoral rejection)</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="CAMR">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Chronic antibody mediated rejection (CAMR)</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="VR">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Vascular rejection (we can consider separating this into cellular, antibody mediated or mixed)</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="BK">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>BK nephropathy</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="CNI">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Calcineurin inhibitor toxicity (CNI toxicity)</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Pyelonephritis">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Pyelonephritis</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="HUS">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>HUS</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="CMV">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>CMV</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Lupus">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Lupus Nephritis</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Vasculitis">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Vasculitis</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="No Diagnosis">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>No Diagnosis</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Other">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Other</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ATN">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Acute Tubular Necrosis</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="IFTA">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Interstitial Fibrosis Tubular Atrophy</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="B-ACR">
+				<xs:annotation>
+					<xs:appinfo>
+						<display-text>Borderline ACR</display-text>
+					</xs:appinfo>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>
