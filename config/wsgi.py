@@ -7,10 +7,11 @@ For more information on this file, see
 https://docs.djangoproject.com/en/1.10/howto/deployment/wsgi/
 """
 
-import os
+import environ
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings")
+# os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings")
+environ.Env.read_env(env_file='settings/.env')
 
 application = get_wsgi_application()
