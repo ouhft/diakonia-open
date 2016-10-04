@@ -773,6 +773,10 @@ class NHSBTRecord(models.Model):
     egfr48 = models.CharField(max_length=10, verbose_name="eGFR48", help_text="recipient eGFR at 48 months", blank=True)
     egfr60 = models.CharField(max_length=10, verbose_name="eGFR60", help_text="recipient eGFR at 60 months", blank=True)
 
+    # Temporary fields for linking to the NHIC export, until we have this stored as part of the FHIRbase
+    _psuedo_id_r = models.CharField(max_length=10, default="", blank=True, db_index=True)
+    _psuedo_id_d = models.CharField(max_length=10, default="", blank=True, db_index=True)
+
     class Meta:
         verbose_name = "NHSBT Record Row"
         verbose_name_plural = "NHSBT Record Rows"
