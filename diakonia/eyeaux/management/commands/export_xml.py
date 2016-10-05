@@ -320,154 +320,149 @@ class Command(BaseCommand):
                 etree.SubElement(node_recipient_study_sample, "nhic_tra_228").text = ""  # str
                 etree.SubElement(node_recipient_study_sample, "nhic_tra_229").text = ""  # str
 
+                # DONOR
+                node_donor = etree.SubElement(node_record, "donor")
+                etree.SubElement(node_donor, "donor_ID").text = "D_"+psuedo_id(record.id, True)
+
+                # Donor - DEMOGRAPHICS
+                node_donor_demographics = etree.SubElement(node_donor, "demographics")
+                etree.SubElement(node_donor_demographics, "nhic_tra_243").text = "D_"+psuedo_id(record.id, True)
+                etree.SubElement(node_donor_demographics, "nhic_tra_40").text = record.donor_id
+                etree.SubElement(node_donor_demographics, "nhic_tra_27").text = str(record.ddob.year if record.ddob else 0)
+                etree.SubElement(node_donor_demographics, "nhic_tra_35").text = record.dsex
+                etree.SubElement(node_donor_demographics, "nhic_tra_35-1").text = gender_translated(record.dsex)
+                etree.SubElement(node_donor_demographics, "nhic_tra_36").text = record.dethnic
+                etree.SubElement(node_donor_demographics, "nhic_tra_36-1").text = ethnic_translated(record.dethnic)
+                etree.SubElement(node_donor_demographics, "nhic_tra_38").text = record.dbg
+                etree.SubElement(node_donor_demographics, "nhic_tra_38-1").text = blood_group_translated(record.dbg)
+                etree.SubElement(node_donor_demographics, "nhic_tra_39").text = record.drhesus
+                etree.SubElement(node_donor_demographics, "nhic_tra_39-1").text = blood_rhesus_translated(record.drhesus)
+                # etree.SubElement(node_donor_demographics, "nhic_tra_41").text = ""  # donor Renal Registry Unknown
+                etree.SubElement(node_donor_demographics, "nhic_tra_42").text = "0"  # age of donor in years
+                node_donor_demographics_living = etree.SubElement(node_donor_demographics, "living-donor")
+                etree.SubElement(node_donor_demographics_living, "nhic_tra_29").text = outer_postcode(record.donor_postcode)
+                etree.SubElement(node_donor_demographics_living, "nhic_tra_37").text = ""  # GP Surgery Unknown
+                node_donor_demographics_cadaveric = etree.SubElement(node_donor_demographics, "cadaveric-donor")
+                etree.SubElement(node_donor_demographics_cadaveric, "nhic_tra_44").text = ""  # Cause of death
+                etree.SubElement(node_donor_demographics_cadaveric, "nhic_tra_44-1").text = ""  # Cause of death translated
+
+                # Donor - COMORBIDITY
+                node_donor_comorbidity = etree.SubElement(node_donor, "comorbidity")
+                etree.SubElement(node_donor_comorbidity, "nhic_tra_46").text = ""  # condition
+                etree.SubElement(node_donor_comorbidity, "nhic_tra_47").text = ""  # Datetime
+                
+                # Donor - SEROLOGY
+                node_donor_serology = etree.SubElement(node_donor, "serology")
+                node_donor_serology_cmv = etree.SubElement(node_donor_serology, "cmv")
+                etree.SubElement(node_donor_serology_cmv, "nhic_tra_107").text = ""  # str
+                etree.SubElement(node_donor_serology_cmv, "nhic_tra_108").text = ""  # Datetime
+                node_donor_serology_ebv = etree.SubElement(node_donor_serology, "ebv")
+                etree.SubElement(node_donor_serology_ebv, "nhic_tra_109").text = ""  # str
+                etree.SubElement(node_donor_serology_ebv, "nhic_tra_110").text = ""  # Datetime
+                node_donor_serology_vzv = etree.SubElement(node_donor_serology, "vzv")
+                etree.SubElement(node_donor_serology_vzv, "nhic_tra_111").text = ""  # str
+                etree.SubElement(node_donor_serology_vzv, "nhic_tra_112").text = ""  # Datetime
+                node_donor_serology_toxoplasma = etree.SubElement(node_donor_serology, "toxoplasma")
+                etree.SubElement(node_donor_serology_toxoplasma, "nhic_tra_113").text = ""  # str
+                etree.SubElement(node_donor_serology_toxoplasma, "nhic_tra_114").text = ""  # Datetime
+                node_donor_serology_hiv = etree.SubElement(node_donor_serology, "hiv")
+                etree.SubElement(node_donor_serology_hiv, "nhic_tra_115").text = ""  # str
+                etree.SubElement(node_donor_serology_hiv, "nhic_tra_116").text = ""  # Datetime
+                node_donor_serology_hep = etree.SubElement(node_donor_serology, "hep")
+                etree.SubElement(node_donor_serology_hep, "nhic_tra_233").text = ""  # str
+                etree.SubElement(node_donor_serology_hep, "nhic_tra_283").text = ""  # Datetime
+                etree.SubElement(node_donor_serology_hep, "nhic_tra_234").text = ""  # str
+                etree.SubElement(node_donor_serology_hep, "nhic_tra_284").text = ""  # Datetime
+                etree.SubElement(node_donor_serology_hep, "nhic_tra_235").text = ""  # str
+                etree.SubElement(node_donor_serology_hep, "nhic_tra_285").text = ""  # Datetime
+
+                # Donor - HLA
+                node_donor_hla = etree.SubElement(node_donor, "hla")
+                node_donor_hla_serological = etree.SubElement(node_donor_hla, "serological")
+                etree.SubElement(node_donor_hla_serological, "nhic_tra_262").text = ""  # datetime
+                etree.SubElement(node_donor_hla_serological, "nhic_tra_263").text = ""  # str
+                etree.SubElement(node_donor_hla_serological, "nhic_tra_264").text = ""  # str
+                etree.SubElement(node_donor_hla_serological, "nhic_tra_265").text = ""  # str
+                node_donor_hla_molecular = etree.SubElement(node_donor_hla, "molecular")
+                etree.SubElement(node_donor_hla_molecular, "nhic_tra_272").text = ""  # datetime
+                etree.SubElement(node_donor_hla_molecular, "nhic_tra_273").text = ""  # str
+                etree.SubElement(node_donor_hla_molecular, "nhic_tra_274").text = ""  # str
+                etree.SubElement(node_donor_hla_molecular, "nhic_tra_275").text = ""  # str
+
+                # Donor - GENERIC-CONSENT
+                node_donor_consent = etree.SubElement(node_donor, "generic-consent")
+                etree.SubElement(node_donor_consent, "nhic_tra_210").text = ""  # Enum
+                etree.SubElement(node_donor_consent, "nhic_tra_211").text = ""  # Enum
+                etree.SubElement(node_donor_consent, "nhic_tra_212").text = ""  # Enum
+                etree.SubElement(node_donor_consent, "nhic_tra_213").text = ""  # Enum
+                etree.SubElement(node_donor_consent, "nhic_tra_214").text = ""  # Enum
+                etree.SubElement(node_donor_consent, "nhic_tra_215").text = ""  # Enum
+                etree.SubElement(node_donor_consent, "nhic_tra_216").text = ""  # Datetime
+                etree.SubElement(node_donor_consent, "nhic_tra_217").text = ""  # Datetime
+
+                # Donor - STUDY
+                node_donor_study = etree.SubElement(node_donor, "study")
+                node_donor_study_enrolment = etree.SubElement(node_donor_study, "enrolment")
+                etree.SubElement(node_donor_study_enrolment, "nhic_tra_218").text = ""  # str
+                etree.SubElement(node_donor_study_enrolment, "nhic_tra_219").text = ""  # Datetime
+                etree.SubElement(node_donor_study_enrolment, "nhic_tra_220").text = ""  # str
+                etree.SubElement(node_donor_study_enrolment, "nhic_tra_221").text = ""  # Datetime
+                etree.SubElement(node_donor_study_enrolment, "nhic_tra_222").text = ""  # str
+                etree.SubElement(node_donor_study_enrolment, "nhic_tra_223").text = ""  # str
+                node_donor_study_sample = etree.SubElement(node_donor_study, "sample-collection")
+                etree.SubElement(node_donor_study_sample, "nhic_tra_224").text = ""  # str
+                etree.SubElement(node_donor_study_sample, "nhic_tra_225").text = ""  # str
+                etree.SubElement(node_donor_study_sample, "nhic_tra_226").text = ""  # Datetime
+                etree.SubElement(node_donor_study_sample, "nhic_tra_227").text = ""  # str
+                etree.SubElement(node_donor_study_sample, "nhic_tra_228").text = ""  # str
+                etree.SubElement(node_donor_study_sample, "nhic_tra_229").text = ""  # str
+
+                # TRANSPLANT
+                node_transplant = etree.SubElement(node_record, "transplant")
+                etree.SubElement(node_transplant, "recipient_IDREF").text = "R_"+psuedo_id(record.id, False)
+                etree.SubElement(node_transplant, "donor_IDREF").text = "D_"+psuedo_id(record.id, True)
+
+                # Transplant - TRANSPLANT-DETAILS
+                node_transplant_details = etree.SubElement(node_transplant, "tranplant-details")  # sic!
+                etree.SubElement(node_transplant_details, "nhic_tra_66").text = ""  # Datetime
+                etree.SubElement(node_transplant_details, "nhic_tra_67").text = ""  # str
+                etree.SubElement(node_transplant_details, "nhic_tra_70").text = ""  # str
+                etree.SubElement(node_transplant_details, "nhic_tra_70-1").text = ""  # str
+                etree.SubElement(node_transplant_details, "nhic_tra_71").text = ""  # str
+                etree.SubElement(node_transplant_details, "nhic_tra_71-1").text = ""  # str
+                etree.SubElement(node_transplant_details, "nhic_tra_72").text = ""  # str
+                etree.SubElement(node_transplant_details, "nhic_tra_72-1").text = ""  # str
+                etree.SubElement(node_transplant_details, "nhic_tra_74").text = ""  # str
+                etree.SubElement(node_transplant_details, "nhic_tra_74-1").text = ""  # str
+                etree.SubElement(node_transplant_details, "nhic_tra_77").text = ""  # Datetime
+                etree.SubElement(node_transplant_details, "nhic_tra_78").text = ""  # Enum
+                etree.SubElement(node_transplant_details, "nhic_tra_79").text = ""  # str
+                etree.SubElement(node_transplant_details, "nhic_tra_80").text = ""  # Datetime
+                etree.SubElement(node_transplant_details, "nhic_tra_81").text = ""  # Enum
+                etree.SubElement(node_transplant_details, "nhic_tra_82").text = ""  # Enum
+                etree.SubElement(node_transplant_details, "nhic_tra_83").text = ""  # Decimal
+                etree.SubElement(node_transplant_details, "nhic_tra_84").text = ""  # Decimal
+                etree.SubElement(node_transplant_details, "nhic_tra_73").text = ""  # str
+                etree.SubElement(node_transplant_details, "nhic_tra_73-1").text = ""  # str
+
+                # Transplant - HLA-MISMATCH
+                node_transplant_hla = etree.SubElement(node_transplant, "hla-mismatch")
+                etree.SubElement(node_transplant_hla, "nhic_tra_85").text = ""  # char(2)
+                etree.SubElement(node_transplant_hla, "nhic_tra_259").text = ""  # char(2)
+                etree.SubElement(node_transplant_hla, "nhic_tra_260").text = ""  # char(2)
+                etree.SubElement(node_transplant_hla, "nhic_tra_261").text = ""  # char(2)
+
+                # Transplant - INDUCTION
+                node_transplant_induction = etree.SubElement(node_transplant, "induction")
+                etree.SubElement(node_transplant_induction, "nhic_tra_90").text = ""  # str
+                etree.SubElement(node_transplant_induction, "nhic_tra_91").text = ""  # str
+                etree.SubElement(node_transplant_induction, "nhic_tra_91-1").text = ""  # Enum
+                etree.SubElement(node_transplant_induction, "nhic_tra_92").text = ""  # Datetime
+                etree.SubElement(node_transplant_induction, "nhic_tra_93").text = ""  # str
+                etree.SubElement(node_transplant_induction, "nhic_tra_94").text = ""  # str
+                etree.SubElement(node_transplant_induction, "nhic_tra_95").text = ""  # str
+                etree.SubElement(node_transplant_induction, "nhic_tra_95-1").text = ""  # Enum
+                etree.SubElement(node_transplant_induction, "nhic_tra_96").text = ""  # Datetime
+
                 # Output the record
                 xml_file.write(etree.tostring(node_record, pretty_print=True, encoding="UTF-8"))
-
-            """
-            def _create_element_with_datetime(
-                    parent_element=None,
-                    element_name="",
-                    element_datetime=timezone.now(),
-                    required=True
-            ):
-                if element_datetime is None and not required:
-                    return
-                element_date_string = element_datetime.strftime("%Y-%m-%dT%H:%M:%S%z") if element_datetime is not None else ""
-                # Need to reformat the timezone offset to an xml compliant string with a colon in it
-                if element_date_string is not "" and element_date_string[-5] in ["+", "-"]:
-                    element_date_string = element_date_string[:-2] + ":" + element_date_string[-2:]
-                new_element = xml_doc.createElement(element_name)
-                new_element.appendChild(xml_doc.createTextNode(element_date_string))
-                parent_element.appendChild(new_element)
-
-
-                # RECIPIENTS
-
-
-                # DONORS
-                node_record_donor = xml_doc.createElement('donor')
-                _create_element_with_text(
-                    node_record_donor,
-                    "donor_ID",
-                    "D_{0}".format(organ.donor.patient.psuedo_id),
-                    required=True
-                )
-
-                node_record_donor_demographics = xml_doc.createElement('demographics')
-                _create_element_with_text(
-                    node_record_donor_demographics,
-                    "nhic_tra_243",
-                    organ.donor.patient.psuedo_id,
-                    required=True
-                )
-                odt_number = organ.donor.patient.nhsbt_odt_number
-                _create_element_with_text(
-                    node_record_donor_demographics,
-                    "nhic_tra_40",
-                    odt_number if odt_number is not None else "0000000000",
-                    required=True
-                )
-                _create_element_with_text(
-                    node_record_donor_demographics,
-                    "nhic_tra_27",
-                    organ.donor.patient.date_of_birth.year,
-                    required=False
-                )
-
-                _create_element_with_text(
-                    node_record_donor_demographics,
-                    "nhic_tra_35",
-                    organ.donor.patient.gender,
-                    required=False
-                )
-                _create_element_with_text(
-                    node_record_donor_demographics,
-                    "nhic_tra_35-1",
-                    organ.donor.patient.gender_translated,
-                    required=False
-                )
-                _create_element_with_text(
-                    node_record_donor_demographics,
-                    "nhic_tra_36",
-                    organ.donor.patient.ethnicity,
-                    required=False
-                )
-                _create_element_with_text(
-                    node_record_donor_demographics,
-                    "nhic_tra_36-1",
-                    organ.donor.patient.ethnicity_translated,
-                    required=False
-                )
-                _create_element_with_text(
-                    node_record_donor_demographics,
-                    "nhic_tra_38",
-                    organ.donor.patient.blood_group,
-                    required=False
-                )
-                _create_element_with_text(
-                    node_record_donor_demographics,
-                    "nhic_tra_38-1",
-                    organ.donor.patient.blood_group_translated,
-                    required=False
-                )
-                _create_element_with_text(
-                    node_record_donor_demographics,
-                    "nhic_tra_39",
-                    organ.donor.patient.blood_rhesus,
-                    required=False
-                )
-                _create_element_with_text(
-                    node_record_donor_demographics,
-                    "nhic_tra_39-1",
-                    organ.donor.patient.blood_rhesus_translated,
-                    required=False
-                )
-                _create_element_with_text(
-                    node_record_donor_demographics,
-                    "nhic_tra_41",
-                    "RENAL REGISTRY NUMBER",
-                    required=False
-                )
-                _create_element_with_text(
-                    node_record_donor_demographics,
-                    "nhic_tra_42",
-                    "AGE IN YEARS",
-                    required=False
-                )
-                node_record_donor.appendChild(node_record_donor_demographics)
-
-                node_record.appendChild(node_record_donor)
-
-                # TRANSPLANTS
-                node_record_transplant = xml_doc.createElement('transplant')
-                _create_element_with_text(
-                    node_record_transplant,
-                    "recipient_IDREF",
-                    "R_{0}".format(organ.recipient.patient.psuedo_id),
-                    required=True
-                )
-                _create_element_with_text(
-                    node_record_transplant,
-                    "donor_IDREF",
-                    "D_{0}".format(organ.donor.patient.psuedo_id),
-                    required=True
-                )
-
-                # NB: Tranplant-details is not my typo, this is from the XSD!
-                node_record_transplant_transplantdetails = xml_doc.createElement('tranplant-details')
-                _create_element_with_datetime(
-                    node_record_transplant_transplantdetails,
-                    "nhic_tra_66",
-                    organ.recipient.start_time,
-                    required=True
-                )
-
-                node_record_transplant.appendChild(node_record_transplant_transplantdetails)
-
-                node_record.appendChild(node_record_transplant)
-
-                xml_doc.appendChild(node_record)
-
-            # Write the accumulated output
-            xml_file.write(xml_doc.toprettyxml(encoding="utf-8"))
-            """
