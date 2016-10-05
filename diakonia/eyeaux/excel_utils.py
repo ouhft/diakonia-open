@@ -234,5 +234,8 @@ def int_as_str(value):
     try:
         output = int(value)
     except ValueError:
-        output = int(float(value))
+        try:
+            output = int(float(value))
+        except ValueError:  # "could not convert string to float"
+            pass
     return str(output)
