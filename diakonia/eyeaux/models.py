@@ -790,3 +790,52 @@ class NHSBTLog(models.Model):
     class Meta:
         verbose_name = "NHSBT Ingest Log"
         verbose_name_plural = "NHSBT Ingest Logs"
+
+
+class PSSPerson(models.Model):
+    nhsnumber = models.CharField(max_length=10, verbose_name="nhs number", help_text="NHS Number")
+    mrn = models.CharField(max_length=8, verbose_name="mrn", blank=True)
+    sex = models.CharField(max_length=10, verbose_name="sex", help_text="Gender", blank=True)
+    forename = models.CharField(
+        max_length=50,
+        verbose_name="forename",
+        help_text="Forename",
+        blank=True
+    )
+    surname = models.CharField(
+        max_length=50,
+        verbose_name="Surname",
+        help_text="Surname",
+        blank=True
+    )
+    birthdate = models.DateField(verbose_name="dob", help_text="date of birth", null=True, blank=True)
+    deathdate = models.DateField(verbose_name="dod", help_text="date of death", null=True, blank=True)
+    ethnic_group = models.CharField(
+        max_length=50,
+        verbose_name="ethnic group",
+        help_text="Ethnic Group",
+        blank=True
+    )
+
+
+class PSSmicroResult(models.Model):
+    person = models.ForeignKey(PSSPerson)
+    collection_datetime = models.DateTimeField(verbose_name="collection datetime")
+    accession_number = models.CharField(max_length=10, verbose_name="accession number", blank=True)
+    testcode = models.CharField(max_length=5, verbose_name="test code")
+    batch_test_code = models.CharField(max_length=5, verbose_name="test code")
+    result_trans = models.TextField(verbose_name="result translated", blank=True)
+    result_modifiers = models.TextField(verbose_name="result modifiers", blank=True)
+    res_composed_text = models.TextField(verbose_name="result text", blank=True)
+    result_method = models.CharField(max_length=4, verbose_name="Result Method", blank=True)
+
+
+class PSSlimsResult(models.Model):
+    person = models.ForeignKey(PSSPerson)
+    collection_datetime = models.DateTimeField(verbose_name="collection datetime")
+    test_name = models.CharField(max_length=20, verbose_name="test name")
+    min_range = models.FloatField(verbose_name="min range", blank=True, null=True)
+    max_range = models.FloatField(verbose_name="max range", blank=True, null=True)
+    units = models.CharField(max_length=10, verbose_name="units", blank=True)
+    value_string = models.CharField(max_length=10, verbose_name="value (string)", blank=True)
+    value_number = models.FloatField(verbose_name="value (float)", blank=True, null=True)

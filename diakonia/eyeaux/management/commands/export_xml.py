@@ -18,18 +18,19 @@ from diakonia.eyeaux.excel_utils import int_as_str
 
 
 class Command(BaseCommand):
-    help = "Generates an XML document compliant with the v1.7.0 NHIC TRA xsd"
+    current_xsd_version="1.7.1"
+    help = "Generates an XML document compliant with the v{0} NHIC TRA xsd".format(current_xsd_version)
 
     def handle(self, *args, **options):
         with io.open('diakonia/eyeaux/tmp/tests.xml', mode='wb') as xml_file:
             xml_file.write(b'<?xml version="1.0" encoding="UTF-8"?>\n<!-- Output from Diakonia:eyeaux App -->\n')
 
             # Fetch the data for output
-            records = NHSBTRecord.objects.all()  #.filter(id__lt=1100)
+            records = NHSBTRecord.objects.filter(tx_date__gt='2005-01-01')
 
             xmlns = "https://www.w3.org/2009/01/xml.xsd"
             xsi = "http://www.w3.org/2001/XMLSchema-instance"
-            nhic_xsd = "NHIC_TRA_1.7.0.xsd"
+            nhic_xsd = "NHIC_TRA_{0}.xsd".format(Command.current_xsd_version)
 
             node_record = etree.Element("record", nsmap={'xsi': xsi})
             node_record.set("{" + xsi + "}noNamespaceSchemaLocation", nhic_xsd)
@@ -37,7 +38,7 @@ class Command(BaseCommand):
             # METADATA
             node_metadata = etree.SubElement(node_record, "metadata")
             etree.SubElement(node_metadata, "form-name").text = "NHIC-Transplantation"
-            etree.SubElement(node_metadata, "form-version").text = "1.7.0"
+            etree.SubElement(node_metadata, "form-version").text = Command.current_xsd_version
             etree.SubElement(node_metadata, "date").text = timezone.now().strftime("%Y-%m-%d")
             etree.SubElement(node_metadata, "nhic_tra_245").text = "RJ1"  # Unconfirmed enumeration
 
@@ -105,9 +106,6 @@ class Command(BaseCommand):
                 etree.SubElement(node_recipient_followup_bpd, "nhic_tra_242").text = ""  # Measurement
                 etree.SubElement(node_recipient_followup_bpd, "nhic_tra_253").text = ""  # Unit
                 etree.SubElement(node_recipient_followup_bpd, "nhic_tra_254").text = ""  # Datetime
-                node_recipient_followup_dgf = etree.SubElement(node_recipient_followup, "dgf")
-                etree.SubElement(node_recipient_followup_dgf, "nhic_tra_124").text = record.dgf
-                etree.SubElement(node_recipient_followup_dgf, "nhic_tra_124-1").text = ""
                 node_recipient_followup_dialysis_modality = etree.SubElement(node_recipient_followup, "dialysis-modality")
                 etree.SubElement(node_recipient_followup_dialysis_modality, "nhic_tra_125").text = ""  # Period
                 etree.SubElement(node_recipient_followup_dialysis_modality, "nhic_tra_125-1").text = ""  # Translated
@@ -206,14 +204,14 @@ class Command(BaseCommand):
                 etree.SubElement(node_recipient_urine_microalbumin, "nhic_tra_200").text = ""  # Datetime
                 etree.SubElement(node_recipient_urine_microalbumin, "nhic_tra_201").text = ""  # char(30)
                 etree.SubElement(node_recipient_urine_microalbumin, "nhic_tra_202").text = ""  # str
-                node_recipient_urine_protein_creatine = etree.SubElement(node_recipient_urine, "protein-creatine-ratio")
-                etree.SubElement(node_recipient_urine_protein_creatine, "nhic_tra_239").text = ""  # char(30)
-                etree.SubElement(node_recipient_urine_protein_creatine, "nhic_tra_276").text = ""  # str
-                etree.SubElement(node_recipient_urine_protein_creatine, "nhic_tra_277").text = ""  # datetime
-                node_recipient_urine_albumin_creatine = etree.SubElement(node_recipient_urine, "albumin-creatine-ratio")
-                etree.SubElement(node_recipient_urine_albumin_creatine, "nhic_tra_240").text = ""  # char(30)
-                etree.SubElement(node_recipient_urine_albumin_creatine, "nhic_tra_278").text = ""  # str
-                etree.SubElement(node_recipient_urine_albumin_creatine, "nhic_tra_279").text = ""  # datetime
+                node_recipient_urine_protein_creatinine = etree.SubElement(node_recipient_urine, "protein-ccreatinine-ratio")
+                etree.SubElement(node_recipient_urine_protein_creatinine, "nhic_tra_239").text = ""  # char(30)
+                etree.SubElement(node_recipient_urine_protein_creatinine, "nhic_tra_276").text = ""  # str
+                etree.SubElement(node_recipient_urine_protein_creatinine, "nhic_tra_277").text = ""  # datetime
+                node_recipient_urine_albumin_creatinine = etree.SubElement(node_recipient_urine, "albumin-creatinine-ratio")
+                etree.SubElement(node_recipient_urine_albumin_creatinine, "nhic_tra_240").text = ""  # char(30)
+                etree.SubElement(node_recipient_urine_albumin_creatinine, "nhic_tra_278").text = ""  # str
+                etree.SubElement(node_recipient_urine_albumin_creatinine, "nhic_tra_279").text = ""  # datetime
 
                 # Recipient - BLOOD-TEST
                 # node_recipient_blood = etree.SubElement(node_recipient, "blood-test")
@@ -328,7 +326,7 @@ class Command(BaseCommand):
 
                 # Recipient - HLA
                 node_recipient_hla = etree.SubElement(node_recipient, "hla")
-                node_recipient_hla_serological = etree.SubElement(node_recipient_hla, "seroligical")  # sic!
+                node_recipient_hla_serological = etree.SubElement(node_recipient_hla, "serological")
                 etree.SubElement(node_recipient_hla_serological, "nhic_tra_86").text = translate_datetime(record.recip_hla_sample_date)  # datetime
                 etree.SubElement(node_recipient_hla_serological, "nhic_tra_87").text = ""  # str
                 etree.SubElement(node_recipient_hla_serological, "nhic_tra_88").text = ""  # str
@@ -524,7 +522,7 @@ class Command(BaseCommand):
                 etree.SubElement(node_transplant, "donor_IDREF").text = "D_"+psuedo_id(record.id, True)
 
                 # Transplant - TRANSPLANT-DETAILS
-                node_transplant_details = etree.SubElement(node_transplant, "tranplant-details")  # sic!
+                node_transplant_details = etree.SubElement(node_transplant, "transplant-details")
                 etree.SubElement(node_transplant_details, "nhic_tra_66").text = translate_datetime(record.tx_date)  # Datetime
                 etree.SubElement(node_transplant_details, "nhic_tra_67").text = record.rec_unit  # str
                 etree.SubElement(node_transplant_details, "nhic_tra_70").text = record.dtype  # str
@@ -547,6 +545,8 @@ class Command(BaseCommand):
                 # etree.SubElement(node_transplant_details, "nhic_tra_84").text = int_as_str(record.swit)  # Decimal
                 etree.SubElement(node_transplant_details, "nhic_tra_73").text = record.tx_type  # str
                 etree.SubElement(node_transplant_details, "nhic_tra_73-1").text = ""  # str
+                etree.SubElement(node_transplant_details, "nhic_tra_124").text = record.dgf
+                etree.SubElement(node_transplant_details, "nhic_tra_124-1").text = ""
 
                 # Transplant - HLA-MISMATCH
                 node_transplant_hla = etree.SubElement(node_transplant, "hla-mismatch")
