@@ -1,9 +1,9 @@
 #!/usr/bin/python
 # coding: utf-8
 from django import forms
-from django.conf import settings
+import pytz
 
-from .models import NHSBTRecord
+from .models import NHSBTRecord, PSSPerson, PSSmicroResult, PSSlimsResult
 from .excel_utils import int_as_str
 
 
@@ -179,3 +179,62 @@ class NHSBTRecordForm(forms.ModelForm):
         cleaned_data = super(NHSBTRecordForm, self).clean()
         # Insert Clean up code
         return cleaned_data
+
+
+class PSSPersonForm(forms.ModelForm):
+    class Meta:
+        model = PSSPerson
+        fields = [
+            'nhsnumber',
+            'mrn',
+            'sex',
+            'forename',
+            'surname',
+            'birthdate',
+            'deathdate',
+            'ethnic_group'
+        ]
+
+
+class PSSlimsResultForm(forms.ModelForm):
+    class Meta:
+        model = PSSlimsResult
+        fields = [
+            'person',
+            'collection_datetime',
+            'test_name',
+            'min_range',
+            'max_range',
+            'units',
+            'value_string',
+            'value_number'
+        ]
+
+    def clean_collection_datetime(self):
+        dt_value = self.cleaned_data['collection_datetime']
+        if dt_value.tzinfo is not None and dt_value.tzinfo.utcoffset(dt_value) is not None:
+            return dt_value
+        return pytz.utc.localize(dt_value)
+
+
+
+class PSSmicroResultForm(forms.ModelForm):
+    class Meta:
+        model = PSSmicroResult
+        fields = [
+            'person',
+            'collection_datetime',
+            'accession_number',
+            'testcode',
+            'batch_test_code',
+            'result_trans',
+            'result_modifiers',
+            'res_composed_text',
+            'result_method',
+        ]
+
+    def clean_collection_datetime(self):
+        dt_value = self.cleaned_data['collection_datetime']
+        if dt_value.tzinfo is not None and dt_value.tzinfo.utcoffset(dt_value) is not None:
+            return dt_value
+        return pytz.utc.localize(dt_value)

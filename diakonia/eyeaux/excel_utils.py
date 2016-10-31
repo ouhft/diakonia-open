@@ -180,7 +180,7 @@ class NHSBTworkbook(Workbook):
 
     def __load_header_dictionaries__(self):
         # Find the headers in row 1 of this worksheet, and store in the first dictionary, and flip for the second
-        for column_id in range(1, self.worksheet.max_column):
+        for column_id in range(1, self.worksheet.max_column + 1):
             self.__headers_by_id__[column_id] = self.worksheet.cell(row=1, column=column_id).value
             self.__headers_by_title__[self.worksheet.cell(row=1, column=column_id).value] = column_id
 
@@ -201,7 +201,7 @@ class NHSBTworkbook(Workbook):
         """
         if row_id > 1:
             self.__current_row_id__ = row_id
-            for column_id in range(1, self.worksheet.max_column):
+            for column_id in range(1, self.worksheet.max_column + 1):
                 self.__current_row_data__[self.__headers_by_id__[column_id].lower()] =\
                     self.worksheet.cell(row=row_id, column=column_id).value
             return self.__current_row_data__
@@ -239,3 +239,53 @@ def int_as_str(value):
         except ValueError:  # "could not convert string to float"
             pass
     return str(output)
+
+
+class ReadOnlyWorkbook(object):
+    __workbook__ = None
+    __worksheet__ = None
+    __max_columns__ = 0
+    __headers_by_id__ = dict()
+    __headers_by_title__ = dict()
+    __current_row_id__ = 2  # First row is headers, so start with data
+    __current_row_data__ = dict()  # Store the row in a dictionary based on the column titles
+
+    def __init__(self, filename=""):
+        if filename is not "":
+            self.load_workbook(filename=filename)
+
+    def load_workbook(self, filename="", column_count=1):
+        if isinstance(filename, str) and filename is not "":
+            self.__workbook__ = load_workbook(filename=filename, read_only=True)
+            self.__worksheet__ = self.__workbook__.active
+            self.__max_columns__ = column_count + 1  # NB: Excel references start at 1, not 0
+            print("DEBUG: Max columns = {0}".format(self.__max_columns__))
+            for column_id in range(1, self.__max_columns__):
+                self.__headers_by_id__[column_id] = self.__worksheet__.cell(row=1, column=column_id).value
+                self.__headers_by_title__[self.__worksheet__.cell(row=1, column=column_id).value] = column_id
+
+            print("DEBUG: load_workbook: headers = {0}".format(self.__headers_by_id__))
+            return True
+        return False
+
+    def get_rows(self):
+        if self.__worksheet__ is not None:
+            return self.__worksheet__.iter_rows()
+        return None
+
+    def load_row(self, row=None):
+        """
+        Load the current row contents into a dictionary keyed on the column title. The title is
+        reduced to lower case so that it matches model naming conventions and is consistent.
+
+        :param row: Worksheet row to be loaded into dict
+        :return: dict() of row data if row id provided, otherwise, int of the current row id
+        """
+        column_id = 1
+        for cell in row:
+            self.__current_row_data__[self.__headers_by_id__[column_id].lower()] = cell.value
+            column_id += 1
+        return self.__current_row_data__
+
+
+

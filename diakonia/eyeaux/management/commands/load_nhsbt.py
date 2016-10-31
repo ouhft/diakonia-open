@@ -44,7 +44,7 @@ class Command(LabelCommand):
         print("Workbook is now loaded. {0} rows were found".format(total_rows))
 
         # Iterate through the data, creating or updating records in NHSBTRecords
-        for row_index in range(2, total_rows):
+        for row_index in range(2, total_rows+1):
             row_data = workbook.load_row(row_index)
             # print("DEBUG: Row data for row {0} is loaded".format(row_index))
 

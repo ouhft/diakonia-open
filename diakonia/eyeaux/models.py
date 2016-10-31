@@ -793,7 +793,12 @@ class NHSBTLog(models.Model):
 
 
 class PSSPerson(models.Model):
-    nhsnumber = models.CharField(max_length=10, verbose_name="nhs number", help_text="NHS Number")
+    nhsnumber = models.CharField(
+        max_length=10,
+        verbose_name="nhs number",
+        help_text="NHS Number",
+        db_index=True
+    )
     mrn = models.CharField(max_length=8, verbose_name="mrn", blank=True)
     sex = models.CharField(max_length=10, verbose_name="sex", help_text="Gender", blank=True)
     forename = models.CharField(

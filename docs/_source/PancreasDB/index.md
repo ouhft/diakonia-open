@@ -8,6 +8,30 @@ Service Evaluation DB
 
 Later work on updating clinical processes with electronic systems.
 
+## Meeting 27/10/16 - CM Notes
+A review of what has been happening around the department regarding database plans was given, and the key note was made that the biggest objective is to digitise data and processes, not to be drawn into technical best fits, etc. The work on this project is to aide the digitisation migration and provide timely access to clinical and service data, ahead of other longer term plans for clinical data storage.
+
+Consequently we are looking to go through a period of rapid iteration and take on a number of mini-projects to allow staff to evolve and learn from, that will lead to a larger overall solution.
+
+We have selected the starting point to be the Referral Pro-forma document that is completed by the admin team and the surgeon, around the initial interview of an accepted patient. This will then feed into the population of the KP Spreadsheet dataset, which is our first data gathering area.
+
+Emphasis was made that this is about handling human factors and user experience as a priority, and not just about technical coding - we need processes that reflect good clinical practices and systems that support that, rather than forcing users to adapt purely to systems in place.
+
+Mini-projects identified so far:
+
+* Offer Review
+* Referral Acceptance  <-- Starting Point for this project
+* KP DB
+* Recipient follow-up
+ * Post Listing
+ * Post Transplant
+* Patient Summary & Flow Tracking
+* EOS Integration and Digitisation
+* Reporting
+ * Financial 
+ * Weekly Review
+* Referral Data Gathering
+
 
 ## Meeting 2/9/16 - CM Notes
 Process:
