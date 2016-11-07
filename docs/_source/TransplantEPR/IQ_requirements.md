@@ -1,4 +1,4 @@
-# Datebase Requirement Notes from IQ
+# Database Requirement Notes from IQ
 
 Typed up notes from a document used by IQ as the basis for looking for a system to procure.
 
@@ -186,14 +186,24 @@ Should produce reports for:
 ## Page 8: Diagram 2
 ![Page 8: Diagram 2](../../_static/transplant_epr/iq_requirements/IQ_Diagram2.svg)
 
+* AR = Acute Rejection
+* TEGS = Thromboelastograms
+* OGTT = Oral Glucose Tolerance Test
+* DGF = Delayed Graft Function
+* OPA = Out Patients Assessment
+* TT = Tissue Typing
+
 ## Page 9: Diagram 3
 ![Page 9: Diagram 3](../../_static/transplant_epr/iq_requirements/IQ_Diagram3.svg)
+
+* CxR = Chest X-Ray
+* HNI = Histocompatibility and Immunogenetics
 
 ### 2: Surgeon Assessment
 
 #### Diabetes
 * Year/age diagnosis
-* Type I / II
+* Type I / II / Mody (Mature Onset of Diabetes of the Young)
 * Insulin dose - total units
 * Hypos Y/N
 * Awareness / Unawareness
@@ -216,15 +226,15 @@ Should produce reports for:
 * Amputations Y/N
  * Extent
 * Ulcers Y/N
-* MI Y/N
+* MI Y/N  (Myocardial Infarction)
 * Stroke Y/N
-* Clavdication Y/N
+* Clauidication Y/N
  * Distance
 
 #### Retinopathy
 * Y/N
 * Laser Y/N
-* Number
+ * Number
 * Surgery
 * Stable / Unstable
 * Regular Follow Up
@@ -233,17 +243,17 @@ Should produce reports for:
 #### Nephropathy
 * Y/N
 * Cause of renal failure
- * Polycystic Kidneys - UTIs Y/N; Bleeds Y/N; Large kidneys Y/N; Previous nephre??????ies
- * Lupus - Ab's Y/N; Previous thrombotic events: DVT's / PE / ???? / Recurrant thrombosis of AVF; Previous treatment 
- * FSGS - Ful???ant; Recurrance; Type of treatment
+ * Polycystic Kidneys - UTIs Y/N; Bleeds Y/N; Large kidneys Y/N; Previous nephrectomies
+ * Lupus - Antibodies Y/N; Previous thrombotic events: DVT's / Pulmonary Embolism / Miscarriage / Recurrant thrombosis of AVF; Previous treatment 
+ * FSGS (focal segmental glomerulo sclerosis) - Fulminant; Recurrance; Type of treatment
 * Biopsy proven Y/N
 * Predialysis / dialysis
- * Estimated start day 
-* HD
+ * (Estimated) start day 
+* HD (hemodialysis)
  * Access type
  * Problems Y/N
  * HD days
-* PD
+* PD (Peritoneal Dialysis)
  * Catheter inserted where?
  * Previous peritonitus
  * Exit site R/L
@@ -254,10 +264,10 @@ Should produce reports for:
 * Renal stones
 * Reflux
 * Outflow obstruction symptoms
- * Noct??? Y/N + Number
+ * Nocturia Y/N + Number
  * Frequency Y/N + Number
- * Thesit???
- * Pidd????
+ * Hesitancy
+ * Dribbling
 
 #### Previous Transplant
 * Tx Type
@@ -266,11 +276,11 @@ Should produce reports for:
 * Previous donor TT
 * Previous immunosuppresion
 
-#### P?H
+#### Past Medical History
 * Cardiac
-* Respitory
-* GI
-* GV
+* Respiratory
+* GI (Gastro Intestinal)
+* GU (Genitourinary)
 * Surgical
 * Gynaecological
 
@@ -288,18 +298,19 @@ Should produce reports for:
 * Job
 * Disable Y/N
 * Wheelchair bound
+* Registered Blind
 * Lives with family / alone
 * Family numbers
 * Relatives / friends close by
 * Smoker Y/N
- * CPD
+ * CPD (number per day)
 * Alcohol
  * Number units
 * Other recreational drugs
 
 #### Examination
-* CVS
-* RS
+* CVS (Cardio Vascular System)
+* RS (Respiritory System)
 * Abdomen
 * Pulses
 * Fistula
@@ -317,7 +328,7 @@ Should produce reports for:
 * Decision to list Y/N
 
 #### 4: Annual Review
-...and Report / Letter Tissue Typing
+...and Report / Letter Tissue Typing (about sensitisation status and calls)
 
 #### Diabetes
 * Insulin dose
@@ -341,19 +352,19 @@ New changes in complications...
 #### Retinopathy
 * Y/N
 * Laser Y/N
-* Number
+ * Number
 * Surgery
 * Stable / Unstable
 
 #### Vasculopathy
 * Y/N
 * Amputations Y/N
- * Extent - Toes; Forefoot; BKA; AKA; <-- system aler - lower limb & iliac duplex
+ * Extent - Toes; Forefoot; BKA (Below Knee); AKA (Above Knee); 
 * Ulcers Y/N
 * MI Y/N
-* CVA Y/N  <-- system alert need or carotid duplex
+* CVA (stroke) Y/N  <-- system alert need or carotid duplex
 * Stroke Y/N
-* Clavdication Y/N
+* Clauidication Y/N  <-- system alert - lower limb & iliac duplex
  * Distance
 
 * Admissions during last year
@@ -387,18 +398,18 @@ New changes in complications...
 
 ###  6: Donor
 * Cadaveric - EOS Information 
-* Living donor - LRD team
+* Living donor - LRD (Living related donor) team
 * Letters - Direct; Paired exchange; altruistic
 
 #### Retrieval
 * Team and surgeon
-* OBD - cross clamp date and time
+* DBD - cross clamp date and time
 * DCD
  * Withdrawal time
  * BP < 50
  * As?stole
  * Certification
- * KTS
+ * KTS (Knife to skin)
  * Perfusion
  * HTA A Number
 * Type of solution
@@ -415,14 +426,14 @@ New changes in complications...
 * Number of veins
 * Number of ureters
 * Number of patches
-* Quality of ?? patch
-* Quality of arterial ost???
+* Quality of patch
+* Quality of arterial ostium
 
 #### Backtable reconstruction
 * Aortic patch shortened
 * Ao patch sacrificed
-* Ar??? trouss??
-* Art anastomosed end-to-nice to renal art??
+* Arteries troussered
+* Arteries anastomosed end-to-side to renal arteries
 
 Damage
 
@@ -430,8 +441,8 @@ Damage
 * Capsular
 * Arterial
 * Vein
-* Creter
-* Substance of ???
+* Ureter
+* Substance of kidney
 
 Perfusion solution on back table + batch number
 
@@ -440,14 +451,14 @@ Machine perfusion Y/N
 * at retrieval / base
 * time perfusion started / finished
 * reason for perfusion
-* kps batch number
+* kps (kidney perfusion solution) batch number
 
 #### Pancreas + Perfusion fluid culture
 * Fatty - No; Mild; Moderate; Severe
 * Damage Type - Report to NHSBT + HTA B form
 * Vascular reconstruction
 * Preservation solution on back table
- * VW
+ * UW (University of Wisconsin) Solution
  * Batch number 
 
 ### 8: Transplant
@@ -457,8 +468,8 @@ Machine perfusion Y/N
 
 Templates for operations and back table
 * Kidney
-* SPK
-* PTA
-* PAK
+* SPK (Simultaneous Pancreas Kidney)
+* PTA (Pancreas Transplant Alone)
+* PAK (Pancreas After Kidney)
 
 HTA B Form - Number keep for tracability
