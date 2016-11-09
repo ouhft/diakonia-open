@@ -74,3 +74,6 @@ It will be necessary to identify all th ecurrent information assets that are bei
 Currently the various data items are stored utilising multiple techniques and applications.  These inclufe EPR, Proton Excel Spreadsheets, Word documentes and paper records.
 
 It is necessary to clearly identify how the solution that will suport this pathway fits within the strategic aims of the organisaiton as a whole.  This is clearly of imprtance as we should not follow a path that is inconsistent with the long term goals of the organisation without due consideration and consultation.
+
+1.6 Outline of the following sections
+The rest of this document is set out in a number of sections.  The next section considers what quality and audit mechanisms are necessary to allow accurate reporting of the effectiveness of the pathway.  A section providing a brief overview of the whole pathway follows this.  The following chapters concentrate on an individual portion of the pathway.  This is followed by sections on administration and notes relating to the EPR.  The final section summarises the key findings and suggestions.
