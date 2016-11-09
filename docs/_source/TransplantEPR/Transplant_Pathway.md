@@ -27,3 +27,9 @@ The managerial dta collection is necessary to maintain the smooth running of the
 
 1.1.3 Mandatory Reporting
 There is a requirement to provide data to certain external bodies such as the Renal Registry and NHSBT.  This reporting is mandatory and the informaiton required is specified by these bodies.  It is therfore essential that any information necesary to comply with these requirements is collected in an appropriate way.
+
+1.1.4 Evaluation/Research
+This section relates to the data collecte4d over and above that needed for other purposes that will permit the critical evaluation of the performance of the department.  In addition this data can also form a core of reserach data that could be used to support studies if the appropriate ethical permission and consents are obtained.
+
+1.2 Scope
+The kidney transplant pathway is complex and there are several potential rouutes that a patient could take.  the pathway involves members of a multidiscicplinary team who provide patient care and support at different stages.
