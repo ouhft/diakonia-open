@@ -65,4 +65,12 @@ Other groups that are involved or porvide support include:
 - Social Services
 - Transport
 
-1.4 
+1.4 Information acquisition
+It is also important to ascertain how information is presented.  It will require different handling depending on the format used.  If the information is presented as paper records it will need to be rekeyed to add it to an electronic record.  This could lead to random errors being introduces.  It may therefore be advantageous to use a double entry method to help reducde the error rate.  If the information is presented in an alectronic format it is important to ascertain that all the concepts that are used are correctly mapped to a local representation.  this again could lead to systemic errors being introduced if the mappings are incorrect.  This required the agreeing semantic means of each of fileds as well as mappings between various acceptable that could be recorded in each of the fields.
+
+1.5 Information assets
+It will be necessary to identify all th ecurrent information assets that are being utilised to provide the current service.  In addition to these assets it will be necessarry to identify which assets already exist to meet the needs of the pathway and wher there are deficiencies that need to be plugged.
+
+Currently the various data items are stored utilising multiple techniques and applications.  These inclufe EPR, Proton Excel Spreadsheets, Word documentes and paper records.
+
+It is necessary to clearly identify how the solution that will suport this pathway fits within the strategic aims of the organisaiton as a whole.  This is clearly of imprtance as we should not follow a path that is inconsistent with the long term goals of the organisation without due consideration and consultation.
