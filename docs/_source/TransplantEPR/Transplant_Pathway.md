@@ -32,4 +32,37 @@ There is a requirement to provide data to certain external bodies such as the Re
 This section relates to the data collecte4d over and above that needed for other purposes that will permit the critical evaluation of the performance of the department.  In addition this data can also form a core of reserach data that could be used to support studies if the appropriate ethical permission and consents are obtained.
 
 1.2 Scope
-The kidney transplant pathway is complex and there are several potential rouutes that a patient could take.  the pathway involves members of a multidiscicplinary team who provide patient care and support at different stages.
+The kidney transplant pathway is complex and there are several potential rouutes that a patient could take.  the pathway involves members of a multidiscicplinary team who provide patient care and support at different stages.  It is therefore improtant to clearly articulate the scope of this document and to highlight the elements that we consider to be within the pathway.
+
+It is important to remember that the patient is always central to each of the stages that comprise the pathway.
+
+It is understood that the scope is purely a boundary to the areas we provide detailed consideration to. However, as information has to flow across teh cope boundary it is therefore vital that appropriate protocols and information flows are well defined to ensure efficient communication across the boundary.
+
+It ahs been decided that for the purpose of documenting the renal tranplant pathway we will include all interactitons from an initial referral to a transplant surgeon throug to the discharge of a patient into the care of their local referrer.  There may a need for patienets to re-enter the pathway for a number of reasons.  Additionally is is also important to record as part of the pathway information relating to the donated organ.  It is also possible that some patients are unsuitable for transplant and this information also requires recording.
+
+1.3 Groups involved
+The following is an initial list of groups and personnel who are involved in the pathway associated with transplant.
+
+- Patient
+- Nephrologist
+- Surgeon
+- Anaesthetist
+- Theatre staff
+- Pharmacist
+- Transplant Coordinator
+- H&I lab
+- Administrative Support
+
+
+Other groups that are involved or porvide support include:
+- Infectious Diseases
+- Radiologist
+- Cardiologist
+- Dietician
+- Pathologist
+- Laboratory
+- Management
+- Social Services
+- Transport
+
+1.4 
