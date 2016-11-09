@@ -17,5 +17,13 @@ The aim is to allow clinicians, managers and reserchers access to information pe
 Throughout this document the term 'referring clinician' will be used to cover any clinician that could refer a patient including but not limited to Nephrologists, Diabetologies and GPs.
 
 1.1  Data Needs
-The data collected as a patiten traverses the pathway will be used to support several functions by fulfilling the needs of various customers.
+The data collected as a patiten traverses the pathway will be used to support several functions by fulfilling the needs of various customers.  The primary uses can be classified as:  Clinical, Managerial, Madatory reporting, Evaluation and Research.  The following givea a brief summary of the key data consumers and the types of data that they require.
 
+1.1.1 Clinical
+There is a minimum set o fdata that needs to be collected for clinical reasons.  This data is necessary to permit clinical staff to perform their function effectively and maintain patient safety.  The exact makeup of the required data will depend on the clinical specialty concerned.  Although, there will be a core set of data that will usually be needed alonside a more extensive discipline specific data set.
+
+1.1.2. Managerial
+The managerial dta collection is necessary to maintain the smooth running of the department.  It is imprortant to collect data that allows the rapid identification of potential problem areas.
+
+1.1.3 Mandatory Reporting
+There is a requirement to provide data to certain external bodies such as the Renal Registry and NHSBT.  This reporting is mandatory and the informaiton required is specified by these bodies.  It is therfore essential that any information necesary to comply with these requirements is collected in an appropriate way.
