@@ -364,5 +364,161 @@ These are potentially involved:
 - Psychologist
 
 
+7.4 Processes involved
+
+Each of the individual tests orgered could be considered a sub-process.  They wil leach have their own SOPs that govern how the patient is evaluated and the results returned.
+
+7.5 Information generated and stored
+
+The data is potentially captured in a number of ways:
+EPR will capture demographic data as well as that pertaining to lab results.
+PACS will contain radiographic information
+The H&I lab system will contain additional information not available in EPR.
+
+ECG information is captured potentially this is only in paper format at the moment.
+
+proton currently captures any information related to the pharmacist although this is likely to change in the near future as teh ePrescribing module of the EPR is rolled out.
+
+In addition there is a form to be filled in during the assessment process.  This is currently a paper form.  This could be transplated into a form on EPR to allow the electronic capture of data.
+
+7.6  General data
+
+- Demographics
+ - NHS number
+ - Hospital number 
+ - Name
+ - DoB
+ - Address
+ - Contact numbers
+ - Age
+ - Gender
+ - Ethinicity
+ - Employment
+ - NOK
+ - GP details
+
+-Referral details
+ - Date
+ - Clinic
+ - Tx Surgeon
+ - Tx Coordinator
+ - Local coordinator
+ - Organs required
+ - Clock start
+ - Clock stop
+ - Reason
+ - Ref consultant
+ - Contact details
+ - Dialysis unit
+
+- Transport plan
+ - Own transport
+ - Hospital transport
+ - Plan
+ - Pre-authorisation code
+ - Back up
+ 
+- Is there a LD Kidney option
+- Clinical basics
+ - Height
+ - Weight
+ - BMI
+ - Hip/waist ratio
+ - BP
+ - Pulse
+ - SF-36 Questionnaire
+ - Hypoglycaemia questionnaire
+- Renal History (diabetic)
+- Past medical history
+- Past surgical history
+- Drug history
+- Anaesthetic assessment
+- Social history
+- Check list
+ - PAP smear date
+ - Mammogram date
+ - Pregnancies
+ - Blood transfusions 
+  - Date
+ - VZV immunity
+ - Female less than 55 years and Rh neg?
+- Clinical Examination
+ - Diagrams to complete
+- Plan and investigations required
+- Date
+- Assessing surgeon
+- Assessing coordinator
+- Cardiac investigation outcomes
+ - Type of scan
+  - Date
+  - Centre
+  - Report Details
+- Cardiology MDT Summary
+ - Date 
+ - Present
+ - Summary
+- Blood test results
+- Urine test results
+- H&I lab results
+
+7.7 Consent Forms
+
+7.7.1  Sample Consent Form
+
+- Hepatitis B surface antigen
+- Hepatitis B core
+- Hepatitis C IgG
+- HIV 1 and 2 antibody
+- Herpes zoster IgG antibody
+- Treponema pallidum ELISA
+- Epstein Barr virus
+- Cytomegalotvirus IgG antibody
+- Syphillis
+- Toxoplasmosis
+- Herpes Simplex
+- Name
+  - Signature
+  - Date
+- Coordinator name
+  - Signature
+  - Date
+ 
+ 
+ 7.7.2 Clinical Photography
+ 
+ - Hospital number
+ - Name
+ - Address
+ - DoB
+ - Department/Ward
+ - Consultant
+ - Clinician's name
+  - Signature
+- Photographs details
+ - Taken by
+ - Badge number
+ - Job title
+ - Location of photography
+ - Date
+ - Location of stored image files
+
+Consent level 1
+  - signature of patient
+  - date
+  - name of signatory (if different from patient)
+  - relationship
+
+Consent level 2 (restricted education use)
+ - signature of patient
+ - date
+ - name of signatory if different from patient
+ - relationship
+ 
+Consent level 3
+ - Individual consent for each image
+ 
+ 7.7.3 Recipient consent form
+ 
+ 
 
 
