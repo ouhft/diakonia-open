@@ -10,35 +10,35 @@ Once we have a full understanding of the pathway we can then conduct a gap analy
 
 It is the goal of this endeavour to provide a system to support the patient pathway within transplantation.
 
-An orthoganoal ambition is to provide high quality research data.  In the initial stages the research data will be made available in the form of a number of standardised queries, whic ccan be parameterised.  It is anticipated that initially these queries will only produce aggregated results to maintain patient confidentiality.
+An orthoganoal ambition is to provide high quality research data.  In the initial stages the research data will be made available in the form of a number of standardised queries, which can be parameterised.  It is anticipated that initially these queries will only produce aggregated results to maintain patient confidentiality.
 
 The aim is to allow clinicians, managers and reserchers access to information pertaining to the performance of the transplant programme and allow identification of any trends that could warrant futher action.  We will also give consideration to how additional data collection could be integrated for additional reserch purposes.  This may need additional protocols that relate to the additional processes involved in obtaining relevant consent to tpermit the collection of supplementary information.
 
-Throughout this document the term 'referring clinician' will be used to cover any clinician that could refer a patient including but not limited to Nephrologists, Diabetologies and GPs.
+Throughout this document the term 'referring clinician' will be used to cover any clinician that could refer a patient including but not limited to Nephrologists, Diabetologists and GPs.
 
 1.1  Data Needs
-The data collected as a patiten traverses the pathway will be used to support several functions by fulfilling the needs of various customers.  The primary uses can be classified as:  Clinical, Managerial, Madatory reporting, Evaluation and Research.  The following givea a brief summary of the key data consumers and the types of data that they require.
+The data collected as a patient traverses the pathway will be used to support several functions by fulfilling the needs of various customers.  The primary uses can be classified as:  Clinical, Managerial, Madatory reporting, Evaluation and Research.  The following give a brief summary of the key data consumers and the types of data that they require.
 
 1.1.1 Clinical
-There is a minimum set o fdata that needs to be collected for clinical reasons.  This data is necessary to permit clinical staff to perform their function effectively and maintain patient safety.  The exact makeup of the required data will depend on the clinical specialty concerned.  Although, there will be a core set of data that will usually be needed alonside a more extensive discipline specific data set.
+There is a minimum set of data that needs to be collected for clinical reasons.  This data is necessary to permit clinical staff to perform their function effectively and maintain patient safety.  The exact makeup of the required data will depend on the clinical specialty concerned.  Although, there will be a core set of data that will usually be needed alonside a more extensive discipline specific data set.
 
 1.1.2. Managerial
-The managerial dta collection is necessary to maintain the smooth running of the department.  It is imprortant to collect data that allows the rapid identification of potential problem areas.
+The managerial data collection is necessary to maintain the smooth running of the department.  It is important to collect data that allows the rapid identification of potential problem areas.
 
 1.1.3 Mandatory Reporting
-There is a requirement to provide data to certain external bodies such as the Renal Registry and NHSBT.  This reporting is mandatory and the informaiton required is specified by these bodies.  It is therfore essential that any information necesary to comply with these requirements is collected in an appropriate way.
+There is a requirement to provide data to certain external bodies such as the Renal Registry and NHSBT.  This reporting is mandatory and the informaiton required is specified by these bodies.  It is therefore essential that any information necessary to comply with these requirements is collected in an appropriate way.
 
 1.1.4 Evaluation/Research
-This section relates to the data collecte4d over and above that needed for other purposes that will permit the critical evaluation of the performance of the department.  In addition this data can also form a core of reserach data that could be used to support studies if the appropriate ethical permission and consents are obtained.
+This section relates to the data collected over and above that needed for other purposes that will permit the critical evaluation of the performance of the department.  In addition this data can also form a core of research data that could be used to support studies if the appropriate ethical permission and consents are obtained.
 
 1.2 Scope
-The kidney transplant pathway is complex and there are several potential rouutes that a patient could take.  the pathway involves members of a multidiscicplinary team who provide patient care and support at different stages.  It is therefore improtant to clearly articulate the scope of this document and to highlight the elements that we consider to be within the pathway.
+The kidney transplant pathway is complex and there are several potential routes that a patient could take.  the pathway involves members of a multidiscicplinary team who provide patient care and support at different stages.  It is therefore important to clearly articulate the scope of this document and to highlight the elements that we consider to be within the pathway.
 
 It is important to remember that the patient is always central to each of the stages that comprise the pathway.
 
-It is understood that the scope is purely a boundary to the areas we provide detailed consideration to. However, as information has to flow across teh cope boundary it is therefore vital that appropriate protocols and information flows are well defined to ensure efficient communication across the boundary.
+It is understood that the scope is purely a boundary to the areas we provide detailed consideration to. However, as information has to flow across the scope boundary it is therefore vital that appropriate protocols and information flows are well defined to ensure efficient communication across the boundary.
 
-It ahs been decided that for the purpose of documenting the renal tranplant pathway we will include all interactitons from an initial referral to a transplant surgeon throug to the discharge of a patient into the care of their local referrer.  There may a need for patienets to re-enter the pathway for a number of reasons.  Additionally is is also important to record as part of the pathway information relating to the donated organ.  It is also possible that some patients are unsuitable for transplant and this information also requires recording.
+It has been decided that for the purpose of documenting the renal tranplant pathway we will include all interactions from an initial referral to a transplant surgeon throuhg to the discharge of a patient into the care of their local referrer.  There may be a need for patienets to re-enter the pathway for a number of reasons.  Additionally is is also important to record as part of the pathway information relating to the donated organ.  It is also possible that some patients are unsuitable for transplant and this information also requires recording.
 
 1.3 Groups involved
 The following is an initial list of groups and personnel who are involved in the pathway associated with transplant.
@@ -140,5 +140,61 @@ The simplified pathways can be summarised as:
 
 There are a number of outcomes possible at various stages of the pathway.  The patient can proceed to the next step, require further investigations or be turned down for transplant.  There is a potential for a number of individuals to be involved at each stage in the pathway, who each have a responsibility for ensureing different portions of the information required is collected.  The overall target is to ensure that sufficient information is available to allow it to be accessed in an appropriate manner to reach a decision.
 
-Insert diagram here
+Insert Figure 1 
+
+# 3.1 18 Week referral to treatment pathway
+There is a maximum time of 18 weeks between the referral being recorded and a final decision about treatment, either refusal or entry onto the waiting list. The general rule is that ther should not be more thatn 18 weeks betwen referral and first treatment.  In the cae of transplant, first treatment is consered to be acceptance onto the waiting list or being deemed unsuitable for transplant.  An illustration of the timeline for the case of being accepted onto the waiting list is outlined in Figure 2.  The 18 weeks may nto be contigiuous as there are various reasons that can cause the clock to be temporarily stopped.  If the clock has been stopped it may subsequently be restarted if approprate events occur at a future time.  This is discussed more fully in Section 5 below.
+
+NOTE:  The 18 week pathway is currently managed via an Excel spreadsheet.  It should also be noted that there is a suggested maximum of 6 weeks between referral and the first outpatient appointment.
+
+Insert Figure 2
+
+# 4 Satellite organisations
+There are a number of satellite organisations that will interact with the patient pathway, who may have different Information Technology (IT) solutions.  To prevent this being a problem it will be necessary to have clearly defined protocols with respect to the information being passed between the organisations.  These protocols will have to define minimum acceptable data sets for each possible interaction.  The definitions will have to include field names along with acceptable pseudonyms, the type of data being recorded and if applicable a range for acceptable values including any relevant units.  If electronic information interchange can be agreed then it will minimise the amount of human intervention necessary to incorporate data from satellite sites.
+
+#5 Other general comments
+At various points in the patient pathway numerous forms are currently filled in. Further details about the content of thse forms is to be provided at teh relevant places within this document.  A copy of each forms needs to be obtained and annotated to indicate the minimum amount of information that has to be collected.  This will help to identify the source of the data required at each stage of the pathway as well as the data that is supplied by each of the stages.
+
+There are a number of coordinators who are responsible for dealing with referrals for all the transplant programmes;p
+- Kidney
+- Kidney and pancreas
+- Pancreas
+- Islet cells
+- Kidney and islet cells
+- Small bowel
+
+Although there is a separate living donor team, they interface closely with the deceased donor kidney team.
+
+The RTC (Renal Transplant Coordinators) in addtion to other roles and responsibilities perform the following tasks:
+- Waiting list management
+- Call in patients
+
+Ther is currently a separate team that performs the function of post transplant follow up.
+
+There ia a potential for patients to seitch between lists for various reasons, including 
+- Failed transplants which can potentially result in teh patient being relisted 
+- Second trasplant - this may be a different organ (e.g. pancreas transplant after a kidney transplant)
+- Patient no longer fit for their originally planned transplantation such as a SPK but are still suitable for lesser option of renal transplant only.
+
+NHSBT - currently submissions to hte NHSBT from the transplant team are via manually completed paper forms which are completed after gathering data from multiple sources.  
+
+Some forms can be automatically generated by Proton.  As teh Proton fuctionality is migrated to the EPR system it is hoped that these features can be maintained and additional forms added.  This is however dependent on the priorities set during the migration from Proton to EPR.
+
+NOTE:  It is the intention of the project team to concentrate on kidney onl trasnplantation in teh first instance.  The lessons learned from this work will help inform the development of approprate solutions for other transplant treatments.
+
+# 6 Referral
+STM:  Referral letters MUST be processed in accordance with any OUH NHS Trust SOP.  The receipt of the referral letter is the start of the 18 week referral to treatment cloack.  On receipt of the referral letter it should be stamped with a date.  This date indicates the start of the 18 week referral to treatment pathway which is illustrated in Figure 2.
+
+The referral is the initial contact with the unit and is usually in the form of a physical letter.  The quality of the information supplied is variable.  It is however possible for referrals to be received in alternate ways including but not limited to:
+- Electronic transfer
+- Email
+- Phone conversations
+- Self referral
+
+The remainder of this section identifies the mechanisms involved in referral and the information flows that are expected to occur.
+
+Insert Figure 3
+
+# 6.1 Standard operating procedures
+The trusts standard procedure for logging referrals should be followed.  The patient should be entered into the EPR system along with all of the information available at this point in time.
 
