@@ -103,3 +103,42 @@ The information that would probably be useful for local analysis included:
 2.1 Dat registry and metadata
 To facilitate the reuse of data for research purposes it is necessary to clearly define the data being captured.  This includes providing a definition of each item, how the data is collected, when data is enterd, the acceptable units for the measurement and any restrictions to the acceptable range.  For reasons of data provenance it is essential that informatio is stored that details the time that the data was captured along with the person entering the data.  Any changes also need to be accurately recorded to ensure that any modifications are easily identified to enable verification.  In addition ther may be a need to record temporal informatio for procedures and processses that have a clearly identifiable staring and finishing time.
 The most important this is to ensure that we capture a complete set of dat items that togerher provide a coherent piece of information related to an event.  Each of these infomration items should be signed, in some way, to help provide a degree of provenance.  In suppor of this all data should be recorded contemporaneously with respect to the events to which it relates.
+
+# 3 Pathway Summary
+
+The contents of this section represent our current understanding of the pathway.  Figure 1 provides an abstract summary of the pathway.  The subsequent sections will provide a more detailed description of each process.  As far as possible the data required to support each process will be indentified along with the source of the data.  our current understanding is that a patient follows one of several possible pathways from referral to the eventual outcome.
+
+The simplified pathways can be summarised as:
+
+1. Referral
+2. Outpatient appointment which on teh initial appointment normally includes work up.
+(a) Refusal is a potential outcome of the outpatient appointment
+(b) Recommendation to consider for listing
+3. Listing discussion
+(a) Refusal
+(b) Further investigation
+(c) Accepted onto the waiting list
+4. Activation
+(a) Tissue typing
+5. Waiting List
+6. Transplant
+(a) Tissue typing - confirm compatibility
+(b) Donor information
+(c) Organ
+    (i) Biopsy
+(d) anaesthetic assessment
+(e) Operation (Post admission tests)
+7. Post operation
+8. Discharge
+9. Follow-up at outpatients
+(a) Initiallyfollow up is local
+(b) Finally patient is discharged to their referring unit for further followup
+10 Events
+(a) Outpatient
+(b) Telephone contact
+(c) Admission
+
+There are a number of outcomes possible at various stages of the pathway.  The patient can proceed to the next step, require further investigations or be turned down for transplant.  There is a potential for a number of individuals to be involved at each stage in the pathway, who each have a responsibility for ensureing different portions of the information required is collected.  The overall target is to ensure that sufficient information is available to allow it to be accessed in an appropriate manner to reach a decision.
+
+Insert diagram here
+
