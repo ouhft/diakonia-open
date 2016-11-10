@@ -256,6 +256,85 @@ The primary goal of this phase of the pathway is a letter inviting the patient t
 6.8 Other comments
 SUG: It would improve the process if all referrals contained the essential information pertaining to the reason for referral.  Additional benefit may also be obtained if certain standard clinical investigations could be either scheduled or completed around the time of referral.  e.g. cardiac mps?
 
-STM: The referral letter should be digitised and attached to the patient record.  This could make up the initial entry on the timeline.
+STM: The referral letter should be digitised and attached to the patient record.  This could make up the initial entry on the timeline.  If a local system is developed the information from the EPR needs to be visible to local users without rekeying.  It is important that there is no additional work created by the requirement to rekey data.
+
+Ideally all the required information associated with the referral would be supplied in an electronic format by the referring clinician.  This would permit the incorporation of the information in the patient record without the need to rekey.  In addition to the potential time saving, the removal of the manual rekeying reduces the chance of typographic errors being introduced.  The minimum information that should be included in a referral is the demographic information.  A reasonable minimum referral should include: name, address, contact details, DoB, GP and details of the reason for the referral.  It is also imperative that the date of receipt of the referral is recorded to ensure that the first offer of an appointment is within the target time scales.
+
+# 7 Outpatient appointment
+
+The outpatient appointment is the initial contact with the patient.  During this appointment a transplant assessment form is completed alongside other tests to gather the necessary information to permit a decision to be made about suitability for transplant.  The patient arrives for assessment and the demographic information already in the system is validated.  If tests have been performed previously then some of the informatio required might already be available.
+
+Insert Figure 4
+
+7.1 Assessment process
+The first appointment should occur within 6 weeks of receiving the referral.  At the outpatient appointment a consultant and nurse perform a transplant assessment using a standard form.  This form is designed to capture the information necessary to enable a listing meeting to make an appropriate decision.  This form does include diagrams that are annotated when the clinical examination is conducted.
+
+It would be beneficial to have an electronic version of the form that recorded the information directly into a suitable information system.  In addition an anaesthetic assessment section shoudl be completed as part of the outpatient appointment.  This should be forwarded to the anaesthetist in advance to enable them to request additional tests if that is appropriate.
+
+The assessment usually include:
+- Blood tests, with the results being available from the EPR
+- X-rays
+- Tissue typing (H&I lab)
+- ECG
+
+Additional tests can include:
+- Chest - CXR, PFTs, CPEX
+- Cardiology - heart MPS, coronary angio stent cardiac surgery
+- Myocardial perfusion scans
+- Other - dopplers, duplex, CT
+
+In addition input may be required from 
+- Pharmacist
+- Dietician
+- Psychologist
+
+All of the data collecte is used to make an assessment of the suitability of the patient for transplant.  Additional tests can be ordered at different times.  The results of tests take variable amounts of time to become available.  It is therefore essential that any system notifies an appropriate person when all of the data becomes available, or if a particular timeout has been exceeded.
+
+During the assessment phase, and subsequent phases, it is necessary to get positive confirmation from the patient of the current medication as any information recorded in the system may be out of date.
+
+It is also desireable to obtain positivie confirmatio of allergies at the same time.  Blood tests may be done on the day of the assessment or at subsequent appointments possibly at the patient's local centre.  It is unlikely that these results will be available immediately.  Currently tests for out patients are ordered on paper but this should become electronic ordering as the EPR rollout continues.
+
+In addition to the completion of the assessment form the patient is asked to sign several consent forms:
+- DPA related to permit the sending of information to NHSBT
+- Consent for virology test - in particular HIV
+- Consent for a photograph to be taken and added to work up documents
+- Consent to go on the waiting list (is this currently done?)
+
+The consent forms are currently filled in by hand, with some of the information duplicated on each of the forms.  One of the forms goes to NHSBT the others are stored locally.  It is possible for forms to be mislayed.  A method of reducing the duplication of information would be beneficial.  It would also be beneficial to have an electronic version of the consent forms associated with the patient record.
+
+It is also necessary to take account of potential exceptions to the usual progress through the transplant pathway.  For instance special measures may need to be taken to prevent discrimination against patients from particular groups or suffering from particular ailments, such as:
+
+- Jehovah's Witnesses
+- Allergies
+- Other issues
+
+7.2 Inputs
+For an outpatient appointment to occur several things need to be in place;
+- A record of the patient on the system that needs to be verified
+- The patients needs to attend
+- The patient needs to bring any additional informatio requested at the time the appointment was sent out.
+
+However, the primary input to the outpatient appointment is the referral letter and any associated patient history it includes.  It is therefore imperative that the referral letter is available either physically or electronically.
+
+7.3 Actor involved
+The following are normally involved in the outpatient appointment stage:
+- Patient
+- Surgeon
+- Coordinator
+- Tissue typing (H&I lab)
+
+These are potentially involved:
+
+- Radiologist
+- Phlebotomist
+- Nursing staff
+- Laboratory staff
+- Secretarial support
+- Pharmacist
+- Cardiology
+- Dietician
+- Psychologist
+
+
 
 
