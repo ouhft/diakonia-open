@@ -10,28 +10,34 @@ Once we have a full understanding of the pathway we can then conduct a gap analy
 
 It is the goal of this endeavour to provide a system to support the patient pathway within transplantation.
 
-An orthoganoal ambition is to provide high quality research data.  In the initial stages the research data will be made available in the form of a number of standardised queries, which can be parameterised.  It is anticipated that initially these queries will only produce aggregated results to maintain patient confidentiality.
+An orthogonal ambition is to provide high quality research data.  In the initial stages the research data will be made available in the form of a number of standardised queries, which can be parameterised.  It is anticipated that initially these queries will only produce aggregated results to maintain patient confidentiality.
 
 The aim is to allow clinicians, managers and reserchers access to information pertaining to the performance of the transplant programme and allow identification of any trends that could warrant futher action.  We will also give consideration to how additional data collection could be integrated for additional reserch purposes.  This may need additional protocols that relate to the additional processes involved in obtaining relevant consent to tpermit the collection of supplementary information.
 
 Throughout this document the term 'referring clinician' will be used to cover any clinician that could refer a patient including but not limited to Nephrologists, Diabetologists and GPs.
 
 1.1  Data Needs
+
 The data collected as a patient traverses the pathway will be used to support several functions by fulfilling the needs of various customers.  The primary uses can be classified as:  Clinical, Managerial, Madatory reporting, Evaluation and Research.  The following give a brief summary of the key data consumers and the types of data that they require.
 
 1.1.1 Clinical
+
 There is a minimum set of data that needs to be collected for clinical reasons.  This data is necessary to permit clinical staff to perform their function effectively and maintain patient safety.  The exact makeup of the required data will depend on the clinical specialty concerned.  Although, there will be a core set of data that will usually be needed alonside a more extensive discipline specific data set.
 
 1.1.2. Managerial
+
 The managerial data collection is necessary to maintain the smooth running of the department.  It is important to collect data that allows the rapid identification of potential problem areas.
 
 1.1.3 Mandatory Reporting
+
 There is a requirement to provide data to certain external bodies such as the Renal Registry and NHSBT.  This reporting is mandatory and the informaiton required is specified by these bodies.  It is therefore essential that any information necessary to comply with these requirements is collected in an appropriate way.
 
 1.1.4 Evaluation/Research
+
 This section relates to the data collected over and above that needed for other purposes that will permit the critical evaluation of the performance of the department.  In addition this data can also form a core of research data that could be used to support studies if the appropriate ethical permission and consents are obtained.
 
 1.2 Scope
+
 The kidney transplant pathway is complex and there are several potential routes that a patient could take.  the pathway involves members of a multidiscicplinary team who provide patient care and support at different stages.  It is therefore important to clearly articulate the scope of this document and to highlight the elements that we consider to be within the pathway.
 
 It is important to remember that the patient is always central to each of the stages that comprise the pathway.
@@ -41,6 +47,7 @@ It is understood that the scope is purely a boundary to the areas we provide det
 It has been decided that for the purpose of documenting the renal tranplant pathway we will include all interactions from an initial referral to a transplant surgeon throuhg to the discharge of a patient into the care of their local referrer.  There may be a need for patienets to re-enter the pathway for a number of reasons.  Additionally is is also important to record as part of the pathway information relating to the donated organ.  It is also possible that some patients are unsuitable for transplant and this information also requires recording.
 
 1.3 Groups involved
+
 The following is an initial list of groups and personnel who are involved in the pathway associated with transplant.
 
 - Patient
@@ -54,7 +61,7 @@ The following is an initial list of groups and personnel who are involved in the
 - Administrative Support
 
 
-Other groups that are involved or porvide support include:
+Other groups that are involved or provide support include:
 - Infectious Diseases
 - Radiologist
 - Cardiologist
@@ -66,9 +73,11 @@ Other groups that are involved or porvide support include:
 - Transport
 
 1.4 Information acquisition
+
 It is also important to ascertain how information is presented.  It will require different handling depending on the format used.  If the information is presented as paper records it will need to be rekeyed to add it to an electronic record.  This could lead to random errors being introduces.  It may therefore be advantageous to use a double entry method to help reducde the error rate.  If the information is presented in an alectronic format it is important to ascertain that all the concepts that are used are correctly mapped to a local representation.  this again could lead to systemic errors being introduced if the mappings are incorrect.  This required the agreeing semantic means of each of fileds as well as mappings between various acceptable that could be recorded in each of the fields.
 
 1.5 Information assets
+
 It will be necessary to identify all th ecurrent information assets that are being utilised to provide the current service.  In addition to these assets it will be necessarry to identify which assets already exist to meet the needs of the pathway and wher there are deficiencies that need to be plugged.
 
 Currently the various data items are stored utilising multiple techniques and applications.  These inclufe EPR, Proton Excel Spreadsheets, Word documentes and paper records.
@@ -76,6 +85,7 @@ Currently the various data items are stored utilising multiple techniques and ap
 It is necessary to clearly identify how the solution that will suport this pathway fits within the strategic aims of the organisaiton as a whole.  This is clearly of imprtance as we should not follow a path that is inconsistent with the long term goals of the organisation without due consideration and consultation.
 
 1.6 Outline of the following sections
+
 The rest of this document is set out in a number of sections.  The next section considers what quality and audit mechanisms are necessary to allow accurate reporting of the effectiveness of the pathway.  A section providing a brief overview of the whole pathway follows this.  The following chapters concentrate on an individual portion of the pathway.  This is followed by sections on administration and notes relating to the EPR.  The final section summarises the key findings and suggestions.
 
 # 2 Quality and Audit
@@ -84,7 +94,7 @@ It is very important to capture sufficient information to fulfil the secondary r
 
 The quality of the data collected is paramount.  However, it is important to define the meaning of quality in the context of the data captured. A poetneial measure that could be considered is completeness.  Equally critical is the provenance, accuracy and contemporary nature of the data.
 
-it is also vital that the organisation monitors its own performance.  This monitoring will allow the organistion to react to any negative changes to its own statistics.  Additionally the use of monitoring allows a rigourous assessment of the effect of any changes to procedures that occur.
+It is also vital that the organisation monitors its own performance.  This monitoring will allow the organistion to react to any negative changes to its own statistics.  Additionally the use of monitoring allows a rigourous assessment of the effect of any changes to procedures that occur.
 
 External bodies that currently receive information includes the Renal Registry and NHSBT.  The renal registry returns are currently generated by the Proton system.  The NHSBT returns are generally generated by hand from information gathered from multiple sources.  The dat required by these organisations if reasonably weel defined, although ther is occasionaly a need for some additional translation betwee the data collected and that required for submission.
 
@@ -100,7 +110,8 @@ The information that would probably be useful for local analysis included:
 - Readmissions
 - Other complications not directly related to the treatment.
 
-2.1 Dat registry and metadata
+2.1 Data registry and metadata
+
 To facilitate the reuse of data for research purposes it is necessary to clearly define the data being captured.  This includes providing a definition of each item, how the data is collected, when data is enterd, the acceptable units for the measurement and any restrictions to the acceptable range.  For reasons of data provenance it is essential that informatio is stored that details the time that the data was captured along with the person entering the data.  Any changes also need to be accurately recorded to ensure that any modifications are easily identified to enable verification.  In addition ther may be a need to record temporal informatio for procedures and processses that have a clearly identifiable staring and finishing time.
 The most important this is to ensure that we capture a complete set of dat items that togerher provide a coherent piece of information related to an event.  Each of these infomration items should be signed, in some way, to help provide a degree of provenance.  In suppor of this all data should be recorded contemporaneously with respect to the events to which it relates.
 
@@ -111,7 +122,7 @@ The contents of this section represent our current understanding of the pathway.
 The simplified pathways can be summarised as:
 
 1. Referral
-2. Outpatient appointment which on teh initial appointment normally includes work up.
+2. Outpatient appointment which on the initial appointment normally includes work up.
 (a) Refusal is a potential outcome of the outpatient appointment
 (b) Recommendation to consider for listing
 3. Listing discussion
@@ -142,7 +153,8 @@ There are a number of outcomes possible at various stages of the pathway.  The p
 
 Insert Figure 1 
 
-# 3.1 18 Week referral to treatment pathway
+3.1 18 Week referral to treatment pathway
+
 There is a maximum time of 18 weeks between the referral being recorded and a final decision about treatment, either refusal or entry onto the waiting list. The general rule is that ther should not be more thatn 18 weeks betwen referral and first treatment.  In the cae of transplant, first treatment is consered to be acceptance onto the waiting list or being deemed unsuitable for transplant.  An illustration of the timeline for the case of being accepted onto the waiting list is outlined in Figure 2.  The 18 weeks may nto be contigiuous as there are various reasons that can cause the clock to be temporarily stopped.  If the clock has been stopped it may subsequently be restarted if approprate events occur at a future time.  This is discussed more fully in Section 5 below.
 
 NOTE:  The 18 week pathway is currently managed via an Excel spreadsheet.  It should also be noted that there is a suggested maximum of 6 weeks between referral and the first outpatient appointment.
@@ -150,9 +162,11 @@ NOTE:  The 18 week pathway is currently managed via an Excel spreadsheet.  It sh
 Insert Figure 2
 
 # 4 Satellite organisations
+
 There are a number of satellite organisations that will interact with the patient pathway, who may have different Information Technology (IT) solutions.  To prevent this being a problem it will be necessary to have clearly defined protocols with respect to the information being passed between the organisations.  These protocols will have to define minimum acceptable data sets for each possible interaction.  The definitions will have to include field names along with acceptable pseudonyms, the type of data being recorded and if applicable a range for acceptable values including any relevant units.  If electronic information interchange can be agreed then it will minimise the amount of human intervention necessary to incorporate data from satellite sites.
 
-#5 Other general comments
+# 5 Other general comments
+
 At various points in the patient pathway numerous forms are currently filled in. Further details about the content of thse forms is to be provided at teh relevant places within this document.  A copy of each forms needs to be obtained and annotated to indicate the minimum amount of information that has to be collected.  This will help to identify the source of the data required at each stage of the pathway as well as the data that is supplied by each of the stages.
 
 There are a number of coordinators who are responsible for dealing with referrals for all the transplant programmes;p
@@ -183,6 +197,7 @@ Some forms can be automatically generated by Proton.  As teh Proton fuctionality
 NOTE:  It is the intention of the project team to concentrate on kidney onl trasnplantation in teh first instance.  The lessons learned from this work will help inform the development of approprate solutions for other transplant treatments.
 
 # 6 Referral
+
 STM:  Referral letters MUST be processed in accordance with any OUH NHS Trust SOP.  The receipt of the referral letter is the start of the 18 week referral to treatment cloack.  On receipt of the referral letter it should be stamped with a date.  This date indicates the start of the 18 week referral to treatment pathway which is illustrated in Figure 2.
 
 The referral is the initial contact with the unit and is usually in the form of a physical letter.  The quality of the information supplied is variable.  It is however possible for referrals to be received in alternate ways including but not limited to:
@@ -196,15 +211,19 @@ The remainder of this section identifies the mechanisms involved in referral and
 Insert Figure 3
 
 6.1 Standard operating procedures
+
 The trusts standard procedure for logging referrals should be followed.  The patient should be entered into the EPR system along with all of the information available at this point in time.
 
 6.2 Inputs
+
 The referral, usually a letter is the only input available at this time.  The referral should include at least the patients name, contact details and reason for referral.  It would be useful if additional information pertaining to medical history and medications could be included.
 
 6.2.1 Where do referrals come from?
+
 Typically a referral to a transplant surgeon is generated by a reffering clinician.  The referring clinician may be based locally in Oxford, in one of the satellite centres closely associated with Oxford or potentially from further afield.  In some circumstances it is possible to get self referrals.  It is also possible to get referrals from other centres asking for a second opinion.
 
 6.2.2 What information is essential for a valid referral?
+
 The more details provided in teh referral the better.  It is essential to have contact details and some details about the referral.  In general the following would be a good starting point
 - Demographic information.
      - Patient name
@@ -224,11 +243,13 @@ The more details provided in teh referral the better.  It is essential to have c
 It has been suggested that there could be an improvement in the quality of information provided at the time of referral if a proforma template was provided to referring clinicians.  This could be tailored to the type of referral.  The initial sections should contain suitable space to allow the capture of essential information.  Additional sections could ask for the information that would be 'nice to have'.
 
 6.3 Queries required
+
 There may be a need to specify a report that provides information about the number of referrals that have been received.  It would also be of benefit for the management of the department to know the average time from referral to treatment along with any outliers that exceed the 18 week time limit.  Further reports detailing the number of DNA or withdrawals may also be useful for the management of the department.
 
 6.4 Actors involved
+
 The following are generall involved in the referral process:
-- patietn
+- patient
 - Referring clinician
 - Surgeon
 - Receiver and processor of the referral?
@@ -236,16 +257,19 @@ The following are generall involved in the referral process:
     Admin (managed by office manager)
     
 6.5 Processes involved
+
 An outpatients appointment is gererated after the basic information contained within the referral letter is entered onto the EPR system.  It is required that patients are seen within 6 weeks of the receipt of the referral letter.
 
 It is possible that the patient is referred onto a different speciality.
 
 6.6 Information generated and stored
+
 A summary of the information gathered at referral is presented in Table 1.  The majority of the information generated by this phase of the pathway is stored in the EPR.
 
 Insert Table 1.
 
 6.7 Outputs
+
 There are a number of potential outcomes from a referral:
 - Outpatient appointment
 - Request for additional information from the referring clinician
@@ -254,6 +278,7 @@ There are a number of potential outcomes from a referral:
 The primary goal of this phase of the pathway is a letter inviting the patient to attend an outpatient appointment.  In addition the basic demographic information should have been entered into the EPR.  This information will need to be validated at teh time the patient attends the outpatient appointment.  A refusal can occur at any stage of the pathway if the consultant feels that it is indicated.  Also, the patient can change their mind and decline a transplant at any point.
 
 6.8 Other comments
+
 SUG: It would improve the process if all referrals contained the essential information pertaining to the reason for referral.  Additional benefit may also be obtained if certain standard clinical investigations could be either scheduled or completed around the time of referral.  e.g. cardiac mps?
 
 STM: The referral letter should be digitised and attached to the patient record.  This could make up the initial entry on the timeline.  If a local system is developed the information from the EPR needs to be visible to local users without rekeying.  It is important that there is no additional work created by the requirement to rekey data.
@@ -267,6 +292,7 @@ The outpatient appointment is the initial contact with the patient.  During this
 Insert Figure 4
 
 7.1 Assessment process
+
 The first appointment should occur within 6 weeks of receiving the referral.  At the outpatient appointment a consultant and nurse perform a transplant assessment using a standard form.  This form is designed to capture the information necessary to enable a listing meeting to make an appropriate decision.  This form does include diagrams that are annotated when the clinical examination is conducted.
 
 It would be beneficial to have an electronic version of the form that recorded the information directly into a suitable information system.  In addition an anaesthetic assessment section shoudl be completed as part of the outpatient appointment.  This should be forwarded to the anaesthetist in advance to enable them to request additional tests if that is appropriate.
@@ -288,7 +314,7 @@ In addition input may be required from
 - Dietician
 - Psychologist
 
-All of the data collecte is used to make an assessment of the suitability of the patient for transplant.  Additional tests can be ordered at different times.  The results of tests take variable amounts of time to become available.  It is therefore essential that any system notifies an appropriate person when all of the data becomes available, or if a particular timeout has been exceeded.
+All of the data collected is used to make an assessment of the suitability of the patient for transplant.  Additional tests can be ordered at different times.  The results of tests take variable amounts of time to become available.  It is therefore essential that any system notifies an appropriate person when all of the data becomes available, or if a particular timeout has been exceeded.
 
 During the assessment phase, and subsequent phases, it is necessary to get positive confirmation from the patient of the current medication as any information recorded in the system may be out of date.
 
@@ -309,6 +335,7 @@ It is also necessary to take account of potential exceptions to the usual progre
 - Other issues
 
 7.2 Inputs
+
 For an outpatient appointment to occur several things need to be in place;
 - A record of the patient on the system that needs to be verified
 - The patients needs to attend
@@ -317,6 +344,7 @@ For an outpatient appointment to occur several things need to be in place;
 However, the primary input to the outpatient appointment is the referral letter and any associated patient history it includes.  It is therefore imperative that the referral letter is available either physically or electronically.
 
 7.3 Actor involved
+
 The following are normally involved in the outpatient appointment stage:
 - Patient
 - Surgeon
