@@ -785,5 +785,30 @@ The information is currently stored on the Renal (R:) drive.  There is no linkin
 
 SUG: This would be better organised using a central information store which mandated consisten (standardised) coding of information.
 
+Word documents contain the threads of communication.
+ - Emails are cut and pasted into the word document
+ - This forms timeline with a sequence of events recorded by virtue of the orger in the document
+ - This allows conversations and reqests to be tracked
+ - On call coordinator has access to the information especially that associated with health
+ 
+ 
+ Patient notes qare occasionally unavailable or missing.
+ 
+ The patient notes at listing consists of 2 sets:
+  - Buff - General hospial notes that could be anywhere depending on which department was the last to have contact with teh patient
+  - Blue - activated at transplant but need to reflect changes that are made to the buff notes.
+  
+  NOTE:  This issue is closely related to dta reliability and accuracy.  Ultimately it could impct upon patient safety.
+  
+  While on the waiting list the patient may be seen by the nephrologist.  Letters may be gererated and sent to expernal referring clinicians - these need to be part of the medical record.  All correspondence by coordinators, such as email, need to be captured.  NOTE:  Currently all correspondence by coordinators by email or telephone is recorded in a word document.  If this information is included within the ePR or other system appropriate access control needs to be considered.
+  
+  SUG:  There is possibly a need for access control to be included on any system or subsystem that records correspondence betwen coordinators and others in relation to patients.
+  
+  Patients can be suspended at any time.  This may be because of holiday, illness, change in circumstances.
+  
+SUG: Ther should be a mechanism that allows a patient to be suspended and a cause given.  There should be a mechanism for reactivating patietns.  A reactivation plan should be recorded.  Perioadic reminders shoudl be snet to approprate team members to check if suspension is till approprate.  The reminder mechanisme must be configureable with respect to the frequency of reminders being sent.
 
+9.6 Outputs
+
+Outputs at this stage could include the mandatory periodic reporting to various bodies.
 
