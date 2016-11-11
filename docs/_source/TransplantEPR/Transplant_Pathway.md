@@ -125,31 +125,31 @@ The simplified pathways can be summarised as:
 
 1. Referral
 2. Outpatient appointment which on the initial appointment normally includes work up.
- 1. Refusal is a potential outcome of the outpatient appointment
- 2. Recommendation to consider for listing
+   1. Refusal is a potential outcome of the outpatient appointment
+   2. Recommendation to consider for listing
 3. Listing discussion
- 1. Refusal
- 2. Further investigation
- 3. Accepted onto the waiting list
+   1. Refusal
+   2. Further investigation
+   3. Accepted onto the waiting list
 4. Activation
- 1. Tissue typing
+   1. Tissue typing
 5. Waiting List
 6. Transplant
- 1. Tissue typing - confirm compatibility
- 2. Donor information
- 3. Organ :
-    (i) Biopsy
- 4. anaesthetic assessment
- 5. Operation (Post admission tests)
+   1. Tissue typing - confirm compatibility
+   2. Donor information
+   3. Organ :
+      (i) Biopsy
+   4. anaesthetic assessment
+   5. Operation (Post admission tests)
 7. Post operation
 8. Discharge
 9. Follow-up at outpatients
- 1. Initiallyfollow up is local
- 2. Finally patient is discharged to their referring unit for further followup
+   1. Initiallyfollow up is local
+   2. Finally patient is discharged to their referring unit for further followup
 10. Events
- 1. Outpatient
- 2. Telephone contact
- 3. Admission
+    1. Outpatient
+    2. Telephone contact
+    3. Admission
 
 There are a number of outcomes possible at various stages of the pathway.  The patient can proceed to the next step, require further investigations or be turned down for transplant.  There is a potential for a number of individuals to be involved at each stage in the pathway, who each have a responsibility for ensureing different portions of the information required is collected.  The overall target is to ensure that sufficient information is available to allow it to be accessed in an appropriate manner to reach a decision.
 
