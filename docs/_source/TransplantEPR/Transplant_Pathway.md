@@ -519,6 +519,45 @@ Consent level 3
  
  7.7.3 Recipient consent form
  
- 
+ Consent
+  - Understand voluntary consent for data use by NHSBT
+    - Initial
+  - All data shared as necessary
+   - Initial
+  - Signature of paient
+  - Date
+  - Witness signature
+  - Date
+  - Representative signature (if necessary)
+  - Date
+  - Name of representative
+  
+ Refusal of consent
+  - Understan refusal may jeopardise chances
+    - Initial
+  - Refuse consent for certain items
+    - Initial
+    - Specify items
+  - Refuse consent for all information
+    - Initia
+  - Signature of patient
+  - Date
+  - Witness signature
+  - Date
+  - Representative signature
+  - Date
+  - Name of representative
+  
+  7.7.4 Outpatient outcome form
+  
+   - Consultant
+   - Clinic prep
+   - Reception
+      - Patient type (NHS/Private/Overseas)
+   - Clinical staff
+      - Patient on 18 week pathway
+   - Outcome of attendance
+   
+  7.8 Outputs
 
 
