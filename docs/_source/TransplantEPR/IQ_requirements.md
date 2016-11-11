@@ -2,6 +2,8 @@
 
 Typed up notes from a document used by IQ as the basis for looking for a system to procure.
 
+## General
+
 To be used by:
 
 1. Surgical Team
@@ -24,7 +26,7 @@ Should produce reports for:
 2. Collaborative Transplant Study
 3. Renal Registry
 
-## Recipient Assessment
+### Recipient Assessment
 
 1. Correspondence
  1. Referral Letter
@@ -81,12 +83,12 @@ Should produce reports for:
  4. Further investigations required
  5. Decision
 
-## Cadaveric Donor Assessment
+### Cadaveric Donor Assessment
 
 1. All information from EOS
 2. Follow up information from EOS regarding other organs from the same donor
 
-## Retrieval Data
+### Retrieval Data
 
 1. HBD/NHBD
 2. Retrieval Team
@@ -99,13 +101,13 @@ Should produce reports for:
 9. Machine perfusion
 10. NORS database
 
-## Living Donor Assessment
+### Living Donor Assessment
 
 1. Referral letters and all correspondence
 2. Surgical Assessment
 3. Investigations
 
-## Transplant
+### Transplant
 
 1. Back table
 2. Operation details
@@ -117,7 +119,7 @@ Should produce reports for:
 6. Stent
 7. Perfusion culture
 
-## Post-operative Curse
+### Post-operative Curse
 
 1. Duplex scan
 2. DGF Y/N
@@ -143,7 +145,7 @@ Should produce reports for:
 14. Medication during admission and on discharge
 15. Discharge summary automatically generated
 
-## Transplant Clinic
+### Transplant Clinic
 
 1. Date
 2. Doctor/nurse
@@ -155,24 +157,24 @@ Should produce reports for:
 8. Graft dysfunction
 9. Medication
 
-## Re-admission
+### Re-admission
 
 1. Complications
 2. Operations
 
-## Labs results
+### Labs results
 
 1. Biochemistry
 2. Drug levels
 3. Haematology
 4. Coagulation
 
-## Graft Function
+### Graft Function
 
 1. Graft Failure
 2. Date of failure
 
-## Alerts
+### Alerts
 
 1. Stent
 2. Missed follow-up
@@ -199,9 +201,9 @@ Should produce reports for:
 * CxR = Chest X-Ray
 * HNI = Histocompatibility and Immunogenetics
 
-### 2: Surgeon Assessment
+## 2: Surgeon Assessment
 
-#### Diabetes
+### Diabetes
 * Year/age diagnosis
 * Type I / II / Mody (Mature Onset of Diabetes of the Young)
 * Insulin dose - total units
@@ -210,7 +212,7 @@ Should produce reports for:
 * Frequency of hypos
 * Complications
 
-#### Neuropathy
+### Neuropathy
 * Peripheral Y/N
 * Extent - Hands / Feet / Lower legs / Thighs
 * Wheelchair Y/N
@@ -221,7 +223,7 @@ Should produce reports for:
 * Diarrohea / Constipation
 * Gastric pacemaker Y/N
 
-#### Vasculopathy
+### Vasculopathy
 * Y/N
 * Amputations Y/N
  * Extent
@@ -231,7 +233,7 @@ Should produce reports for:
 * Clauidication Y/N
  * Distance
 
-#### Retinopathy
+### Retinopathy
 * Y/N
 * Laser Y/N
  * Number
@@ -240,7 +242,7 @@ Should produce reports for:
 * Regular Follow Up
 * Research Link
 
-#### Nephropathy
+### Nephropathy
 * Y/N
 * Cause of renal failure
  * Polycystic Kidneys - UTIs Y/N; Bleeds Y/N; Large kidneys Y/N; Previous nephrectomies
@@ -269,14 +271,14 @@ Should produce reports for:
  * Hesitancy
  * Dribbling
 
-#### Previous Transplant
+### Previous Transplant
 * Tx Type
 * Date of Tx
 * Reason for failure
 * Previous donor TT
 * Previous immunosuppresion
 
-#### Past Medical History
+### Past Medical History
 * Cardiac
 * Respiratory
 * GI (Gastro Intestinal)
@@ -284,16 +286,16 @@ Should produce reports for:
 * Surgical
 * Gynaecological
 
-#### Current Drugs
+### Current Drugs
 
-#### Allergies
+### Allergies
 
-#### Sensitising events
+### Sensitising events
 - Tx
 - Pregnancies
 - Blood transfusions
 
-#### Social History
+### Social History
 * Employment Y/N
 * Job
 * Disable Y/N
@@ -308,7 +310,7 @@ Should produce reports for:
  * Number units
 * Other recreational drugs
 
-#### Examination
+### Examination
 * CVS (Cardio Vascular System)
 * RS (Respiritory System)
 * Abdomen
@@ -317,20 +319,20 @@ Should produce reports for:
 * Hands
 * Teeth
 
-#### Decision to list
+### Decision to list
 
-#### Generate Template Letter
+### Generate Template Letter
 
-### 3: Listing Meeting
+## 3: Listing Meeting
 * List of people present
 * Further investigations
 * Concerns and name of those with reservations
 * Decision to list Y/N
 
-#### 4: Annual Review
+## 4: Annual Review
 ...and Report / Letter Tissue Typing (about sensitisation status and calls)
 
-#### Diabetes
+### Diabetes
 * Insulin dose
 * Hypos
 * Awareness / Unawareness
@@ -338,7 +340,7 @@ Should produce reports for:
 
 New changes in complications...
 
-#### Neuropathy
+### Neuropathy
 * Peripheral Y/N
 * Extent - Hands / Feet / Lower legs / Thighs
 * Wheelchair Y/N
@@ -349,14 +351,14 @@ New changes in complications...
 * Diarrohea / Constipation
 * Gastric pacemaker Y/N
 
-#### Retinopathy
+### Retinopathy
 * Y/N
 * Laser Y/N
  * Number
 * Surgery
 * Stable / Unstable
 
-#### Vasculopathy
+### Vasculopathy
 * Y/N
 * Amputations Y/N
  * Extent - Toes; Forefoot; BKA (Below Knee); AKA (Above Knee); 
@@ -371,19 +373,19 @@ New changes in complications...
 * Transfusion or possible sensitisation events
 * New problems
 
-#### Social History
+### Social History
 * Any changes?
 
-#### Examination
+### Examination
 
-#### Investigations
+### Investigations
 
 #### Decision
 * Remain on waiting list
 * Suspend
 * Remove from waiting list
 
-### 5: Call / Selected for Transplant
+## 5: Call / Selected for Transplant
 * Not attended
  * Unwell
  * No transport
@@ -396,12 +398,12 @@ New changes in complications...
  * Organ not suitable
  * Proceeded with transplant...
 
-###  6: Donor
+##  6: Donor
 * Cadaveric - EOS Information 
 * Living donor - LRD (Living related donor) team
 * Letters - Direct; Paired exchange; altruistic
 
-#### Retrieval
+### Retrieval
 * Team and surgeon
 * DBD - cross clamp date and time
 * DCD
@@ -416,11 +418,11 @@ New changes in complications...
 * Reported damage
 * Abnormal anatomy
 
-### 7: Organ and Backtable
+## 7: Organ and Backtable
 * Name of surgeon and assistant
 * Start time
 
-#### Kidney R / L + Biopsy + Perfusion fluid culture
+### Kidney R / L + Biopsy + Perfusion fluid culture
 
 * Number of arteries
 * Number of veins
@@ -429,13 +431,13 @@ New changes in complications...
 * Quality of patch
 * Quality of arterial ostium
 
-#### Backtable reconstruction
+### Backtable reconstruction
 * Aortic patch shortened
 * Ao patch sacrificed
 * Arteries troussered
 * Arteries anastomosed end-to-side to renal arteries
 
-Damage
+#### Damage
 
 * Y/N
 * Capsular
@@ -453,7 +455,7 @@ Machine perfusion Y/N
 * reason for perfusion
 * kps (kidney perfusion solution) batch number
 
-#### Pancreas + Perfusion fluid culture
+### Pancreas + Perfusion fluid culture
 * Fatty - No; Mild; Moderate; Severe
 * Damage Type - Report to NHSBT + HTA B form
 * Vascular reconstruction
@@ -461,12 +463,13 @@ Machine perfusion Y/N
  * UW (University of Wisconsin) Solution
  * Batch number 
 
-### 8: Transplant
+## 8: Transplant
 * Surgeon's name
 * Assistant's name
 * Consultant in charge
 
-Templates for operations and back table
+### Templates for operations and back table
+
 * Kidney
 * SPK (Simultaneous Pancreas Kidney)
 * PTA (Pancreas Transplant Alone)
