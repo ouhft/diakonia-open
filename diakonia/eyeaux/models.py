@@ -7,6 +7,7 @@ from django.utils import timezone
 
 # NB: The entire set of NHSBT records would be ideal for MongoDB
 
+
 class NHSBTFile(models.Model):
     filename = models.CharField(max_length=200)
     extract_date = models.DateField()
@@ -15,6 +16,7 @@ class NHSBTFile(models.Model):
     class Meta:
         verbose_name = "NHSBT Ingest File"
         verbose_name_plural = "NHSBT Ingest Files"
+        app_label = "diakonia.eyeaux"
 
 
 class NHSBTRecord(models.Model):
@@ -780,6 +782,7 @@ class NHSBTRecord(models.Model):
     class Meta:
         verbose_name = "NHSBT Record Row"
         verbose_name_plural = "NHSBT Record Rows"
+        app_label = "diakonia.eyeaux"
 
 
 class NHSBTLog(models.Model):
@@ -790,6 +793,7 @@ class NHSBTLog(models.Model):
     class Meta:
         verbose_name = "NHSBT Ingest Log"
         verbose_name_plural = "NHSBT Ingest Logs"
+        app_label = "diakonia.eyeaux"
 
 
 class PSSPerson(models.Model):
@@ -821,6 +825,8 @@ class PSSPerson(models.Model):
         help_text="Ethnic Group",
         blank=True
     )
+    class Meta:
+        app_label = "diakonia.eyeaux"
 
 
 class PSSmicroResult(models.Model):
@@ -834,6 +840,9 @@ class PSSmicroResult(models.Model):
     res_composed_text = models.TextField(verbose_name="result text", blank=True)
     result_method = models.CharField(max_length=4, verbose_name="Result Method", blank=True)
 
+    class Meta:
+        app_label = "diakonia.eyeaux"
+
 
 class PSSlimsResult(models.Model):
     person = models.ForeignKey(PSSPerson)
@@ -844,3 +853,6 @@ class PSSlimsResult(models.Model):
     units = models.CharField(max_length=10, verbose_name="units", blank=True)
     value_string = models.CharField(max_length=10, verbose_name="value (string)", blank=True)
     value_number = models.FloatField(verbose_name="value (float)", blank=True, null=True)
+
+    class Meta:
+        app_label = "diakonia.eyeaux"

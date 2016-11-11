@@ -18,8 +18,8 @@ import sys
 import os
 import importlib
 import inspect
-import environ
 from recommonmark.parser import CommonMarkParser
+from django.conf import settings
 from django.db.models.fields.files import FileDescriptor
 from django.db.models.manager import ManagerDescriptor
 from django.db.models.query import QuerySet
@@ -37,11 +37,9 @@ sys.path.insert(0, os.path.abspath('.'))
 sys.path.insert(0, os.path.abspath('..'))
 sys.path.append(os.path.abspath('../../lib/python3.5/site-packages/'))
 
-# with open('../location.env', 'r') as location_file:
-#     environment_string = location_file.read().replace('\n', '')
+# Import Django settings
+settings.configure()
 
-environ.Env.read_env(env_file='../config/settings/.env')
-# os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings")  # + environment_string)
 import django
 django.setup()
 from diakonia import __version__ as RELEASE_VERSION

@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class FhirstationConfig(AppConfig):
-    name = 'fhirstation'
+    name = 'diakonia.fhirstation'

@@ -15,8 +15,11 @@ import environ
 
 ROOT_DIR = environ.Path(__file__) - 3  # diakonia-repo/config/settings/common.py - 3 = {{ diakonia-repo }}/)
 APPS_DIR = ROOT_DIR.path('diakonia')
+ENV_FILE = str(environ.Path(__file__) - 1 + ".env")
+# print("HELLO: Path is [{0}]".format(ENV_FILE))
 
 env = environ.Env()
+env.read_env(env_file=ENV_FILE)
 
 # APP CONFIGURATION
 # ------------------------------------------------------------------------------
