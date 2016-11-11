@@ -1,7 +1,7 @@
-# Transplant Pathway
+# Transplant Pathways
 
-Original version by Mark Slaymaker, 10/07/2014
-Updates via Ally Bradley and Carl Marshall, 11/11/2016
+* Original version by *Mark Slaymaker*, 10/07/2014
+* Updates via *Ally Bradley* and *Carl Marshall*, 11/11/2016
 
 ## Overview
 
