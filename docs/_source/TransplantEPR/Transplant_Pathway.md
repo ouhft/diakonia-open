@@ -125,31 +125,31 @@ The simplified pathways can be summarised as:
 
 1. Referral
 2. Outpatient appointment which on the initial appointment normally includes work up.
-   1. Refusal is a potential outcome of the outpatient appointment
-   2. Recommendation to consider for listing
+ 1. Refusal is a potential outcome of the outpatient appointment
+ 2. Recommendation to consider for listing
 3. Listing discussion
-   1. Refusal
-   2. Further investigation
-   3. Accepted onto the waiting list
+ 1. Refusal
+ 2. Further investigation
+ 3. Accepted onto the waiting list
 4. Activation
-   1. Tissue typing
+ 1. Tissue typing
 5. Waiting List
 6. Transplant
-   1. Tissue typing - confirm compatibility
-   2. Donor information
-   3. Organ :
-      (i) Biopsy
-   4. anaesthetic assessment
-   5. Operation (Post admission tests)
+ 1. Tissue typing - confirm compatibility
+ 2. Donor information
+ 3. Organ :
+    (i) Biopsy
+ 4. anaesthetic assessment
+ 5. Operation (Post admission tests)
 7. Post operation
 8. Discharge
 9. Follow-up at outpatients
-   1. Initiallyfollow up is local
-   2. Finally patient is discharged to their referring unit for further followup
+ 1. Initiallyfollow up is local
+ 2. Finally patient is discharged to their referring unit for further followup
 10. Events
-    1. Outpatient
-    2. Telephone contact
-    3. Admission
+ 1. Outpatient
+ 2. Telephone contact
+ 3. Admission
 
 There are a number of outcomes possible at various stages of the pathway.  The patient can proceed to the next step, require further investigations or be turned down for transplant.  There is a potential for a number of individuals to be involved at each stage in the pathway, who each have a responsibility for ensureing different portions of the information required is collected.  The overall target is to ensure that sufficient information is available to allow it to be accessed in an appropriate manner to reach a decision.
 
@@ -693,6 +693,97 @@ A standard letter template should be created appropriate to each specialty.  The
 
 The letter will either be requesting the addition of the patient to a waiting list or the refusal of the patient.
 
+If the outcome is positive teh letter request the activiation of the patietn on the waiting list.  This letter is sent to the H&I lab.  It is necessary for this letter to be signed before the H&I lab forward teh form to NHSBT.
+
+QUE:  Could this letter be in an electronic format and be signed with a digital signature?
+
+## 9 Waiting List
+
+At present there is an Excel spreadsheet that is used for managing the patients transition through the pathway.  The spread sheet records pertinent information that is required for ensuring that the 18 week time frame is complied with.  The information includes items such as:
+
+- Date of appointment
+- Date that the clock started on the 18 weeks - clock stop/restart
+- A paper admin form has teh code for teh next stage ans start/stop clock
+
+Insert Figure 8
+
+### 9.1 Inputs
+
+The inputs to this stage of teh pathway are teh decision of teh listing meeting along with the information collected to this point.  Additional inputs can take the form of communications relating to the patietn.  These communications can take many forms such as telephone calls, emails and letters.  
+
+### 9.2 Queries required
+
+Reports:  Currently information has to gathered from multipjjle sources to e able to generate results and reports.  Some of these reports form the basis of submissions to relevant external bodies.  It could be useful to generate perioadic reports that give up to date figures relating to the activity of the department as well as the status of patients.  This would allow closer monitoring of the number of patients on the waiting list and the proportion of patiens in each potential waiting list state.
+
+### 9.3 Actors involved
+
+The following are the primary participants at this stage:
+
+- Patients
+- Coordinators
+
+In addition there will be periodic input from clinical specialists as required.
+
+###m9.4 Processes involved
+
+While on the waiting list each patient can be in one of several states:
+
+- Can be an active work up patient
+- Be suspended for any one of a number of reasons, such as:
+  - Overweight/high BMI
+  - Cardiac issues
+  - Anything else that could cause additional complications with the transplant
   
+If a patietn is removed from the active list they can be reactivated when they are considered fit.  A multi disciplinary team (MDT) is responsible for assessing the patients fitness for listing in the case of kidney or kidney and pancreas.
+
+The bowel trasplant team have separate listing meetings.
+
+Cardiology meet fortnightly for fitness discussions.  This is a physical meeting and actions are taken at the meeting
+
+If the patient is from another centre and radiology images need to be reviewed there is an image exchange portal for images from other centres.  This can introduce delays into the process if investigations are carried out by local centres.  This is because the process is currently very labour intensive.
+
+For some patient on the waiting list there is a need for a periodic review, usually annually, see section below.  There is also some biannual cardiac testing (annual for Type 1 DM).
+
+SUG:  System should automatically flat tests needed and review dates.  Notify of annual annual review.
+
+If the tests are to be carried out an another centre the system should flag when a tes being carried out remotely has not been reported within a predefined period of time.  
+
+### 9.5 Information generated and stored
+
+Data locations:
+
+MedCon - Cardiologist information
+PACs - images
+
+We need to be able to record when a patient has their waiting list status either activated or suspended.  It is important for this information to be accurate.  NOTE:  It has been suggested that it would be useful to generate a letter automatically for the patient and clinician.  This letter would provide details about the status update as well as indicate the next follow up.
+
+Other information that may be generated while the patient is on the waiting list includes:
+
+- letters
+  - from other centres are not scanned
+  - cardiology letters on a different system to proton letters
+  - internal and external letters not centrally accessible
+- Telephone converstions
+- Emails
  
+Keeping up with exernally sourced information such as letters, emails etc can be problematic (it might be helpful to have some form of notificaions alongside scanning)
+ 
+Regular, monthly reports are sent to other centres to keep them informed about the status of their patients.  Mainly:
+
+- Where in the work up process they are
+- What if anything is causing delays
+- Who is active/suspended/transplanted
+
+This is currently managed in an Excel spreadsheet.
+
+This is a very time consuming process which typically involves a lot of cutting and pasting.  The manual nature of this process increases the possibility of minor errors being introduced.
+
+SUG:  Would it be possible to allow external read only access to reduce work?
+QUE: What would the granularity of access be for external users.  They should only have access to their own patietns.
+
+The information is currently stored on the Renal (R:) drive.  There is no linking between the different portions of the information.
+
+SUG: This would be better organised using a central information store which mandated consisten (standardised) coding of information.
+
+
 
