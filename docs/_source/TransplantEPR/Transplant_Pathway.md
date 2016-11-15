@@ -724,7 +724,7 @@ The following are the primary participants at this stage:
 
 In addition there will be periodic input from clinical specialists as required.
 
-###m9.4 Processes involved
+### 9.4 Processes involved
 
 While on the waiting list each patient can be in one of several states:
 
@@ -752,8 +752,8 @@ If the tests are to be carried out an another centre the system should flag when
 
 Data locations:
 
-MedCon - Cardiologist information
-PACs - images
+* MedCon - Cardiologist information
+* PACs - images
 
 We need to be able to record when a patient has their waiting list status either activated or suspended.  It is important for this information to be accurate.  NOTE:  It has been suggested that it would be useful to generate a letter automatically for the patient and clinician.  This letter would provide details about the status update as well as indicate the next follow up.
 
@@ -783,70 +783,73 @@ QUE: What would the granularity of access be for external users.  They should on
 
 The information is currently stored on the Renal (R:) drive.  There is no linking between the different portions of the information.
 
-SUG: This would be better organised using a central information store which mandated consisten (standardised) coding of information.
+SUG: This would be better organised using a central information store which mandated consistent (standardised) coding of information.
 
 Word documents contain the threads of communication.
+
  - Emails are cut and pasted into the word document
  - This forms timeline with a sequence of events recorded by virtue of the orger in the document
  - This allows conversations and reqests to be tracked
  - On call coordinator has access to the information especially that associated with health
  
  
- Patient notes qare occasionally unavailable or missing.
+Patient notes qare occasionally unavailable or missing.
  
- The patient notes at listing consists of 2 sets:
+The patient notes at listing consists of 2 sets:
+ 
   - Buff - General hospial notes that could be anywhere depending on which department was the last to have contact with teh patient
   - Blue - activated at transplant but need to reflect changes that are made to the buff notes.
   
-  NOTE:  This issue is closely related to dta reliability and accuracy.  Ultimately it could impct upon patient safety.
+NOTE:  This issue is closely related to dta reliability and accuracy.  Ultimately it could impct upon patient safety.
   
-  While on the waiting list the patient may be seen by the nephrologist.  Letters may be gererated and sent to expernal referring clinicians - these need to be part of the medical record.  All correspondence by coordinators, such as email, need to be captured.  NOTE:  Currently all correspondence by coordinators by email or telephone is recorded in a word document.  If this information is included within the ePR or other system appropriate access control needs to be considered.
+While on the waiting list the patient may be seen by the nephrologist.  Letters may be gererated and sent to expernal referring clinicians - these need to be part of the medical record.  All correspondence by coordinators, such as email, need to be captured.  NOTE:  Currently all correspondence by coordinators by email or telephone is recorded in a word document.  If this information is included within the ePR or other system appropriate access control needs to be considered.
   
   SUG:  There is possibly a need for access control to be included on any system or subsystem that records correspondence betwen coordinators and others in relation to patients.
   
-  Patients can be suspended at any time.  This may be because of holiday, illness, change in circumstances.
+Patients can be suspended at any time.  This may be because of holiday, illness, change in circumstances.
   
-SUG: Ther should be a mechanism that allows a patient to be suspended and a cause given.  There should be a mechanism for reactivating patietns.  A reactivation plan should be recorded.  Perioadic reminders shoudl be snet to approprate team members to check if suspension is till approprate.  The reminder mechanisme must be configureable with respect to the frequency of reminders being sent.
+  SUG: Ther should be a mechanism that allows a patient to be suspended and a cause given.  There should be a mechanism for reactivating patietns.  A reactivation plan should be recorded.  Perioadic reminders shoudl be snet to approprate team members to check if suspension is till approprate.  The reminder mechanisme must be configureable with respect to the frequency of reminders being sent.
 
-9.6 Outputs
+### 9.6 Outputs
 
 Outputs at this stage could include the mandatory periodic reporting to various bodies.
 
 In addition there could be:
 
-Letters for annual reviews.
-Email and other correspondence
+* Letters for annual reviews.
+* Email and other correspondence
 
-# 10 Periodic checks
+## 10 Periodic checks
 
 While the patient is on the waiting list, depending on the transplant that they are waiting for, it may be prudent to carry out periodic health checks to ascertain if there have been any significant changes.  These changes may alter the suitability of the patient for transplant.  The regular monitoring and contact with the patient will also allow the capturing of any changes to relevant information including demographic and underlying health issues.
 
 If the patient is referred from a satellite unit, will that unit be responsible for performing any tests and checks?
+
 - Patient is reassessed annually by the Oxford team.
 
 If so, how will the relevant data be returned for inclusion in the patient history?
 
 Annual checks for pancreas transplant are carried out by surgeons.  For renal only transplants the patients are only checked when they are called for transplant.
 
-# 11 Transplant
+## 11 Transplant
 
 Insert figure 7
 
-11.1 Process
+### 11.1 Process
 
 The living donor team have demographic information.  DATA: paper based and word documents.  Some is stored locally and some at remote centres.
 
 If donor is remote the local living donor team should have all the information.
 TO CONFIRM:  Check with Sandra Dix
 
-DONOR
+#### DONOR
 For deceased donors the Electronic Organ Offering System (EOS) contains all pertinent data relating to the donors and organs.
 
 It is not currently possible to obtain the information held in EOS automatically.
 
 Induction plan.
 
-ORGAN
+#### ORGAN
 Data needs to be recorded relating to the organ retrieval.  This should include as a minimum:
 - The surgeon and team involved
 - The solution perfused with
@@ -854,7 +857,7 @@ Data needs to be recorded relating to the organ retrieval.  This should include 
 
 It is also important to ensure that the HTA A document number is recorded.
 
-OPERATION
+#### OPERATION
 
 Back table information
 
@@ -865,6 +868,7 @@ Back table information
 SUG:  Template for back table data entry
 
 Data from operation:
+
  - Time of operation
  - Surgeon
  - Other details?
@@ -876,11 +880,11 @@ Data from operation:
  
 There should be a standardised form to fill out for the surgery.  From this data can be recorded in an electronic format.  In addition a OpNote can be generated.  The data entry shoudl follow a standardised template with a small number of free text areas to note any deviations from the standard procedure.
 
-11.2 Inputs
+### 11.2 Inputs
 
 Information related to the organ being transplanted along with information pertaining to the recipient.
 
-11.3 Actors Involved
+### 11.3 Actors Involved
 
 The following perform the transplant and support this stage:
 
@@ -889,23 +893,26 @@ The following perform the transplant and support this stage:
 - Theatre staff
 - Pharmacist
 
-11.4  Information generated and stored
+### 11.4  Information generated and stored
 
 What information is gathered and stored as a result of this process?
 
-NHSBT
+#### NHSBT
 At the time of transplant there are multiple forms to fill in.
+
 - Pancreas record form (deceased pancreas form)
 - Islets record form
 - Small bowel/multi viscera
 - Organ CIT and Perfusion Record and Kidney Record Form
 
 Organ specific forms
+
 - Repeated details from various sources:
   - Labs
   - Wards
 
 Kidney record form - approximately 2 pages
+
  - Repeated information such as 
  
    - Height
@@ -913,23 +920,26 @@ Kidney record form - approximately 2 pages
    - Virology status
    - Dialysis status
    
-   Deceased patient form
-   Outcome and anatomical issues
+Deceased patient form
+
+Outcome and anatomical issues
    
-   HTA B form
+HTA B form
+
    - Organ perfusion
    - TIMMS system recorded but not available link (theatre uses TIMMS to record organ perfusion fluid)
    
-   Information copies manually
-   A copy of forms is kept locally for inspection - originals sent off.  Copies kept.
+Information copies manually
+
+A copy of forms is kept locally for inspection - originals sent off.  Copies kept.
    
-   Recipient Coordinator has to fill forms and send to NHSBT (Transplant surgeon should complete).
+Recipient Coordinator has to fill forms and send to NHSBT (Transplant surgeon should complete).
    
-   Induction procedure used and medications
+Induction procedure used and medications
    
-11.5 Outputs
+### 11.5 Outputs
    
-   The outputs that are generated by the transplant surgery include:
+The outputs that are generated by the transplant surgery include:
    
    - An Operation Note
    - HTA B Form (1 per organ transplanted)
@@ -941,7 +951,7 @@ Kidney record form - approximately 2 pages
    - Medication details
    
 
-11.6 Notes
+### 11.6 Notes
 
 The operation note may be able to be automatically generated if the data necessary is entered using an appropriate system.
 
@@ -950,63 +960,64 @@ The HTA B Form needs to be submitted.  A record needs to be kept tying the HTA A
 Electronic versions of the data along with a scanned copy of each form would aid traceability.
 
 
-# 12 Post operative care
+## 12 Post operative care
 
 The patient is monitored post operatively to asses their progress.
 
 Insert Figure 8
 
-12.1 Inputs
+### 12.1 Inputs
+
 All of the information gathered by previous stages.  Along with any medication information.
 
-12.2 Actors involved
+### 12.2 Actors involved
 
 - Patients
 - Nephrologist
 - Surgeon
 - Nursing staff
 
-12.3 Information generated and stored
+### 12.3 Information generated and stored
 
 The results of regular measurements of blood pressure and temperature.  Along with blood and urine results.
 
-12.4 Outputs
+### 12.4 Outputs
 
 Recommendation that a patient can be discharged.
 
-# 13 Discharge
+## 13 Discharge
 
 The patient is initially discharged with local follow-up.  The local follow-up continues until the patient is discharged to the care of their referring unit.  The referring unit then continues with planned follow ups at regular intervals.
 
 Insert figure 9
 
-13.1  Actors involved
+### 13.1  Actors involved
 
 - Patient
 - Nethrologist
 - Surgeon
 - Nursing staff
 
-13.2 Information generated and stored
+### 13.2 Information generated and stored
 
 Update patient record to indicate the patient has been discharged.  In addition record the medication, if any, they are sent home with.
 
-13.3 Outputs
+### 13.3 Outputs
 
 A discharge summary letter that is sent to the patient's GP. (Does this also go to the referring clinician?)
 
-# 14 Follow up
+## 14 Follow up
 
 Initial follow ups are carried out locally.  The responsibility for follow ups is then returned to the referring centre, which may of course be Oxford.
 
 Insert figure 10
 
-14.1 Actors involved
+### 14.1 Actors involved
 
 - Patient
 - Nephrologist
 
-14.2  Information generated and stored
+### 14.2  Information generated and stored
 
 A standard set of information is required to enable the completion of NHSBT reporting forms.  This is likely to include:
 
@@ -1016,15 +1027,15 @@ A standard set of information is required to enable the completion of NHSBT repo
 - Blood tests
 - Urine tests
 
-14.3 Outputs
+### 14.3 Outputs
 
 A regular report document for NHSBT is created at this stage.
 
-# 15 Refusal
+## 15 Refusal
 
 If a patient is considered unsuitable for whatever reason, do they have an opportunity to be re-evaluated at a later time?  Or is the decision non-negotiable?  Does a refusal generate a letter for the GP and referring clinician?
 
-# 16 Other notes
+## 16 Other notes
 
 Transplant hospital admission:  Most of the data is in the EPR.
 
@@ -1036,7 +1047,7 @@ Information relation to additional hospital admissions should be recorded where 
 
 Should also record how successful the surgery was along with any other relevant clinical data.
 
-# 17 Administration
+## 17 Administration
 
 Any administration system needs to be small and efficient.  It cannot require the duplication of work such as manually re-typing information that has already been entered into the EPR system.  The reasons for not duplicating effort are two fold.  Firstly, the re-entry of information is inefficient and is usually non-productive work.  Secondly, the probability of typographical errors being introduced increases each time information has to be re-keyed.  It is envisaged that the vast majority of information required for administrative tasks associated with the patients interactions with the transplantation centre will be available through the EPR system.  The EPR system currently contains information pertaining to outpatient activity including peripheral clinics.  In addition most ward bsed activity is also recorded in the EPR.  The ADT (Admission Discharge Transfer) is rolled out and will in due course provide realtime information for all wards.  This is currently not the case as there can be delays in updating information.  The EPR system will soon have ePrescribing rolled out.  Numerous tests are currently ordered via the EPR.  There are however a number of tests associated with teh trasplantation function that are ordered in a more traditional way.
 
@@ -1067,7 +1078,7 @@ The proton system is also responsible for other data feeds:
 
 QUESTION:  Is it possible for EPR to capture the relevant information for these two external uses as well as push the necessary data.
 
-# 18 EPR Notes
+## 18 EPR Notes
 
 It is possible to add adhoc attachments to a patient record in EPR.  This is done by creating a digital version of the item to be added and placing it in an appropriate place.  The item is 'scanned' in some way and is usueally placed in a directory on the K drive.  From there it is possible to attach the item to a 'Note'.  This will allos the viewing of each item added to the patient record.
 
@@ -1075,9 +1086,9 @@ Dashboards can be added to the EPR, with complex pathway rules to allow a quick 
 
 It is also possible to capture paper forms including those with the diagrams, in the EPR.  This would allow the capturing of information in a consistent way and permit the instant sharing with multiple interested parties.
 
-# 19 Findings and suggestions
+## 19 Findings and suggestions
 
-The current transplant pathway utilises various mechanisms to store and manage patient information.  These include EPR (Cerner Millenium), Proton, Excel spread sheets and Word documents.
+The current transplant pathway utilises various mechanisms to store and manage patient information.  These include EPR (Cerner Millenium), Proton, Excel spreadsheets and Word documents.
 
 A potential improvement would be to enable the scanning of documents into the patient record.  An additional enhancement would be the ability to add notes relating to all communications relevant to the patients treatment.  This would permit easy access to historicl communications relating to the patient in a single place.  It would also be more robust than the current procedure of adding notes to a word document.  Another enhancement could be to make various forms that need fillin in electronic.  This could potentially include several consent forms that need to be signed.  Currently there is a lot duplicated information on each of these forms.  If the information was collected electronically it could permit the sharing of information between the various forms thus reducing the amount of duplicated effort.  The forms could still be printed for signing and then scanned in using the mechanism that supports the first improvement.  Alternatively, the forms could be signed electronically on a a tablet and only printed to give the patient a copy for their own records. 
 
