@@ -1,12 +1,6 @@
-# Pancreas DB Project
+# Meeting Notes
 
-Service Evaluation DB 
-
-* Reporting to NHSBT - Shirley Lockhart (Specialist Nurse) and Simon Northover + Rob Cookston
-* Pre-op spreadsheet data for matching, paper, emails
-* Maintain active data
-
-Later work on updating clinical processes with electronic systems.
+Mostly rough notes from CM below... WIP.
 
 ## Meeting 27/10/16 - CM Notes
 A review of what has been happening around the department regarding database plans was given, and the key note was made that the biggest objective is to digitise data and processes, not to be drawn into technical best fits, etc. The work on this project is to aide the digitisation migration and provide timely access to clinical and service data, ahead of other longer term plans for clinical data storage.
