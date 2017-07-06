@@ -1,18 +1,56 @@
 Pancreas DB Project
 ===================
 
-Service Evaluation DB and Departmental Process & Data Digitisation Pilot Project
-
-* Reporting to NHSBT - Shirley Lockhart (Specialist Nurse) and Simon Northover + Rob Cookston
-* Pre-op spreadsheet data for matching, paper, emails
-* Maintain active data
-
-Later work on updating clinical processes with electronic systems.
-
 .. toctree::
+   :hidden:
    :maxdepth: 2
 
    introduction
-   meeting_notes
+   notes
+   requirements
    governance
    infrastructure
+
+See the project Introduction for more details
+
+
+Outline
+-------
+**Name**: Pancreas DB
+
+**Goal**: Departmental Process & Data Digitisation Pilot Project, focused on Pancreas Transplants
+
+**Metrics**: See each sub-project
+
+**Target Group**: Transplant Department Clinical Staff
+
+
+Sub Projects
+------------
+This list is still a work in progress, and the ordering doesn't indicate priority
+
+1. Referral Acceptance  <-- Starting Point for this project
+2. Offer Review
+3. KP DB
+4. Recipient follow-up
+
+   * Post Listing
+   * Post Transplant
+
+5. Patient Summary & Flow Tracking
+6. EOS Integration and Digitisation
+7. Reporting
+
+   * Financial
+   * Weekly Review
+
+8. Referral Data Gathering
+
+
+Key Links
+---------
+* This documentation at https://ouh-churchill.github.io/_source/PancreasDB/
+* The project repository at https://github.com/ouh-churchill/diakonia
+* The project task board at https://waffle.io/ouh-churchill/diakonia
+* The test server - TBC
+* The live services - TBA

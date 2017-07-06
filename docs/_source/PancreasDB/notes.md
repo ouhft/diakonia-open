@@ -1,8 +1,19 @@
-# Meeting Notes
+# Notes
+
+* Reporting to NHSBT - Shirley Lockhart (Specialist Nurse) and Simon Northover + Rob Cookston
+* Pre-op spreadsheet data for matching, paper, emails
+* Maintain active data
+
+Later work on updating clinical processes with electronic systems.
+
+
+
+
+## Meeting Notes
 
 Mostly rough notes from CM below... WIP.
 
-## Meeting 27/10/16 - CM Notes
+### Meeting 27/10/16 - CM Notes
 A review of what has been happening around the department regarding database plans was given, and the key note was made that the biggest objective is to digitise data and processes, not to be drawn into technical best fits, etc. The work on this project is to aide the digitisation migration and provide timely access to clinical and service data, ahead of other longer term plans for clinical data storage.
 
 Consequently we are looking to go through a period of rapid iteration and take on a number of mini-projects to allow staff to evolve and learn from, that will lead to a larger overall solution.
@@ -27,7 +38,7 @@ Mini-projects identified so far:
 * Referral Data Gathering
 
 
-## Meeting 2/9/16 - CM Notes
+### Meeting 2/9/16 - CM Notes
 Process:
 
 * Organ offered, with NHSBT number (often for a specific patient)
