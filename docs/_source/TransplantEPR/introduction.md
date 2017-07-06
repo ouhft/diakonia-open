@@ -1,5 +1,5 @@
 # Transplant EPR Project
 
-AKA: Project OTTR
+AKA: was Project OTTR -- no longer, now Project Emory (as of Jun 2017)
 
-* [http://www.ottr.com](http://www.ottr.com)
+No details to link to are yet available. 

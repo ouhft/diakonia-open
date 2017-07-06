@@ -28,8 +28,8 @@ This is an umbrella project to aide service development in the Transplant and Ha
 
 
 ## Sub Projects
-1. **NHIC-TRA Export** - Starting point from a timeline perspective (if not a logical one) is the NIHR Health Informatics Collaborative - Transplantation data export project. 
-2. **Pancreas DB** - Process mapping and application development to capture Pancreas Transplant data for clinical evaluation
-3. **Transplant EPR** - Business proposal for a clinical EPR system to support the Transplant department
-4. **BMT** - Bone Marrow Transplant project
-5. **FHIRstation** - Development of an application server supporting the FHIR API built on top of the FHIRbase DB platform
+1. [**NHIC-TRA Export**](NHIC/index.rst) - Starting point from a timeline perspective (if not a logical one) is the NIHR Health Informatics Collaborative - Transplantation data export project. 
+2. [**Pancreas DB**](PancreasDB/index.rst) - Process mapping and application development to capture Pancreas Transplant data for clinical evaluation
+3. [**Transplant EPR**](TransplantEPR/index.rst) - Business proposal for a clinical EPR system to support the Transplant department
+4. [**BMT**](BMT/index.md) - Bone Marrow Transplant project
+5. [**FHIRstation**](FHIRstation/index.rst) - Development of an application server supporting the FHIR API built on top of the FHIRbase DB platform

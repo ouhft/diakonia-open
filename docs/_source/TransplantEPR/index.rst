@@ -1,5 +1,5 @@
-NHIC-TRA Project
-================
+Transplant EPR Project
+======================
 
 .. toctree::
    :maxdepth: 2
