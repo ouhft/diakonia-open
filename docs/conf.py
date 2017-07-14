@@ -221,8 +221,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Diakonia'
-copyright = u'2016, Carl Marshall'
-author = u'Carl Marshall'
+copyright = u'2016-2017, University of Oxford & Oxford Universities NHS Foundatation Trust'
+author = u'Carl Marshall, Grant Vallance, et al'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
