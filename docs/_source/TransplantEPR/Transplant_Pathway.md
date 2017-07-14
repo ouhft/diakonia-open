@@ -312,13 +312,15 @@ Ideally, all the required information associated with the referral would be supp
 
 The outpatient appointment is the initial contact with the patient. During this appointment a transplant assessment form is completed alongside other tests to gather the necessary information to permit a decision to be made about suitability for transplant. The patient arrives for assessment and the demographic information already in the system is validated. If tests have been performed previously then some of the information required might already be available.
 
-Insert Figure 4
+![Figure 4: Outpatient Stage](../../_static/transplant_epr/transplant_pathway/transplant_pathways_diagrams_figure_4.svg)
 
 ### 7.1 Assessment process
 
-The first appointment should occur within 6 weeks of receiving the referral. At the outpatient appointment a consultant and nurse perform a transplant assessment using a standard form. This form is designed to capture the information necessary to enable a listing meeting to make an appropriate decision. This form does include diagrams that are annotated when the clinical examination is conducted.
+The first appointment should occur within 6 weeks of receiving the referral. At the outpatient appointment a Consultant and Nurse perform a Transplant Assessment using a standard form. This form is designed to capture the information necessary to enable a listing meeting to make an appropriate decision. This form does include diagrams that are annotated when the clinical examination is conducted.
 
-It would be beneficial to have an electronic version of the form that recorded the information directly into a suitable information system. In addition an anaesthetic assessment section shoudl be completed as part of the outpatient appointment. This should be forwarded to the anaesthetist in advance to enable them to request additional tests if that is appropriate.
+It would be beneficial to have an electronic version of the form that recorded the information directly into a suitable information system. 
+
+In addition an anaesthetic assessment section should be completed as part of the outpatient appointment. This should be forwarded to the anaesthetist in advance to enable them to request additional tests if that is appropriate.
 
 The assessment usually include:
 
@@ -332,9 +334,9 @@ Additional tests can include:
 - Chest - CXR, PFTs, CPEX
 - Cardiology - heart MPS, coronary angio stent cardiac surgery
 - Myocardial perfusion scans
-- Other - dopplers, duplex, CT
+- Other - canoud? dopplers, duplex, CT
 
-In addition input may be required from 
+In addition input may be required from:
 
 - Pharmacist
 - Dietician
@@ -342,18 +344,22 @@ In addition input may be required from
 
 All of the data collected is used to make an assessment of the suitability of the patient for transplant. Additional tests can be ordered at different times. The results of tests take variable amounts of time to become available. It is therefore essential that any system notifies an appropriate person when all of the data becomes available, or if a particular timeout has been exceeded.
 
-During the assessment phase, and subsequent phases, it is necessary to get positive confirmation from the patient of the current medication as any information recorded in the system may be out of date.
+During the assessment phase, and subsequent phases, it is necessary to get positive confirmation from the patient of the current medication, as any information recorded in the system may be out of date.
 
-It is also desireable to obtain positivie confirmatio of allergies at the same time. Blood tests may be done on the day of the assessment or at subsequent appointments possibly at the patient's local centre. It is unlikely that these results will be available immediately. Currently tests for out patients are ordered on paper but this should become electronic ordering as the EPR rollout continues.
+It is also desirable to obtain positive confirmation of allergies at the same time. 
+
+Blood tests may be done on the day of the assessment or at subsequent appointments possibly at the patient's local centre. It is unlikely that these results will be available immediately. Currently tests for out patients are ordered on paper but this should become electronic ordering as the EPR rollout continues.
 
 In addition to the completion of the assessment form the patient is asked to sign several consent forms:
 
 - DPA related to permit the sending of information to NHSBT
 - Consent for virology test - in particular HIV
-- Consent for a photograph to be taken and added to work up documents
+- Consent for a photograph to be taken and added to work-up documents
 - Consent to go on the waiting list (is this currently done?)
 
-The consent forms are currently filled in by hand, with some of the information duplicated on each of the forms. One of the forms goes to NHSBT the others are stored locally. It is possible for forms to be mislayed. A method of reducing the duplication of information would be beneficial. It would also be beneficial to have an electronic version of the consent forms associated with the patient record.
+The consent forms are currently filled in by hand, with some of the information duplicated on each of the forms. One of the forms goes to NHSBT the others are stored locally. It is possible for forms to be mislaid. A method of reducing the duplication of information would be beneficial. 
+
+It would also be beneficial to have an electronic version of the consent forms associated with the patient record.
 
 It is also necessary to take account of potential exceptions to the usual progress through the transplant pathway. For instance special measures may need to be taken to prevent discrimination against patients from particular groups or suffering from particular ailments, such as:
 
@@ -366,14 +372,15 @@ It is also necessary to take account of potential exceptions to the usual progre
 For an outpatient appointment to occur several things need to be in place:
 
 - A record of the patient on the system that needs to be verified
-- The patients needs to attend
-- The patient needs to bring any additional informatio requested at the time the appointment was sent out.
+- The patient needs to attend
+- The patient needs to bring any additional information requested at the time the appointment was sent out.
 
 However, the primary input to the outpatient appointment is the referral letter and any associated patient history it includes. It is therefore imperative that the referral letter is available either physically or electronically.
 
-### 7.3 Actor involved
+### 7.3 Actors involved
 
 The following are normally involved in the outpatient appointment stage:
+
 - Patient
 - Surgeon
 - Coordinator
@@ -391,72 +398,71 @@ These are potentially involved:
 - Dietician
 - Psychologist
 
-
 ### 7.4 Processes involved
 
-Each of the individual tests orgered could be considered a sub-process. They wil leach have their own SOPs that govern how the patient is evaluated and the results returned.
+Each of the individual tests ordered could be considered a sub-process. They will each have their own SOPs that govern how the patient is evaluated and the results returned.
 
 ### 7.5 Information generated and stored
 
 The data is potentially captured in a number of ways:
-EPR will capture demographic data as well as that pertaining to lab results.
-PACS will contain radiographic information
-The H&I lab system will contain additional information not available in EPR.
 
-ECG information is captured potentially this is only in paper format at the moment.
+* EPR will capture demographic data as well as that pertaining to lab results
+* PACS will contain radiographic information
+* The H&I lab system will contain additional information not available in EPR
+* ECG information is captured, though potentially this is only in paper format
+* Proton currently captures any information related to the pharmacist although this is likely to change in the near future as the ePrescribing module of the EPR is rolled out
 
-proton currently captures any information related to the pharmacist although this is likely to change in the near future as teh ePrescribing module of the EPR is rolled out.
-
-In addition there is a form to be filled in during the assessment process. This is currently a paper form. This could be transplated into a form on EPR to allow the electronic capture of data.
+In addition there is a form to be filled in during the assessment process. This is currently a paper form. This could be translated into a form on EPR to allow the electronic capture of data.
 
 ### 7.6 General data
 
 - Demographics
- - NHS number
- - Hospital number 
- - Name
- - DoB
- - Address
- - Contact numbers
- - Age
- - Gender
- - Ethinicity
- - Employment
- - NOK
- - GP details
+  - NHS number
+  - Hospital number (MRN)
+  - Name
+  - DoB
+  - Address
+  - Contact numbers
+  - Age
+  - Gender
+  - Ethnicity
+  - Employment
+  - NOK
+  - GP details
 
 - Referral details
- - Date
- - Clinic
- - Tx Surgeon
- - Tx Coordinator
- - Local coordinator
- - Organs required
- - Clock start
- - Clock stop
- - Reason
- - Ref consultant
- - Contact details
- - Dialysis unit
+  - Date
+  - Clinic
+  - Tx Surgeon
+  - Tx Coordinator
+  - Local coordinator
+  - Organ(s) required
+  - Clock start
+  - Clock stop
+  - Reason
+  - Referring consultant
+  - Contact details
+  - Dialysis unit
 
 - Transport plan
- - Own transport
- - Hospital transport
- - Plan
- - Pre-authorisation code
- - Back up
+  - Own transport
+  - Hospital transport
+  - Plan
+  - Pre-authorisation code
+  - Backup?
  
-- Is there a LD Kidney option
+- Is there a LD Kidney option?
 
 - Clinical basics
- - Height
- - Weight
- - BMI
- - Hip/waist ratio
- - BP
- - Pulse
- - SF-36 Questionnaire
- - Hypoglycaemia questionnaire
+  - Height
+  - Weight
+    - BMI
+  - Hip/waist ratio
+  - BP
+  - Pulse
+  - SF-36 Questionnaire
+  - Hypoglycaemia questionnaire
+
 - Renal History (diabetic)
 - Past medical history
 - Past surgical history
@@ -464,28 +470,28 @@ In addition there is a form to be filled in during the assessment process. This 
 - Anaesthetic assessment
 - Social history
 - Check list
- - PAP smear date
- - Mammogram date
- - Pregnancies
- - Blood transfusions 
- - Date
- - VZV immunity
- - Female less than 55 years and Rh neg?
+  - PAP smear date
+  - Mammogram date
+  - Pregnancies
+  - Blood transfusions 
+    - Date
+  - VZV immunity
+  - Female less than 55 years and Rh neg?
 - Clinical Examination
- - Diagrams to complete
+  - Diagrams to complete
 - Plan and investigations required
 - Date
 - Assessing surgeon
 - Assessing coordinator
 - Cardiac investigation outcomes
- - Type of scan
- - Date
- - Centre
- - Report Details
+  - Type of scan
+  - Date
+  - Centre
+  - Report Details
 - Cardiology MDT Summary
- - Date 
- - Present
- - Summary
+  - Date 
+  - Present
+  - Summary
 - Blood test results
 - Urine test results
 - H&I lab results
@@ -506,44 +512,43 @@ In addition there is a form to be filled in during the assessment process. This 
 - Toxoplasmosis
 - Herpes Simplex
 - Name
- - Signature
- - Date
+  - Signature
+  - Date
 - Coordinator name
- - Signature
- - Date
- 
- 
+  - Signature
+  - Date
+
 #### 7.7.2 Clinical Photography
  
- - Hospital number
- - Name
- - Address
- - DoB
- - Department/Ward
- - Consultant
- - Clinician's name
- - Signature
+- Hospital number
+- Name
+- Address
+- DoB
+- Department/Ward
+- Consultant
+- Clinician's name
+  - Signature
 - Photographs details
- - Taken by
- - Badge number
- - Job title
- - Location of photography
- - Date
- - Location of stored image files
+  - Taken by
+  - Badge number
+  - Job title
+  - Location of photography
+  - Date
+  - Location of stored image files
 
 Consent level 1
 
- - signature of patient
- - date
- - name of signatory (if different from patient)
- - relationship
+- signature of patient
+- date
+- name of signatory (if different from patient)
+- relationship
 
 Consent level 2 (restricted education use)
 
- - signature of patient
- - date
- - name of signatory if different from patient
- - relationship
+- signature of patient
+- date
+- name of signatory if different from patient
+- relationship
  
 Consent level 3
 
@@ -554,11 +559,11 @@ Consent level 3
 Consent
  
 - Understand voluntary consent for data use by NHSBT
- - Initial
+  - Initial
 - All data shared as necessary
- - Initial
-- Signature of paient
-- Date
+  - Initial
+- Signature of patient
+- Date  
 - Witness signature
 - Date
 - Representative signature (if necessary)
@@ -567,38 +572,39 @@ Consent
  
 Refusal of consent
  
-- Understan refusal may jeopardise chances
- - Initial
+- Understand refusal may jeopardise chances
+  - Initial
 - Refuse consent for certain items
- - Initial
- - Specify items
+  - Initial
+  - Specify items
 - Refuse consent for all information
- - Initia
+  - Initial
 - Signature of patient
-- Date
+  - Date
 - Witness signature
-- Date
+  - Date
 - Representative signature
-- Date
-- Name of representative
+  - Date
+  - Name of representative
  
 #### 7.7.4 Outpatient outcome form
  
 - Consultant
 - Clinic prep
 - Reception
- - Patient type (NHS/Private/Overseas)
+  - Patient type (NHS/Private/Overseas)
 - Clinical staff
- - Patient on 18 week pathway
+  - Patient on 18 week pathway
 - Outcome of attendance
   
 ### 7.8 Outputs
+
 The potential results of the OPA are:
 
- - The patient is put forward to a listing meeting (considered an appropriate candidate).
- - The patient is not considered to be a suitable candidate and a refusal is granted.
+- The patient is put forward to a listing meeting (considered an appropriate candidate)
+- The patient is not considered to be a suitable candidate and a refusal is granted
  
-The ultimate output from this section is a letter, wither indicating that the patietn is being forwrded to the listing meeting or that they are un unsuitable candidate for transplantation.
+The ultimate output from this section is a letter, wither indicating that the patient is being forwarded to the listing meeting or that they are an unsuitable candidate for transplantation.
  
 Letters are usually generated using the ALDEN system.
 
@@ -612,48 +618,50 @@ Letters are usually generated using the ALDEN system.
  
 Some procedures exit in various states.
  
-- Transplant immunology - SOPs
+- Transplant immunology -> SOPs
 - Protocols on intranet for all transplant programmes reviewed
 - Renal 
- - Transplant intranet 
- - link to other OUH documents
+  - Transplant intranet 
+  - link to other OUH documents
 - Renal transplant RTC SOP (Renal directorate server)
  
-It is not clear if the EPR system captures all of the information required for the assessmetn. If the EPR system does not collect all of the necessary information it is probable that an additional system will need to be developed that will operate in conjunction with the EPR system.
+It is not clear if the EPR system captures all of the information required for the assessment. If the EPR system does not collect all of the necessary information it is probable that an additional system will need to be developed that will operate in conjunction with the EPR system.
 
-SUG: A system should allow the storage of the letter as part of teh overall patietn record. In addition it should also form part of the patietns timeline. Note: Apparently this is being incorporated into the EPR system.
+**SUG:** A system should allow the storage of the letter as part of the overall patient record. In addition it should also form part of the patient's timeline. Note: Apparently this is being incorporated into the EPR system.
 
-SUG: A template for a letter could be provided that is automatically populated with the relevant test result and other asessment findings. The surgeon could then add any customisations that were appropriate for the individual patient.
+**SUG:** A template for a letter could be provided that is automatically populated with the relevant test result and other assessment findings. The surgeon could then add any customisations that were appropriate for the individual patient.
 
 Note: Islet and bowel cases do not always fit into the 18 week time frame as the assessments can be complex.
 
 
 ## 8 Listing Meeting
 
-The final decision about the suitability of a candidate patietn for transplant is made at the listing meeting. The outcome of the meeting dictates the next stage for the patient in the pathway.
+The final decision about the suitability of a candidate patient for transplant is made at the listing meeting. The outcome of the meeting dictates the next stage for the patient in the pathway.
 
-The meeting is a multi-professional meeting.
+The meeting is a multi-profession meeting.
 
-SUG: It is importanat to identify any items of information that should be circulated to all attendees prior to the meeting being convened. For each item of information that is required the format and acceptable content should be defined. It is easier to circulate information if it is in an electronic form.
+**SUG:** It is important to identify any items of information that should be circulated to all attendees prior to the meeting being convened. For each item of information that is required the format and acceptable content should be defined. It is easier to circulate information if it is in an electronic form.
+
+![Figure 5: Listing Meeting](../../_static/transplant_epr/transplant_pathway/transplant_pathways_diagrams_figure_5.svg)
 
 ### 8.1 Inputs
 
-The inputs to this process are the outputs of the outpatient appointment phase and teh initial referral letter. This includes the letter detailing the recommendation as the result of a cardiology MDT meeting, test results and any other information available at the time of the meeting.
+The inputs to this process are the outputs of the outpatient appointment phase and the initial referral letter. This includes the letter detailing the recommendation as the result of a cardiology MDT meeting, test results, and any other information available at the time of the meeting.
 
-The gereral information to complete the NHSBT form is currently obtained from several sources including:
+The general information to complete the NHSBT form is currently obtained from several sources including:
 
- - Word documents containing patient demographics
- - Lab reports from EPR
- - Dialysis data from
- - Assessment
- - Proton
- - Referral letter
+- Word documents containing patient demographics
+- Lab reports from EPR
+- Dialysis data from
+- Assessment
+- Proton
+- Referral letter
  
 Also recorded:
 
- - Height
- - Weight - BMI
- - QoL and hypoglycaemia awareness from a paper questionnaire and clinical assessment - only in word document
+- Height
+- Weight -> BMI
+- QoL and hypoglycaemia awareness from a paper questionnaire and clinical assessment - only in word document
  
 ### 8.2 Actors involved
 
@@ -667,25 +675,27 @@ The following are usually involved in the listing meeting
 
 ### 8.3 Procedure
 
-There should be a record of who attended the meeting. There should be a brief record of discussions that occurred. This should be attached to the patients timeline. A record of the consensus view should be kept along with any reservations raised. Ther should be a record of the reasons for declining a patient.
+There should be a record of who attended the meeting. There should be a brief record of discussions that occurred, and this should be attached to the patient's timeline. A record of the consensus view should be kept along with any reservations raised. There should be a record of the reasons for declining a patient.
 
-If the patient is deemed suitable for listing then the NHSBT pre registration data needs to be collected and the following done:
+If the patient is deemed suitable for listing then the NHSBT pre-registration data needs to be collected and the following done:
 
-- Complete the form so the patient is registerd with NHSBT
+- Complete the form so the patient is registered with NHSBT
 - Send the form to the H&I lab for tissue type information to be added prior to being sent off
-- Paper form is faxed to NHSBT at the time of registration
 
-We are currently focusing on the requirements for renal transplant but it is worth noting that ther are some differences between each programme as to the criteria to go on the waiting list.
+Paper form is faxed to NHSBT at the time of registration
+
+We are currently focusing on the requirements for renal transplant but it is worth noting that there are some differences between each programme as to the criteria to go on the waiting list.
 
 ### 8.4 Information generated and stored
 
 The following data artefacts should be generated by the listing meeting:
 
 - Listing MDT Summary and Transplant Plan
- - Date
- - Present
- - Issues Discussed/concerns raised
- - Consultant Sign off
+  - Date
+  - Present
+  - Issues Discussed/concerns raised
+  - Outcomes/Actions
+  - Consultant Sign off
 - Letter to patient
 - Letter to GP/referring clinician
 - NHSBT form
@@ -697,19 +707,19 @@ Data to register the patient on the waiting list including:
 
 ### 8.5 Outputs
 
-The utimate output of the meeting is a letter to the patient and GP (?) indicating whether or not the patient has been accepted onto the waiting list. In addition if the patient is recommended for listing then the appropriate NHSBT forms should be completed and sent off.
+The ultimate output of the meeting is a letter to the patient and GP (?) indicating whether or not the patient has been accepted onto the waiting list. In addition, if the patient is recommended for listing then the appropriate NHSBT forms should be completed and sent off.
 
 ### 8.6 Notes
 
-SUG: Automated letter production
+**SUG:** Automated letter production
 
-A standard letter template should be created appropriate to each specialty. The letter should be automatically populated with any information available from the system (EPR) along with entered information. Information entered should be via a template captured via an input form appropriate to the specialty. A combination of dropdowns and text areas should be used to permit the entry of information that completes standardised prose. Enterd information should also be stored to facilitate searching for items of interst at a later point in time.
+A standard letter template *should* be created appropriate to each specialty. The letter should be automatically populated with any information available from the system (EPR) along with entered information. Information entered should be via a template captured via an input form appropriate to the specialty. A combination of dropdowns and text areas should be used to permit the entry of information that completes standardised prose. Entered information should also be stored to facilitate searching for items of interest at a later point in time.
 
 The letter will either be requesting the addition of the patient to a waiting list or the refusal of the patient.
 
-If the outcome is positive teh letter request the activiation of the patietn on the waiting list. This letter is sent to the H&I lab. It is necessary for this letter to be signed before the H&I lab forward teh form to NHSBT.
+If the outcome is positive, the letter requests the activation of the patient on the waiting list. This letter is sent to the H&I lab. It is necessary for this letter to be signed before the H&I lab forward the form to NHSBT.
 
-QUE: Could this letter be in an electronic format and be signed with a digital signature?
+**QUE:** Could this letter be in an electronic format and be signed with a digital signature?
 
 ## 9 Waiting List
 
