@@ -1,4 +1,4 @@
-# Transplant Pathways
+# Transplant Pathways (DRAFT)
 
 * Original version by *Mark Slaymaker*, 10/07/2014, Draft 1.0.0
 * Updates via *Ally Bradley* and *Carl Marshall*, 11/11/2016
@@ -723,21 +723,21 @@ If the outcome is positive, the letter requests the activation of the patient on
 
 ## 9 Waiting List
 
-At present there is an Excel spreadsheet that is used for managing the patients transition through the pathway. The spread sheet records pertinent information that is required for ensuring that the 18 week time frame is complied with. The information includes items such as:
+At present there is an Excel spreadsheet that is used for managing the patients transition through the pathway. The spreadsheet records pertinent information that is required for ensuring that the 18 week time frame is complied with. The information includes items such as:
 
 - Date of appointment
-- Date that the clock started on the 18 weeks - clock stop/restart
-- A paper admin form has teh code for teh next stage ans start/stop clock
+- Date that the clock started on the 18 weeks (as well as clock stop/restart)
+- A paper admin form has the code for the next stage and start/stop clock
 
-Insert Figure 8
+![Figure 6: Waiting List](../../_static/transplant_epr/transplant_pathway/transplant_pathways_diagrams_figure_6.svg)
 
 ### 9.1 Inputs
 
-The inputs to this stage of teh pathway are teh decision of teh listing meeting along with the information collected to this point. Additional inputs can take the form of communications relating to the patietn. These communications can take many forms such as telephone calls, emails and letters. 
+The inputs to this stage of the pathway are the decision of the listing meeting along with the information collected to this point. Additional inputs can take the form of communications relating to the patient. These communications can take many forms such as telephone calls, emails, and letters. 
 
 ### 9.2 Queries required
 
-Reports: Currently information has to gathered from multipjjle sources to e able to generate results and reports. Some of these reports form the basis of submissions to relevant external bodies. It could be useful to generate perioadic reports that give up to date figures relating to the activity of the department as well as the status of patients. This would allow closer monitoring of the number of patients on the waiting list and the proportion of patiens in each potential waiting list state.
+**Reports:** Currently information has to gathered from multiple sources to be able to generate results and reports. Some of these reports form the basis of submissions to relevant external bodies. It could be useful to generate periodic reports that give up-to-date figures relating to the activity of the department as well as the status of patients. This would allow closer monitoring of the number of patients on the waiting list and the proportion of patients in each potential waiting list state.
 
 ### 9.3 Actors involved
 
@@ -752,25 +752,25 @@ In addition there will be periodic input from clinical specialists as required.
 
 While on the waiting list each patient can be in one of several states:
 
-- Can be an active work up patient
+- An active work up patient
 - Be suspended for any one of a number of reasons, such as:
- - Overweight/high BMI
- - Cardiac issues
- - Anything else that could cause additional complications with the transplant
+  - Overweight/high BMI
+  - Cardiac issues
+  - Anything else that could cause additional complications with the transplant
  
-If a patietn is removed from the active list they can be reactivated when they are considered fit. A multi disciplinary team (MDT) is responsible for assessing the patients fitness for listing in the case of kidney or kidney and pancreas.
+If a patient is removed from the active list they can be reactivated when they are considered fit. A multi disciplinary team (MDT) is responsible for assessing the patient's fitness for listing in the case of kidney or kidney and pancreas.
 
-The bowel trasplant team have separate listing meetings.
+The bowel transplant team have separate listing meetings.
 
-Cardiology meet fortnightly for fitness discussions. This is a physical meeting and actions are taken at the meeting
+Cardiology meet fortnightly for fitness discussions. This is a physical meeting and actions are taken at the meeting.
 
 If the patient is from another centre and radiology images need to be reviewed there is an image exchange portal for images from other centres. This can introduce delays into the process if investigations are carried out by local centres. This is because the process is currently very labour intensive.
 
-For some patient on the waiting list there is a need for a periodic review, usually annually, see section below. There is also some biannual cardiac testing (annual for Type 1 DM).
+For some patients on the waiting list there is a need for a periodic review, usually annually, see section below. There is also some biannual cardiac testing (annual for Type 1 DM).
 
-SUG: System should automatically flat tests needed and review dates. Notify of annual annual review.
+**SUG:** System should automatically flag tests needed and review dates. Notify of annual annual review.
 
-If the tests are to be carried out an another centre the system should flag when a tes being carried out remotely has not been reported within a predefined period of time. 
+If the tests are to be carried out at another centre the system should flag when a test being carried out remotely has not been reported within a predefined period of time. 
 
 ### 9.5 Information generated and stored
 
@@ -779,60 +779,68 @@ Data locations:
 * MedCon - Cardiologist information
 * PACs - images
 
-We need to be able to record when a patient has their waiting list status either activated or suspended. It is important for this information to be accurate. NOTE: It has been suggested that it would be useful to generate a letter automatically for the patient and clinician. This letter would provide details about the status update as well as indicate the next follow up.
+We need to be able to record when a patient has their waiting list status either activated or suspended. It is important for this information to be accurate. 
+
+NOTE: It has been suggested that it would be useful to generate a letter automatically for the patient and clinician. This letter would provide details about the status update as well as indicate the next follow up.
 
 Other information that may be generated while the patient is on the waiting list includes:
 
-- letters
- - from other centres are not scanned
- - cardiology letters on a different system to proton letters
- - internal and external letters not centrally accessible
-- Telephone converstions
+- Letters:
+  - from other centres are not currently scanned
+  - Cardiology letters on a different system to Proton letters
+  - nternal and external letters not centrally accessible
+- Telephone conversations
 - Emails
  
-Keeping up with exernally sourced information such as letters, emails etc can be problematic (it might be helpful to have some form of notificaions alongside scanning)
+Keeping up with externally sourced information such as letters, emails etc can be problematic (it might be helpful to have some form of notifications alongside scanning).
  
-Regular, monthly reports are sent to other centres to keep them informed about the status of their patients. Mainly:
+Monthly reports are sent to other centres to keep them informed about the status of their patients. Mainly:
 
-- Where in the work up process they are
-- What if anything is causing delays
+- Where in the work-up process they are
+- What, if anything, is causing delays
 - Who is active/suspended/transplanted
 
 This is currently managed in an Excel spreadsheet.
 
 This is a very time consuming process which typically involves a lot of cutting and pasting. The manual nature of this process increases the possibility of minor errors being introduced.
 
-SUG: Would it be possible to allow external read only access to reduce work?
-QUE: What would the granularity of access be for external users. They should only have access to their own patietns.
+**SUG:** Would it be possible to allow external read only access to reduce work?
 
-The information is currently stored on the Renal (R:) drive. There is no linking between the different portions of the information.
+**QUE:** What would the granularity of access be for external users. They should only have access to their own patients.
 
-SUG: This would be better organised using a central information store which mandated consistent (standardised) coding of information.
+The information is currently stored on the 'Renal (R:) drive'. There is no linking between the different portions of the information.
+
+**SUG:** This would be better organised using a central information store which mandated consistent (standardised) coding of information.
 
 Word documents contain the threads of communication.
 
- - Emails are cut and pasted into the word document
- - This forms timeline with a sequence of events recorded by virtue of the orger in the document
- - This allows conversations and reqests to be tracked
- - On call coordinator has access to the information especially that associated with health
- 
- 
-Patient notes qare occasionally unavailable or missing.
+- Emails are cut and pasted into the word document
+- This forms a timeline with a sequence of events recorded by virtue of their order in the document
+- This allows conversations and requests to be tracked
+- On call coordinator has access to the information especially that associated with health
+
+Patient notes are occasionally unavailable or missing.
  
 The patient notes at listing consists of 2 sets:
  
- - Buff - General hospial notes that could be anywhere depending on which department was the last to have contact with teh patient
+ - Buff - General hospital notes that could be anywhere depending on which department was the last to have contact with the patient
  - Blue - activated at transplant but need to reflect changes that are made to the buff notes.
  
-NOTE: This issue is closely related to dta reliability and accuracy. Ultimately it could impct upon patient safety.
+NOTE: This issue is closely related to data reliability and accuracy. Ultimately it could impact upon patient safety.
  
-While on the waiting list the patient may be seen by the nephrologist. Letters may be gererated and sent to expernal referring clinicians - these need to be part of the medical record. All correspondence by coordinators, such as email, need to be captured. NOTE: Currently all correspondence by coordinators by email or telephone is recorded in a word document. If this information is included within the ePR or other system appropriate access control needs to be considered.
+While on the waiting list the patient may be seen by the nephrologist. 
+
+Letters may be generated and sent to external referring clinicians - these need to be part of the medical record. 
+
+All correspondence by coordinators, such as email, need to be captured. 
+
+**NOTE:** Currently all correspondence by coordinators by email or telephone is recorded in a word document. If this information is included within the EPR or other system, appropriate access control needs to be considered.
  
- SUG: There is possibly a need for access control to be included on any system or subsystem that records correspondence betwen coordinators and others in relation to patients.
+**SUG:** There is possibly a need for access control to be included on any system or subsystem that records correspondence between coordinators and others in relation to patients.
  
-Patients can be suspended at any time. This may be because of holiday, illness, change in circumstances.
+Patients can be suspended at any time. This may be because of holiday, illness, change in circumstances, etc.
  
- SUG: Ther should be a mechanism that allows a patient to be suspended and a cause given. There should be a mechanism for reactivating patietns. A reactivation plan should be recorded. Perioadic reminders shoudl be snet to approprate team members to check if suspension is till approprate. The reminder mechanisme must be configureable with respect to the frequency of reminders being sent.
+**SUG:** There *should* be a mechanism that allows a patient to be suspended and a cause given. There *should* be a mechanism for reactivating patients. A reactivation plan *should* be recorded. Periodic reminders *should* be sent to appropriate team members to check if suspension is still appropriate. The reminder mechanisms *must* be configureable with respect to the frequency of reminders being sent.
 
 ### 9.6 Outputs
 
@@ -840,7 +848,7 @@ Outputs at this stage could include the mandatory periodic reporting to various 
 
 In addition there could be:
 
-* Letters for annual reviews.
+* Letters for annual reviews
 * Email and other correspondence
 
 ## 10 Periodic checks
