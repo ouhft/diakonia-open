@@ -853,26 +853,29 @@ In addition there could be:
 
 ## 10 Periodic checks
 
-While the patient is on the waiting list, depending on the transplant that they are waiting for, it may be prudent to carry out periodic health checks to ascertain if there have been any significant changes. These changes may alter the suitability of the patient for transplant. The regular monitoring and contact with the patient will also allow the capturing of any changes to relevant information including demographic and underlying health issues.
+While the patient is on the waiting list, depending on the transplant that they are waiting for, it may be prudent to carry out periodic health checks to ascertain if there have been any significant changes. These changes may alter the suitability of the patient for transplant. This regular monitoring and contact with the patient will also allow the capturing of any changes to relevant information, including demographic and underlying health issues.
 
-If the patient is referred from a satellite unit, will that unit be responsible for performing any tests and checks?
+**QUE:** If the patient is referred from a satellite unit, will that unit be responsible for performing any tests and checks?
 
 - Patient is reassessed annually by the Oxford team.
 
 If so, how will the relevant data be returned for inclusion in the patient history?
 
-Annual checks for pancreas transplant are carried out by surgeons. For renal only transplants the patients are only checked when they are called for transplant.
+- Annual checks for pancreas transplant are carried out by surgeons. For renal only transplants the patients are only checked when they are called for transplant.
 
 ## 11 Transplant
 
-Insert figure 7
+![Figure 7: Transplant](../../_static/transplant_epr/transplant_pathway/transplant_pathways_diagrams_figure_7.svg)
 
 ### 11.1 Process
 
-The living donor team have demographic information. DATA: paper based and word documents. Some is stored locally and some at remote centres.
+The living donor team have demographic information. 
+
+**DATA:** paper based and word documents. Some is stored locally and some at remote centres.
 
 If donor is remote the local living donor team should have all the information.
-TO CONFIRM: Check with Sandra Dix
+
+**TO CONFIRM:** Check with Sandra Dix
 
 #### DONOR
 For deceased donors the Electronic Organ Offering System (EOS) contains all pertinent data relating to the donors and organs.
@@ -883,21 +886,22 @@ Induction plan.
 
 #### ORGAN
 Data needs to be recorded relating to the organ retrieval. This should include as a minimum:
+
 - The surgeon and team involved
 - The solution perfused with
-- HTA A Document comes with the organ. This should be scanned and the image attached to the relevant patient record. In addition the information contained on the form should be incorporated in the patient record by manual data entry.
+- *HTA A* Document comes with the organ. This should be scanned and the image attached to the relevant patient record. In addition the information contained on the form should be incorporated in the patient record by manual data entry.
 
-It is also important to ensure that the HTA A document number is recorded.
+It is also important to ensure that the *HTA A* document number is recorded.
 
 #### OPERATION
 
-Back table information
+Back table information:
 
-- Who performed the tasks: Record the surgeon responsible
+- Who performed the tasks. i.e. record the surgeon responsible
 - Time
 - Perfusion fluid and batch number
 
-SUG: Template for back table data entry
+**SUG:** Template for back table data entry
 
 Data from operation:
 
@@ -907,10 +911,10 @@ Data from operation:
  
  This is recorded in the transplant surgery form - recipient timings.
  
- QUE: Can a template be created in Surginet
- SUG: Template for operation data entry.
+ **QUE:** Can a template be created in Surginet
+ **SUG:** Template for operation data entry.
  
-There should be a standardised form to fill out for the surgery. From this data can be recorded in an electronic format. In addition a OpNote can be generated. The data entry shoudl follow a standardised template with a small number of free text areas to note any deviations from the standard procedure.
+There should be a standardised form to fill out for the surgery. From this, data can be recorded in an electronic format. In addition, an OpNote can be generated. The data entry should follow a standardised template with a small number of free text areas to note any deviations from the standard procedure.
 
 ### 11.2 Inputs
 
@@ -932,6 +936,7 @@ What information is gathered and stored as a result of this process?
 #### NHSBT
 At the time of transplant there are multiple forms to fill in.
 
+- HTA Form B (one for each organ). NB: A lot of duplicated information.
 - Pancreas record form (deceased pancreas form)
 - Islets record form
 - Small bowel/multi viscera
@@ -940,17 +945,16 @@ At the time of transplant there are multiple forms to fill in.
 Organ specific forms
 
 - Repeated details from various sources:
- - Labs
- - Wards
+  - Labs
+  - Wards
 
 Kidney record form - approximately 2 pages
 
  - Repeated information such as 
- 
-  - Height
-  - Weight
-  - Virology status
-  - Dialysis status
+   - Height
+   - Weight
+   - Virology status
+   - Dialysis status
   
 Deceased patient form
 
@@ -958,12 +962,10 @@ Outcome and anatomical issues
   
 HTA B form
 
-  - Organ perfusion
-  - TIMMS system recorded but not available link (theatre uses TIMMS to record organ perfusion fluid)
+- Organ perfusion
+- TIMMS system recorded but not available link (theatre uses TIMMS to record organ perfusion fluid)
   
-Information copies manually
-
-A copy of forms is kept locally for inspection - originals sent off. Copies kept.
+Information copied manually: A copy of forms is kept locally for inspection - originals sent off. Copies kept.
   
 Recipient Coordinator has to fill forms and send to NHSBT (Transplant surgeon should complete).
   
@@ -972,31 +974,29 @@ Induction procedure used and medications
 ### 11.5 Outputs
   
 The outputs that are generated by the transplant surgery include:
-  
-  - An Operation Note
-  - HTA B Form (1 per organ transplanted)
-   - Kidney Transplant record
-   - Pancreas Transplant record
-   
-  - Transplant surgery form
-  - Crossmatch report
-  - Medication details
+
+- An Operation Note
+- HTA B Form (1 per organ transplanted)
+  - Kidney Transplant record
+  - Pancreas Transplant record   
+- Transplant surgery form
+- Crossmatch report
+- Medication details
   
 
 ### 11.6 Notes
 
 The operation note may be able to be automatically generated if the data necessary is entered using an appropriate system.
 
-The HTA B Form needs to be submitted. A record needs to be kept tying the HTA A Form numbers to the HTA B Form numbers for reasons of traceability. The forms are submitted to NHSBT.
+The *HTA Form B* needs to be submitted. A record needs to be kept tying the *HTA Form A* numbers to the *HTA Form B* numbers for reasons of traceability. The forms are submitted to NHSBT.
 
 Electronic versions of the data along with a scanned copy of each form would aid traceability.
 
-
 ## 12 Post operative care
 
-The patient is monitored post operatively to asses their progress.
+The patient is monitored post operatively to assess their progress.
 
-Insert Figure 8
+![Figure 8: Post Operative Care](../../_static/transplant_epr/transplant_pathway/transplant_pathways_diagrams_figure_8.svg)
 
 ### 12.1 Inputs
 
@@ -1019,14 +1019,14 @@ Recommendation that a patient can be discharged.
 
 ## 13 Discharge
 
-The patient is initially discharged with local follow-up. The local follow-up continues until the patient is discharged to the care of their referring unit. The referring unit then continues with planned follow ups at regular intervals.
+The patient is initially discharged with local follow-up. The local follow-up continues until the patient is discharged to the care of their referring unit. The referring unit then continues with planned follow-ups at regular intervals.
 
-Insert figure 9
+![Figure 9: Discharge](../../_static/transplant_epr/transplant_pathway/transplant_pathways_diagrams_figure_9.svg)
 
 ### 13.1 Actors involved
 
 - Patient
-- Nethrologist
+- Nephrologist
 - Surgeon
 - Nursing staff
 
@@ -1040,9 +1040,9 @@ A discharge summary letter that is sent to the patient's GP. (Does this also go 
 
 ## 14 Follow up
 
-Initial follow ups are carried out locally. The responsibility for follow ups is then returned to the referring centre, which may of course be Oxford.
+Initial follow-ups are carried out locally. The responsibility for follow-ups is then returned to the referring centre, which may of course be Oxford.
 
-Insert figure 10
+![Figure 10: Follow-up](../../_static/transplant_epr/transplant_pathway/transplant_pathways_diagrams_figure_10.svg)
 
 ### 14.1 Actors involved
 
@@ -1053,9 +1053,9 @@ Insert figure 10
 
 A standard set of information is required to enable the completion of NHSBT reporting forms. This is likely to include:
 
-- Patient demorgraphic details
+- Patient demographic details
 - Blood pressure
-- Height/weight BMI
+- Height/Weight/BMI
 - Blood tests
 - Urine tests
 
@@ -1065,15 +1065,15 @@ A regular report document for NHSBT is created at this stage.
 
 ## 15 Refusal
 
-If a patient is considered unsuitable for whatever reason, do they have an opportunity to be re-evaluated at a later time? Or is the decision non-negotiable? Does a refusal generate a letter for the GP and referring clinician?
+**QUE:** If a patient is considered unsuitable for whatever reason, do they have an opportunity to be re-evaluated at a later time? Or is the decision non-negotiable? Does a refusal generate a letter for the GP and referring clinician?
 
 ## 16 Other notes
 
 Transplant hospital admission: Most of the data is in the EPR.
 
-Discharge: There is a word template for the discharge letter stored ont eh shared renal drive.
+Discharge: There is a word template for the discharge letter stored on the shared renal drive.
 
-Follow up clinics: Letters from clinics should be stored.
+Follow-up clinics: Letters from clinics should be stored.
 
 Information relation to additional hospital admissions should be recorded where this information is available.
 
@@ -1081,61 +1081,74 @@ Should also record how successful the surgery was along with any other relevant 
 
 ## 17 Administration
 
-Any administration system needs to be small and efficient. It cannot require the duplication of work such as manually re-typing information that has already been entered into the EPR system. The reasons for not duplicating effort are two fold. Firstly, the re-entry of information is inefficient and is usually non-productive work. Secondly, the probability of typographical errors being introduced increases each time information has to be re-keyed. It is envisaged that the vast majority of information required for administrative tasks associated with the patients interactions with the transplantation centre will be available through the EPR system. The EPR system currently contains information pertaining to outpatient activity including peripheral clinics. In addition most ward bsed activity is also recorded in the EPR. The ADT (Admission Discharge Transfer) is rolled out and will in due course provide realtime information for all wards. This is currently not the case as there can be delays in updating information. The EPR system will soon have ePrescribing rolled out. Numerous tests are currently ordered via the EPR. There are however a number of tests associated with teh trasplantation function that are ordered in a more traditional way.
+Any administration system needs to be small and efficient. It cannot require the duplication of work such as manually re-typing information that has already been entered into the EPR system. 
 
-QUE: How will the introduction of ePrescribing affect Proton? It is my understanding that Proton currently has the patients medication as well as the induction medication used at the time of transplant. One current shortfall in the EPR system is the lack of digitised copies of correspondence from referral centres as well as electronic copies of reports snt out from the unit. It would be useful to have all relevant correspondance scanned and associated with the relevant patient record. This would allow timely access by clinicians or others responsible for various aspects of teh care pathway.
+The reasons for not duplicating effort are two fold: Firstly, the re-entry of information is inefficient and is usually non-productive work; Secondly, the probability of typographical errors being introduced increases each time information has to be re-keyed. 
 
-There should be wider range of templates available to assist teh gereration of approprate letter to be sent to patient and other parties with a legitimate care relationship with the patient.
+It is envisaged that the vast majority of information required for administrative tasks associated with the patients interactions with the transplantation centre will be available through the EPR system. 
 
-Currently the department uses the ALDEN service which is a typing service which transcribes digital diction into letters. The service woks by sharing inforatmion the dictations and resulting letters via a secure site. Once finalised the letters associated with transplant are stored in Proton.
+The EPR system currently contains information pertaining to outpatient activity including peripheral clinics. In addition, most ward-based activity is also recorded in the EPR. The ADT (Admission Discharge Transfer) is rolled out and will in due course provide realtime information for all wards. This is currently not the case as there can be delays in updating information. 
+
+The EPR system will soon have ePrescribing rolled out. 
+
+Numerous tests are currently ordered via the EPR. There are however a number of tests associated with the transplantation function that are ordered in a more traditional way.
+
+**QUE:** How will the introduction of ePrescribing affect Proton? It is my understanding that Proton currently has the patient's medication as well as the induction medication used at the time of transplant. 
+
+One current shortfall in the EPR system is the lack of digitised copies of correspondence from referral centres as well as electronic copies of reports sent out from the unit. It would be useful to have all relevant correspondence scanned and associated with the relevant patient record. This would allow timely access by clinicians or others responsible for various aspects of the care pathway.
+
+There should be wider range of templates available to assist the generation of appropriate letters to be sent to patient and other parties with a legitimate care relationship with the patient.
+
+Currently the department uses the ALDEN service which is a typing service which transcribes digital diction into letters. The service woks by sharing information, the dictations and resulting letters, via a secure site. Once finalised the letters associated with transplant are stored in Proton.
 
 The Surginet module in the EPR should ideally record transplant information as well as any other procedures carried out.
 
-QUE: What can be recorded in Surginet?
+**QUE:** What can be recorded in Surginet?
 
-Proton currently stores data sent to commissioners pertaining to procedures carried out. There are different payment models for each of the transplants performed. Currently the kidney only transplant is only paid at the time of transplant. This payment is to cover all work upto and including the transplant. This model of payment is liely to change to one where payment is provided for each stage of the process separately.
+Proton currently stores data sent to commissioners pertaining to procedures carried out. There are different payment models for each of the transplants performed. Currently the kidney only transplant is only paid at the time of transplant. This payment is to cover all work up to and including the transplant. This model of payment is likely to change to one where payment is provided for each stage of the process separately.
 
-This is there will be separate payments for:
+This is where will be separate payments for:
 
 - Assessment
-- Work up of donor
+- Work-up of donor
 - Transplant episode
 - Ongoing care
 
 It therefore becomes necessary to accurately record each individual element.
 
 The proton system is also responsible for other data feeds:
-- The data needed by the renal registry
-- The data used by the patient facing web application (some further investigation is needed on exactly how this currently works).
 
-QUESTION: Is it possible for EPR to capture the relevant information for these two external uses as well as push the necessary data.
+- The data needed by the renal registry
+- The data used by the patient facing web application (some further investigation is needed on exactly how this currently works)
+
+**QUE:** Is it possible for EPR to capture the relevant information for these two external uses as well as push the necessary data.
 
 ## 18 EPR Notes
 
-It is possible to add adhoc attachments to a patient record in EPR. This is done by creating a digital version of the item to be added and placing it in an appropriate place. The item is 'scanned' in some way and is usueally placed in a directory on the K drive. From there it is possible to attach the item to a 'Note'. This will allos the viewing of each item added to the patient record.
+It is possible to add adhoc attachments to a patient record in EPR. This is done by creating a digital version of the item to be added and placing it in an appropriate place. The item is 'scanned' in some way and is usually placed in a directory on the K drive. From there it is possible to attach the item to a 'Note'. This will allow the viewing of each item added to the patient record.
 
 Dashboards can be added to the EPR, with complex pathway rules to allow a quick visual check as to the state of the required tasks related to the tests and other items necessary for completion before the patient moves to the next phase of the pathway.
 
-It is also possible to capture paper forms including those with the diagrams, in the EPR. This would allow the capturing of information in a consistent way and permit the instant sharing with multiple interested parties.
+It is also possible to capture paper forms, including those with the diagrams, in the EPR. This would allow the capturing of information in a consistent way and permit the instant sharing with multiple interested parties.
 
 ## 19 Findings and suggestions
 
-The current transplant pathway utilises various mechanisms to store and manage patient information. These include EPR (Cerner Millenium), Proton, Excel spreadsheets and Word documents.
+The current transplant pathway utilises various mechanisms to store and manage patient information. These include EPR (Cerner Millennium), Proton, Excel spreadsheets, and Word documents.
 
-A potential improvement would be to enable the scanning of documents into the patient record. An additional enhancement would be the ability to add notes relating to all communications relevant to the patients treatment. This would permit easy access to historicl communications relating to the patient in a single place. It would also be more robust than the current procedure of adding notes to a word document. Another enhancement could be to make various forms that need fillin in electronic. This could potentially include several consent forms that need to be signed. Currently there is a lot duplicated information on each of these forms. If the information was collected electronically it could permit the sharing of information between the various forms thus reducing the amount of duplicated effort. The forms could still be printed for signing and then scanned in using the mechanism that supports the first improvement. Alternatively, the forms could be signed electronically on a a tablet and only printed to give the patient a copy for their own records. 
+A potential improvement would be to enable the scanning of documents into the patient record. An additional enhancement would be the ability to add notes relating to all communications relevant to the patients treatment. This would permit easy access to historical communications relating to the patient in a single place. It would also be more robust than the current procedure of adding notes to a word document. 
 
-In the area of assessment, it could be beneficial to other professionals involved in the care pathway to have access to the information collected in an electronic form. 
+Another enhancement could be to make various forms that need filling in electronic. This could potentially include several consent forms that need to be signed. Currently there is a lot duplicated information on each of these forms. If the information was collected electronically it could permit the sharing of information between the various forms thus reducing the amount of duplicated effort. The forms could still be printed for signing and then scanned in using the mechanism that supports the first improvement. Alternatively, the forms could be signed electronically on a a tablet and only printed to give the patient a copy for their own records. 
+
+In the area of assessment, it could be beneficial to other professionals involved in the care pathway to have access to the information collected in an electronic form. This would allow some automated processes to be used as an initial prescreening. One potential example is anaesthetic assessment. In this case, based on information collected, additional tests could be suggested before the patient even saw the consultant anaesthetist. To help facilitate this form of data sharing, it would be beneficial to make the assessment form electronic.
 
 The Proton system is being retired and the functionality is being migrated to the EPR. The exact nature of the new system is still being assessed.
 
-There are a number of spread sheets that support a wide range of functionality. Some of this functionality is very specific to transplant. This may therefore necessitate the development of a standalone application that ocmmunicate with the EPR for demographic and other standard information. This however will need careful consideration and detailed discussion with the EPR team. There is a already a facility to access demographic information. This is via the EPDS system which is already used by several systems across the multiple departments.
+There are a number of spreadsheets that support a wide range of functionality. Some of this functionality is very specific to transplant. This may therefore necessitate the development of a standalone application that can communicate with the EPR for demographic and other standard information. This however will need careful consideration and detailed discussion with the EPR team. There is a already a facility to access demographic information. This is via the EPDS system which is already used by several systems across the multiple departments.
 
 The production of letters is currently via the ALDEN system. These letters are then incorporated in the patient record with Proton. This functionality needs to be maintained after the migration of Proton to EPR.
 
 The next stage of this process is to produce a definitive gap analysis between the features required for the transplant pathway and those available within EPR. It is also worth considering what is planned for EPR in the next 12 to 18 months as developing a standalone system that would be subsumed shortly after completion would not necessarily be the best use of time.
 
-It would also be desireable to have the facility to automatically generate the relevant forms that need to be submitted to NHSBT and other bodies at various points in the patients journey. Additionally the data should be accessible withing the boundaries of information governance and data protection legislation for use in research. 
+It would also be desirable to have the facility to automatically generate the relevant forms that need to be submitted to NHSBT and other bodies at various points in the patients journey. Additionally the data should be accessible within the boundaries of information governance and data protection legislation for use in research. 
 
-Note: After several discussions with various people it is unlikely in the short to medium term that the EPR system will be able to support all of the requirements necessary to provide the functionality required by the transplant pathway. Although some feature are liekly to be supported in particul those associated with the core funtions of Proton, others are unlikely to be considered or do not fit with the EPR architectual model. It is worth noting that the current understanding is subject to revision as more information becomes available.
-
-
+Note: After several discussions with various people it is unlikely in the short to medium term that the EPR system will be able to support all of the requirements necessary to provide the functionality required by the transplant pathway. Although some feature are likely to be supported, inparticular those associated with the core functions of Proton, others are unlikely to be considered or do not fit with the EPR architectural model. It is worth noting that the current understanding is subject to revision as more information becomes available.
