@@ -26,4 +26,4 @@ after_success:
 
   - git add -A -v .
   - git commit -m "[ci skip] Autodoc commit for $COMMIT."
-  - git push -v --force origin master
+  - git push -v --force origin HEAD:master
