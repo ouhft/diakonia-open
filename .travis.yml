@@ -28,4 +28,4 @@ after_success:
   - git remote rm origin
   - git remote add origin https://marshalc:$GH_TOKEN@github.com/ouh-churchill/diakonia.git
   # -q is very important, otherwise you leak your GH_TOKEN
-  - git push -q origin master
+  - git push -v origin master
