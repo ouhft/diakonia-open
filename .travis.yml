@@ -27,6 +27,6 @@ after_success:
   - git commit -m "[ci skip] Autodoc commit for $COMMIT."
 
   - git remote rm origin
-  - git remote add origin https://marshalc:$GH_TOKEN@github.com:ouh-churchill/diakonia.git
+  - git remote add origin https://marshalc:$GH_TOKEN@github.com/ouh-churchill/diakonia.git
   # -q is very important, otherwise you leak your GH_TOKEN
   - git push -q origin master
