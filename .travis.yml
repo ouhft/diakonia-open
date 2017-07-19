@@ -20,3 +20,9 @@ script:
 after_success:
 #  - travis-sphinx deploy
   - git status
+  - git config user.name "Travis Builder"
+  - git config user.email "$EMAIL"
+  - git add -A .
+  - git commit -m "[ci skip] Autodoc commit for $COMMIT."
+  # -q is very important, otherwise you leak your GH_TOKEN
+  - git push -q
