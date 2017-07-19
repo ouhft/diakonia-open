@@ -51,7 +51,8 @@ This is the nitty gritty bit... what **is** a FHIR Server? How much functionalit
 
 FHIRbase have [taken the view that](http://try-fhirplace.hospital-systems.com/fhirbase-presentation/index.html#/fhirbase) json is the standard for web apis, and so don't export xml natively. They do offer an xslt transformation for [FHIR xml to json](https://github.com/fhirbase/fhir-xml2json), which is handy, but nothing vice-versa. Whilst it recommends using Saxon as the XSLT engine, [lxml](http://lxml.de) is [a more common](http://stackoverflow.com/questions/16698935/how-to-transform-an-xml-file-using-xslt-in-python) python approach. There is a [JS implementation that does json to xml](https://github.com/kwboone/FHIR-JSON-to-XML-Converter) to look at. **Consider:** Leaving XML implementation to a later version of FHIRstation.
 
-![Diakona Layers Diagram](../../_static/diakonia_layers.svg)
+![Diakona Layers Diagram](../../_static/fhirstation/diakonia_layers.svg)
+
 System layer diagram (modelled on the [Hospital Systems](http://try-fhirplace.hospital-systems.com/fhirbase-presentation/index.html#/) one). Work in Progress, clearly.
 
 We're using FHIR as a semantic structure for the data layer, with FHIR-like communication happening between data and application layers. FHIR (exact) communication should then be happening between the client and application layers. 
