@@ -25,4 +25,4 @@ after_success:
   - git add -A .
   - git commit -m "[ci skip] Autodoc commit for $COMMIT."
   # -q is very important, otherwise you leak your GH_TOKEN
-  - git push master
+  - git push -q master master
