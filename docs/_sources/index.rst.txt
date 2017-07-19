@@ -3,7 +3,7 @@
 Documentation for Project Diakonia
 ==================================
 
-This is an umbrella project for a range of activitie within the Oxford Universities NHS Hospitals Trust. This documentation
+This is an umbrella project for a range of activities within the Oxford Universities NHS Hospitals Trust. This documentation
 has the aims of collating content in one easy to find location for quick reference and collective understanding.
 
 You should find information related to the overall systems from design, through to deployment and

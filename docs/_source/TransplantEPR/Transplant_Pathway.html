@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Transplant Pathways (DRAFT) &mdash; Diakonia v0.3.0 documentation</title>
+  <title>Transplant Pathways (DRAFT) &mdash; Diakonia v0.3.1 documentation</title>
   
 
   
@@ -35,7 +35,7 @@
         <link rel="index" title="Index"
               href="../../genindex.html"/>
         <link rel="search" title="Search" href="../../search.html"/>
-    <link rel="top" title="Diakonia v0.3.0 documentation" href="../../index.html"/>
+    <link rel="top" title="Diakonia v0.3.1 documentation" href="../../index.html"/>
         <link rel="up" title="Transplant EPR Project" href="index.html"/>
         <link rel="next" title="Notes" href="../notes.html"/>
         <link rel="prev" title="Database Requirement Notes from IQ" href="IQ_requirements.html"/> 
@@ -67,7 +67,7 @@
             
             
               <div class="version">
-                v0.3.0
+                v0.3.1
               </div>
             
           
@@ -103,103 +103,31 @@
 <li class="toctree-l1"><a class="reference internal" href="../FHIRstation/index.html">FHIRstation Project</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../PancreasDB/index.html">Pancreas DB Project</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Transplant EPR Project</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="introduction.html">Transplant EPR Project</a></li>
-<li class="toctree-l2"><a class="reference internal" href="IQ_requirements.html">Database Requirement Notes from IQ</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Transplant Pathways (DRAFT)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#data-needs">1.1 Data Needs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#scope">1.2 Scope</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#groups-involved">1.3 Groups involved</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#information-acquisition">1.4 Information acquisition</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#information-assets">1.5 Information assets</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#outline-of-the-following-sections">1.6 Outline of the following sections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#about-the-project">About the Project</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#contents">Contents</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="IQ_requirements.html">Database Requirement Notes from IQ</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Transplant Pathways (DRAFT)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#quality-and-audit">2 Quality and Audit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pathway-summary">3 Pathway Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#satellite-organisations">4 Satellite organisations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#other-general-comments">5 Other general comments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#referral">6 Referral</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#outpatient-appointment">7 Outpatient appointment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#listing-meeting">8 Listing Meeting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#waiting-list">9 Waiting List</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#periodic-checks">10 Periodic checks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transplant">11 Transplant</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#post-operative-care">12 Post operative care</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#discharge">13 Discharge</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#follow-up">14 Follow up</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#refusal">15 Refusal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#other-notes">16 Other notes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#administration">17 Administration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#epr-notes">18 EPR Notes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#findings-and-suggestions">19 Findings and suggestions</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#quality-and-audit">2 Quality and Audit</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#data-registry-and-metadata">2.1 Data registry and metadata</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#pathway-summary">3 Pathway Summary</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#week-referral-to-treatment-pathway">3.1 18 Week referral to treatment pathway</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#satellite-organisations">4 Satellite organisations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#other-general-comments">5 Other general comments</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#referral">6 Referral</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#standard-operating-procedures-sop">6.1 Standard Operating Procedures (SOP)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#inputs">6.2 Inputs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#queries-required">6.3 Queries required</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#actors-involved">6.4 Actors involved</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#processes-involved">6.5 Processes involved</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#information-generated-and-stored">6.6 Information generated and stored</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#outputs">6.7 Outputs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#other-comments">6.8 Other comments</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#outpatient-appointment">7 Outpatient appointment</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#assessment-process">7.1 Assessment process</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#inputs">7.2 Inputs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#actors-involved">7.3 Actors involved</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#processes-involved">7.4 Processes involved</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#information-generated-and-stored">7.5 Information generated and stored</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#general-data">7.6 General data</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#consent-forms">7.7 Consent Forms</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#outputs">7.8 Outputs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#notes">7.9 Notes</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#listing-meeting">8 Listing Meeting</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#inputs">8.1 Inputs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#actors-involved">8.2 Actors involved</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#procedure">8.3 Procedure</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#information-generated-and-stored">8.4 Information generated and stored</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#outputs">8.5 Outputs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#notes">8.6 Notes</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#waiting-list">9 Waiting List</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#inputs">9.1 Inputs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#queries-required">9.2 Queries required</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#actors-involved">9.3 Actors involved</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#processes-involved">9.4 Processes involved</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#information-generated-and-stored">9.5 Information generated and stored</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#outputs">9.6 Outputs</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#periodic-checks">10 Periodic checks</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#transplant">11 Transplant</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#process">11.1 Process</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#inputs">11.2 Inputs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#actors-involved">11.3 Actors Involved</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#information-generated-and-stored">11.4 Information generated and stored</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#outputs">11.5 Outputs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#notes">11.6 Notes</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#post-operative-care">12 Post operative care</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#inputs">12.1 Inputs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#actors-involved">12.2 Actors involved</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#information-generated-and-stored">12.3 Information generated and stored</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#outputs">12.4 Outputs</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#discharge">13 Discharge</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#actors-involved">13.1 Actors involved</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#information-generated-and-stored">13.2 Information generated and stored</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#outputs">13.3 Outputs</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#follow-up">14 Follow up</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#actors-involved">14.1 Actors involved</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#information-generated-and-stored">14.2 Information generated and stored</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#outputs">14.3 Outputs</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#refusal">15 Refusal</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#other-notes">16 Other notes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#administration">17 Administration</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#epr-notes">18 EPR Notes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#findings-and-suggestions">19 Findings and suggestions</a></li>
 </ul>
 </li>
 </ul>
@@ -1446,7 +1374,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../',
-            VERSION:'v0.3.0',
+            VERSION:'v0.3.1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,

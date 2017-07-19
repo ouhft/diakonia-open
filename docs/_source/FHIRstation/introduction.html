@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Introduction &mdash; Diakonia v0.3.0 documentation</title>
+  <title>Introduction &mdash; Diakonia v0.3.1 documentation</title>
   
 
   
@@ -35,7 +35,7 @@
         <link rel="index" title="Index"
               href="../../genindex.html"/>
         <link rel="search" title="Search" href="../../search.html"/>
-    <link rel="top" title="Diakonia v0.3.0 documentation" href="../../index.html"/>
+    <link rel="top" title="Diakonia v0.3.1 documentation" href="../../index.html"/>
         <link rel="up" title="FHIRstation Project" href="index.html"/>
         <link rel="next" title="Testing" href="tests.html"/>
         <link rel="prev" title="FHIRstation Project" href="index.html"/> 
@@ -67,7 +67,7 @@
             
             
               <div class="version">
-                v0.3.0
+                v0.3.1
               </div>
             
           
@@ -243,8 +243,8 @@
 <span id="design"></span><h2>Design<a class="headerlink" href="#design" title="Permalink to this headline">¶</a></h2>
 <p>This is the nitty gritty bit... what <strong>is</strong> a FHIR Server? How much functionality can we hand off to FHIRbase? Are there packages (like <a class="reference external" href="http://www.django-rest-framework.org">Django REST Framework</a>) we can hand off large chunks of functionality to?</p>
 <p>FHIRbase have <a class="reference external" href="http://try-fhirplace.hospital-systems.com/fhirbase-presentation/index.html#/fhirbase">taken the view that</a> json is the standard for web apis, and so don't export xml natively. They do offer an xslt transformation for <a class="reference external" href="https://github.com/fhirbase/fhir-xml2json">FHIR xml to json</a>, which is handy, but nothing vice-versa. Whilst it recommends using Saxon as the XSLT engine, <a class="reference external" href="http://lxml.de">lxml</a> is <a class="reference external" href="http://stackoverflow.com/questions/16698935/how-to-transform-an-xml-file-using-xslt-in-python">a more common</a> python approach. There is a <a class="reference external" href="https://github.com/kwboone/FHIR-JSON-to-XML-Converter">JS implementation that does json to xml</a> to look at. <strong>Consider:</strong> Leaving XML implementation to a later version of FHIRstation.</p>
-<p><img alt="Diakona Layers Diagram" src="../../_images/diakonia_layers.svg" />
-System layer diagram (modelled on the <a class="reference external" href="http://try-fhirplace.hospital-systems.com/fhirbase-presentation/index.html#/">Hospital Systems</a> one). Work in Progress, clearly.</p>
+<p><img alt="Diakona Layers Diagram" src="../../_images/diakonia_layers.svg" /></p>
+<p>System layer diagram (modelled on the <a class="reference external" href="http://try-fhirplace.hospital-systems.com/fhirbase-presentation/index.html#/">Hospital Systems</a> one). Work in Progress, clearly.</p>
 <p>We're using FHIR as a semantic structure for the data layer, with FHIR-like communication happening between data and application layers. FHIR (exact) communication should then be happening between the client and application layers.</p>
 <p>Standard ORM techniques from most frameworks are of limited use with FHIRbase directly, though given other system elements will reside in a Postgres DB, they will still have their uses, and the FHIRbase DB can also be queried by <code class="docutils literal"><span class="pre">SQL</span> <span class="pre">SELECT</span></code> statements via ORM.</p>
 <p><strong>Question:</strong> Do we handle the Binary endpoint? <a class="reference external" href="https://www.hl7.org/fhir/binary.html">https://www.hl7.org/fhir/binary.html</a> There's no hint in the FHIRbase docs about what it does or does not support regarding binary types.</p>
@@ -295,7 +295,7 @@ System layer diagram (modelled on the <a class="reference external" href="http:/
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../',
-            VERSION:'v0.3.0',
+            VERSION:'v0.3.1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
