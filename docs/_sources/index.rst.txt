@@ -3,7 +3,7 @@
 Documentation for Project Diakonia
 ==================================
 
-This is a PROJECT. This has aims AIMS.
+This is a PROJECT. This has aims AIMS. Test Message...
 
 You should find information related to the overall system from design, through to deployment and
 maintenance. If you have any questions, please contact the main author Carl Marshall
