@@ -1,6 +1,12 @@
 language: python
 python:
   - "3.5"
+
+addons:
+  apt:
+    packages:
+    - enchant
+
 # command to install dependencies
 install:
   - pip install -r requirements/travis.txt
