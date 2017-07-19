@@ -61,7 +61,7 @@ instance/
 .scrapy
 
 # Sphinx documentation
-docs/_build/
+# docs/_build/  -- we now host and publish from this folder
 docs/_source/*/generated/
 
 # PyBuilder

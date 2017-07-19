@@ -1,0 +1,902 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Database Requirement Notes from IQ &mdash; Diakonia v0.2.4 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="Diakonia v0.2.4 documentation" href="../../index.html"/>
+        <link rel="up" title="Transplant EPR Project" href="index.html"/>
+        <link rel="next" title="Transplant Pathways (DRAFT)" href="Transplant_Pathway.html"/>
+        <link rel="prev" title="Transplant EPR Project" href="introduction.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Diakonia
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                v0.2.4
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">About Diakonia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../requirements.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_stories.html">User Stories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../development.html">Project Setup Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../development.html#dev-system-notes">Dev System Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../BMT/index.html">BMT Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NHIC/index.html">NHIC-TRA Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../FHIRstation/index.html">FHIRstation Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PancreasDB/index.html">Pancreas DB Project</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Transplant EPR Project</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="introduction.html">Transplant EPR Project</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Database Requirement Notes from IQ</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#general">General</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#recipient-assessment">Recipient Assessment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cadaveric-donor-assessment">Cadaveric Donor Assessment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#retrieval-data">Retrieval Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#living-donor-assessment">Living Donor Assessment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transplant">Transplant</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#post-operative-curse">Post-operative Curse</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transplant-clinic">Transplant Clinic</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#re-admission">Re-admission</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#labs-results">Labs results</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#graft-function">Graft Function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#alerts">Alerts</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#page-7-diagram-1">Page 7: Diagram 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#page-8-diagram-2">Page 8: Diagram 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#page-9-diagram-3">Page 9: Diagram 3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#surgeon-assessment">2: Surgeon Assessment</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#diabetes">Diabetes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuropathy">Neuropathy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vasculopathy">Vasculopathy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#retinopathy">Retinopathy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#nephropathy">Nephropathy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#previous-transplant">Previous Transplant</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#past-medical-history">Past Medical History</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#current-drugs">Current Drugs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#allergies">Allergies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sensitising-events">Sensitising events</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#social-history">Social History</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#examination">Examination</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#decision-to-list">Decision to list</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#generate-template-letter">Generate Template Letter</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#listing-meeting">3: Listing Meeting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#annual-review">4: Annual Review</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#diabetes">Diabetes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuropathy">Neuropathy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#retinopathy">Retinopathy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vasculopathy">Vasculopathy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#social-history">Social History</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#examination">Examination</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#investigations">Investigations</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#call-selected-for-transplant">5: Call / Selected for Transplant</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#donor">6: Donor</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#retrieval">Retrieval</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#organ-and-backtable">7: Organ and Backtable</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#kidney-r-l-biopsy-perfusion-fluid-culture">Kidney R / L + Biopsy + Perfusion fluid culture</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#backtable-reconstruction">Backtable reconstruction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pancreas-perfusion-fluid-culture">Pancreas + Perfusion fluid culture</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#transplant">8: Transplant</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#templates-for-operations-and-back-table">Templates for operations and back table</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Transplant_Pathway.html">Transplant Pathways (DRAFT)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../notes.html">Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project_management.html">Project Management</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Diakonia</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Transplant EPR Project</a> &raquo;</li>
+        
+      <li>Database Requirement Notes from IQ</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/_source/TransplantEPR/IQ_requirements.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="database-requirement-notes-from-iq">
+<span id="database-requirement-notes-from-iq"></span><h1>Database Requirement Notes from IQ<a class="headerlink" href="#database-requirement-notes-from-iq" title="Permalink to this headline">¶</a></h1>
+<p>Typed up notes from a document used by IQ as the basis for looking for a system to procure.</p>
+<div class="section" id="general">
+<span id="general"></span><h2>General<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h2>
+<p>To be used by:</p>
+<ol class="simple">
+<li>Surgical Team</li>
+<li>Recipient Coordinators</li>
+<li>Living Donor Team</li>
+<li>Small bowel Team</li>
+<li>Pancreas Specialist Nurses</li>
+<li>Vascular Access nurses</li>
+<li>Transplant Clinic</li>
+<li>Anaesthetists</li>
+<li>Pharmacists</li>
+<li>Dieticians</li>
+<li>Researchers</li>
+<li>Tissue Typing</li>
+<li>Psychologists</li>
+</ol>
+<p>Should produce reports for:</p>
+<ol class="simple">
+<li>NHSBT</li>
+<li>Collaborative Transplant Study</li>
+<li>Renal Registry</li>
+</ol>
+<div class="section" id="recipient-assessment">
+<span id="recipient-assessment"></span><h3>Recipient Assessment<a class="headerlink" href="#recipient-assessment" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li>Correspondence</li>
+<li>Referral Letter</li>
+<li>Surgical Assessment</li>
+<li>Further correspondence</li>
+<li>Nurse notes/emails</li>
+<li>Clinical Assessment</li>
+<li>Name of surgeon assessing patient</li>
+<li>Present history</li>
+<li>Past medical history</li>
+<li>Drugs and allergies</li>
+<li>Social history</li>
+<li>Examination</li>
+<li>Compliance</li>
+<li>Virology</li>
+<li>CMV</li>
+<li>EBV</li>
+<li>Cardiac Assessment</li>
+<li>MPS</li>
+<li>ECHO</li>
+<li>Angio</li>
+<li>Cardiac MDT</li>
+<li>Diabetes</li>
+<li>DM type</li>
+<li>Date of diagnosis</li>
+<li>24 hour insulin dose</li>
+<li>Pump or sensor</li>
+<li>Complications - (Peripheral Neuropathy, Autonomic Neuropathy, Hypoglycaemic unawareness, Retinopathy, gastroparesis)</li>
+<li>Renal</li>
+<li>Type of dialysis</li>
+<li>Native output</li>
+<li>Ureteric reflux</li>
+<li>Outflow obstruction</li>
+<li>UTI</li>
+<li>Vascular access</li>
+<li>Type of fistula</li>
+<li>Intervential radiology</li>
+<li>Anaesthetic assessment</li>
+<li>Tissue Typing</li>
+<li>HLA Type</li>
+<li>Blood group</li>
+<li>Date of activation on waiting list</li>
+<li>Screening information (calculated reaction frequency %)</li>
+<li>Previous transplant offers</li>
+<li>Other investigations</li>
+<li>CXR</li>
+<li>CT</li>
+<li>Lung function tests</li>
+<li>Duplex</li>
+<li>Listing meeting</li>
+<li>Names of doctors present</li>
+<li>Issues discussed</li>
+<li>Concerns</li>
+<li>Further investigations required</li>
+<li>Decision</li>
+</ol>
+</div>
+<div class="section" id="cadaveric-donor-assessment">
+<span id="cadaveric-donor-assessment"></span><h3>Cadaveric Donor Assessment<a class="headerlink" href="#cadaveric-donor-assessment" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li>All information from EOS</li>
+<li>Follow up information from EOS regarding other organs from the same donor</li>
+</ol>
+</div>
+<div class="section" id="retrieval-data">
+<span id="retrieval-data"></span><h3>Retrieval Data<a class="headerlink" href="#retrieval-data" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li>HBD/NHBD</li>
+<li>Retrieval Team</li>
+<li>Surgeon's Name</li>
+<li>Organs retrieved</li>
+<li>Perfusion solution</li>
+<li>Retrieval times</li>
+<li>Damage</li>
+<li>Quality of perfusion</li>
+<li>Machine perfusion</li>
+<li>NORS database</li>
+</ol>
+</div>
+<div class="section" id="living-donor-assessment">
+<span id="living-donor-assessment"></span><h3>Living Donor Assessment<a class="headerlink" href="#living-donor-assessment" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li>Referral letters and all correspondence</li>
+<li>Surgical Assessment</li>
+<li>Investigations</li>
+</ol>
+</div>
+<div class="section" id="transplant">
+<span id="transplant"></span><h3>Transplant<a class="headerlink" href="#transplant" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li>Back table</li>
+<li>Operation details</li>
+<li>Anasomosis times</li>
+<li>Calculated CIT</li>
+<li>Calculated WIT</li>
+<li>Automatic operation note with extra free text</li>
+<li>Post operative instructions</li>
+<li>Stent</li>
+<li>Perfusion culture</li>
+</ol>
+</div>
+<div class="section" id="post-operative-curse">
+<span id="post-operative-curse"></span><h3>Post-operative Curse<a class="headerlink" href="#post-operative-curse" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li>Duplex scan</li>
+<li>DGF Y/N</li>
+<li>Rejection - Y/N, Date</li>
+<li>Biopsy - Date, Histology report/result</li>
+<li>Blood transfusion - Date, number of units</li>
+<li>TEGS</li>
+<li>Anticoagulation</li>
+<li>Drains</li>
+<li>Y/N</li>
+<li>Culture</li>
+<li>Chemistry</li>
+<li>Date removed</li>
+<li>Antibiotics</li>
+<li>Length of hospital stay</li>
+<li>Length of ITU stay</li>
+<li>Re-admissions to ITU</li>
+<li>Complications</li>
+<li>Infections</li>
+<li>Re-operations</li>
+<li>Collections</li>
+<li>Interventional radiology</li>
+<li>Medication during admission and on discharge</li>
+<li>Discharge summary automatically generated</li>
+</ol>
+</div>
+<div class="section" id="transplant-clinic">
+<span id="transplant-clinic"></span><h3>Transplant Clinic<a class="headerlink" href="#transplant-clinic" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li>Date</li>
+<li>Doctor/nurse</li>
+<li>Weight</li>
+<li>Blood pressure</li>
+<li>BMs</li>
+<li>OGTT</li>
+<li>Complications</li>
+<li>Graft dysfunction</li>
+<li>Medication</li>
+</ol>
+</div>
+<div class="section" id="re-admission">
+<span id="re-admission"></span><h3>Re-admission<a class="headerlink" href="#re-admission" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li>Complications</li>
+<li>Operations</li>
+</ol>
+</div>
+<div class="section" id="labs-results">
+<span id="labs-results"></span><h3>Labs results<a class="headerlink" href="#labs-results" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li>Biochemistry</li>
+<li>Drug levels</li>
+<li>Haematology</li>
+<li>Coagulation</li>
+</ol>
+</div>
+<div class="section" id="graft-function">
+<span id="graft-function"></span><h3>Graft Function<a class="headerlink" href="#graft-function" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li>Graft Failure</li>
+<li>Date of failure</li>
+</ol>
+</div>
+<div class="section" id="alerts">
+<span id="alerts"></span><h3>Alerts<a class="headerlink" href="#alerts" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li>Stent</li>
+<li>Missed follow-up</li>
+<li>Tacrolimus levels outside set range</li>
+<li>CMV</li>
+<li>BKV PCR</li>
+</ol>
+</div>
+</div>
+<div class="section" id="page-7-diagram-1">
+<span id="page-7-diagram-1"></span><h2>Page 7: Diagram 1<a class="headerlink" href="#page-7-diagram-1" title="Permalink to this headline">¶</a></h2>
+<p><img alt="Page 7: Diagram 1" src="../../_images/IQ_Diagram1.svg" /></p>
+</div>
+<div class="section" id="page-8-diagram-2">
+<span id="page-8-diagram-2"></span><h2>Page 8: Diagram 2<a class="headerlink" href="#page-8-diagram-2" title="Permalink to this headline">¶</a></h2>
+<p><img alt="Page 8: Diagram 2" src="../../_images/IQ_Diagram2.svg" /></p>
+<ul class="simple">
+<li>AR = Acute Rejection</li>
+<li>TEGS = Thromboelastograms</li>
+<li>OGTT = Oral Glucose Tolerance Test</li>
+<li>DGF = Delayed Graft Function</li>
+<li>OPA = Out Patients Assessment</li>
+<li>TT = Tissue Typing</li>
+</ul>
+</div>
+<div class="section" id="page-9-diagram-3">
+<span id="page-9-diagram-3"></span><h2>Page 9: Diagram 3<a class="headerlink" href="#page-9-diagram-3" title="Permalink to this headline">¶</a></h2>
+<p><img alt="Page 9: Diagram 3" src="../../_images/IQ_Diagram3.svg" /></p>
+<ul class="simple">
+<li>CxR = Chest X-Ray</li>
+<li>HNI = Histocompatibility and Immunogenetics</li>
+</ul>
+</div>
+<div class="section" id="surgeon-assessment">
+<span id="surgeon-assessment"></span><h2>2: Surgeon Assessment<a class="headerlink" href="#surgeon-assessment" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="diabetes">
+<span id="diabetes"></span><h3>Diabetes<a class="headerlink" href="#diabetes" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Year/age diagnosis</li>
+<li>Type I / II / Mody (Mature Onset of Diabetes of the Young)</li>
+<li>Insulin dose - total units</li>
+<li>Hypos Y/N</li>
+<li>Awareness / Unawareness</li>
+<li>Frequency of hypos</li>
+<li>Complications</li>
+</ul>
+</div>
+<div class="section" id="neuropathy">
+<span id="neuropathy"></span><h3>Neuropathy<a class="headerlink" href="#neuropathy" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Peripheral Y/N</li>
+<li>Extent - Hands / Feet / Lower legs / Thighs</li>
+<li>Wheelchair Y/N</li>
+<li>Autonomic Y/N</li>
+<li>Vomiting Y/N</li>
+<li>Frequency</li>
+<li>Nausea</li>
+<li>Diarrohea / Constipation</li>
+<li>Gastric pacemaker Y/N</li>
+</ul>
+</div>
+<div class="section" id="vasculopathy">
+<span id="vasculopathy"></span><h3>Vasculopathy<a class="headerlink" href="#vasculopathy" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Y/N</li>
+<li>Amputations Y/N</li>
+<li>Extent</li>
+<li>Ulcers Y/N</li>
+<li>MI Y/N  (Myocardial Infarction)</li>
+<li>Stroke Y/N</li>
+<li>Clauidication Y/N</li>
+<li>Distance</li>
+</ul>
+</div>
+<div class="section" id="retinopathy">
+<span id="retinopathy"></span><h3>Retinopathy<a class="headerlink" href="#retinopathy" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Y/N</li>
+<li>Laser Y/N</li>
+<li>Number</li>
+<li>Surgery</li>
+<li>Stable / Unstable</li>
+<li>Regular Follow Up</li>
+<li>Research Link</li>
+</ul>
+</div>
+<div class="section" id="nephropathy">
+<span id="nephropathy"></span><h3>Nephropathy<a class="headerlink" href="#nephropathy" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Y/N</li>
+<li>Cause of renal failure</li>
+<li>Polycystic Kidneys - UTIs Y/N; Bleeds Y/N; Large kidneys Y/N; Previous nephrectomies</li>
+<li>Lupus - Antibodies Y/N; Previous thrombotic events: DVT's / Pulmonary Embolism / Miscarriage / Recurrant thrombosis of AVF; Previous treatment</li>
+<li>FSGS (focal segmental glomerulo sclerosis) - Fulminant; Recurrance; Type of treatment</li>
+<li>Biopsy proven Y/N</li>
+<li>Predialysis / dialysis</li>
+<li>(Estimated) start day</li>
+<li>HD (hemodialysis)</li>
+<li>Access type</li>
+<li>Problems Y/N</li>
+<li>HD days</li>
+<li>PD (Peritoneal Dialysis)</li>
+<li>Catheter inserted where?</li>
+<li>Previous peritonitus</li>
+<li>Exit site R/L</li>
+<li>Urine output volume</li>
+<li>Previous UTI Y/N</li>
+<li>Frequency UTIs</li>
+<li>Date of last UTI</li>
+<li>Renal stones</li>
+<li>Reflux</li>
+<li>Outflow obstruction symptoms</li>
+<li>Nocturia Y/N + Number</li>
+<li>Frequency Y/N + Number</li>
+<li>Hesitancy</li>
+<li>Dribbling</li>
+</ul>
+</div>
+<div class="section" id="previous-transplant">
+<span id="previous-transplant"></span><h3>Previous Transplant<a class="headerlink" href="#previous-transplant" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Tx Type</li>
+<li>Date of Tx</li>
+<li>Reason for failure</li>
+<li>Previous donor TT</li>
+<li>Previous immunosuppresion</li>
+</ul>
+</div>
+<div class="section" id="past-medical-history">
+<span id="past-medical-history"></span><h3>Past Medical History<a class="headerlink" href="#past-medical-history" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Cardiac</li>
+<li>Respiratory</li>
+<li>GI (Gastro Intestinal)</li>
+<li>GU (Genitourinary)</li>
+<li>Surgical</li>
+<li>Gynaecological</li>
+</ul>
+</div>
+<div class="section" id="current-drugs">
+<span id="current-drugs"></span><h3>Current Drugs<a class="headerlink" href="#current-drugs" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="allergies">
+<span id="allergies"></span><h3>Allergies<a class="headerlink" href="#allergies" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="sensitising-events">
+<span id="sensitising-events"></span><h3>Sensitising events<a class="headerlink" href="#sensitising-events" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Tx</li>
+<li>Pregnancies</li>
+<li>Blood transfusions</li>
+</ul>
+</div>
+<div class="section" id="social-history">
+<span id="social-history"></span><h3>Social History<a class="headerlink" href="#social-history" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Employment Y/N</li>
+<li>Job</li>
+<li>Disable Y/N</li>
+<li>Wheelchair bound</li>
+<li>Registered Blind</li>
+<li>Lives with family / alone</li>
+<li>Family numbers</li>
+<li>Relatives / friends close by</li>
+<li>Smoker Y/N</li>
+<li>CPD (number per day)</li>
+<li>Alcohol</li>
+<li>Number units</li>
+<li>Other recreational drugs</li>
+</ul>
+</div>
+<div class="section" id="examination">
+<span id="examination"></span><h3>Examination<a class="headerlink" href="#examination" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>CVS (Cardio Vascular System)</li>
+<li>RS (Respiritory System)</li>
+<li>Abdomen</li>
+<li>Pulses</li>
+<li>Fistula</li>
+<li>Hands</li>
+<li>Teeth</li>
+</ul>
+</div>
+<div class="section" id="decision-to-list">
+<span id="decision-to-list"></span><h3>Decision to list<a class="headerlink" href="#decision-to-list" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="generate-template-letter">
+<span id="generate-template-letter"></span><h3>Generate Template Letter<a class="headerlink" href="#generate-template-letter" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="listing-meeting">
+<span id="listing-meeting"></span><h2>3: Listing Meeting<a class="headerlink" href="#listing-meeting" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>List of people present</li>
+<li>Further investigations</li>
+<li>Concerns and name of those with reservations</li>
+<li>Decision to list Y/N</li>
+</ul>
+</div>
+<div class="section" id="annual-review">
+<span id="annual-review"></span><h2>4: Annual Review<a class="headerlink" href="#annual-review" title="Permalink to this headline">¶</a></h2>
+<p>...and Report / Letter Tissue Typing (about sensitisation status and calls)</p>
+<div class="section" id="diabetes">
+<span id="id1"></span><h3>Diabetes<a class="headerlink" href="#diabetes" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Insulin dose</li>
+<li>Hypos</li>
+<li>Awareness / Unawareness</li>
+<li>Frequency of hypos</li>
+</ul>
+<p>New changes in complications...</p>
+</div>
+<div class="section" id="neuropathy">
+<span id="id2"></span><h3>Neuropathy<a class="headerlink" href="#neuropathy" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Peripheral Y/N</li>
+<li>Extent - Hands / Feet / Lower legs / Thighs</li>
+<li>Wheelchair Y/N</li>
+<li>Autonomic Y/N</li>
+<li>Vomiting Y/N</li>
+<li>Frequency</li>
+<li>Nausea</li>
+<li>Diarrohea / Constipation</li>
+<li>Gastric pacemaker Y/N</li>
+</ul>
+</div>
+<div class="section" id="retinopathy">
+<span id="id3"></span><h3>Retinopathy<a class="headerlink" href="#retinopathy" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Y/N</li>
+<li>Laser Y/N</li>
+<li>Number</li>
+<li>Surgery</li>
+<li>Stable / Unstable</li>
+</ul>
+</div>
+<div class="section" id="vasculopathy">
+<span id="id4"></span><h3>Vasculopathy<a class="headerlink" href="#vasculopathy" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Y/N</li>
+<li>Amputations Y/N</li>
+<li>Extent - Toes; Forefoot; BKA (Below Knee); AKA (Above Knee);</li>
+<li>Ulcers Y/N</li>
+<li>MI Y/N</li>
+<li>CVA (stroke) Y/N  &lt;-- system alert need or carotid duplex</li>
+<li>Stroke Y/N</li>
+<li>Clauidication Y/N  &lt;-- system alert - lower limb &amp; iliac duplex</li>
+<li>Distance</li>
+<li>Admissions during last year</li>
+<li>Transfusion or possible sensitisation events</li>
+<li>New problems</li>
+</ul>
+</div>
+<div class="section" id="social-history">
+<span id="id5"></span><h3>Social History<a class="headerlink" href="#social-history" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Any changes?</li>
+</ul>
+</div>
+<div class="section" id="examination">
+<span id="id6"></span><h3>Examination<a class="headerlink" href="#examination" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="investigations">
+<span id="investigations"></span><h3>Investigations<a class="headerlink" href="#investigations" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="decision">
+<span id="decision"></span><h4>Decision<a class="headerlink" href="#decision" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>Remain on waiting list</li>
+<li>Suspend</li>
+<li>Remove from waiting list</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="call-selected-for-transplant">
+<span id="call-selected-for-transplant"></span><h2>5: Call / Selected for Transplant<a class="headerlink" href="#call-selected-for-transplant" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Not attended</li>
+<li>Unwell</li>
+<li>No transport</li>
+<li>Unable to find patient</li>
+<li>Patient refused</li>
+<li>Other</li>
+<li>Attended</li>
+<li>Back-up</li>
+<li>Donor did not die</li>
+<li>Organ not suitable</li>
+<li>Proceeded with transplant...</li>
+</ul>
+</div>
+<div class="section" id="donor">
+<span id="donor"></span><h2>6: Donor<a class="headerlink" href="#donor" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Cadaveric - EOS Information</li>
+<li>Living donor - LRD (Living related donor) team</li>
+<li>Letters - Direct; Paired exchange; altruistic</li>
+</ul>
+<div class="section" id="retrieval">
+<span id="retrieval"></span><h3>Retrieval<a class="headerlink" href="#retrieval" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Team and surgeon</li>
+<li>DBD - cross clamp date and time</li>
+<li>DCD</li>
+<li>Withdrawal time</li>
+<li>BP &lt; 50</li>
+<li>As?stole</li>
+<li>Certification</li>
+<li>KTS (Knife to skin)</li>
+<li>Perfusion</li>
+<li>HTA A Number</li>
+<li>Type of solution</li>
+<li>Reported damage</li>
+<li>Abnormal anatomy</li>
+</ul>
+</div>
+</div>
+<div class="section" id="organ-and-backtable">
+<span id="organ-and-backtable"></span><h2>7: Organ and Backtable<a class="headerlink" href="#organ-and-backtable" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Name of surgeon and assistant</li>
+<li>Start time</li>
+</ul>
+<div class="section" id="kidney-r-l-biopsy-perfusion-fluid-culture">
+<span id="kidney-r-l-biopsy-perfusion-fluid-culture"></span><h3>Kidney R / L + Biopsy + Perfusion fluid culture<a class="headerlink" href="#kidney-r-l-biopsy-perfusion-fluid-culture" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Number of arteries</li>
+<li>Number of veins</li>
+<li>Number of ureters</li>
+<li>Number of patches</li>
+<li>Quality of patch</li>
+<li>Quality of arterial ostium</li>
+</ul>
+</div>
+<div class="section" id="backtable-reconstruction">
+<span id="backtable-reconstruction"></span><h3>Backtable reconstruction<a class="headerlink" href="#backtable-reconstruction" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Aortic patch shortened</li>
+<li>Ao patch sacrificed</li>
+<li>Arteries troussered</li>
+<li>Arteries anastomosed end-to-side to renal arteries</li>
+</ul>
+<div class="section" id="damage">
+<span id="damage"></span><h4>Damage<a class="headerlink" href="#damage" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>Y/N</li>
+<li>Capsular</li>
+<li>Arterial</li>
+<li>Vein</li>
+<li>Ureter</li>
+<li>Substance of kidney</li>
+</ul>
+<p>Perfusion solution on back table + batch number</p>
+<p>Machine perfusion Y/N</p>
+<ul class="simple">
+<li>at retrieval / base</li>
+<li>time perfusion started / finished</li>
+<li>reason for perfusion</li>
+<li>kps (kidney perfusion solution) batch number</li>
+</ul>
+</div>
+</div>
+<div class="section" id="pancreas-perfusion-fluid-culture">
+<span id="pancreas-perfusion-fluid-culture"></span><h3>Pancreas + Perfusion fluid culture<a class="headerlink" href="#pancreas-perfusion-fluid-culture" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Fatty - No; Mild; Moderate; Severe</li>
+<li>Damage Type - Report to NHSBT + HTA B form</li>
+<li>Vascular reconstruction</li>
+<li>Preservation solution on back table</li>
+<li>UW (University of Wisconsin) Solution</li>
+<li>Batch number</li>
+</ul>
+</div>
+</div>
+<div class="section" id="transplant">
+<span id="id7"></span><h2>8: Transplant<a class="headerlink" href="#transplant" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Surgeon's name</li>
+<li>Assistant's name</li>
+<li>Consultant in charge</li>
+</ul>
+<div class="section" id="templates-for-operations-and-back-table">
+<span id="templates-for-operations-and-back-table"></span><h3>Templates for operations and back table<a class="headerlink" href="#templates-for-operations-and-back-table" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Kidney</li>
+<li>SPK (Simultaneous Pancreas Kidney)</li>
+<li>PTA (Pancreas Transplant Alone)</li>
+<li>PAK (Pancreas After Kidney)</li>
+</ul>
+<p>HTA B Form - Number keep for tracability</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Transplant_Pathway.html" class="btn btn-neutral float-right" title="Transplant Pathways (DRAFT)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="introduction.html" class="btn btn-neutral" title="Transplant EPR Project" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016-2017, University of Oxford &amp; Oxford Universities NHS Foundatation Trust.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'v0.2.4',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

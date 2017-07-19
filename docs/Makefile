@@ -23,6 +23,7 @@ I18NSPHINXOPTS  = $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) .
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
 	@echo "  html       to make standalone HTML files"
+	@echo "  carlhtml   to make standalone HTML files in Carl's local Churchill.io repository"
 	@echo "  dirhtml    to make HTML files named index.html in directories"
 	@echo "  singlehtml to make a single large HTML file"
 	@echo "  pickle     to make pickle files"
@@ -55,10 +56,14 @@ clean:
 
 .PHONY: html
 html:
-	# $(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html <-- Original
+	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
+	@echo
+	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
+
+.PHONY: carlhtml
+carlhtml:
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) /Users/carl/Projects/ouh-churchill-docs/ouh-churchill.github.io-repo
 	@echo
-	# @echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
 	@echo "Build finished. The HTML pages are in ouh-churchill.github.io-repo."
 
 .PHONY: dirhtml
