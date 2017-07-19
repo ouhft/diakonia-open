@@ -19,7 +19,6 @@ script:
 
 after_success:
 #  - travis-sphinx deploy
-  - echo $EMAIL
   - git status
   - git config user.name "Travis Builder"
   - git config user.email "$EMAIL"
