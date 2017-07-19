@@ -13,8 +13,9 @@ install:
 # command to run doc build
 script:
 #  - travis-sphinx --source=docs-source/ build
+  - pwd
   - cd docs-source
-  - make gh-pages
+  - make gh-html
 
 after_success:
 #  - travis-sphinx deploy
