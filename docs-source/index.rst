@@ -3,17 +3,17 @@
 Documentation for Project Diakonia
 ==================================
 
-This is a PROJECT. This has aims AIMS. Test Message...
+This is an umbrella project for a range of activitie within the Oxford Universities NHS Hospitals Trust. This documentation
+has the aims of collating content in one easy to find location for quick reference and collective understanding.
 
-You should find information related to the overall system from design, through to deployment and
+You should find information related to the overall systems from design, through to deployment and
 maintenance. If you have any questions, please contact the main author Carl Marshall
 (carl.marshall@ouh.nhs.uk).
 
 Quick links:
 
-* This documentation is online at https://ouh-churchill.github.io/index.html
+* This documentation is online at https://ouh-churchill.github.io/diakona/index.html
 * The repository is at https://github.com/ouh-churchill/diakonia
-* The project management (Waffle.io) screen is at https://waffle.io/ouh-churchill/diakonia
 
 Contents
 --------

@@ -1,0 +1,8 @@
+-r common.txt
+
+## Documentation
+sphinx
+sphinx_rtd_theme
+pyenchant
+sphinxcontrib-spelling
+recommonmark

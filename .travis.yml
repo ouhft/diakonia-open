@@ -1,0 +1,15 @@
+language: python
+python:
+  - "3.5"
+# command to install dependencies
+install:
+  - pip install -r requirements/travis.txt
+# command to run doc build
+script:
+#  - travis-sphinx --source=docs-source/ build
+  - cd docs-source
+  - make gh-pages
+
+after_success:
+#  - travis-sphinx deploy
+  - git status
