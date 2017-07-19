@@ -23,13 +23,7 @@ after_success:
   - git remote add origin https://marshalc:$GH_TOKEN@github.com/ouh-churchill/diakonia.git
   - git config user.name "Travis Builder"
   - git config user.email "$EMAIL"
-  - git pull --all
-  - git branch
-  - git checkout
 
-  - git status
   - git add -A -v .
   - git commit -m "[ci skip] Autodoc commit for $COMMIT."
-
-  # -q is very important, otherwise you leak your GH_TOKEN
-  - git push -v origin master
+  - git push -v --force origin master
