@@ -2,4 +2,4 @@
 # Project Diakonia
 Ministers to the data needs of the departments
 
-See the full documentation at [https://ouh-churchill.github.io/_source/introduction.html](https://ouh-churchill.github.io/_source/introduction.html)
+See the full documentation at [https://ouh-churchill.github.io/](https://ouh-churchill.github.io/)
