@@ -17,7 +17,7 @@ The draft [Transplant Pathways](Transplant_Pathway.md) document needs further wo
 * Investigate the Proton development, both in terms of scope and progress
 * Attempt to produce a list of data variables identified during the workflow. This will hopefully form part of a dictionary providing linkage between names and values in different systems that relate to the same data.
 * {Low priority} What will be done with historical information and potential data entry?
-* Is there a patient facting web application in place for anything?
+* Is there a patient facing web application in place for anything?
 
 ## Outstanding questions
 
