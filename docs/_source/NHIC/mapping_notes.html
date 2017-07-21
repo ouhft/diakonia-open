@@ -1,0 +1,362 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Mapping notes &mdash; Diakonia v0.3.4 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="Diakonia v0.3.4 documentation" href="../../index.html"/>
+        <link rel="up" title="NHIC-TRA Project" href="index.html"/>
+        <link rel="next" title="diakonia.eyeaux.models" href="generated/diakonia.eyeaux.models.html"/>
+        <link rel="prev" title="TRA Processing" href="process.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Diakonia
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                v0.3.4
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">Documentation for Project Diakonia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">About Diakonia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../requirements.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_stories.html">User Stories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../development.html">Project Setup Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../development.html#dev-system-notes">Dev System Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notes.html">Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project_management.html">Project Management</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Sub Projects</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../BMT/index.html">BMT Project</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">NHIC-TRA Project</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="process.html">TRA Processing</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Mapping notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#requirements">Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#transformation-steps">Transformation steps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#replacements">Replacements</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#nhic-tra-43-1">NHIC_TRA_43-1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#nhic-tra-44-1">NHIC_TRA_44-1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#nhic-tra-45-1">NHIC_TRA_45-1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#nhic-tra-56">NHIC_TRA_56</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#nhic-tra-70-1">NHIC_TRA_70-1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#nhic-tra-71-1">NHIC_TRA_71-1</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#m-attributes"><code class="docutils literal"><span class="pre">m</span></code> attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#data-models">Data models</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../FHIRstation/index.html">FHIRstation Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PancreasDB/index.html">Pancreas DB Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../TransplantEPR/index.html">Transplant EPR Project</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Diakonia</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">NHIC-TRA Project</a> &raquo;</li>
+        
+      <li>Mapping notes</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/_source/NHIC/mapping_notes.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="mapping-notes">
+<span id="mapping-notes"></span><h1>Mapping notes<a class="headerlink" href="#mapping-notes" title="Permalink to this headline">¶</a></h1>
+<p>This document (from Ryan Brooks) contains implementation notes to aid maintenance of the transform.</p>
+<div class="section" id="requirements">
+<span id="requirements"></span><h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<p>This transformation is built with the <a class="reference external" href="https://www.talend.com/products/talend-open-studio">Talend Open Studio Data Integration</a> suite.</p>
+<ul class="simple">
+<li>Talend Open Studio Data Integration, &gt;~5.6.2.</li>
+<li>Git</li>
+</ul>
+</div>
+<div class="section" id="transformation-steps">
+<span id="transformation-steps"></span><h2>Transformation steps<a class="headerlink" href="#transformation-steps" title="Permalink to this headline">¶</a></h2>
+<p>The transform is broken down into 5 steps:</p>
+<ol class="simple">
+<li>Extract the Excel spreadsheet.</li>
+<li>Map the spreadsheet columns to NHIC data elements.</li>
+<li>Replace spurious values with <code class="docutils literal"><span class="pre">null</span></code>s.</li>
+<li>Replace input strings with their enumerated counterparts.</li>
+<li>Load the output XML file.</li>
+</ol>
+</div>
+<div class="section" id="replacements">
+<span id="replacements"></span><h2>Replacements<a class="headerlink" href="#replacements" title="Permalink to this headline">¶</a></h2>
+<p>The primary role of the replacements is to swap input values for valid enumeratied values in the XML, for example swapping <code class="docutils literal"><span class="pre">Positive</span></code> for <code class="docutils literal"><span class="pre">Pos</span></code>.</p>
+<p>There are also many values which are non-values, for example <code class="docutils literal"><span class="pre">Not</span> <span class="pre">tested</span></code>, <code class="docutils literal"><span class="pre">Awaiting</span> <span class="pre">result</span></code>, and <code class="docutils literal"><span class="pre">Unknown</span></code>, when valid values in the XML are <code class="docutils literal"><span class="pre">Positive</span></code> and <code class="docutils literal"><span class="pre">Negative</span></code>.</p>
+<div class="section" id="nhic-tra-43-1">
+<span id="nhic-tra-43-1"></span><h3>NHIC_TRA_43-1<a class="headerlink" href="#nhic-tra-43-1" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">Unknown</span></code> -&gt; <code class="docutils literal"><span class="pre">0</span></code> (Not known)</li>
+</ul>
+</div>
+<div class="section" id="nhic-tra-44-1">
+<span id="nhic-tra-44-1"></span><h3>NHIC_TRA_44-1<a class="headerlink" href="#nhic-tra-44-1" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">Burns</span></code> -&gt; <code class="docutils literal"><span class="pre">17</span></code> (Other)</li>
+<li><code class="docutils literal"><span class="pre">Cardiovascular</span> <span class="pre">-</span> <span class="pre">type</span> <span class="pre">unclassified</span></code> -&gt; <code class="docutils literal"><span class="pre">17</span></code> (Other)</li>
+<li><code class="docutils literal"><span class="pre">Chronic</span> <span class="pre">pulmonary</span> <span class="pre">disease</span></code> -&gt; <code class="docutils literal"><span class="pre">17</span></code> (Other)</li>
+<li><code class="docutils literal"><span class="pre">Liver</span> <span class="pre">failure</span> <span class="pre">(not</span> <span class="pre">self</span> <span class="pre">poisoning)</span></code> -&gt; <code class="docutils literal"><span class="pre">17</span></code> (Other)</li>
+<li><code class="docutils literal"><span class="pre">Pneumonia</span></code> -&gt; <code class="docutils literal"><span class="pre">17</span></code> (Other)</li>
+<li><code class="docutils literal"><span class="pre">Respiratory</span> <span class="pre">-</span> <span class="pre">type</span> <span class="pre">unclassified</span> <span class="pre">(inc</span> <span class="pre">smoke</span> <span class="pre">inhalation)</span></code> -&gt;</li>
+<li><code class="docutils literal"><span class="pre">Respiratory</span> <span class="pre">failure</span></code> -&gt;</li>
+<li><code class="docutils literal"><span class="pre">Septicaemia</span></code> -&gt; <code class="docutils literal"><span class="pre">17</span></code> (Other)</li>
+<li><code class="docutils literal"><span class="pre">Other</span> <span class="pre">drug</span> <span class="pre">overdose</span></code> -&gt; <code class="docutils literal"><span class="pre">6</span></code> (Drug overdose)</li>
+<li><code class="docutils literal"><span class="pre">Not</span> <span class="pre">reported</span></code> -&gt; <code class="docutils literal"><span class="pre">18</span></code> (Unknown)</li>
+<li><code class="docutils literal"><span class="pre">Infections</span> <span class="pre">-</span> <span class="pre">type</span> <span class="pre">unclassified</span></code> -&gt; <code class="docutils literal"><span class="pre">8</span></code> (Infection)</li>
+<li><code class="docutils literal"><span class="pre">Trauma</span> <span class="pre">-</span> <span class="pre">RTA</span> <span class="pre">-</span> <span class="pre">car</span></code> -&gt; <code class="docutils literal"><span class="pre">16</span></code> (Trauma)</li>
+<li><code class="docutils literal"><span class="pre">Trauma</span> <span class="pre">-</span> <span class="pre">RTA</span> <span class="pre">-</span> <span class="pre">motorbike</span></code> -&gt; <code class="docutils literal"><span class="pre">16</span></code> (Trauma)</li>
+<li><code class="docutils literal"><span class="pre">Trauma</span> <span class="pre">-</span> <span class="pre">RTA</span> <span class="pre">-</span> <span class="pre">pedestrian</span></code> -&gt; <code class="docutils literal"><span class="pre">16</span></code> (Trauma)</li>
+<li><code class="docutils literal"><span class="pre">Trauma</span> <span class="pre">-</span> <span class="pre">RTA</span> <span class="pre">-</span> <span class="pre">pushbike</span></code> -&gt; <code class="docutils literal"><span class="pre">16</span></code> (Trauma)</li>
+<li><code class="docutils literal"><span class="pre">Trauma</span> <span class="pre">-</span> <span class="pre">RTA</span> <span class="pre">-</span> <span class="pre">unknown</span> <span class="pre">type</span></code> -&gt; <code class="docutils literal"><span class="pre">16</span></code> (Trauma)</li>
+<li><code class="docutils literal"><span class="pre">Other</span> <span class="pre">trauma</span> <span class="pre">-</span> <span class="pre">accident</span></code> -&gt; <code class="docutils literal"><span class="pre">16</span></code> (Trauma)</li>
+<li><code class="docutils literal"><span class="pre">Other</span> <span class="pre">trauma</span> <span class="pre">-</span> <span class="pre">unknown</span> <span class="pre">cause</span></code> -&gt; <code class="docutils literal"><span class="pre">16</span></code> (Trauma)</li>
+<li><code class="docutils literal"><span class="pre">Other</span> <span class="pre">trauma</span> <span class="pre">-</span> <span class="pre">suicide</span></code> -&gt; <code class="docutils literal"><span class="pre">16</span></code> (Trauma)</li>
+</ul>
+</div>
+<div class="section" id="nhic-tra-45-1">
+<span id="nhic-tra-45-1"></span><h3>NHIC_TRA_45-1<a class="headerlink" href="#nhic-tra-45-1" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">Mixed</span></code> -&gt; <code class="docutils literal"><span class="pre">G</span></code> (Any other mixed background)</li>
+<li><code class="docutils literal"><span class="pre">Other</span></code> -&gt; <code class="docutils literal"><span class="pre">S</span></code> (Any other ethnic group)</li>
+</ul>
+</div>
+<div class="section" id="nhic-tra-56">
+<span id="nhic-tra-56"></span><h3>NHIC_TRA_56<a class="headerlink" href="#nhic-tra-56" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">Peritoneal</span> <span class="pre">dialysis</span></code> -&gt; <code class="docutils literal"><span class="pre">PERITONEAL</span> <span class="pre">DIALYSIS</span> <span class="pre">(CAPD/APD)</span></code></li>
+<li><code class="docutils literal"><span class="pre">Haemodialysis</span></code> -&gt; <code class="docutils literal"><span class="pre">UNIT</span> <span class="pre">HAEMODIALYSIS</span></code> ** THIS IS A MASSIVE ASSUMPTION **</li>
+</ul>
+</div>
+<div class="section" id="nhic-tra-70-1">
+<span id="nhic-tra-70-1"></span><h3>NHIC_TRA_70-1<a class="headerlink" href="#nhic-tra-70-1" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">Living</span> <span class="pre">unrelated</span> <span class="pre">-</span> <span class="pre">Altruistic</span></code> -&gt; <code class="docutils literal"><span class="pre">LIVING</span> <span class="pre">UNRELATED</span></code></li>
+<li><code class="docutils literal"><span class="pre">Living</span> <span class="pre">unrelated</span> <span class="pre">-</span> <span class="pre">Pooled</span></code> -&gt; <code class="docutils literal"><span class="pre">LIVING</span> <span class="pre">UNRELATED</span></code></li>
+<li><code class="docutils literal"><span class="pre">Unknown</span></code> -&gt; removed</li>
+</ul>
+</div>
+<div class="section" id="nhic-tra-71-1">
+<span id="nhic-tra-71-1"></span><h3>NHIC_TRA_71-1<a class="headerlink" href="#nhic-tra-71-1" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">ALTRUISTIC</span> <span class="pre">NON-DIRECTED</span> <span class="pre">DONOR</span></code> -&gt; <code class="docutils literal"><span class="pre">OTHER</span> <span class="pre">LIVING</span> <span class="pre">NON-RELATED</span> <span class="pre">DONOR</span> <span class="pre">-</span> <span class="pre">PLEASE</span> <span class="pre">SPECIFY</span></code></li>
+<li><code class="docutils literal"><span class="pre">POOLED</span> <span class="pre">DONOR</span></code> -&gt; <code class="docutils literal"><span class="pre">OTHER</span> <span class="pre">LIVING</span> <span class="pre">NON-RELATED</span> <span class="pre">DONOR</span> <span class="pre">-</span> <span class="pre">PLEASE</span> <span class="pre">SPECIFY</span></code></li>
+<li><code class="docutils literal"><span class="pre">LIVING</span> <span class="pre">NON-RELATED</span> <span class="pre">DONOR</span> <span class="pre">-</span> <span class="pre">PARTNER</span></code> -&gt; <code class="docutils literal"><span class="pre">LIVING</span> <span class="pre">NON-RELATED</span> <span class="pre">DONOR</span> <span class="pre">-</span> <span class="pre">SPOUSE</span></code></li>
+</ul>
+</div>
+</div>
+<div class="section" id="m-attributes">
+<span id="m-attributes"></span><h2><code class="docutils literal"><span class="pre">m</span></code> attributes<a class="headerlink" href="#m-attributes" title="Permalink to this headline">¶</a></h2>
+<p>The modification time (<code class="docutils literal"><span class="pre">m</span></code>) attributes have been omitted from the transformation, because each transformation will include the entire NHSBT extract and will therefore supercede any prior values. The NHSBT extract doesn't contain timestamps for modifications, so it would only be possible to add the <code class="docutils literal"><span class="pre">m</span></code> value of the extract or transformation date and apply that to all elements.</p>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="generated/diakonia.eyeaux.models.html" class="btn btn-neutral float-right" title="diakonia.eyeaux.models" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="process.html" class="btn btn-neutral" title="TRA Processing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016-2017, University of Oxford &amp; Oxford Universities NHS Foundatation Trust.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'v0.3.4',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

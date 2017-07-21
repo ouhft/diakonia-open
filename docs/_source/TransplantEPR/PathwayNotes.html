@@ -1,0 +1,324 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Transplant Pathways - Update Notes &mdash; Diakonia v0.3.4 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="Diakonia v0.3.4 documentation" href="../../index.html"/>
+        <link rel="up" title="Transplant EPR Project" href="index.html"/>
+        <link rel="next" title="Database Requirement Notes from IQ" href="IQ_requirements.html"/>
+        <link rel="prev" title="Transplant Pathways (DRAFT)" href="Transplant_Pathway.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Diakonia
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                v0.3.4
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">Documentation for Project Diakonia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">About Diakonia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../requirements.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_stories.html">User Stories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../development.html">Project Setup Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../development.html#dev-system-notes">Dev System Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notes.html">Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project_management.html">Project Management</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Sub Projects</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../BMT/index.html">BMT Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NHIC/index.html">NHIC-TRA Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../FHIRstation/index.html">FHIRstation Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PancreasDB/index.html">Pancreas DB Project</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Transplant EPR Project</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="introduction.html">Introduction &amp; Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Transplant_Pathway.html">Transplant Pathways (DRAFT)</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Transplant Pathways - Update Notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#investigation-tasks">Investigation tasks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#outstanding-questions">Outstanding questions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="IQ_requirements.html">Database Requirement Notes from IQ</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Diakonia</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Transplant EPR Project</a> &raquo;</li>
+        
+      <li>Transplant Pathways - Update Notes</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/_source/TransplantEPR/PathwayNotes.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="transplant-pathways-update-notes">
+<span id="transplant-pathways-update-notes"></span><h1>Transplant Pathways - Update Notes<a class="headerlink" href="#transplant-pathways-update-notes" title="Permalink to this headline">¶</a></h1>
+<p>The draft <a class="reference external" href="Transplant_Pathway.md">Transplant Pathways</a> document needs further work - both in terms of updates (somethings have changed since late 2014), and in terms of outstanding questions. Through a process of follow-up meetings, interviews, and emails, this document will take note on the findings, so that the original document can be completed.</p>
+<div class="section" id="investigation-tasks">
+<span id="investigation-tasks"></span><h2>Investigation tasks<a class="headerlink" href="#investigation-tasks" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Get a staff list for Transplant to generate a list of roles (and contacts for those roles)</li>
+<li>Find out which OUH department has recently built a bespoke interface to the EPR for their workflows (was presented at the Precision Medicine and Digital Healthcare conference in Oxford in June 2017)</li>
+<li>Determine what aspects of NHSBT EOS and related services have got a digital component now (i.e. how many paper forms are still needed and what tasks can be digitally processed)</li>
+<li>Produce a glossary of terms and acronymns (both medical and technical - there are readers that don't occupy one or both camps)<ul>
+<li>Link these terms to the various appearances in the documents for ease of reference</li>
+</ul>
+</li>
+<li>Identify what EPR and other training is expected by Transplant roles (e.g. Admin, Clinical, etc)<ul>
+<li>Review that training where possible for reference to what <em>should</em> be known and done. Compare with working practice.</li>
+</ul>
+</li>
+<li>Collate examples of existing digital and paper documents used in Transplant workflow<ul>
+<li>Include any SoP documents (these should be easily discoverable by staff)</li>
+<li>Store them in the internal repository system where needed</li>
+</ul>
+</li>
+<li>Investigate the Proton development, both in terms of scope and progress</li>
+<li>Attempt to produce a list of data variables identified during the workflow. This will hopefully form part of a dictionary providing linkage between names and values in different systems that relate to the same data.</li>
+<li>{Low priority} What will be done with historical information and potential data entry?</li>
+<li>Is there a patient facing web application in place for anything?</li>
+</ul>
+</div>
+<div class="section" id="outstanding-questions">
+<span id="outstanding-questions"></span><h2>Outstanding questions<a class="headerlink" href="#outstanding-questions" title="Permalink to this headline">¶</a></h2>
+<p>Section 5:</p>
+<ul class="simple">
+<li>Will the project focus be limited to Kidney in the first instance, or something else?</li>
+</ul>
+<p>Section 8.6:</p>
+<ul class="simple">
+<li>Could this letter (waiting list inclusion/refusal) be in an electronic format and be signed with a digital signature?</li>
+</ul>
+<p>Section 9.5:</p>
+<ul class="simple">
+<li>{Remote waiting list status monitoring} What would the granularity of access be for external users? They should only have access to their own patients.</li>
+</ul>
+<p>Section 10:</p>
+<ul class="simple">
+<li>{Periodic Checks} If the patient is referred from a satellite unit, will that unit be responsible for performing any tests and checks?</li>
+</ul>
+<p>Section 11:</p>
+<ul class="simple">
+<li>{Living donor demographic information} Does the living donor team closest to the (remote) donor hold their demographic information? How and when is that passed along?</li>
+<li>Does the EPR Surginet contain information on Transplant operations? Is it complete? Is there a Transplant template?</li>
+</ul>
+<p>Section 15:</p>
+<ul class="simple">
+<li>{Refusal} If a patient is considered unsuitable for whatever reason, do they have an opportunity to be re-evaluated at a later time? Or is the decision non-negotiable?</li>
+<li>Does a refusal generate a letter for the GP and referring clinician?</li>
+</ul>
+<p>Section 17:</p>
+<ul class="simple">
+<li>{Administration and Proton} How will the introduction of ePrescribing affect Proton? It is my understanding that Proton currently has the patient's medication as well as the induction medication used at the time of transplant.</li>
+<li>What can be recorded in Surginet?</li>
+<li>{Renal Registry &amp; Patient Facing Web Application} Is it possible for EPR to capture the relevant information for these two external uses as well as push the necessary data?</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="IQ_requirements.html" class="btn btn-neutral float-right" title="Database Requirement Notes from IQ" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Transplant_Pathway.html" class="btn btn-neutral" title="Transplant Pathways (DRAFT)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016-2017, University of Oxford &amp; Oxford Universities NHS Foundatation Trust.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'v0.3.4',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

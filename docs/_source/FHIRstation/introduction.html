@@ -1,0 +1,330 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Introduction &mdash; Diakonia v0.3.4 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="Diakonia v0.3.4 documentation" href="../../index.html"/>
+        <link rel="up" title="FHIRstation Project" href="index.html"/>
+        <link rel="next" title="Testing" href="tests.html"/>
+        <link rel="prev" title="FHIRstation Project" href="index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Diakonia
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                v0.3.4
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">Documentation for Project Diakonia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">About Diakonia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../requirements.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_stories.html">User Stories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../development.html">Project Setup Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../development.html#dev-system-notes">Dev System Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notes.html">Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project_management.html">Project Management</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Sub Projects</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../BMT/index.html">BMT Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NHIC/index.html">NHIC-TRA Project</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FHIRstation Project</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Introduction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#notes">Notes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#requirements">Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#design">Design</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html">Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#data-models">Data models</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../PancreasDB/index.html">Pancreas DB Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../TransplantEPR/index.html">Transplant EPR Project</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Diakonia</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">FHIRstation Project</a> &raquo;</li>
+        
+      <li>Introduction</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/_source/FHIRstation/introduction.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction">
+<span id="introduction"></span><h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p><strong>Summary:</strong> FHIR server django app built on top of <a class="reference external" href="http://fhirbase.github.io">FHIRbase</a></p>
+<p><strong>Key objectives:</strong></p>
+<ul class="simple">
+<li>Provide a working, documented, FHIR API interface</li>
+<li>Meet the HL7 FHIR <a class="reference external" href="http://hl7.org/implement/standards/fhir/implementation.html#Use">Implementer's Safety Checklist</a></li>
+<li>Support server side django application development by providing the relevant FHIR objects as python/django classes</li>
+<li>Keep technology stack to the minimal technologies identified in Diakonia (python/postgres) to aide maintenance, development, and system administration</li>
+<li>Be as <a class="reference external" href="https://en.wikipedia.org/wiki/Zen_of_Python">pythonic</a> as possible. <a class="reference external" href="https://www.python.org/dev/peps/pep-0020/">Zen is good</a></li>
+</ul>
+<div class="section" id="notes">
+<span id="notes"></span><h2>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
+<p>Background research for alternative solutions:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/fhirbase/fhirbase-plv8">FHIRbase Github Repository</a></li>
+<li><a class="reference external" href="http://wiki.hl7.org/index.php?title=Open_Source_FHIR_implementations">List of open source FHIR implementations</a> contains 4 examples: One in <a class="reference external" href="https://github.com/grahamegrieve/fhirserver">Delphi/MSSQL</a>; One in Grails (Java/Groovy/Postgres); One in <a class="reference external" href="https://github.com/furore-fhir/spark">.net/MongoDB</a>; One in Java/java-db. None of these fit the technology stack requirements</li>
+<li><a class="reference external" href="https://en.wikibooks.org/wiki/GNU_Health">GNU Health</a> offers a FHIR server in <a class="reference external" href="https://en.wikibooks.org/wiki/GNU_Health/Installation">python/tryton/postgres</a> stack, so may offer some help, but isn't close enough to the mark to start from<ul>
+<li>The Tryton based server code is at <a class="reference external" href="#">http://hg.savannah.gnu.org/hgweb/health/file/9e52df027d5d/tryton/backend/fhir/server</a>. Not clear at first glance as to its operation and how/why the fhir classes are hardcoded</li>
+<li>The basic <a class="reference external" href="https://pypi.python.org/pypi/fhir">python client</a> from them is also not maintained... (last uploaded 17/4/2014)</li>
+</ul>
+</li>
+<li>SMART on FHIR offers a maintained <a class="reference external" href="https://github.com/smart-on-fhir/client-py">python FHIR client</a> with <a class="reference external" href="https://smart-on-fhir.github.io/client-py">good documentation</a>. This may be able to be incorportated to provide the FHIR objects as python classes, however this is written as a flask app, so can't be fully run without expanding the tech base with another python framework<ul>
+<li>Perhaps of more use is the SMART on FHIR, <a class="reference external" href="https://github.com/smart-on-fhir/fhir-parser">fhir-parser</a> which goes through the specification and generates python classes</li>
+<li>They also have a <a class="reference external" href="https://github.com/smart-on-fhir/sample-patients">package of sample patients</a> for testing with</li>
+</ul>
+</li>
+<li><a class="reference external" href="https://github.com/videntity/django-fhir">Django-FHIR</a> (nice optimistic title) is an alpha level project that hasn't seen development in 5+ months which aims to do python/django/mongodb implementation of a FHIR server. Alpha level is a bit of a stretch from browsing through the current master branch, looks like there isn't much to work from here</li>
+</ul>
+</div>
+<div class="section" id="requirements">
+<span id="requirements"></span><h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li>Provide a RESTful, FHIR-compliant, API to the data layer<ol>
+<li>API should be available via https</li>
+<li>API should support REST methodology</li>
+<li>API should support the following FHIR calls: Create (http <code class="docutils literal"><span class="pre">POST</span></code>), Read (http <code class="docutils literal"><span class="pre">GET</span></code>), Update (http <code class="docutils literal"><span class="pre">PUT</span></code>), Delete (http <code class="docutils literal"><span class="pre">DELETE</span></code>)</li>
+<li>API should additionally support FHIR calls: vread, history (instance), search (instance), history (type), conformance, history (system), search (system). See <a class="reference external" href="https://www.hl7.org/fhir/http.html">FHIR RESTful API</a> pages, in particular the <a class="reference external" href="https://www.hl7.org/fhir/http.html#summary">summary table</a>.</li>
+</ol>
+</li>
+<li>Create (a resource) should:<ol>
+<li>Accept http POST request</li>
+<li>Map the contents to an url which indicates the resource type (E.g. <code class="docutils literal"><span class="pre">http://server.org/fhir/patient</span></code>)</li>
+<li>Accept the body’s format in Content-Type header (<strong>a:</strong> <code class="docutils literal"><span class="pre">application/json+fhir;charset=utf-8</span></code> and <strong>b:</strong> <code class="docutils literal"><span class="pre">application/xml+fhir;charset=utf-8</span></code>)</li>
+<li>Return http status 201 (Created).</li>
+<li>Return only the newly assigned version id URL in the Location header</li>
+</ol>
+</li>
+<li>Update (a resource) should:<ol>
+<li>Accept http PUT request</li>
+<li>Map the contents to an url which indicates the resource type (E.g. <code class="docutils literal"><span class="pre">http://server.org/fhir/patient/id/_history/version_id</span></code>)</li>
+<li>Accept the body’s format in Content-Type header (<strong>a:</strong> <code class="docutils literal"><span class="pre">application/json+fhir;charset=utf-8</span></code> and <strong>b:</strong> <code class="docutils literal"><span class="pre">application/xml+fhir;charset=utf-8</span></code>)</li>
+<li>Return http status 200 (OK), and the full version URI</li>
+<li>If resource does not exist, return http status 405 (Method Not Allowed). This is update, not update-or-create!</li>
+<li>If the resource URI does not match the latest version, return http status 409 (Conflict) and do not apply the update</li>
+</ol>
+</li>
+</ol>
+</div>
+<div class="section" id="design">
+<span id="design"></span><h2>Design<a class="headerlink" href="#design" title="Permalink to this headline">¶</a></h2>
+<p>This is the nitty gritty bit... what <strong>is</strong> a FHIR Server? How much functionality can we hand off to FHIRbase? Are there packages (like <a class="reference external" href="http://www.django-rest-framework.org">Django REST Framework</a>) we can hand off large chunks of functionality to?</p>
+<p>FHIRbase have <a class="reference external" href="http://try-fhirplace.hospital-systems.com/fhirbase-presentation/index.html#/fhirbase">taken the view that</a> json is the standard for web apis, and so don't export xml natively. They do offer an xslt transformation for <a class="reference external" href="https://github.com/fhirbase/fhir-xml2json">FHIR xml to json</a>, which is handy, but nothing vice-versa. Whilst it recommends using Saxon as the XSLT engine, <a class="reference external" href="http://lxml.de">lxml</a> is <a class="reference external" href="http://stackoverflow.com/questions/16698935/how-to-transform-an-xml-file-using-xslt-in-python">a more common</a> python approach. There is a <a class="reference external" href="https://github.com/kwboone/FHIR-JSON-to-XML-Converter">JS implementation that does json to xml</a> to look at. <strong>Consider:</strong> Leaving XML implementation to a later version of FHIRstation.</p>
+<p><img alt="Diakona Layers Diagram" src="../../_images/diakonia_layers.svg" /></p>
+<p>System layer diagram (modelled on the <a class="reference external" href="http://try-fhirplace.hospital-systems.com/fhirbase-presentation/index.html#/">Hospital Systems</a> one). Work in Progress, clearly.</p>
+<p>We're using FHIR as a semantic structure for the data layer, with FHIR-like communication happening between data and application layers. FHIR (exact) communication should then be happening between the client and application layers.</p>
+<p>Standard ORM techniques from most frameworks are of limited use with FHIRbase directly, though given other system elements will reside in a Postgres DB, they will still have their uses, and the FHIRbase DB can also be queried by <code class="docutils literal"><span class="pre">SQL</span> <span class="pre">SELECT</span></code> statements via ORM.</p>
+<p><strong>Question:</strong> Do we handle the Binary endpoint? <a class="reference external" href="https://www.hl7.org/fhir/binary.html">https://www.hl7.org/fhir/binary.html</a> There's no hint in the FHIRbase docs about what it does or does not support regarding binary types.</p>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="tests.html" class="btn btn-neutral float-right" title="Testing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="FHIRstation Project" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016-2017, University of Oxford &amp; Oxford Universities NHS Foundatation Trust.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'v0.3.4',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
