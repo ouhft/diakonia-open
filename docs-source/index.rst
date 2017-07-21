@@ -23,17 +23,23 @@ Contents
    :caption: Table of Contents
    :name: mastertoc
 
+   self
    _source/introduction
    _source/requirements
    _source/user_stories
    _source/development
+   _source/notes
+   _source/project_management
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Sub Projects
+
    _source/BMT/index
    _source/NHIC/index
    _source/FHIRstation/index
    _source/PancreasDB/index
    _source/TransplantEPR/index
-   _source/notes
-   _source/project_management
 
 
 Indices and tables

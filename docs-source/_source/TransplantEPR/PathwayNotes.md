@@ -1,4 +1,4 @@
-# Transplant Pathway Update Notes
+# Transplant Pathways - Update Notes
 
 The draft [Transplant Pathways](Transplant_Pathway.md) document needs further work - both in terms of updates (somethings have changed since late 2014), and in terms of outstanding questions. Through a process of follow-up meetings, interviews, and emails, this document will take note on the findings, so that the original document can be completed.
 
