@@ -3,7 +3,7 @@
 
 ## About the Project
 
-AKA: was Project OTTR, now Project Emory (as of Jun 2017)
+AKA: was Project OTTR, now Project Emory (as of Apr 2017)
 
 Two existing documents are available: A collection of notes from one of the department's surgeons, and the other
 is a requirements gathering draft outlining workflows for Transplant patients. Additionally a list of further tasks and
