@@ -7,6 +7,8 @@ Ultimately this data resides in Oracle (version?) databases.
 To view the database, recommend using the [Oracle SQL Database Developer IDE](http://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html). Unsurprisingly this is a Java application, and thus there are Mac and Windows versions [1] [Documentation is online](http://docs.oracle.com/database/sql-developer-17.2/index.html) or can be downloaded. To use the software you'll need an xml configuration file (internal only) for connection details.
 
 
+There's an article attempting to do the start of this at http://boristyukin.com/healthcare-analytics-with-cerner-part-2-cerner-millennium-data-model/
+
 
 --
 

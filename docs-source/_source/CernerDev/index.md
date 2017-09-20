@@ -2,13 +2,14 @@
 There are a lot of areas of concern, and large gaps in knowledge (both available and received), when it comes to developing in the Cerner Millennium Environment. We want to improve this situation by sharing and curating our findings and experiences here.
 
 ## Guides
-Consise (and short) documents on a range of common topics
+Concise (and mostly short) documents on a range of common topics
 
 ### How-to
 1. [Create an mPage project](guides/build_mpage_project.md)
 2. [Build an mPage project](guides/create_mpage_project.md)
 3. [Deploy an mPage project](guides/deploy_mpage_project.md)
 4. [Register for Cerner Development access](guides/register_for_cerner_development.md)
+5. [Register for Cerner Lights On Network access](guides/register_for_cerner_lon_access.md)
 
 And the presently uncategorised [Miscellaneous Notes](notes.md).
 
