@@ -1,0 +1,330 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Cerner Open Developer Environment (CODE - code.cerner.com) &mdash; Diakonia v0.3.4 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="Diakonia v0.3.4 documentation" href="../../index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Diakonia
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                v0.3.4
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">Documentation for Project Diakonia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">About Diakonia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../requirements.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user_stories.html">User Stories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../development.html">Project Setup Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../development.html#dev-system-notes">Dev System Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notes.html">Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project_management.html">Project Management</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Sub Projects</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../BMT/index.html">BMT Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NHIC/index.html">NHIC-TRA Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../FHIRstation/index.html">FHIRstation Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PancreasDB/index.html">Pancreas DB Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../TransplantEPR/index.html">Transplant EPR Project</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Diakonia</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Cerner Open Developer Environment (CODE - code.cerner.com)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/_source/CernerDev/notes.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <p>The Citrix presented virtual desktops we use are for Windows 2008 Server (Service Pack 2?). This platform is currently in Extended Microsoft Support until Jan 14th 2020 (https://support.microsoft.com/en-us/lifecycle/search/1163). There are currently two newer major releases of the Windows Server platform since this (2012 &amp; 2016)</p>
+<p>Cerner has a <a class="reference external" href="https://github.com/cerner">GitHub account</a> with a range of projects on it! Including details on for <a class="reference external" href="https://github.com/cerner/fhir.cerner.com">FHIR-on-Cerner</a>. <a class="reference external" href="https://github.com/cerner/terra-core">Terra related code</a> is here, which leads to...</p>
+<p><strong><a class="reference external" href="http://terra-ui.herokuapp.com/home">Terra UI</a></strong></p>
+<blockquote>
+<div>Terra UI offers a set of configurable React components designed to help build scalable and modular healthcare focused applications. These components follow Cerner’s Design Standard Guidelines and are well-maintained and tested. The UI framework easily integrates with webpack-based workflows and was created to solve real-world issues in projects we work on day to day.</div></blockquote>
+<p>Cerner appears to be favouring <a class="reference external" href="https://facebook.github.io/react/">React.JS</a> for some web development, and recommends being familiar with this before looking into Terra</p>
+<p>Cerner's <a class="reference external" href="http://engineering.cerner.com/smart-on-fhir-tutorial/">SMART on FHIR tutorial</a> is a basic example of how a FHIR app can be built and run with <a class="reference external" href="https://github.com/cerner/smart-on-fhir-tutorial">example code</a>.</p>
+<p>Looking into the <a class="reference external" href="https://www.google.co.uk/search?q=cerner+millennium+api">Cerner Millennium API</a> search results should be interesting...</p>
+<div class="section" id="cerner-open-developer-environment-code-code-cerner-com">
+<span id="cerner-open-developer-environment-code-code-cerner-com"></span><h1>Cerner Open Developer Environment (CODE - code.cerner.com)<a class="headerlink" href="#cerner-open-developer-environment-code-code-cerner-com" title="Permalink to this headline">¶</a></h1>
+<p><em>TLDR: Waste of a website with no content</em></p>
+<p>First up in the Google results is <a class="reference external" href="https://code.cerner.com">https://code.cerner.com</a> which looks promising as:</p>
+<blockquote>
+<div>Cerner Ignite APIs for Millennium allow outside apps to be integrated with the Cerner Millennium EHR platform. These APIs are Cerner’s implementation of SMART Health IT and the HL7® Fast Healthcare Interoperability Resources (FHIR®) standard.</div></blockquote>
+<p>... however this appears to be <strong>a shell website consisting of minimal marketing and zero content</strong>. Its purpose is to sign you up to a newsletter. At time of writing most of the content is on a Blog within the site, and hasn't been updated in 4 months, with the first update from Oct 2015, but they're short link articles to press releases on the main Cerner site.</p>
+<p>Yet, from Google (and not easily findable from the site), you can see https://code.cerner.com/ehr-api, which essentially links you to http://fhir.cerner.com and the SMART On FHIR example marketing material.</p>
+</div>
+<div class="section" id="cerner-accounts">
+<span id="cerner-accounts"></span><h1>Cerner Accounts<a class="headerlink" href="#cerner-accounts" title="Permalink to this headline">¶</a></h1>
+<p>There are multiple places to register for access to Cerner areas/tools/systems, and they have a multitude of account management systems</p>
+<ul class="simple">
+<li><a class="reference external" href="https://connect.ucern.com/get-started">uCern Account</a> (Cerner uCern <strong>Connect</strong>)</li>
+<li><a class="reference external" href="https://ulearn.cerner.com/showAccountPrefs">uLearn Account</a></li>
+<li><a class="reference external" href="https://cernercare.com/accounts">Cerner Account</a> (CernerCare account login). Management is at <a class="reference external" href="#">https://accounts.cerner.com</a> <em>which is nigh on impossible to find a link to from anywhere!</em></li>
+</ul>
+<p>The Cerner Account link can also be found on the wiki page <a class="reference external" href="https://wiki.ucern.com/display/CAP/Cerner+Web+Applications">Cerner Web Applications</a>, which asks you to <em>&quot;Bookmark this uCern Space and make it your go-to location for access to Cerner Applications&quot;</em></p>
+<div class="section" id="cerner-websites">
+<span id="cerner-websites"></span><h2>Cerner Websites<a class="headerlink" href="#cerner-websites" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="support">
+<span id="support"></span><h3>Support<a class="headerlink" href="#support" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="https://support.ucern.com/Destination.aspx">Cerner Support</a>. Links to:<ul>
+<li><a class="reference external" href="https://associates.cerner.com/accounts">eService</a> for Cerner Associates only</li>
+<li><a class="reference external" href="https://helpdesk.ucern.com">Help Desk</a> which errors on load suggesting its either dead or not usable</li>
+</ul>
+</li>
+<li><a class="reference external" href="https://wiki.ucern.com/pages/viewpage.action?pageId=969441308">Cerner Classic Support</a> - <em>&quot;The uCern Wiki HNA Classic Reference Pages are your source for HNA Classic solution documentation. Reference Pages allow you to contribute updates, provide feedback, receive update notifications, and much more.&quot;</em></li>
+<li><code class="docutils literal"><span class="pre">[DEAD]</span></code> Cerner Knowledge Manager Downtime (CKM) http://www.cerner.com/CKM-Downtime/ - <em>&quot;Cerner Knowledge Manager is currently unavailable. We are working to get service restored.&quot; &lt;-- Irony</em></li>
+<li><a class="reference external" href="http://www.cerner.com/supportdashboard">Cerner Support Dashboard</a> -- redirects to <a class="reference external" href="https://mybi.cerner.com/analytics/saw.dll?dashboard">MyBI portal</a>. <em>Not compatible with Safari, works with Firefox.</em></li>
+</ul>
+</div>
+<div class="section" id="systems-management">
+<span id="systems-management"></span><h3>Systems Management<a class="headerlink" href="#systems-management" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="https://distributions.cerner.com/">Distributions</a> - Appears to be software downloads. <em>Investigate the <a class="reference external" href="https://distributions.cerner.com/Downloads/dMillennium_Set.asp">Linux Cerner Millennium</a> 2015.01 Release Update Client Feb 2015 New Install</em></li>
+<li><a class="reference external" href="https://flashes.cerner.com">Flashes</a> - 3000+ news item style update notifications</li>
+<li><a class="reference external" href="https://connect.ucern.com/community/healthcare-organizations/cerner-ambulatory-asp?view=overview">Physician Practice Flashes</a> - uCern Connect Organisation linking to groups and pages</li>
+<li><a class="reference external" href="https://lightson.cerner.com">Lights On Network</a> - General info on the network<ul>
+<li><a class="reference external" href="https://lightson.cerner.com/clients/OUH_UK/domains/P0481/overview/kpi/">OUH LoN Dashboard</a></li>
+</ul>
+</li>
+<li><a class="reference external" href="https://wiki.ucern.com/display/public/reference/Bedrock+Overview">Bedrock</a> - uCern wiki, page missing</li>
+<li><a class="reference external" href="https://methodm.cerner.com/">MethodM</a>, redirects via CernerCare account login (occasionally problematic) to a Sharepoint site, mostly listing .jar files</li>
+</ul>
+</div>
+<div class="section" id="business">
+<span id="business"></span><h3>Business<a class="headerlink" href="#business" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="https://ebillsso.cerner.com/">Cerner eBill</a> - Apart from having a link to manage your CernerCare account (rare find!), this is otherwise a non-applicable website with a holding page on</li>
+<li><a class="reference external" href="https://solutiondescriptions.cerner.com">Solution Descriptions</a> -<ul>
+<li><em>&quot;Below is a comprehensive listing of the current Cerner Solution Descriptions by Industry Classification. To view more details expand the category.&quot;</em> As an example, the <a class="reference external" href="https://solutiondescriptions.cerner.com/Home/ViewFile?filerefno=PS-22700_03">MPages Development Kit</a> contains an empty template with no usable content in it! Just &quot;Click here to type&quot; written in for each of the five fields (Document #PS-22700, Version 3)</li>
+<li>Thankfully other PDFs do contain short bits of content acting as a bullet point summary of features or licensing</li>
+<li>Links to: <a class="reference external" href="https://contracts.cerner.com/admin/default.aspx">Contracts</a> - <em>&quot;You do not have access to view contracts online. Note: Client contracts are strictly confidential and are not to be accessed, downloaded, copied or forwarded without express permission from Cerner's Finance team. Access to these files is monitored and recorded.&quot;</em></li>
+<li>Links to: <a class="reference external" href="https://passthroughprovisions.cerner.com">Passthrough Provisions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="training">
+<span id="training"></span><h3>Training<a class="headerlink" href="#training" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="https://connect.ucern.com/community/illuminations">Illuminations</a> uCern Connect Organisation which supposedly provides &quot;Unique web-based presentations that focus on the vision, direction, functionality, highlights, optimisation, and release of Cerner Solutions&quot;. The Client Illuminations list is predominately a list of documents providing links to register for upcoming WebEx conference calls, and video files and pdfs for past calls.</li>
+<li><a class="reference external" href="https://ulearn.cerner.com">uLearn</a> - a collection of free and charged-for eLearning courses. Be prepared to experience a lot of marketing dressed up as learning materials.</li>
+</ul>
+</div>
+<div class="section" id="ucern">
+<span id="ucern"></span><h3>uCern<a class="headerlink" href="#ucern" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="https://connect.ucern.com/news">Connect</a> is Cerner's social media platform that wraps around several of their websites. You can &quot;follow&quot; groups and discussions, and then get notifications on your profile. It's a poor man's attempt at LinkedIn, where it isn't easy to find people to follow, even in your own organisation.</li>
+<li><a class="reference external" href="https://events.ucern.com/">Events</a> is exactly what it sounds like, a list of Cerner events</li>
+<li><code class="docutils literal"><span class="pre">[DEAD]</span></code> <a class="reference external" href="https://organizations.ucern.com/">Organisations</a> is &quot;uCern Organizations is a place to learn about your organization and connect with others&quot; but results in a 403 Forbidden code after login, so no connecting or learning going on there.</li>
+<li><code class="docutils literal"><span class="pre">[DEAD]</span></code> <a class="reference external" href="https://meaningfuluse.ucern.com/about.do">Meaningful Use</a> https://meaningfuluse.ucern.com/</li>
+<li><a class="reference external" href="https://search.ucern.com">Search</a>... a search box on a page, which after logging in with a CC account, you can do a search over uCern content</li>
+<li><a class="reference external" href="https://wiki.ucern.com/dashboard.action">Wiki</a> is a Cerner hosted wiki, with a nightmarish lack of content management and linkage. But also contains l</li>
+</ul>
+</div>
+</div>
+<div class="section" id="other-dead-cerner-websites">
+<span id="other-dead-cerner-websites"></span><h2>Other Dead Cerner Websites<a class="headerlink" href="#other-dead-cerner-websites" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Cerner Store: https://store.cerner.com/ -&gt; Redirects to cerner.com</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016-2017, University of Oxford &amp; Oxford Universities NHS Foundatation Trust.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'v0.3.4',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
