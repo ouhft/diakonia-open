@@ -552,9 +552,12 @@ class Command(BaseCommand):
                 node_transplant_hla = etree.SubElement(node_transplant, "hla-mismatch")
                 etree.SubElement(node_transplant_hla, "nhic_tra_85").text = add_hla_mismatches(
                     record.amm, record.bmm, record.drmm)  # char(2)
-                etree.SubElement(node_transplant_hla, "nhic_tra_259").text = record.amm  # char(2)
-                etree.SubElement(node_transplant_hla, "nhic_tra_260").text = record.bmm  # char(2)
-                etree.SubElement(node_transplant_hla, "nhic_tra_261").text = record.drmm  # char(2)
+                if record.amm is not None:
+                    etree.SubElement(node_transplant_hla, "nhic_tra_259").text = record.amm  # char(2)
+                if record.bmm is not None:
+                    etree.SubElement(node_transplant_hla, "nhic_tra_260").text = record.bmm  # char(2)
+                if record.drmm is not None:
+                    etree.SubElement(node_transplant_hla, "nhic_tra_261").text = record.drmm  # char(2)
 
                 # Transplant - INDUCTION
                 node_transplant_induction = etree.SubElement(node_transplant, "induction")

@@ -217,7 +217,6 @@ class PSSlimsResultForm(forms.ModelForm):
         return pytz.utc.localize(dt_value)
 
 
-
 class PSSmicroResultForm(forms.ModelForm):
     class Meta:
         model = PSSmicroResult

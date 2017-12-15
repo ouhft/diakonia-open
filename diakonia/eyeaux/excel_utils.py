@@ -238,6 +238,8 @@ def int_as_str(value):
             output = int(float(value))
         except ValueError:  # "could not convert string to float"
             pass
+    except TypeError:  # For when the value is None
+        pass
     return str(output)
 
 

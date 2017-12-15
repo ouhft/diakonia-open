@@ -39,6 +39,7 @@ DJANGO_APPS = [
     'django.contrib.admin',
     'django.contrib.admindocs',
 ]
+
 THIRD_PARTY_APPS = [
 ]
 

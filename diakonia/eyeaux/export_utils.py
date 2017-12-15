@@ -70,13 +70,19 @@ def add_hla_mismatches(a, b, dr):
         total = int(a)
     except ValueError:
         pass
+    except TypeError:  # e.g. None
+        pass
     try:
         total += int(b)
     except ValueError:
         pass
+    except TypeError:  # e.g. None
+        pass
     try:
         total += int(dr)
     except ValueError:
+        pass
+    except TypeError:  # e.g. None
         pass
     return str(total)
 

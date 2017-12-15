@@ -4,7 +4,7 @@ wheel
 docutils
 
 # Latest Django
-Django
+Django < 2.0
 
 # Configuration
 django-environ

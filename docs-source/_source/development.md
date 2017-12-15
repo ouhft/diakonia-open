@@ -99,4 +99,8 @@ There is now a staging/test server available at dev.nds.ox.ac.uk, and diakonia h
 * Install requirements
   * `$ cd diakonia_repo/`
   * `$ pip install -r requirements/staging.txt`
+* Modify local `.env` settings
+  * `$ cp config/settings/.env.template config/settings/.env`
+  * `$ vi config/settings/.env` -- Put in local setting values
+  * `$ python manage.py check`
 
