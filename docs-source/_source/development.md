@@ -107,3 +107,16 @@ There is now a staging/test server available at dev.nds.ox.ac.uk, and diakonia h
   * Check it is current with `$ python manage.py migrate`, there should be no missing migrations.
 * Copy the static content into place `$ python manage.py collectstatic`
 
+ToDo: Setup NGinx configuration behind the main reverse proxy on this server.
+
+## Operations
+
+* Securely copy latest (or all) data sources to the relevant folder on the system `/sites/diakonia/misc/data`
+* If new session, ensure virtualenv is active (`$ workon diakonia`), and you are in the repository folder (`$ cd diakonia_repo/`)
+* Load the new data files one at a time:
+  * `$ python manage.py load_nhsbt /full/path/to/datafile.ext`
+  * *Be prepared to wait several minutes for each file, this is not a quick operation (and this is on old and slow hardware)*
+* Produce an export in XML:
+  * `$ python manage.py export_xml`
+  * This export is currently hardwired to go into the eyeaux app, `tmp/` folder as `tests.xml`
+  * *This aspect will want some working on in terms of a secure access process for exporting to our partner sites*
