@@ -103,4 +103,7 @@ There is now a staging/test server available at dev.nds.ox.ac.uk, and diakonia h
   * `$ cp config/settings/.env.template config/settings/.env`
   * `$ vi config/settings/.env` -- Put in local setting values
   * `$ python manage.py check`
+* Create database - using sqlite initially, migrating to Postgres at a later date.
+  * Check it is current with `$ python manage.py migrate`, there should be no missing migrations.
+* Copy the static content into place `$ python manage.py collectstatic`
 
