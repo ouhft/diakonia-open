@@ -19,7 +19,7 @@ Open project in PyCharm, and create requirements file (`requirements/common.txt`
 
 * `pip install -r diakonia-repo/requirements/development.txt`
 
-## Creating the intial project
+## Creating the initial project
 
 Start the django project:
 
@@ -82,3 +82,21 @@ To manually generate the output:
 	* For the quick commit, it can be: `git add --all; git commit -m 'updates'; git push`
 	
 Online documents can then be seen at [https://ouh-churchill.github.io](https://ouh-churchill.github.io) which now redirects to the Diakonia project sub-folder.
+
+# Test Server
+
+There is now a staging/test server available at dev.nds.ox.ac.uk, and diakonia has been installed as a project on there using the following setup.
+
+* Create project `$ mkproject -p /usr/bin/python3 diakonia`
+  * This will activate the new virtualenv, and drop you into `/sites/diakonia `
+* Create project user `$ sudo useradd --system --gid worker --shell /bin/bash --home /sites/diakonia diakonia-app-user`
+* Clone repository
+  * `$ git clone git@github.com:ouh-churchill/diakonia.git diakonia_repo`
+* Create subfolders, link virtualenv folders
+  * `$ ln -s /sites/.virtualenvs/diakonia/lib ./lib`
+  * `$ ln -s /sites/.virtualenvs/diakonia/bin ./bin` 
+  * `$ mkdir -p var/log var/run etc/nginx/sites-available htdocs/media etc/gunicorn misc/data/nhsbt`
+* Install requirements
+  * `$ cd diakonia_repo/`
+  * `$ pip install -r requirements/staging.txt`
+

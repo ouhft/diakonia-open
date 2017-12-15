@@ -7,17 +7,34 @@ Development settings
 - Add django-extensions as app
 """
 
-print("DEBUG: Loading settings from development")
+print("DEBUG: Loading settings from staging")
 
 from .common import *  # noqa
 
+# Because we're behind a reverse proxy, pay attention to where the request is coming from
+USE_X_FORWARDED_HOST = True
+FORCE_SCRIPT_NAME = env('FORCE_SCRIPT_NAME', default='/diakonia/')
+
+# SITE CONFIGURATION
+# ------------------------------------------------------------------------------
+# Hosts/domain names that are valid for this site
+# See https://docs.djangoproject.com/en/1.6/ref/settings/#allowed-hosts
+# ALLOWED_HOSTS = env.list('DJANGO_ALLOWED_HOSTS', default=['example.com']) -- In Common.py
+# SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTOCOL', 'https')
+# END SITE CONFIGURATION
+
+INSTALLED_APPS += ["gunicorn", ]
+
+
 # Mail settings
 # ------------------------------------------------------------------------------
+EMAIL_HOST = env('DJANGO_EMAIL_HOST', default='localhost')
+EMAIL_PORT = 25
+EMAIL_BACKEND = env('DJANGO_EMAIL_BACKEND', default='django.core.mail.backends.smtp.EmailBackend')
+DEFAULT_FROM_EMAIL = env('DJANGO_DEFAULT_FROM_EMAIL', default='Diakonia (Testing) <noreply@dev.nds.ox.ac.uk>')
+EMAIL_SUBJECT_PREFIX = env("DJANGO_EMAIL_SUBJECT_PREFIX", default='[Diakonia Testing] ')
+SERVER_EMAIL = env('DJANGO_SERVER_EMAIL', default=DEFAULT_FROM_EMAIL)
 
-EMAIL_PORT = 1025
-EMAIL_HOST = 'localhost'
-EMAIL_BACKEND = env('DJANGO_EMAIL_BACKEND',
-                    default='django.core.mail.backends.console.EmailBackend')
 
 # TEMPLATE CONFIGURATION
 # ------------------------------------------------------------------------------
@@ -27,6 +44,7 @@ TEMPLATES[0]['OPTIONS']['loaders'] = [
     ('django.template.loaders.cached.Loader', [
         'django.template.loaders.filesystem.Loader', 'django.template.loaders.app_directories.Loader', ]),
 ]
+
 
 # CACHING
 # ------------------------------------------------------------------------------

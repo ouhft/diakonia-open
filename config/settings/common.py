@@ -15,8 +15,8 @@ import environ
 
 ROOT_DIR = environ.Path(__file__) - 3  # diakonia-repo/config/settings/common.py - 3 = {{ diakonia-repo }}/)
 APPS_DIR = ROOT_DIR.path('diakonia')
+BASE_DIR = str(ROOT_DIR)  # For django_extensions and other legacy code
 ENV_FILE = str(environ.Path(__file__) - 1 + ".env")
-# print("HELLO: Path is [{0}]".format(ENV_FILE))
 
 env = environ.Env()
 env.read_env(env_file=ENV_FILE)
@@ -37,6 +37,7 @@ DJANGO_APPS = [
 
     # Admin
     'django.contrib.admin',
+    'django.contrib.admindocs',
 ]
 THIRD_PARTY_APPS = [
 ]
@@ -50,14 +51,20 @@ LOCAL_APPS = [
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
-MIDDLEWARE = [
+# MIDDLEWARE CONFIGURATION
+# ------------------------------------------------------------------------------
+MIDDLEWARE_CLASSES = [
+    # Make sure djangosecure.middleware.SecurityMiddleware is listed first
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    # 'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # Third party middleware
+    # Own custom middleware
 ]
 
 
@@ -83,6 +90,7 @@ FIXTURE_DIRS = (
 # EMAIL CONFIGURATION
 # ------------------------------------------------------------------------------
 EMAIL_BACKEND = env('DJANGO_EMAIL_BACKEND', default='django.core.mail.backends.smtp.EmailBackend')
+EMAIL_FILE_PATH = env('DJANGO_EMAIL_FILE_PATH', default='/tmp')
 
 # MANAGER CONFIGURATION
 # ------------------------------------------------------------------------------
@@ -99,8 +107,8 @@ MANAGERS = ADMINS
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#databases
 DATABASES = {
     # Raises ImproperlyConfigured exception if DATABASE_URL not in os.environ
-    'default': env.db('DATABASE_URL', default='postgres://localhost/diakonia'),
-    'fhirbase': env.db('DATABASE2_URL', default='postgres://localhost/fhirbase'),
+    'default': env.db('DATABASE_URL_DEFAULT', default='postgres://localhost/diakonia'),
+    'fhirbase': env.db('DATABASE_URL_FHIRBASE', default='postgres://localhost/fhirbase'),
 }
 DATABASES['default']['ATOMIC_REQUESTS'] = True
 
@@ -127,6 +135,12 @@ USE_L10N = True
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#use-tz
 USE_TZ = True
+
+# SECRET CONFIGURATION
+# ------------------------------------------------------------------------------
+# See: https://docs.djangoproject.com/en/dev/ref/settings/#secret-key
+# Raises ImproperlyConfigured exception if DJANGO_SECRET_KEY not in os.environ
+SECRET_KEY = env("DJANGO_SECRET_KEY")
 
 # TEMPLATE CONFIGURATION
 # ------------------------------------------------------------------------------
@@ -167,10 +181,10 @@ TEMPLATES = [
 # STATIC FILE CONFIGURATION
 # ------------------------------------------------------------------------------
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#static-root
-STATIC_ROOT = str(ROOT_DIR('staticfiles'))
+STATIC_ROOT = env('STATIC_FILES_ROOT', default=str(ROOT_DIR('staticfiles')))
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#static-url
-STATIC_URL = '/static/'
+STATIC_URL = env('STATIC_FILES_URL', default='/static/')
 
 # See: https://docs.djangoproject.com/en/dev/ref/contrib/staticfiles/#std:setting-STATICFILES_DIRS
 STATICFILES_DIRS = (
@@ -183,20 +197,24 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 )
 
+
 # MEDIA CONFIGURATION
 # ------------------------------------------------------------------------------
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#media-root
-MEDIA_ROOT = str(APPS_DIR('media'))
+MEDIA_ROOT = env('MEDIA_FILES_ROOT', default=str(ROOT_DIR('media')))
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#media-url
-MEDIA_URL = '/media/'
+MEDIA_URL = env('MEDIA_FILES_URL', default='/media/')
 
 # URL Configuration
 # ------------------------------------------------------------------------------
 ROOT_URLCONF = 'config.urls'
 
+
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#wsgi-application
 WSGI_APPLICATION = 'config.wsgi.application'
+ALLOWED_HOSTS = env.list('DJANGO_ALLOWED_HOSTS', default=['example.com'])
+
 
 # AUTHENTICATION CONFIGURATION
 # ------------------------------------------------------------------------------
@@ -211,6 +229,9 @@ AUTH_PASSWORD_VALIDATORS = [
     },
     {
         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'OPTIONS': {
+            'min_length': 12,
+        }
     },
     {
         'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
@@ -232,12 +253,65 @@ ACCOUNT_ALLOW_REGISTRATION = env.bool('DJANGO_ACCOUNT_ALLOW_REGISTRATION', True)
 # Custom user app defaults
 # Select the correct user model
 # AUTH_USER_MODEL = 'users.User'
-LOGIN_REDIRECT_URL = 'users:redirect'
-LOGIN_URL = 'account_login'
+LOGIN_URL = env('LOGIN_URL', default='login')
+LOGIN_REDIRECT_URL = env('LOGIN_REDIRECT_URL', default='/')
+LOGOUT_REDIRECT_URL = env('LOGOUT_REDIRECT_URL', default='/')
+REDIRECT_FIELD_NAME = 'redirect_to'
+
+
+# LOGGING CONFIGURATION
+# ------------------------------------------------------------------------------
+# See: https://docs.djangoproject.com/en/dev/ref/settings/#logging
+# A sample logging configuration. The only tangible logging
+# performed by this configuration is to send an email to
+# the site admins on every HTTP 500 error when DEBUG=False.
+# See http://docs.djangoproject.com/en/dev/topics/logging for
+# more details on how to customize your logging configuration.
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'filters': {
+        'require_debug_false': {
+            '()': 'django.utils.log.RequireDebugFalse'
+        }
+    },
+    'formatters': {
+        'verbose': {
+            'format': '%(levelname)s %(asctime)s %(module)s '
+                      '%(process)d %(thread)d %(message)s'
+        },
+    },
+    'handlers': {
+        'mail_admins': {
+            'level': 'ERROR',
+            'filters': ['require_debug_false'],
+            'class': 'django.utils.log.AdminEmailHandler'
+        },
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+            'formatter': 'verbose',
+        },
+    },
+    'loggers': {
+        'django.request': {
+            'handlers': ['mail_admins'],
+            'level': 'ERROR',
+            'propagate': True,
+        },
+        'loggers': {
+            'django.security.DisallowedHost': {
+                'level': 'ERROR',
+                'handlers': ['console', 'mail_admins'],
+                'propagate': True,
+            },
+        },
+    }
+}
 
 
 # Location of root django.contrib.admin URL, use {% raw %}{% url 'admin:index' %}{% endraw %}
-ADMIN_URL = r'^admin/'
+ADMIN_URL = env('ADMIN_URL', default=r'^admin/')
 
 # Your common stuff: Below this line define 3rd party library settings
 # ------------------------------------------------------------------------------

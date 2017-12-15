@@ -1,0 +1,16 @@
+-r common.txt
+
+## Development utils
+gnureadline
+ipython
+django-extensions
+
+# Testing tools
+django-test-plus
+selenium
+django-debug-toolbar
+
+# WSGI Handler
+# ------------------------------------------------
+gevent==1.1.2
+gunicorn==19.6.0
