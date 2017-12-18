@@ -12,7 +12,8 @@ from django.utils import timezone
 from diakonia.eyeaux.models import NHSBTRecord
 from diakonia.eyeaux.export_utils import psuedo_id, outer_postcode, gender_translated, ethnic_translated
 from diakonia.eyeaux.export_utils import blood_group_translated, blood_rhesus_translated, translate_datetime
-from diakonia.eyeaux.export_utils import add_hla_mismatches, sentence_from_value, year_from_date, translate_yes_no
+from diakonia.eyeaux.export_utils import concat_hla_mismatches, sentence_from_value, year_from_date, translate_yes_no
+from diakonia.eyeaux.export_utils import hla_serological_string
 from diakonia.eyeaux.export_utils import translate_serology, cleanup
 from diakonia.eyeaux.excel_utils import int_as_str
 
@@ -326,11 +327,80 @@ class Command(BaseCommand):
 
                 # Recipient - HLA
                 node_recipient_hla = etree.SubElement(node_recipient, "hla")
-                node_recipient_hla_serological = etree.SubElement(node_recipient_hla, "serological")
-                etree.SubElement(node_recipient_hla_serological, "nhic_tra_86").text = translate_datetime(record.recip_hla_sample_date)  # datetime
-                etree.SubElement(node_recipient_hla_serological, "nhic_tra_87").text = ""  # str
-                etree.SubElement(node_recipient_hla_serological, "nhic_tra_88").text = ""  # str
-                etree.SubElement(node_recipient_hla_serological, "nhic_tra_89").text = ""  # str
+                # Repeat 12 times for the 12 columns for HLA Serological Data
+                if record.recip_first_a_broad is not None and record.recip_first_a_broad is not "":
+                    node_recipient_hla_serological = etree.SubElement(node_recipient_hla, "serological")
+                    etree.SubElement(node_recipient_hla_serological, "nhic_tra_86").text = translate_datetime(record.recip_hla_sample_date)  # datetime
+                    etree.SubElement(node_recipient_hla_serological, "nhic_tra_87").text = "" # str - unknown hla typing method
+                    etree.SubElement(node_recipient_hla_serological, "nhic_tra_88").text = "A"  # str
+                    etree.SubElement(node_recipient_hla_serological, "nhic_tra_89").text = hla_serological_string(record.recip_first_a_broad, record.recip_first_a_split)  # str
+                if record.recip_second_a_broad is not None and record.recip_second_a_broad is not "":
+                    node_recipient_hla_serological = etree.SubElement(node_recipient_hla, "serological")
+                    etree.SubElement(node_recipient_hla_serological, "nhic_tra_86").text = translate_datetime(record.recip_hla_sample_date)  # datetime
+                    etree.SubElement(node_recipient_hla_serological, "nhic_tra_87").text = "" # str - unknown hla typing method
+                    etree.SubElement(node_recipient_hla_serological, "nhic_tra_88").text = "A"  # str
+                    etree.SubElement(node_recipient_hla_serological, "nhic_tra_89").text = hla_serological_string(record.recip_second_a_broad, record.recip_second_a_split)  # str
+                if record.recip_first_b_broad is not None and record.recip_first_b_broad is not "":
+                    node_recipient_hla_serological = etree.SubElement(node_recipient_hla, "serological")
+                    etree.SubElement(node_recipient_hla_serological, "nhic_tra_86").text = translate_datetime(record.recip_hla_sample_date)  # datetime
+                    etree.SubElement(node_recipient_hla_serological, "nhic_tra_87").text = "" # str - unknown hla typing method
+                    etree.SubElement(node_recipient_hla_serological, "nhic_tra_88").text = "B"  # str
+                    etree.SubElement(node_recipient_hla_serological, "nhic_tra_89").text = hla_serological_string(record.recip_first_b_broad, record.recip_first_b_split)  # str
+                if record.recip_second_b_broad is not None and record.recip_second_b_broad is not "":
+                    node_recipient_hla_serological = etree.SubElement(node_recipient_hla, "serological")
+                    etree.SubElement(node_recipient_hla_serological, "nhic_tra_86").text = translate_datetime(record.recip_hla_sample_date)  # datetime
+                    etree.SubElement(node_recipient_hla_serological, "nhic_tra_87").text = "" # str - unknown hla typing method
+                    etree.SubElement(node_recipient_hla_serological, "nhic_tra_88").text = "B"  # str
+                    etree.SubElement(node_recipient_hla_serological, "nhic_tra_89").text = hla_serological_string(record.recip_second_b_broad, record.recip_second_b_split)  # str
+                if record.recip_first_c_broad is not None and record.recip_first_c_broad is not "":
+                    node_recipient_hla_serological = etree.SubElement(node_recipient_hla, "serological")
+                    etree.SubElement(node_recipient_hla_serological, "nhic_tra_86").text = translate_datetime(record.recip_hla_sample_date)  # datetime
+                    etree.SubElement(node_recipient_hla_serological, "nhic_tra_87").text = "" # str - unknown hla typing method
+                    etree.SubElement(node_recipient_hla_serological, "nhic_tra_88").text = "Cw"  # str
+                    etree.SubElement(node_recipient_hla_serological, "nhic_tra_89").text = hla_serological_string(record.recip_first_c_broad, record.recip_first_c_split)  # str
+                if record.recip_second_c_broad is not None and record.recip_second_c_broad is not "":
+                    node_recipient_hla_serological = etree.SubElement(node_recipient_hla, "serological")
+                    etree.SubElement(node_recipient_hla_serological, "nhic_tra_86").text = translate_datetime(record.recip_hla_sample_date)  # datetime
+                    etree.SubElement(node_recipient_hla_serological, "nhic_tra_87").text = "" # str - unknown hla typing method
+                    etree.SubElement(node_recipient_hla_serological, "nhic_tra_88").text = "Cw"  # str
+                    etree.SubElement(node_recipient_hla_serological, "nhic_tra_89").text = hla_serological_string(record.recip_second_c_broad, record.recip_second_c_split)  # str
+                if record.recip_first_dp_broad is not None and record.recip_first_dp_broad is not "":
+                    node_recipient_hla_serological = etree.SubElement(node_recipient_hla, "serological")
+                    etree.SubElement(node_recipient_hla_serological, "nhic_tra_86").text = translate_datetime(record.recip_hla_sample_date)  # datetime
+                    etree.SubElement(node_recipient_hla_serological, "nhic_tra_87").text = "" # str - unknown hla typing method
+                    etree.SubElement(node_recipient_hla_serological, "nhic_tra_88").text = "DP"  # str
+                    etree.SubElement(node_recipient_hla_serological, "nhic_tra_89").text = hla_serological_string(record.recip_first_dp_broad, record.recip_first_dp_split)  # str
+                if record.recip_second_dp_broad is not None and record.recip_second_dp_broad is not "":
+                    node_recipient_hla_serological = etree.SubElement(node_recipient_hla, "serological")
+                    etree.SubElement(node_recipient_hla_serological, "nhic_tra_86").text = translate_datetime(record.recip_hla_sample_date)  # datetime
+                    etree.SubElement(node_recipient_hla_serological, "nhic_tra_87").text = "" # str - unknown hla typing method
+                    etree.SubElement(node_recipient_hla_serological, "nhic_tra_88").text = "DP"  # str
+                    etree.SubElement(node_recipient_hla_serological, "nhic_tra_89").text = hla_serological_string(record.recip_second_dp_broad, record.recip_second_dp_split)  # str
+                if record.recip_first_dq_broad is not None and record.recip_first_dq_broad is not "":
+                    node_recipient_hla_serological = etree.SubElement(node_recipient_hla, "serological")
+                    etree.SubElement(node_recipient_hla_serological, "nhic_tra_86").text = translate_datetime(record.recip_hla_sample_date)  # datetime
+                    etree.SubElement(node_recipient_hla_serological, "nhic_tra_87").text = "" # str - unknown hla typing method
+                    etree.SubElement(node_recipient_hla_serological, "nhic_tra_88").text = "DQ"  # str
+                    etree.SubElement(node_recipient_hla_serological, "nhic_tra_89").text = hla_serological_string(record.recip_first_dq_broad, record.recip_first_dq_split)  # str
+                if record.recip_second_dq_broad is not None and record.recip_second_dq_broad is not "":
+                    node_recipient_hla_serological = etree.SubElement(node_recipient_hla, "serological")
+                    etree.SubElement(node_recipient_hla_serological, "nhic_tra_86").text = translate_datetime(record.recip_hla_sample_date)  # datetime
+                    etree.SubElement(node_recipient_hla_serological, "nhic_tra_87").text = "" # str - unknown hla typing method
+                    etree.SubElement(node_recipient_hla_serological, "nhic_tra_88").text = "DQ"  # str
+                    etree.SubElement(node_recipient_hla_serological, "nhic_tra_89").text = hla_serological_string(record.recip_second_dq_broad, record.recip_second_dq_split)  # str
+                if record.recip_first_dr_broad is not None and record.recip_first_dr_broad is not "":
+                    node_recipient_hla_serological = etree.SubElement(node_recipient_hla, "serological")
+                    etree.SubElement(node_recipient_hla_serological, "nhic_tra_86").text = translate_datetime(record.recip_hla_sample_date)  # datetime
+                    etree.SubElement(node_recipient_hla_serological, "nhic_tra_87").text = "" # str - unknown hla typing method
+                    etree.SubElement(node_recipient_hla_serological, "nhic_tra_88").text = "DR"  # str
+                    etree.SubElement(node_recipient_hla_serological, "nhic_tra_89").text = hla_serological_string(record.recip_first_dr_broad, record.recip_first_dr_split)  # str
+                if record.recip_second_dr_broad is not None and record.recip_second_dr_broad is not "":
+                    node_recipient_hla_serological = etree.SubElement(node_recipient_hla, "serological")
+                    etree.SubElement(node_recipient_hla_serological, "nhic_tra_86").text = translate_datetime(record.recip_hla_sample_date)  # datetime
+                    etree.SubElement(node_recipient_hla_serological, "nhic_tra_87").text = "" # str - unknown hla typing method
+                    etree.SubElement(node_recipient_hla_serological, "nhic_tra_88").text = "DR"  # str
+                    etree.SubElement(node_recipient_hla_serological, "nhic_tra_89").text = hla_serological_string(record.recip_second_dr_broad, record.recip_second_dr_split)  # str
+
                 node_recipient_hla_molecular = etree.SubElement(node_recipient_hla, "molecular")
                 etree.SubElement(node_recipient_hla_molecular, "nhic_tra_268").text = ""  # datetime
                 etree.SubElement(node_recipient_hla_molecular, "nhic_tra_269").text = ""  # str
@@ -475,11 +545,88 @@ class Command(BaseCommand):
 
                 # Donor - HLA
                 node_donor_hla = etree.SubElement(node_donor, "hla")
-                node_donor_hla_serological = etree.SubElement(node_donor_hla, "serological")
-                etree.SubElement(node_donor_hla_serological, "nhic_tra_262").text = ""  # datetime
-                etree.SubElement(node_donor_hla_serological, "nhic_tra_263").text = ""  # str
-                etree.SubElement(node_donor_hla_serological, "nhic_tra_264").text = ""  # str
-                etree.SubElement(node_donor_hla_serological, "nhic_tra_265").text = ""  # str
+                # node_donor_hla_serological = etree.SubElement(node_donor_hla, "serological")
+                # etree.SubElement(node_donor_hla_serological, "nhic_tra_262").text = ""  # datetime
+                # etree.SubElement(node_donor_hla_serological, "nhic_tra_263").text = ""  # str
+                # etree.SubElement(node_donor_hla_serological, "nhic_tra_264").text = ""  # str
+                # etree.SubElement(node_donor_hla_serological, "nhic_tra_265").text = ""  # str
+                
+                # Repeat 12 times for the 12 columns for HLA Serological Data
+                if record.donor_first_a_broad is not None and record.donor_first_a_broad is not "":
+                    node_donor_hla_serological = etree.SubElement(node_donor_hla, "serological")
+                    etree.SubElement(node_donor_hla_serological, "nhic_tra_262").text = translate_datetime(record.donor_hla_sample_date)  # datetime
+                    etree.SubElement(node_donor_hla_serological, "nhic_tra_263").text = "" # str - unknown hla typing method
+                    etree.SubElement(node_donor_hla_serological, "nhic_tra_264").text = "A"  # str
+                    etree.SubElement(node_donor_hla_serological, "nhic_tra_265").text = hla_serological_string(record.donor_first_a_broad, record.donor_first_a_split)  # str
+                if record.donor_second_a_broad is not None and record.donor_second_a_broad is not "":
+                    node_donor_hla_serological = etree.SubElement(node_donor_hla, "serological")
+                    etree.SubElement(node_donor_hla_serological, "nhic_tra_262").text = translate_datetime(record.donor_hla_sample_date)  # datetime
+                    etree.SubElement(node_donor_hla_serological, "nhic_tra_263").text = "" # str - unknown hla typing method
+                    etree.SubElement(node_donor_hla_serological, "nhic_tra_264").text = "A"  # str
+                    etree.SubElement(node_donor_hla_serological, "nhic_tra_265").text = hla_serological_string(record.donor_second_a_broad, record.donor_second_a_split)  # str
+                if record.donor_first_b_broad is not None and record.donor_first_b_broad is not "":
+                    node_donor_hla_serological = etree.SubElement(node_donor_hla, "serological")
+                    etree.SubElement(node_donor_hla_serological, "nhic_tra_262").text = translate_datetime(record.donor_hla_sample_date)  # datetime
+                    etree.SubElement(node_donor_hla_serological, "nhic_tra_263").text = "" # str - unknown hla typing method
+                    etree.SubElement(node_donor_hla_serological, "nhic_tra_264").text = "B"  # str
+                    etree.SubElement(node_donor_hla_serological, "nhic_tra_265").text = hla_serological_string(record.donor_first_b_broad, record.donor_first_b_split)  # str
+                if record.donor_second_b_broad is not None and record.donor_second_b_broad is not "":
+                    node_donor_hla_serological = etree.SubElement(node_donor_hla, "serological")
+                    etree.SubElement(node_donor_hla_serological, "nhic_tra_262").text = translate_datetime(record.donor_hla_sample_date)  # datetime
+                    etree.SubElement(node_donor_hla_serological, "nhic_tra_263").text = "" # str - unknown hla typing method
+                    etree.SubElement(node_donor_hla_serological, "nhic_tra_264").text = "B"  # str
+                    etree.SubElement(node_donor_hla_serological, "nhic_tra_265").text = hla_serological_string(record.donor_second_b_broad, record.donor_second_b_split)  # str
+                if record.donor_first_c_broad is not None and record.donor_first_c_broad is not "":
+                    node_donor_hla_serological = etree.SubElement(node_donor_hla, "serological")
+                    etree.SubElement(node_donor_hla_serological, "nhic_tra_262").text = translate_datetime(record.donor_hla_sample_date)  # datetime
+                    etree.SubElement(node_donor_hla_serological, "nhic_tra_263").text = "" # str - unknown hla typing method
+                    etree.SubElement(node_donor_hla_serological, "nhic_tra_264").text = "Cw"  # str
+                    etree.SubElement(node_donor_hla_serological, "nhic_tra_265").text = hla_serological_string(record.donor_first_c_broad, record.donor_first_c_split)  # str
+                if record.donor_second_c_broad is not None and record.donor_second_c_broad is not "":
+                    node_donor_hla_serological = etree.SubElement(node_donor_hla, "serological")
+                    etree.SubElement(node_donor_hla_serological, "nhic_tra_262").text = translate_datetime(record.donor_hla_sample_date)  # datetime
+                    etree.SubElement(node_donor_hla_serological, "nhic_tra_263").text = "" # str - unknown hla typing method
+                    etree.SubElement(node_donor_hla_serological, "nhic_tra_264").text = "Cw"  # str
+                    etree.SubElement(node_donor_hla_serological, "nhic_tra_265").text = hla_serological_string(record.donor_second_c_broad, record.donor_second_c_split)  # str
+                if record.donor_first_dp_broad is not None and record.donor_first_dp_broad is not "":
+                    node_donor_hla_serological = etree.SubElement(node_donor_hla, "serological")
+                    etree.SubElement(node_donor_hla_serological, "nhic_tra_262").text = translate_datetime(record.donor_hla_sample_date)  # datetime
+                    etree.SubElement(node_donor_hla_serological, "nhic_tra_263").text = "" # str - unknown hla typing method
+                    etree.SubElement(node_donor_hla_serological, "nhic_tra_264").text = "DP"  # str
+                    etree.SubElement(node_donor_hla_serological, "nhic_tra_265").text = hla_serological_string(record.donor_first_dp_broad, record.donor_first_dp_split)  # str
+                if record.donor_second_dp_broad is not None and record.donor_second_dp_broad is not "":
+                    node_donor_hla_serological = etree.SubElement(node_donor_hla, "serological")
+                    etree.SubElement(node_donor_hla_serological, "nhic_tra_262").text = translate_datetime(record.donor_hla_sample_date)  # datetime
+                    etree.SubElement(node_donor_hla_serological, "nhic_tra_263").text = "" # str - unknown hla typing method
+                    etree.SubElement(node_donor_hla_serological, "nhic_tra_264").text = "DP"  # str
+                    etree.SubElement(node_donor_hla_serological, "nhic_tra_265").text = hla_serological_string(record.donor_second_dp_broad, record.donor_second_dp_split)  # str
+                if record.donor_first_dq_broad is not None and record.donor_first_dq_broad is not "":
+                    node_donor_hla_serological = etree.SubElement(node_donor_hla, "serological")
+                    etree.SubElement(node_donor_hla_serological, "nhic_tra_262").text = translate_datetime(record.donor_hla_sample_date)  # datetime
+                    etree.SubElement(node_donor_hla_serological, "nhic_tra_263").text = "" # str - unknown hla typing method
+                    etree.SubElement(node_donor_hla_serological, "nhic_tra_264").text = "DQ"  # str
+                    etree.SubElement(node_donor_hla_serological, "nhic_tra_265").text = hla_serological_string(record.donor_first_dq_broad, record.donor_first_dq_split)  # str
+                if record.donor_second_dq_broad is not None and record.donor_second_dq_broad is not "":
+                    node_donor_hla_serological = etree.SubElement(node_donor_hla, "serological")
+                    etree.SubElement(node_donor_hla_serological, "nhic_tra_262").text = translate_datetime(record.donor_hla_sample_date)  # datetime
+                    etree.SubElement(node_donor_hla_serological, "nhic_tra_263").text = "" # str - unknown hla typing method
+                    etree.SubElement(node_donor_hla_serological, "nhic_tra_264").text = "DQ"  # str
+                    etree.SubElement(node_donor_hla_serological, "nhic_tra_265").text = hla_serological_string(record.donor_second_dq_broad, record.donor_second_dq_split)  # str
+                if record.donor_first_dr_broad is not None and record.donor_first_dr_broad is not "":
+                    node_donor_hla_serological = etree.SubElement(node_donor_hla, "serological")
+                    etree.SubElement(node_donor_hla_serological, "nhic_tra_262").text = translate_datetime(record.donor_hla_sample_date)  # datetime
+                    etree.SubElement(node_donor_hla_serological, "nhic_tra_263").text = "" # str - unknown hla typing method
+                    etree.SubElement(node_donor_hla_serological, "nhic_tra_264").text = "DR"  # str
+                    etree.SubElement(node_donor_hla_serological, "nhic_tra_265").text = hla_serological_string(record.donor_first_dr_broad, record.donor_first_dr_split)  # str
+                if record.donor_second_dr_broad is not None and record.donor_second_dr_broad is not "":
+                    node_donor_hla_serological = etree.SubElement(node_donor_hla, "serological")
+                    etree.SubElement(node_donor_hla_serological, "nhic_tra_262").text = translate_datetime(record.donor_hla_sample_date)  # datetime
+                    etree.SubElement(node_donor_hla_serological, "nhic_tra_263").text = "" # str - unknown hla typing method
+                    etree.SubElement(node_donor_hla_serological, "nhic_tra_264").text = "DR"  # str
+                    etree.SubElement(node_donor_hla_serological, "nhic_tra_265").text = hla_serological_string(record.donor_second_dr_broad, record.donor_second_dr_split)  # str
+                
+                
+                
                 node_donor_hla_molecular = etree.SubElement(node_donor_hla, "molecular")
                 etree.SubElement(node_donor_hla_molecular, "nhic_tra_272").text = ""  # datetime
                 etree.SubElement(node_donor_hla_molecular, "nhic_tra_273").text = ""  # str
@@ -531,13 +678,14 @@ class Command(BaseCommand):
                 etree.SubElement(node_transplant_details, "nhic_tra_71-1").text = ""  # str
                 etree.SubElement(node_transplant_details, "nhic_tra_72").text = record.laterality  # str
                 etree.SubElement(node_transplant_details, "nhic_tra_72-1").text = ""  # str
+                etree.SubElement(node_transplant_details, "nhic_tra_73-1").text = record.tx_type  # str
                 etree.SubElement(node_transplant_details, "nhic_tra_74").text = record.local  # str
                 etree.SubElement(node_transplant_details, "nhic_tra_74-1").text = ""  # str
                 etree.SubElement(node_transplant_details, "nhic_tra_77").text = translate_datetime(record.faildate)  # Datetime
                 # etree.SubElement(node_transplant_details, "nhic_tra_78").text = translate_yes_no(record.aitx_type)  # Enum
                 etree.SubElement(node_transplant_details, "nhic_tra_79").text = ""  # str
                 etree.SubElement(node_transplant_details, "nhic_tra_80").text = ""  # Datetime
-                # etree.SubElement(node_transplant_details, "nhic_tra_81").text = translate_yes_no(record.aitx_type)  # Enum
+                etree.SubElement(node_transplant_details, "nhic_tra_81").text = record.aitx_type  # Enum
                 etree.SubElement(node_transplant_details, "nhic_tra_82").text = ""  # Enum
                 etree.SubElement(node_transplant_details, "nhic_tra_83").text = int_as_str(record.cit_hrs)  # Decimal
                 # TODO: Query if 84 is fwit + swit, or fwit|swit
@@ -546,11 +694,11 @@ class Command(BaseCommand):
                 etree.SubElement(node_transplant_details, "nhic_tra_73").text = record.tx_type  # str
                 etree.SubElement(node_transplant_details, "nhic_tra_73-1").text = ""  # str
                 etree.SubElement(node_transplant_details, "nhic_tra_124").text = record.dgf
-                etree.SubElement(node_transplant_details, "nhic_tra_124-1").text = ""
+                etree.SubElement(node_transplant_details, "nhic_tra_124-1").text = record.dgf
 
                 # Transplant - HLA-MISMATCH
                 node_transplant_hla = etree.SubElement(node_transplant, "hla-mismatch")
-                etree.SubElement(node_transplant_hla, "nhic_tra_85").text = add_hla_mismatches(
+                etree.SubElement(node_transplant_hla, "nhic_tra_85").text = concat_hla_mismatches(
                     record.amm, record.bmm, record.drmm)  # char(2)
                 if record.amm is not None:
                     etree.SubElement(node_transplant_hla, "nhic_tra_259").text = record.amm  # char(2)

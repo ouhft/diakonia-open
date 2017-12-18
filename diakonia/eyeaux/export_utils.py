@@ -2,6 +2,7 @@
 # coding: utf-8
 from __future__ import absolute_import, unicode_literals
 from lxml import etree
+import re
 from .models import NHSBTRecord
 
 
@@ -85,6 +86,27 @@ def add_hla_mismatches(a, b, dr):
     except TypeError:  # e.g. None
         pass
     return str(total)
+
+
+def concat_hla_mismatches(a, b, dr):
+    return "{0}-{1}-{2}".format(a, b, dr)
+
+
+def hla_serological_string(broad_value, split_value):
+    """
+    Take the broad and split value from a HLA serological record, and return in the format Xnn(mm) where X is the
+    locus type (A, B, Cw, DR, etc), nn is the broad value (int), and mm is the split value (int)
+    :param broad_value:
+    :param split_value:
+    :return:
+    """
+    if broad_value is None:
+        return None
+    split_clean = str(re.sub(r"[A-z]*", "", split_value)) if split_value is not None else ""
+    if split_clean is not "":
+        return "{0}({1})".format(broad_value, split_clean)
+    else:
+        return broad_value
 
 
 def sentence_from_value(label, value):
