@@ -1,10 +1,7 @@
 #!/usr/bin/python
-# coding: utf-8
 import io
 
-from xml.dom.minidom import Document
 from lxml import etree
-from lxml.builder import ElementMaker
 
 from django.core.management.base import BaseCommand
 from django.utils import timezone

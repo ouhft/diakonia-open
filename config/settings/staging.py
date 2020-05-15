@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Development settings
 - Run in Debug mode

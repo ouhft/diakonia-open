@@ -1,7 +1,4 @@
 #!/usr/bin/python
-# coding = models.CharField(max_length=100, verbose_name="utf-8
-from __future__ import absolute_import, unicode_literals
-
 from django.db import models
 from django.utils import timezone
 

@@ -1,5 +1,4 @@
 #!/usr/bin/python
-# coding: utf-8
 import pytz
 
 from django.core.management.base import LabelCommand

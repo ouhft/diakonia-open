@@ -1,6 +1,4 @@
 #!/usr/bin/python
-# coding: utf-8
-from __future__ import absolute_import, unicode_literals
 from lxml import etree
 import re
 from .models import NHSBTRecord
