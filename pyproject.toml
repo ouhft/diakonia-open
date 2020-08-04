@@ -9,7 +9,7 @@ license = "MIT"
 python = ">=3.6 <4"
 django = "~3"
 # Eyeaux dependancies
-pytz = "
+pytz = ""
 XlsxWriter = "~1.2"
 openpyxl = "~3"
 bdateutil = ""
@@ -24,6 +24,9 @@ recommonmark = ""
 [tool.poetry.dev-dependencies]
 django-extensions = "~2"
 django-debug-toolbar = "~2"
+pygraphviz = "^1.5"  # Needed for django-extensions to fully work
+# NB: to get this to install you may need to do it manually with...
+# pip install pygraphviz --install-option="--include-path=/usr/local/include/graphviz" --install-option="--library-path=/usr/local/lib/graphviz"
 
 [build-system]
 requires = ["poetry>=0.12"]

@@ -267,6 +267,14 @@ python-versions = ">=3.5"
 version = "2.6.1"
 
 [[package]]
+category = "dev"
+description = "Python interface to Graphviz"
+name = "pygraphviz"
+optional = false
+python-versions = "*"
+version = "1.5"
+
+[[package]]
 category = "main"
 description = "Python implementation of Jean Meeus astronomical routines"
 name = "pymeeus"
@@ -509,7 +517,7 @@ python-versions = "*"
 version = "1.2.8"
 
 [metadata]
-content-hash = "a48975da257d54480b5b929ed5ab6a93e94f74d8a7542dcad636bf17400d142d"
+content-hash = "aa9f94fb8ba485951e95af3f74c46eeffbb0cb403971350059547e61be037b1f"
 python-versions = ">=3.6 <4"
 
 [metadata.files]
@@ -672,6 +680,9 @@ pyenchant = [
 pygments = [
     {file = "Pygments-2.6.1-py3-none-any.whl", hash = "sha256:ff7a40b4860b727ab48fad6360eb351cc1b33cbf9b15a0f689ca5353e9463324"},
     {file = "Pygments-2.6.1.tar.gz", hash = "sha256:647344a061c249a3b74e230c739f434d7ea4d8b1d5f3721bc0f3558049b38f44"},
+]
+pygraphviz = [
+    {file = "pygraphviz-1.5.zip", hash = "sha256:50a829a305dc5a0fd1f9590748b19fece756093b581ac91e00c2c27c651d319d"},
 ]
 pymeeus = [
     {file = "PyMeeus-0.3.7.tar.gz", hash = "sha256:56430209e6f9a039f1ba73f107ab0b23121548e2a67ed2855f2416c3749a5662"},
