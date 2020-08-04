@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "diakonia-open"
-version = "0.1.0"
+version = "0.1.1"
 description = "Ministers to the data needs of the departments. Collection of custom app developments for clinical data analysis or support."
 authors = ["Carl Marshall <marshalc@users.noreply.github.com>"]
 license = "MIT"
@@ -8,21 +8,22 @@ license = "MIT"
 [tool.poetry.dependencies]
 python = ">=3.6 <4"
 django = "~3"
+django-environ = "^0.4.5"
 # Eyeaux dependancies
 pytz = ""
-XlsxWriter = "~1.2"
+XlsxWriter = "~1.3"
 openpyxl = "~3"
 bdateutil = ""
 lxml = "~4.5"
 # Documentation dependancies
 sphinx = "~3"
-sphinx_rtd_theme = "~0.4"
+sphinx_rtd_theme = "~0.5"
 sphinxcontrib-spelling = "~5"
 pyenchant = "~3"
 recommonmark = ""
 
 [tool.poetry.dev-dependencies]
-django-extensions = "~2"
+django-extensions = "~3"
 django-debug-toolbar = "~2"
 pygraphviz = "^1.5"  # Needed for django-extensions to fully work
 # NB: to get this to install you may need to do it manually with...
